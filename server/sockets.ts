@@ -568,5 +568,5 @@ function start(processCount: ConfigLoader.SubProcessesConfig) {
 			break;
 		}
 	}
-	Sockets.listen(port, undefined, processCount);
+	Sockets.listen(port, process.env.PSBINDADDR || undefined, processCount);
 }
