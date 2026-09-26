@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "adam-vs-steve-team-strategy-r1",
+  "format": "gen9pdls4",
+  "buildCount": 6,
+  "status": "passed",
+  "builds": [
+    {
+      "teamId": "adam",
+      "buildId": "adam-sun",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "scovillain",
+          "candidateCount": 7,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.19230769230769226
+        },
+        {
+          "species": "whimsicott",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.1646090534979424
+        },
+        {
+          "species": "uxie",
+          "candidateCount": 11,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2182539682539682
+        },
+        {
+          "species": "tatsugiri",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.1282051282051282
+        },
+        {
+          "species": "magneton",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.34979423868312753
+        },
+        {
+          "species": "incineroar",
+          "candidateCount": 6,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.41208791208791207
+        }
+      ]
+    },
+    {
+      "teamId": "adam",
+      "buildId": "adam-shell-smash",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "whimsicott",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.1646090534979424
+        },
+        {
+          "species": "uxie",
+          "candidateCount": 11,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2182539682539682
+        },
+        {
+          "species": "tatsugiri",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.1282051282051282
+        },
+        {
+          "species": "magneton",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.34979423868312753
+        },
+        {
+          "species": "incineroar",
+          "candidateCount": 6,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.41208791208791207
+        },
+        {
+          "species": "drednaw",
+          "candidateCount": 9,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.21164021164021163
+        }
+      ]
+    },
+    {
+      "teamId": "adam",
+      "buildId": "adam-balance",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "uxie",
+          "candidateCount": 11,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2182539682539682
+        },
+        {
+          "species": "tatsugiri",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.1282051282051282
+        },
+        {
+          "species": "incineroar",
+          "candidateCount": 6,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.41208791208791207
+        },
+        {
+          "species": "drednaw",
+          "candidateCount": 9,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.21164021164021163
+        },
+        {
+          "species": "golem",
+          "candidateCount": 7,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.21978021978021978
+        },
+        {
+          "species": "magneton",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.34979423868312753
+        }
+      ]
+    },
+    {
+      "teamId": "steve",
+      "buildId": "steve-screens-hazards",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "grimmsnarl",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2040816326530612
+        },
+        {
+          "species": "slowbrogalar",
+          "candidateCount": 5,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.39436619718309857
+        },
+        {
+          "species": "delphox",
+          "candidateCount": 9,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.19230769230769226
+        },
+        {
+          "species": "lycanroc",
+          "candidateCount": 7,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.3968253968253968
+        },
+        {
+          "species": "goodra",
+          "candidateCount": 9,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.19230769230769226
+        },
+        {
+          "species": "avalugghisui",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.21164021164021163
+        }
+      ]
+    },
+    {
+      "teamId": "steve",
+      "buildId": "steve-volturn-unburden",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "drifblim",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2962962962962963
+        },
+        {
+          "species": "electivire",
+          "candidateCount": 9,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.19230769230769232
+        },
+        {
+          "species": "ambipom",
+          "candidateCount": 5,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.4
+        },
+        {
+          "species": "bruxish",
+          "candidateCount": 7,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.19230769230769226
+        },
+        {
+          "species": "grimmsnarl",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2040816326530612
+        },
+        {
+          "species": "slowbrogalar",
+          "candidateCount": 5,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.39436619718309857
+        }
+      ]
+    },
+    {
+      "teamId": "steve",
+      "buildId": "steve-hazard-warfare",
+      "pokemonCount": 6,
+      "pdlErrors": [],
+      "showdownErrors": [],
+      "candidateSupport": [
+        {
+          "species": "grimmsnarl",
+          "candidateCount": 10,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2040816326530612
+        },
+        {
+          "species": "slowbrogalar",
+          "candidateCount": 5,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.39436619718309857
+        },
+        {
+          "species": "lycanroc",
+          "candidateCount": 7,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.3968253968253968
+        },
+        {
+          "species": "drifblim",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.2962962962962963
+        },
+        {
+          "species": "ambipom",
+          "candidateCount": 5,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.4
+        },
+        {
+          "species": "avalugghisui",
+          "candidateCount": 8,
+          "truthSupported": true,
+          "maximumPriorWeight": 0.21164021164021163
+        }
+      ]
+    }
+  ],
+  "benchmarks": {
+    "whimsicottVsLycanroc": {
+      "whimsicott": 356,
+      "lycanroc": 355,
+      "passes": true
+    },
+    "drednawVsScarfDelphox": {
+      "drednaw": 260,
+      "shellSmash": 520,
+      "delphox": 337,
+      "choiceScarf": 505,
+      "passes": true
+    },
+    "drifblimVsDrednaw": {
+      "drifblim": 264,
+      "unburden": 528,
+      "drednawAfterShellSmash": 520,
+      "passes": true
+    }
+  },
+  "corrections": [
+    {
+      "kind": "roster",
+      "supplied": "Vikavolt",
+      "used": "Ambipom",
+      "reason": "Vikavolt is absent and Ambipom is present on Steve's current canonical roster."
+    },
+    {
+      "kind": "form",
+      "supplied": "Lycanroc-Dusk / Tough Claws",
+      "used": "Lycanroc / Steadfast",
+      "reason": "Steve's current canonical roster contains base Lycanroc, not Lycanroc-Dusk."
+    },
+    {
+      "kind": "item",
+      "supplied": "Light Clay",
+      "used": "Leftovers",
+      "affectedBuilds": [
+        "steve-screens-hazards",
+        "steve-hazard-warfare"
+      ],
+      "reason": "Light Clay is explicitly banned by gen9pdls4."
+    },
+    {
+      "kind": "ev",
+      "supplied": "248 HP / 52 Def / 208 Spe Whimsicott",
+      "used": "232 HP / 52 Def / 224 Spe Whimsicott",
+      "reason": "224 Timid Speed EVs reach 356, exceeding base Lycanroc's max-Jolly 355 while preserving a legal 508 EV total."
+    },
+    {
+      "kind": "tera",
+      "supplied": "Tera Type fields on non-captains",
+      "used": "omitted",
+      "reason": "Fixed PDL scenario restricts Terastallization to public captains."
+    }
+  ],
+  "failures": []
+}

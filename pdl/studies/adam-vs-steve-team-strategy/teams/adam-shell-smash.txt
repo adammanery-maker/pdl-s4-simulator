@@ -1,0 +1,58 @@
+Whimsicott @ Focus Sash
+Ability: Prankster
+EVs: 232 HP / 52 Def / 224 Spe
+Timid Nature
+IVs: 0 Atk
+- Memento
+- Taunt
+- Encore
+- Moonblast
+
+Uxie @ Mental Herb
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 Spe
+Bold Nature
+IVs: 0 Atk
+- Memento
+- Stealth Rock
+- Thunder Wave
+- Psychic Noise
+
+Tatsugiri @ Heavy-Duty Boots
+Ability: Storm Drain
+Tera Type: Grass
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Draco Meteor
+- Hydro Pump
+- Rapid Spin
+- Nasty Plot
+
+Magneton @ Choice Specs
+Ability: Analytic
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 248 HP / 8 Def / 252 SpD
+Careful Nature
+- Knock Off
+- Flare Blitz
+- Parting Shot
+- Will-O-Wisp
+
+Drednaw @ White Herb
+Ability: Strong Jaw
+EVs: 44 HP / 252 Atk / 212 Spe
+Jolly Nature
+- Shell Smash
+- Liquidation
+- Stone Edge
+- Crunch

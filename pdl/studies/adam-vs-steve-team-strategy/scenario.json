@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "adam-vs-steve-team-strategy-r1",
+  "beliefPath": "belief.json",
+  "teams": [
+    {
+      "teamId": "adam",
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Scovillain",
+        "Tatsugiri"
+      ],
+      "builds": [
+        {
+          "id": "adam-sun",
+          "exported": "Scovillain @ Life Orb\nAbility: Chlorophyll\nTera Type: Fire\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Growth\n- Fire Blast\n- Solar Beam\n- Crunch\n\nWhimsicott @ Heat Rock\nAbility: Prankster\nEVs: 232 HP / 52 Def / 224 Spe\nTimid Nature\nIVs: 0 Atk\n- Sunny Day\n- Memento\n- Encore\n- Moonblast\n\nUxie @ Heat Rock\nAbility: Levitate\nEVs: 252 HP / 196 Def / 60 Spe\nBold Nature\n- Sunny Day\n- Stealth Rock\n- U-turn\n- Psychic Noise\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Draco Meteor\n- Hydro Pump\n- Rapid Spin\n- Nasty Plot\n\nMagneton @ Choice Specs\nAbility: Analytic\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tri Attack\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Knock Off\n- Flare Blitz\n- Parting Shot\n- Will-O-Wisp\n"
+        },
+        {
+          "id": "adam-shell-smash",
+          "exported": "Whimsicott @ Focus Sash\nAbility: Prankster\nEVs: 232 HP / 52 Def / 224 Spe\nTimid Nature\nIVs: 0 Atk\n- Memento\n- Taunt\n- Encore\n- Moonblast\n\nUxie @ Mental Herb\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 Spe\nBold Nature\nIVs: 0 Atk\n- Memento\n- Stealth Rock\n- Thunder Wave\n- Psychic Noise\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Draco Meteor\n- Hydro Pump\n- Rapid Spin\n- Nasty Plot\n\nMagneton @ Choice Specs\nAbility: Analytic\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tri Attack\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Knock Off\n- Flare Blitz\n- Parting Shot\n- Will-O-Wisp\n\nDrednaw @ White Herb\nAbility: Strong Jaw\nEVs: 44 HP / 252 Atk / 212 Spe\nJolly Nature\n- Shell Smash\n- Liquidation\n- Stone Edge\n- Crunch\n"
+        },
+        {
+          "id": "adam-balance",
+          "exported": "Uxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 196 Def / 60 Spe\nBold Nature\n- Knock Off\n- U-turn\n- Thunder Wave\n- Psychic Noise\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Draco Meteor\n- Hydro Pump\n- Rapid Spin\n- Nasty Plot\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Knock Off\n- Flare Blitz\n- Parting Shot\n- Will-O-Wisp\n\nDrednaw @ Choice Band\nAbility: Strong Jaw\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Liquidation\n- Stone Edge\n- Crunch\n- Ice Fang\n\nGolem @ Rocky Helmet\nAbility: Sturdy\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Roar\n\nMagneton @ Choice Scarf\nAbility: Analytic\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tri Attack\n"
+        }
+      ]
+    },
+    {
+      "teamId": "steve",
+      "draftedTeraTypes": [
+        "Fighting",
+        "Fire"
+      ],
+      "teraCaptains": [
+        "Avalugg-Hisui",
+        "Drifblim",
+        "Electivire",
+        "Bruxish"
+      ],
+      "builds": [
+        {
+          "id": "steve-screens-hazards",
+          "exported": "Grimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 116 Def / 140 SpD\nCareful Nature\n- Reflect\n- Light Screen\n- Parting Shot\n- Spirit Break\n\nSlowbro-Galar @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 228 Def / 28 Spe\nBold Nature\nIVs: 0 Atk\n- Slack Off\n- Sludge Bomb\n- Flamethrower\n- Surf\n\nDelphox @ Choice Scarf\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Fire Blast\n- Shadow Ball\n- Grass Knot\n- Psyshock\n\nLycanroc @ Life Orb\nAbility: Steadfast\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Stone Edge\n- Close Combat\n- Accelerock\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 8 Def / 252 SpD\nCalm Nature\nIVs: 0 Atk\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Ice\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Rapid Spin\n- Recover\n- Body Press\n"
+        },
+        {
+          "id": "steve-volturn-unburden",
+          "exported": "Drifblim @ Sitrus Berry\nAbility: Unburden\nTera Type: Ghost\nEVs: 80 HP / 252 SpA / 176 Spe\nTimid Nature\nIVs: 0 Atk\n- Calm Mind\n- Strength Sap\n- Shadow Ball\n- Air Slash\n\nElectivire @ Heavy-Duty Boots\nAbility: Motor Drive\nTera Type: Electric\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Supercell Slam\n- Earthquake\n- Ice Punch\n- Volt Switch\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Edge\n- U-turn\n- Knock Off\n\nBruxish @ Choice Band\nAbility: Strong Jaw\nTera Type: Water\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Wave Crash\n- Psychic Fangs\n- Crunch\n- Flip Turn\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 116 Def / 140 SpD\nCareful Nature\n- Thunder Wave\n- Parting Shot\n- Taunt\n- Spirit Break\n\nSlowbro-Galar @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 252 HP / 228 Def / 28 Spe\nBold Nature\nIVs: 0 Atk\n- Slack Off\n- Sludge Bomb\n- Flamethrower\n- Surf\n"
+        },
+        {
+          "id": "steve-hazard-warfare",
+          "exported": "Grimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 116 Def / 140 SpD\nCareful Nature\n- Reflect\n- Light Screen\n- Taunt\n- Parting Shot\n\nSlowbro-Galar @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 228 Def / 28 Spe\nBold Nature\nIVs: 0 Atk\n- Slack Off\n- Sludge Bomb\n- Flamethrower\n- Surf\n\nLycanroc @ Focus Sash\nAbility: Steadfast\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stealth Rock\n- Stone Edge\n- Close Combat\n- Accelerock\n\nDrifblim @ Heavy-Duty Boots\nAbility: Aftermath\nTera Type: Ghost\nEVs: 248 HP / 196 Def / 64 Spe\nBold Nature\nIVs: 0 Atk\n- Will-O-Wisp\n- Hex\n- Strength Sap\n- Destiny Bond\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Edge\n- U-turn\n- Knock Off\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Ice\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Recover\n- Body Press\n- Mountain Gale\n"
+        }
+      ]
+    }
+  ]
+}

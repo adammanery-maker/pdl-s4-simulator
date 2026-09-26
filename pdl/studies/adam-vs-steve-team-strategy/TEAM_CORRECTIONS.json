@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "sourceRosterSnapshot": "2026-09-23 canonical local roster snapshot",
+  "corrections": [
+    {
+      "kind": "roster",
+      "supplied": "Vikavolt",
+      "used": "Ambipom",
+      "reason": "Vikavolt is absent and Ambipom is present on Steve's current canonical roster."
+    },
+    {
+      "kind": "form",
+      "supplied": "Lycanroc-Dusk / Tough Claws",
+      "used": "Lycanroc / Steadfast",
+      "reason": "Steve's current canonical roster contains base Lycanroc, not Lycanroc-Dusk."
+    },
+    {
+      "kind": "item",
+      "supplied": "Light Clay",
+      "used": "Leftovers",
+      "affectedBuilds": [
+        "steve-screens-hazards",
+        "steve-hazard-warfare"
+      ],
+      "reason": "Light Clay is explicitly banned by gen9pdls4."
+    },
+    {
+      "kind": "ev",
+      "supplied": "248 HP / 52 Def / 208 Spe Whimsicott",
+      "used": "232 HP / 52 Def / 224 Spe Whimsicott",
+      "reason": "224 Timid Speed EVs reach 356, exceeding base Lycanroc's max-Jolly 355 while preserving a legal 508 EV total."
+    },
+    {
+      "kind": "tera",
+      "supplied": "Tera Type fields on non-captains",
+      "used": "omitted",
+      "reason": "Fixed PDL scenario restricts Terastallization to public captains."
+    }
+  ],
+  "truthCandidatePriorWeight": 0.04,
+  "normalization": "All retained and added candidates are renormalized per species; truth sets are never probability 1."
+}

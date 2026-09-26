@@ -1,0 +1,57 @@
+Grimmsnarl @ Leftovers
+Ability: Prankster
+EVs: 252 HP / 116 Def / 140 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Parting Shot
+- Spirit Break
+
+Slowbro-Galar @ Rocky Helmet
+Ability: Regenerator
+EVs: 252 HP / 228 Def / 28 Spe
+Bold Nature
+IVs: 0 Atk
+- Slack Off
+- Sludge Bomb
+- Flamethrower
+- Surf
+
+Delphox @ Choice Scarf
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Fire Blast
+- Shadow Ball
+- Grass Knot
+- Psyshock
+
+Lycanroc @ Life Orb
+Ability: Steadfast
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Stone Edge
+- Close Combat
+- Accelerock
+
+Goodra @ Assault Vest
+Ability: Sap Sipper
+EVs: 248 HP / 8 Def / 252 SpD
+Calm Nature
+IVs: 0 Atk
+- Draco Meteor
+- Thunderbolt
+- Flamethrower
+- Sludge Bomb
+
+Avalugg-Hisui @ Heavy-Duty Boots
+Ability: Sturdy
+Tera Type: Ice
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Stealth Rock
+- Rapid Spin
+- Recover
+- Body Press

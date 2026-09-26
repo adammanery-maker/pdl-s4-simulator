@@ -1,4 +1,4 @@
-import { appendFileSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
+import { appendFileSync, existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
 import { resolve, join } from 'path';
 import { execSync } from 'child_process';
 import { createHash } from 'crypto';
@@ -19,6 +19,8 @@ export interface FixedMatchupOptions {
 	readonly foulRoot: string;
 	readonly outputDirectory: string;
 	readonly beliefEngine: 'legacy' | 'posterior-shadow' | 'posterior';
+	readonly maxTrials: number | null;
+	readonly resume: boolean;
 }
 
 function positiveInteger(value: string, name: string): number {
@@ -53,6 +55,8 @@ export function parseFixedMatchupArguments(argv: readonly string[]): FixedMatchu
 		foulRoot: required('foul-root'),
 		outputDirectory: required('output'),
 		beliefEngine: beliefEngine as FixedMatchupOptions['beliefEngine'],
+		maxTrials: values.has('max-trials') ? positiveInteger(required('max-trials'), 'max-trials') : null,
+		resume: values.get('resume') === 'true',
 	};
 }
 
@@ -122,7 +126,11 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 	if (options.repetitions % 2 !== 0) throw new Error('--repetitions must be even so every fixed matchup is side-balanced.');
 	const scenario = loadFixedScenario(options.scenarioPath);
 	const outputDirectory = resolve(options.outputDirectory);
-	mkdirSync(outputDirectory, { recursive: false });
+	if (existsSync(outputDirectory)) {
+		if (!options.resume) throw new Error(`Output directory already exists: ${outputDirectory}. Pass --resume true only to append a previous partial fixed run.`);
+	} else {
+		mkdirSync(outputDirectory, { recursive: false });
+	}
 	const simulatorRoot = resolve(__dirname, '..', '..', '..');
 	const foulPlayRoot = resolve(options.foulRoot);
 	const [firstTeam, secondTeam] = scenario.teams;
@@ -132,11 +140,15 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 	const pythonVersion = execSync(`"${join(foulPlayRoot, '.venv', 'bin', 'python')}" --version`).toString().trim();
 	const scenarioHash = createHash('sha256').update(readFileSync(options.scenarioPath)).digest('hex');
 	
+	const existingRecords: FixedTrialRecord[] = options.resume && existsSync(`${outputDirectory}/trials.jsonl`)
+		? readFileSync(`${outputDirectory}/trials.jsonl`, 'utf8').trim().split(/\r?\n/).filter(Boolean).map(line => JSON.parse(line) as FixedTrialRecord) : [];
+	const existingArtifactIds = new Set(existingRecords.map(record => record.artifact));
 	writeFileSync(`${outputDirectory}/run.json`, `${JSON.stringify({
 		schemaVersion: 1, runtime: CANONICAL_RUNTIME, scenarioId: scenario.id, showdownCommit: SHOWDOWN_COMMIT, foulPlayCommit, simulatorCommit, nodeVersion, pythonVersion, scenarioHash, options,
 		estimateSemantics: 'Repeated completed battles are empirical Monte Carlo trials. Native MCTS policy support and state values are search estimates, not match-win probabilities.',
 	}, null, 2)}\n`);
-	const records: FixedTrialRecord[] = [];
+	const records: FixedTrialRecord[] = [...existingRecords];
+	let newlyRun = 0;
 	let serial = 0;
 	for (const firstBuild of firstTeam.builds) {
 		for (const secondBuild of secondTeam.builds) {
@@ -151,6 +163,9 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 				const id = `${String(serial).padStart(4, '0')}-${safeId(matchupId)}-${reversed ? 'reverse' : 'forward'}`;
 				const pairId = `${safeId(matchupId)}-${Math.floor(repetition / 2) + 1}`;
 				const side = reversed ? 'reverse' as const : 'forward' as const;
+				const artifactDirectory = join(outputDirectory, 'trials', id);
+				if (existingArtifactIds.has(artifactDirectory)) continue;
+				if (options.maxTrials !== null && newlyRun >= options.maxTrials) continue;
 				const artifact = createTrialArtifact({
 					outputDirectory, trialId: id,
 					manifest: {
@@ -169,6 +184,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 					beliefTruthComparison: evidence.belief.truthComparison,
 				};
 				records.push(record);
+				newlyRun++;
 				appendFileSync(`${outputDirectory}/trials.jsonl`, `${JSON.stringify(record)}\n`);
 				process.stdout.write(`[${serial}/${firstTeam.builds.length * secondTeam.builds.length * options.repetitions}] ${matchupId} ${result.status}${result.winnerTeamId ? ` — ${result.winnerTeamId} won` : ''} — audit ${record.auditStatus}\n`);
 			}
@@ -186,7 +202,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 		posteriorShadow,
 	};
 	writeFileSync(`${outputDirectory}/summary.json`, `${JSON.stringify(summary, null, 2)}\n`);
-	if (aggregate.incompletePairs.length) throw new Error(`${aggregate.incompletePairs.length} requested pair(s) failed, were incomplete, or had non-clean evidence. Inspect summary.json.`);
+	if (aggregate.incompletePairs.length && options.maxTrials === null) throw new Error(`${aggregate.incompletePairs.length} requested pair(s) failed, were incomplete, or had non-clean evidence. Inspect summary.json.`);
 	return outputDirectory;
 }
 

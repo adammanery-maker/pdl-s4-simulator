@@ -1,0 +1,58 @@
+Scovillain @ Life Orb
+Ability: Chlorophyll
+Tera Type: Fire
+EVs: 4 Atk / 252 SpA / 252 Spe
+Naive Nature
+- Growth
+- Fire Blast
+- Solar Beam
+- Crunch
+
+Whimsicott @ Heat Rock
+Ability: Prankster
+EVs: 232 HP / 52 Def / 224 Spe
+Timid Nature
+IVs: 0 Atk
+- Sunny Day
+- Memento
+- Encore
+- Moonblast
+
+Uxie @ Heat Rock
+Ability: Levitate
+EVs: 252 HP / 196 Def / 60 Spe
+Bold Nature
+- Sunny Day
+- Stealth Rock
+- U-turn
+- Psychic Noise
+
+Tatsugiri @ Heavy-Duty Boots
+Ability: Storm Drain
+Tera Type: Grass
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Draco Meteor
+- Hydro Pump
+- Rapid Spin
+- Nasty Plot
+
+Magneton @ Choice Specs
+Ability: Analytic
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 248 HP / 8 Def / 252 SpD
+Careful Nature
+- Knock Off
+- Flare Blitz
+- Parting Shot
+- Will-O-Wisp

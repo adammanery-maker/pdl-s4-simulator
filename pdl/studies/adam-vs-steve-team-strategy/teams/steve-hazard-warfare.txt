@@ -1,0 +1,57 @@
+Grimmsnarl @ Leftovers
+Ability: Prankster
+EVs: 252 HP / 116 Def / 140 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Taunt
+- Parting Shot
+
+Slowbro-Galar @ Rocky Helmet
+Ability: Regenerator
+EVs: 252 HP / 228 Def / 28 Spe
+Bold Nature
+IVs: 0 Atk
+- Slack Off
+- Sludge Bomb
+- Flamethrower
+- Surf
+
+Lycanroc @ Focus Sash
+Ability: Steadfast
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Stealth Rock
+- Stone Edge
+- Close Combat
+- Accelerock
+
+Drifblim @ Heavy-Duty Boots
+Ability: Aftermath
+Tera Type: Ghost
+EVs: 248 HP / 196 Def / 64 Spe
+Bold Nature
+IVs: 0 Atk
+- Will-O-Wisp
+- Hex
+- Strength Sap
+- Destiny Bond
+
+Ambipom @ Silk Scarf
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- U-turn
+- Knock Off
+
+Avalugg-Hisui @ Heavy-Duty Boots
+Ability: Sturdy
+Tera Type: Ice
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Rapid Spin
+- Recover
+- Body Press
+- Mountain Gale

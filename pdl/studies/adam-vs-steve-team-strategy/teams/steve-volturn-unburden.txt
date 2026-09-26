@@ -1,0 +1,58 @@
+Drifblim @ Sitrus Berry
+Ability: Unburden
+Tera Type: Ghost
+EVs: 80 HP / 252 SpA / 176 Spe
+Timid Nature
+IVs: 0 Atk
+- Calm Mind
+- Strength Sap
+- Shadow Ball
+- Air Slash
+
+Electivire @ Heavy-Duty Boots
+Ability: Motor Drive
+Tera Type: Electric
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Supercell Slam
+- Earthquake
+- Ice Punch
+- Volt Switch
+
+Ambipom @ Silk Scarf
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- U-turn
+- Knock Off
+
+Bruxish @ Choice Band
+Ability: Strong Jaw
+Tera Type: Water
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wave Crash
+- Psychic Fangs
+- Crunch
+- Flip Turn
+
+Grimmsnarl @ Leftovers
+Ability: Prankster
+EVs: 252 HP / 116 Def / 140 SpD
+Careful Nature
+- Thunder Wave
+- Parting Shot
+- Taunt
+- Spirit Break
+
+Slowbro-Galar @ Heavy-Duty Boots
+Ability: Regenerator
+EVs: 252 HP / 228 Def / 28 Spe
+Bold Nature
+IVs: 0 Atk
+- Slack Off
+- Sludge Bomb
+- Flamethrower
+- Surf
