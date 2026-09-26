@@ -1,0 +1,603 @@
+|updateuser| Guest 2|0|1|{"blockChallenges":false,"blockPMs":false,"ignoreTickets":false,"hideBattlesFromTrainerCard":false,"blockInvites":false,"doNotDisturb":false,"blockFriendRequests":false,"allowFriendNotifications":false,"displayBattlesToFriends":false,"hideLogins":false,"hiddenNextBattle":false,"inviteOnlyNextBattle":false,"language":null}
+|customgroups|[{"symbol":"~","name":"Administrator","type":"leadership"},{"symbol":"#","name":"Room Owner","type":"leadership"},{"symbol":"★","name":"Host","type":"leadership"},{"symbol":"@","name":"Moderator","type":"staff"},{"symbol":"%","name":"Driver","type":"staff"},{"symbol":"*","name":"Bot","type":"normal"},{"symbol":"☆","name":"Player","type":"normal"},{"symbol":"+","name":"Voice","type":"normal"},{"symbol":"^","name":"Prize Winner","type":"normal"},{"symbol":"whitelist","name":"Whitelist","type":"normal"},{"symbol":" ","name":null,"type":"normal"},{"symbol":"‽","name":"Locked","type":"punishment"},{"symbol":"!","name":"Muted","type":"punishment"}]
+|formats|,LL|,1|Likeshop Spotlight|[Gen 9] OU + Solgaleo,e|[Gen 9] 1v1 Factory,4f|,1|S/V Singles|[Gen 9] Random Battle,4f|[Gen 9] Unrated Random Battle,b|[Gen 9] Free-For-All Random Battle,7|[Gen 9] Random Battle (Blitz),4f|[Gen 9] Multi Random Battle,5|[Gen 9] OU,e|[Gen 9] Ubers,e|[Gen 9] UU,e|[Gen 9] RU,e|[Gen 9] NU,e|[Gen 9] PU,e|[Gen 9] LC,e|[Gen 9] Monotype,e|[Gen 9] CAP,e|[Gen 9] BSS Reg I,5e|[Gen 9] BSS Reg J,5c|[Gen 9] Custom Game,c|,1|S/V Doubles|[Gen 9] Random Doubles Battle,4f|[Gen 9] Doubles OU,e|[Gen 9] Doubles Ubers,e|[Gen 9] Doubles UU,e|[Gen 9] Doubles LC,c|[Gen 9] VGC 2023 Reg C,5c|[Gen 9] VGC 2023 Reg D,5c|[Gen 9] VGC 2024 Reg G,5c|[Gen 9] VGC 2026 Reg I,5e|[Gen 9] VGC 2026 Reg F,5e|[Gen 9] VGC 2026 Reg F (Bo3),1e|[Gen 9] Doubles Custom Game,c|,1|Unofficial Metagames|[Gen 9] 1v1,e|[Gen 9] 2v2 Doubles,e|[Gen 9] Anything Goes,e|[Gen 9] Ubers UU,c|[Gen 9] ZU,e|[Gen 9] Free-For-All,6|[Gen 9] LC UU,c|[Gen 9] NFE,c|,1|Draft|[Gen 9] Draft,8c|[Gen 9] 6v6 Doubles Draft,8c|[Gen 9] 4v4 Doubles Draft,dc|[Gen 9] NatDex Draft,8c|[Gen 9] NatDex 6v6 Doubles Draft,8c|[Gen 9] NatDex LC Draft,8c|[Gen 8] Draft,c|[Gen 8] NatDex Draft,c|[Gen 8] NatDex 4v4 Doubles Draft,1c|[Gen 7] Draft,c|[Gen 6] Draft,c|[Gen 5] Draft,c|[Gen 4] Draft,c|[Gen 3] Draft,c|,2|OM of the Month|[Gen 9] Tier Shift,e|[Gen 9] Bio Mech Mons,e|[Gen 9] NatDex Camove Chaos,e|,2|Other Metagames|[Gen 9] Almost Any Ability,e|[Gen 9] Balanced Hackmons,e|[Gen 9] Godly Gift,e|[Gen 9] Mix and Mega,e|[Gen 9] Shared Power,e|[Gen 9] STABmons,e|[Gen 7] Pure Hackmons,e|,2|Challengeable OMs|[Gen 9] 1-2 Switch,c|[Gen 9] 350 Cup,c|[Gen 9] Alphabet Cup,c|[Gen 9] Bad 'n Boosted,c|[Gen 9] Battlefields,c|[Gen 9] Camomons,c|[Gen 9] Category Swap,c|[Gen 9] Convergence,c|[Gen 9] Cross Evolution,c|[Gen 9] Fervent Impersonation,c|[Gen 9] Foresighters,c|[Gen 9] Formemons,c|[Gen 9] Fortemons,c|[Gen 9] Frantic Fusions,c|[Gen 9] Full Potential,c|[Gen 9] Inheritance,c|[Gen 9] Inverse,c|[Gen 9] Nature Swap,c|[Gen 9] Partners in Crime,c|[Gen 9] Passive Aggressive,c|[Gen 9] Pokebilities,c|[Gen 9] Pokemoves,c|[Gen 9] Pure Hackmons,c|[Gen 9] Relay Race,c|[Gen 9] Revelationmons,c|[Gen 9] Sharing is Caring,c|[Gen 9] Tera Donation,c|[Gen 9] Tera Override,c|[Gen 9] The Card Game,c|[Gen 9] The Loser's Game,c|[Gen 9] Trademarked,c|[Gen 9] Triples,c|[Gen 9] Type Split,c|[Gen 9] VoltTurn Mayhem,c|[Gen 6] Pure Hackmons,c|,2|Temporary Tour Metas|[Gen 9] Mix and Mega LC,c|[Gen 8] Mix and Mega,c|[Gen 7] Mix and Mega,c|[Gen 6] Mix and Mega,c|,2|National Dex|[Gen 9] National Dex,e|[Gen 8] National Dex,e|,2|National Dex Other Tiers|[Gen 9] National Dex 35 Pokes,c|[Gen 9] National Dex Ubers,e|[Gen 9] National Dex UU,e|[Gen 9] National Dex RU,c|[Gen 9] National Dex LC,c|[Gen 9] National Dex Monotype,e|[Gen 9] National Dex Doubles,e|[Gen 9] National Dex Doubles Ubers,c|[Gen 9] National Dex Ubers UU,c|[Gen 9] National Dex 1v1,c|[Gen 9] National Dex AG,c|[Gen 9] National Dex AAA,c|[Gen 9] National Dex BH,c|[Gen 9] National Dex Godly Gift,c|[Gen 9] National Dex STABmons,c|[Gen 8] National Dex UU,c|[Gen 8] National Dex RU,c|[Gen 8] National Dex Doubles,e|[Gen 8] National Dex Monotype,c|[Gen 8 DLC 1] National Dex AG,c|,2|Pet Mods|[Gen 9] Scootopia Random Battle,f|[Gen 9] Scootopia,c|[Gen 9] ChatBats,f|[Gen 9] Legends Z-A OU,e|,3|Randomized Format Spotlight|[Gen 9] BSS Factory (Bo3),1f|,3|Randomized Metas|[Gen 9] Random Roulette,4f|[Gen 9] Monkey's Paw Random Battle,f|[Gen 9] Super Staff Bros Ultimate,4f|[Gen 9] Monotype Random Battle,4f|[Gen 9] Random Battle (Shared Power, B12P6),4f|[Gen 9] Random Battle Mayhem,4f|[Gen 9] Battle Factory,4f|[Gen 9] BSS Factory,5d|[Gen 9] Draft Factory,4d|[Gen 9] Baby Random Battle,4f|[Gen 9] Hackmons Cup,4f|[Gen 9] Doubles Hackmons Cup,4d|[Gen 9] Broken Cup,4f|[Gen 9] Challenge Cup 1v1,4f|[Gen 9] Challenge Cup 2v2,4f|[Gen 9] Challenge Cup 6v6,4d|[Gen 9] Metronome Battle,4e|[Gen 8] Random Battle,4f|[Gen 8] Random Doubles Battle,4d|[Gen 8] Free-For-All Random Battle,5|[Gen 8] Multi Random Battle,5|[Gen 8] Battle Factory,4d|[Gen 8] BSS Factory,5d|[Gen 8] Hackmons Cup,4d|[Gen 8] CAP 1v1,4d|[Gen 8 BDSP] Random Battle,4d|[Gen 7] Random Battle,4f|[Gen 7] Battle Factory,4d|[Gen 7] BSS Factory,5d|[Gen 7] Hackmons Cup,9|[Gen 7 Let's Go] Random Battle,4d|[Gen 6] Random Battle,4f|[Gen 6] Battle Factory,9|[Gen 5] Random Battle,4f|[Gen 4] Random Battle,4f|[Gen 3] Random Battle,4f|[Gen 2] Random Battle,4f|[Gen 1] Random Battle,4f|[Gen 1] Challenge Cup,9|[Gen 1] Hackmons Cup,9|,4|RoA Spotlight|[Gen 2] Ubers,e|[Gen 5] LC,e|[Gen 7] VGC 2017,5e|,4|Past Gens OU|[Gen 8] OU,e|[Gen 7] OU,e|[Gen 6] OU,e|[Gen 5] OU,e|[Gen 4] OU,e|[Gen 3] OU,e|[Gen 2] OU,e|[Gen 1] OU,e|,4|Past Gens Doubles OU|[Gen 8] Doubles OU,e|[Gen 7] Doubles OU,e|[Gen 6] Doubles OU,e|[Gen 5] Doubles OU,c|[Gen 4] Doubles OU,c|[Gen 3] Doubles OU,c|,4|Sw/Sh Singles|[Gen 8] Ubers,c|[Gen 8] UU,c|[Gen 8] RU,c|[Gen 8] NU,c|[Gen 8] PU,c|[Gen 8] LC,c|[Gen 8] Monotype,c|[Gen 8] 1v1,c|[Gen 8] Anything Goes,c|[Gen 8] ZU,c|[Gen 8] CAP,c|[Gen 8] Battle Stadium Singles,5c|[Gen 8 BDSP] OU,c|[Gen 8 BDSP] Ubers,c|[Gen 8] Custom Game,c|,4|Sw/Sh Doubles|[Gen 8] Doubles Ubers,c|[Gen 8] Doubles UU,c|[Gen 8] VGC 2022,5c|[Gen 8] VGC 2021,5c|[Gen 8] VGC 2020,5c|[Gen 8 BDSP] Doubles OU,c|[Gen 8 BDSP] Battle Festival Doubles,1c|[Gen 8] Doubles Custom Game,c|,4|US/UM Singles|[Gen 7] Ubers,c|[Gen 7] UU,c|[Gen 7] RU,c|[Gen 7] NU,c|[Gen 7] PU,c|[Gen 7] LC,c|[Gen 7] Monotype,c|[Gen 7] 1v1,c|[Gen 7] Anything Goes,c|[Gen 7] ZU,c|[Gen 7] CAP,c|[Gen 7] Battle Spot Singles,5c|[Gen 7 Let's Go] OU,1c|[Gen 7] Custom Game,c|,4|US/UM Doubles|[Gen 7] Doubles UU,c|[Gen 7] VGC 2019,5c|[Gen 7] VGC 2018,5c|[Gen 7] Battle Spot Doubles,5c|[Gen 7 Let's Go] Doubles OU,1c|[Gen 7] Doubles Custom Game,c|,4|OR/AS Singles|[Gen 6] Ubers,c|[Gen 6] UU,c|[Gen 6] RU,c|[Gen 6] NU,c|[Gen 6] PU,c|[Gen 6] LC,c|[Gen 6] Monotype,c|[Gen 6] 1v1,c|[Gen 6] Anything Goes,c|[Gen 6] ZU,c|[Gen 6] CAP,c|[Gen 6] Battle Spot Singles,5c|[Gen 6] Custom Game,c|,4|OR/AS Doubles/Triples|[Gen 6] VGC 2016,5c|[Gen 6] VGC 2015,5c|[Gen 6] VGC 2014,5c|[Gen 6] Battle Spot Doubles,5c|[Gen 6] Doubles Custom Game,c|[Gen 6] Battle Spot Triples,1c|[Gen 6] Triples Custom Game,c|,4|B2/W2 Singles|[Gen 5] Ubers,c|[Gen 5] UU,c|[Gen 5] RU,c|[Gen 5] NU,c|[Gen 5] PU,c|[Gen 5] Monotype,c|[Gen 5] 1v1,c|[Gen 5] CAP,c|[Gen 5] ZU,c|[Gen 5] BW1 OU,c|[Gen 5] GBU Singles,5c|[Gen 5] Custom Game,c|,4|B2/W2 Doubles|[Gen 5] VGC 2013,5c|[Gen 5] VGC 2012,5c|[Gen 5] VGC 2011,5c|[Gen 5] Doubles Custom Game,c|[Gen 5] Triples Custom Game,c|,4|DPP Singles|[Gen 4] Ubers,c|[Gen 4] UU,c|[Gen 4] NU,c|[Gen 4] LC,c|[Gen 4] Anything Goes,c|[Gen 4] 1v1,c|[Gen 4] CAP,c|[Gen 4] PU,c|[Gen 4] ZU,c|[Gen 4] Custom Game,c|,4|DPP Doubles|[Gen 4] VGC 2010,5c|[Gen 4] VGC 2009,5c|[Gen 4] Doubles Custom Game,c|,4|Past Generations|[Gen 3] Ubers,c|[Gen 3] RU,c|[Gen 3] UU,c|[Gen 3] NU,c|[Gen 3] PU,c|[Gen 3] LC,c|[Gen 3] 1v1,c|[Gen 3] UUBL,c|[Gen 3] ZU,c|[Gen 3] ADV 200,c|[Gen 3] ADV 200 Doubles,c|[Gen 3] Orre Colosseum,4c|[Gen 3] Custom Game,c|[Gen 3] Doubles Custom Game,c|[Gen 2] UU,c|[Gen 2] NU,c|[Gen 2] PU,c|[Gen 2] 1v1,c|[Gen 2] ZU,c|[Gen 2] NC 2000,4c|[Gen 2] Stadium OU,c|[Gen 2] Custom Game,c|[Gen 1] Ubers,c|[Gen 1] UU,c|[Gen 1] NU,c|[Gen 1] PU,c|[Gen 1] ZU,c|[Gen 1] LC,c|[Gen 1] 1v1,c|[Gen 1] Japanese OU,c|[Gen 1] Stadium OU,c|[Gen 1] Tradebacks OU,c|[Gen 1] NC 1997,4c|[Gen 1] Custom Game,c|,4|PDL S4|[Gen 9] PDL S4,c
+|updatesearch|{"searching":[],"games":null}
+|updateuser| pdla06537815b2fp1|1|1|{"blockChallenges":false,"blockPMs":false,"ignoreTickets":false,"hideBattlesFromTrainerCard":false,"blockInvites":false,"doNotDisturb":false,"blockFriendRequests":false,"allowFriendNotifications":false,"displayBattlesToFriends":false,"hideLogins":false,"hiddenNextBattle":false,"inviteOnlyNextBattle":false,"language":null}
+|challstr|4|aa73da5734a9d3ef5986c55535e6bb59a57dea4231d23253709b2af1a746d3ee73c230cbf33a0eb457eee0789b25df6bf4cbad6f63b622f180e5c6cd8a38a193fce8f1d6884cc9b38e480667b048ba7d090a18a74e52eb70b82778fddde5a6816b192bb32314e1d3d8044d6a5c94164376d502123ab2765deae1bbd15c1a1f6a
+|pm| pdla06537815b2fp1| pdla06537815b2fp2|/challenge gen9pdls4|gen9pdls4|||
+|pm| pdla06537815b2fp1| pdla06537815b2fp2|/log pdla06537815b2fp1 wants to battle!
+|pm| pdla06537815b2fp2| pdla06537815b2fp1|/challenge
+|updatesearch|{"searching":[],"games":null}
+|updatesearch|{"searching":[],"games":{"battle-gen9pdls4-25569":"[Gen 9] PDL S4 Battle"}}
+|updatesearch|{"searching":[],"games":{"battle-gen9pdls4-25569":"[Gen 9] PDL S4 Battle"}}
+>battle-gen9pdls4-25569
+|init|battle
+|title|pdla06537815b2fp1 vs. pdla06537815b2fp2
+|j|☆pdla06537815b2fp1
+>battle-gen9pdls4-25569
+|j|☆pdla06537815b2fp2
+|pm| pdla06537815b2fp2| pdla06537815b2fp1|/nonotify pdla06537815b2fp2 accepted the challenge, starting &laquo;<a href="/battle-gen9pdls4-25569">battle-gen9pdls4-25569</a>&raquo;
+>battle-gen9pdls4-25569
+|t:|1790436436
+|gametype|singles
+>battle-gen9pdls4-25569
+|player|p1|pdla06537815b2fp1|1|
+>battle-gen9pdls4-25569
+|player|p2|pdla06537815b2fp2|266|
+|gen|9
+|tier|[Gen 9] PDL S4
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Endless Battle Clause: Forcing endless battles is banned
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Clause: Evasion abilities, items, and moves are banned
+|rule|Evasion Abilities Clause: Evasion abilities are banned
+|rule|Evasion Items Clause: Evasion items are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|Sleep Moves Clause: Sleep-inducing moves are banned
+|rule|Z-Move Clause: Z-Moves are banned
+|rule|Dynamax Clause: You cannot dynamax
+|clearpoke
+|poke|p1|Drifblim, M|
+|poke|p1|Electivire, M|
+|poke|p1|Ambipom, M|
+|poke|p1|Bruxish, F|
+|poke|p1|Grimmsnarl, M|
+|poke|p1|Slowbro-Galar, F|
+|poke|p2|Uxie|
+|poke|p2|Tatsugiri, M|
+|poke|p2|Incineroar, M|
+|poke|p2|Drednaw, F|
+|poke|p2|Golem, F|
+|poke|p2|Magneton|
+|teampreview
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by pdla06537815b2fp2)
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 60 sec grace
+>battle-gen9pdls4-25569
+|html|<div class="message-error">You must be registered to chat in temporary rooms (like battles).</div>You may register in the <button name="openOptions"><i class="fa fa-cog"></i> Options</button> menu.
+>battle-gen9pdls4-25569
+|inactive|pdla06537815b2fp1 also wants the timer to be on.
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Electivire|Electivire, M|291/291
+|switch|p2a: Drednaw|Drednaw, F|100/100
+|turn|1
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|move|p1a: Electivire|Supercell Slam|p2a: Drednaw
+|-supereffective|p2a: Drednaw
+|-damage|p2a: Drednaw|0 fnt
+|faint|p2a: Drednaw
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|switch|p2a: Incineroar|Incineroar, M|100/100
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Electivire|atk|1
+|turn|2
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|switch|p1a: Grimmsnarl|Grimmsnarl, M|394/394
+|move|p2a: Incineroar|Knock Off|p1a: Grimmsnarl
+|-resisted|p1a: Grimmsnarl
+|-damage|p1a: Grimmsnarl|350/394
+|-enditem|p1a: Grimmsnarl|Leftovers|[from] move: Knock Off|[of] p2a: Incineroar
+|
+|upkeep
+|turn|3
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|move|p2a: Incineroar|Will-O-Wisp|p1a: Grimmsnarl
+|-status|p1a: Grimmsnarl|brn
+|move|p1a: Grimmsnarl|Spirit Break|p2a: Incineroar
+|-damage|p2a: Incineroar|86/100
+|-unboost|p2a: Incineroar|spa|1
+|
+|-damage|p1a: Grimmsnarl|326/394 brn|[from] brn
+|upkeep
+|turn|4
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436436
+|move|p1a: Grimmsnarl|Spirit Break|p2a: Incineroar
+|-damage|p2a: Incineroar|73/100
+|-unboost|p2a: Incineroar|spa|1
+|move|p2a: Incineroar|Parting Shot|p1a: Grimmsnarl
+|-unboost|p1a: Grimmsnarl|atk|1
+|-unboost|p1a: Grimmsnarl|spa|1
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p2a: Uxie|Uxie|100/100|[from] Parting Shot
+|
+|-damage|p1a: Grimmsnarl|302/394 brn|[from] brn
+|upkeep
+|turn|5
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p1a: Grimmsnarl|Parting Shot|p2a: Uxie
+|-unboost|p2a: Uxie|atk|1
+|-unboost|p2a: Uxie|spa|1
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p1a: Electivire|Electivire, M|291/291|[from] Parting Shot
+|move|p2a: Uxie|Stealth Rock|p1a: Electivire
+|-sidestart|p1: pdla06537815b2fp1|move: Stealth Rock
+|
+|upkeep
+|turn|6
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p1a: Electivire|Earthquake|p2a: Uxie
+|-immune|p2a: Uxie|[from] ability: Levitate
+|move|p2a: Uxie|U-turn|p1a: Electivire
+|-damage|p1a: Electivire|259/291
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p2a: Golem|Golem, F|100/100|[from] U-turn
+|
+|upkeep
+|turn|7
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p1a: Electivire|Earthquake|p2a: Golem
+|-supereffective|p2a: Golem
+|-damage|p2a: Golem|38/100
+|move|p2a: Golem|Earthquake|p1a: Electivire
+|-supereffective|p1a: Electivire
+|-damage|p1a: Electivire|0 fnt
+|faint|p1a: Electivire
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p1a: Bruxish|Bruxish, F|277/277
+|-damage|p1a: Bruxish|243/277|[from] Stealth Rock
+|turn|8
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p2a: Golem|Sucker Punch||[still]
+|cant|p1a: Bruxish|ability: Dazzling|Sucker Punch|[of] p2a: Golem
+|move|p1a: Bruxish|Wave Crash|p2a: Golem
+|-supereffective|p2a: Golem
+|-damage|p2a: Golem|0 fnt
+|faint|p2a: Golem
+|-damage|p1a: Bruxish|206/277|[from] Recoil
+|-damage|p1a: Bruxish|179/277|[from] item: Life Orb
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p2a: Magneton|Magneton|100/100
+|turn|9
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p1a: Bruxish|Wave Crash|p2a: Magneton
+|-damage|p2a: Magneton|49/100
+|-damage|p1a: Bruxish|127/277|[from] Recoil
+|-damage|p1a: Bruxish|100/277|[from] item: Life Orb
+|move|p2a: Magneton|Thunderbolt|p1a: Bruxish
+|-supereffective|p1a: Bruxish
+|-damage|p1a: Bruxish|0 fnt
+|faint|p1a: Bruxish
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|switch|p1a: Slowbro|Slowbro-Galar, F|394/394
+|-damage|p1a: Slowbro|345/394|[from] Stealth Rock
+|turn|10
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|156/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|353/394
+|
+|upkeep
+|turn|11
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|160/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|357/394
+|
+|upkeep
+|turn|12
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|155/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|352/394
+|
+|upkeep
+|turn|13
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436437
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|153/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|350/394
+|
+|upkeep
+|turn|14
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|143/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|340/394
+|
+|upkeep
+|turn|15
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|127/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|324/394
+|
+|upkeep
+|turn|16
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Magneton|Thunderbolt|p1a: Slowbro
+|-damage|p1a: Slowbro|116/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|313/394
+|
+|upkeep
+|turn|17
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Magneton|Flash Cannon|p1a: Slowbro
+|-damage|p1a: Slowbro|138/394
+|move|p1a: Slowbro|Slack Off|p1a: Slowbro
+|-heal|p1a: Slowbro|335/394
+|
+|upkeep
+|turn|18
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Magneton|Flash Cannon|p1a: Slowbro
+|-damage|p1a: Slowbro|155/394
+|move|p1a: Slowbro|Flamethrower|p2a: Magneton
+|-supereffective|p2a: Magneton
+|-damage|p2a: Magneton|9/100
+|
+|upkeep
+|turn|19
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p1a: Grimmsnarl|Grimmsnarl, M|302/394 brn
+|-damage|p1a: Grimmsnarl|253/394 brn|[from] Stealth Rock
+|move|p2a: Magneton|Flash Cannon|p1a: Grimmsnarl
+|-supereffective|p1a: Grimmsnarl
+|-damage|p1a: Grimmsnarl|0 fnt
+|faint|p1a: Grimmsnarl
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p1a: Ambipom|Ambipom, M|291/291
+|-damage|p1a: Ambipom|255/291|[from] Stealth Rock
+|turn|20
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p2a: Incineroar|Incineroar, M|73/100
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Ambipom|atk|1
+|move|p1a: Ambipom|Double-Edge|p2a: Incineroar
+|-damage|p2a: Incineroar|31/100
+|-damage|p1a: Ambipom|201/291|[from] Recoil
+|
+|upkeep
+|turn|21
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p2a: Uxie|Uxie|100/100
+|move|p1a: Ambipom|Double-Edge|p2a: Uxie
+|-damage|p2a: Uxie|74/100
+|-damage|p1a: Ambipom|170/291|[from] Recoil
+|
+|-heal|p2a: Uxie|80/100|[from] item: Leftovers
+|upkeep
+|turn|22
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p1a: Ambipom|Knock Off|p2a: Uxie
+|-supereffective|p2a: Uxie
+|-damage|p2a: Uxie|57/100
+|-enditem|p2a: Uxie|Leftovers|[from] move: Knock Off|[of] p1a: Ambipom
+|move|p2a: Uxie|Psychic Noise|p1a: Ambipom
+|-damage|p1a: Ambipom|73/291
+|-start|p1a: Ambipom|move: Heal Block
+|
+|upkeep
+|turn|23
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p1a: Ambipom|U-turn|p2a: Uxie
+|-supereffective|p2a: Uxie
+|-damage|p2a: Uxie|40/100
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p1a: Slowbro|Slowbro-Galar, F|286/394|[from] U-turn
+|-damage|p1a: Slowbro|237/394|[from] Stealth Rock
+|move|p2a: Uxie|Psychic Noise|p1a: Slowbro
+|-damage|p1a: Slowbro|150/394
+|-start|p1a: Slowbro|move: Heal Block
+|
+|upkeep
+|turn|24
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Uxie|U-turn|p1a: Slowbro
+|-damage|p1a: Slowbro|126/394
+|-damage|p2a: Uxie|23/100|[from] item: Rocky Helmet|[of] p1a: Slowbro
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p2a: Incineroar|Incineroar, M|31/100|[from] U-turn
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Slowbro|atk|1
+|move|p1a: Slowbro|Sludge Bomb|p2a: Incineroar
+|-damage|p2a: Incineroar|11/100
+|
+|-end|p1a: Slowbro|move: Heal Block
+|upkeep
+|turn|25
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|move|p2a: Incineroar|Parting Shot|p1a: Slowbro
+|-unboost|p1a: Slowbro|atk|1
+|-unboost|p1a: Slowbro|spa|1
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p2a: Magneton|Magneton|9/100|[from] Parting Shot
+|move|p1a: Slowbro|Flamethrower|p2a: Magneton
+|-supereffective|p2a: Magneton
+|-damage|p2a: Magneton|0 fnt
+|faint|p2a: Magneton
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436438
+|switch|p2a: Tatsugiri|Tatsugiri, M|100/100
+|turn|26
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|move|p2a: Tatsugiri|Surf|p1a: Slowbro
+|-damage|p1a: Slowbro|0 fnt
+|faint|p1a: Slowbro
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|switch|p1a: Ambipom|Ambipom, M|73/291
+|-damage|p1a: Ambipom|37/291|[from] Stealth Rock
+|turn|27
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|switch|p2a: Incineroar|Incineroar, M|11/100
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Ambipom|atk|1
+|move|p1a: Ambipom|Fake Out|p2a: Incineroar
+|-damage|p2a: Incineroar|0 fnt
+|faint|p2a: Incineroar
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|switch|p2a: Tatsugiri|Tatsugiri, M|100/100
+|turn|28
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|move|p1a: Ambipom|Knock Off|p2a: Tatsugiri
+|-damage|p2a: Tatsugiri|68/100
+|-enditem|p2a: Tatsugiri|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Ambipom
+|move|p2a: Tatsugiri|Surf|p1a: Ambipom
+|-damage|p1a: Ambipom|0 fnt
+|faint|p1a: Ambipom
+|
+|upkeep
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total | 5 sec grace
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|switch|p1a: Drifblim|Drifblim, M|504/504
+|-damage|p1a: Drifblim|378/504|[from] Stealth Rock
+|turn|29
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|move|p2a: Tatsugiri|Nasty Plot|p2a: Tatsugiri
+|-boost|p2a: Tatsugiri|spa|2
+|move|p1a: Drifblim|Strength Sap|p2a: Tatsugiri
+|-unboost|p2a: Tatsugiri|atk|1
+|-heal|p1a: Drifblim|472/504
+|
+|upkeep
+|turn|30
+>battle-gen9pdls4-25569
+>battle-gen9pdls4-25569
+|inactive|Time left: 300 sec this turn | 300 sec total
+>battle-gen9pdls4-25569
+|
+|t:|1790436439
+|move|p2a: Tatsugiri|Surf|p1a: Drifblim
+|-damage|p1a: Drifblim|0 fnt
+|faint|p1a: Drifblim
+|
+|win|pdla06537815b2fp2
+|updatesearch|{"searching":[],"games":null}
+>battle-gen9pdls4-25569
+|html|<div class="message-error">You must be registered to chat in temporary rooms (like battles).</div>You may register in the <button name="openOptions"><i class="fa fa-cog"></i> Options</button> menu.
+>battle-gen9pdls4-25569
+|l|☆pdla06537815b2fp2
+>battle-gen9pdls4-25569
+|deinit

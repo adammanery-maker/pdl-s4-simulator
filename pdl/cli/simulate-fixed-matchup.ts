@@ -5,7 +5,7 @@ import { createHash } from 'crypto';
 import { SHOWDOWN_COMMIT } from '../simulate';
 import { createTrialArtifact } from '../batch/artifacts';
 import { CANONICAL_RUNTIME } from '../batch/runtime';
-import { buildTrialEvidence, type AuditStatus } from '../batch/evidence';
+import { buildTrialEvidence, type AuditStatus, type BeliefTruthComparison } from '../batch/evidence';
 import { runFoulPlayTrial } from '../batch/run-trial';
 import type { TrialResult } from '../batch/types';
 import { loadFixedScenario, privateBeliefFor, type FixedBuild, type FixedScenarioTeam } from '../fixed/scenario';
@@ -18,6 +18,7 @@ export interface FixedMatchupOptions {
 	readonly timeoutMs: number;
 	readonly foulRoot: string;
 	readonly outputDirectory: string;
+	readonly beliefEngine: 'legacy' | 'posterior-shadow' | 'posterior';
 }
 
 function positiveInteger(value: string, name: string): number {
@@ -41,6 +42,8 @@ export function parseFixedMatchupArguments(argv: readonly string[]): FixedMatchu
 		if (!value) throw new Error(`Missing required --${name}.`);
 		return value;
 	};
+	const beliefEngine = values.get('belief-engine') || 'legacy';
+	if (!['legacy', 'posterior-shadow', 'posterior'].includes(beliefEngine)) throw new Error('--belief-engine must be legacy, posterior-shadow, or posterior.');
 	return {
 		scenarioPath: required('scenario'),
 		repetitions: positiveInteger(required('repetitions'), 'repetitions'),
@@ -49,6 +52,7 @@ export function parseFixedMatchupArguments(argv: readonly string[]): FixedMatchu
 		timeoutMs: positiveInteger(values.get('timeout-ms') || '900000', 'timeout-ms'),
 		foulRoot: required('foul-root'),
 		outputDirectory: required('output'),
+		beliefEngine: beliefEngine as FixedMatchupOptions['beliefEngine'],
 	};
 }
 
@@ -68,6 +72,26 @@ export interface FixedTrialRecord {
 	readonly result: TrialResult;
 	readonly artifact: string;
 	readonly auditStatus: AuditStatus;
+	readonly beliefTruthComparison: BeliefTruthComparison | null;
+}
+
+function summarizePosteriorShadow(records: readonly FixedTrialRecord[]) {
+	const comparisons = records.map(record => record.beliefTruthComparison).filter((value): value is BeliefTruthComparison => value !== null);
+	const comparable = comparisons.reduce((sum, value) => sum + value.comparableTraceCount, 0);
+	const weighted = (field: keyof Pick<BeliefTruthComparison, 'meanTruthProbability' | 'meanMaximumProbability' | 'meanBrierScore'>) => comparable
+		? comparisons.reduce((sum, value) => sum + value[field] * value.comparableTraceCount, 0) / comparable : 0;
+	return {
+		trialsWithTraceComparison: comparisons.length,
+		traceCount: comparisons.reduce((sum, value) => sum + value.traceCount, 0),
+		comparableTraceCount: comparable,
+		incorrectEliminations: comparisons.reduce((sum, value) => sum + value.incorrectEliminations, 0),
+		overconfidentWrongTraces: comparisons.reduce((sum, value) => sum + value.overconfidentWrongTraces, 0),
+		meanTruthProbability: weighted('meanTruthProbability'),
+		meanMaximumProbability: weighted('meanMaximumProbability'),
+		meanBrierScore: weighted('meanBrierScore'),
+		meanConvergence: comparisons.length
+			? comparisons.reduce((sum, value) => sum + value.meanConvergence, 0) / comparisons.length : 0,
+	};
 }
 
 export function summarizeFixedRecords(records: readonly FixedTrialRecord[], teamIds: readonly string[]) {
@@ -137,9 +161,13 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 					p1Belief: privateBeliefFor(scenario, p1Team.teamId, p1Build),
 					p2Belief: privateBeliefFor(scenario, p2Team.teamId, p2Build),
 				});
-				const result = await runFoulPlayTrial({ simulatorRoot, foulPlayRoot, artifact, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, timeoutMs: options.timeoutMs });
+				const result = await runFoulPlayTrial({ simulatorRoot, foulPlayRoot, artifact, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, beliefEngine: options.beliefEngine, timeoutMs: options.timeoutMs });
 				const evidence = buildTrialEvidence(artifact, result);
-				const record = { pairId, side, matchupId, repetition: repetition + 1, result, artifact: artifact.directory, auditStatus: evidence.auditStatus };
+				const record = {
+					pairId, side, matchupId, repetition: repetition + 1, result,
+					artifact: artifact.directory, auditStatus: evidence.auditStatus,
+					beliefTruthComparison: evidence.belief.truthComparison,
+				};
 				records.push(record);
 				appendFileSync(`${outputDirectory}/trials.jsonl`, `${JSON.stringify(record)}\n`);
 				process.stdout.write(`[${serial}/${firstTeam.builds.length * secondTeam.builds.length * options.repetitions}] ${matchupId} ${result.status}${result.winnerTeamId ? ` — ${result.winnerTeamId} won` : ''} — audit ${record.auditStatus}\n`);
@@ -147,6 +175,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 		}
 	}
 	const aggregate = summarizeFixedRecords(records, scenario.teams.map(team => team.teamId));
+	const posteriorShadow = summarizePosteriorShadow(records);
 	const summary = {
 		schemaVersion: 1, runtime: CANONICAL_RUNTIME, scenarioId: scenario.id, requestedTrials: records.length, statusCounts: aggregate.statusCounts,
 		requestedPairs: aggregate.pairs.length, completedPairs: aggregate.completedPairIds.size, incompletePairs: aggregate.incompletePairs,
@@ -154,6 +183,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 		violatingTrials: aggregate.violatingTrials, inconclusiveTrials: aggregate.inconclusiveTrials,
 		empiricalMonteCarlo: { applicable: aggregate.completedPairIds.size > 0, independentRandomness: 'Each battle launches fresh Showdown and Foul Play processes; no deterministic battle seed is reused.', inclusionRule: 'Only clean terminal forward/reverse pairs are aggregated.' },
 		searchValues: 'Native MCTS state evaluations and policy support; not match-win probabilities.',
+		posteriorShadow,
 	};
 	writeFileSync(`${outputDirectory}/summary.json`, `${JSON.stringify(summary, null, 2)}\n`);
 	if (aggregate.incompletePairs.length) throw new Error(`${aggregate.incompletePairs.length} requested pair(s) failed, were incomplete, or had non-clean evidence. Inspect summary.json.`);

@@ -101,6 +101,15 @@ describe('PDL local simulation process runner', () => {
 		assert.equal(readFileSync(path, 'utf8'), 'first-decision\nterminal-result\n');
 	});
 
+	it('keeps an early runtime contract verifiable when the in-memory tail is truncated', () => {
+		const contract = `PDL_RUNTIME_CONTRACT ${JSON.stringify(CANONICAL_RUNTIME)}\n`;
+		const complete = `${contract}${'verbose-search\n'.repeat(100)}`;
+		const tail = appendProcessOutput(contract, 'verbose-search\n'.repeat(100), 32);
+
+		assert.doesNotMatch(tail, /PDL_RUNTIME_CONTRACT/);
+		assert.deepEqual(parseRuntimeContractFromLog(complete), CANONICAL_RUNTIME);
+	});
+
 	it('passes only local PDL belief and private team inputs to each Foul agent', () => {
 		const args = foulPlayArguments({
 			websocketUri: 'ws://127.0.0.1:8123/showdown/websocket',
@@ -121,6 +130,7 @@ describe('PDL local simulation process runner', () => {
 			'--pdl-team-id', 'adam', '--belief-zero-policy', 'restore', '--team-name', '/tmp/p1-team.txt',
 			'--protocol-log-path', '/tmp/p1.protocol', '--local-no-security', '--offline-runtime',
 			'--search-engine', 'mcts', '--action-policy', 'argmax',
+			'--belief-engine', 'legacy',
 			'--search-time-ms', '100', '--search-parallelism', '2', '--run-count', '1', '--log-level', 'INFO',
 			'--user-to-challenge', 'PDL Sim pair-0001 p2',
 		]);

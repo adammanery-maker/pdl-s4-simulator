@@ -87,7 +87,9 @@ function parseTeam(value: unknown, label: string): FixedScenarioTeam {
 	const raw = object(value, label);
 	const draftedTeraTypes = stringArray(raw.draftedTeraTypes, `${label}.draftedTeraTypes`);
 	const teraCaptains = stringArray(raw.teraCaptains, `${label}.teraCaptains`);
-	if (teraCaptains.length !== 2) throw new Error(`${label}.teraCaptains must declare exactly two distinct captains.`);
+	if (!teraCaptains.length || new Set(teraCaptains).size !== teraCaptains.length) {
+		throw new Error(`${label}.teraCaptains must declare one or more distinct captains.`);
+	}
 	
 	if (!Array.isArray(raw.builds) || !raw.builds.length) throw new Error(`${label}.builds must be non-empty.`);
 	const builds = raw.builds.map((build, index) => parseBuild(build, teraCaptains, draftedTeraTypes, `${label}.builds[${index}]`));

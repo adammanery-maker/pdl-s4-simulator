@@ -7,7 +7,7 @@ const { mkdtempSync, readFileSync, writeFileSync } = require('node:fs');
 const { tmpdir } = require('node:os');
 const { join } = require('node:path');
 const { createTrialArtifact } = require('../../../dist/pdl/batch/artifacts');
-const { buildTrialEvidence, parseDecisionEvidence, publicProtocolFromPrivateCapture } = require('../../../dist/pdl/batch/evidence');
+const { buildTrialEvidence, parseBeliefTrace, parseDecisionEvidence, publicProtocolFromPrivateCapture } = require('../../../dist/pdl/batch/evidence');
 const { foulBotName } = require('../../../dist/pdl/batch/run-trial');
 
 const belief = { schemaVersion: 1, snapshot: { id: 'x', source: 'x', hash: 'x' }, teams: {}, sets: {} };
@@ -19,6 +19,39 @@ describe('PDL fixed-trial evidence', () => {
 		assert.deepEqual(parseDecisionEvidence(log), [{
 			aggregatePolicySupport: { flamethrower: 1 }, selected: 'flamethrower', turn: 7,
 		}]);
+	});
+
+	it('parses posterior traces without treating malformed lines as evidence', () => {
+		const log = 'INFO PDL_BELIEF_TRACE {"species":"tatsugiri","turn":3,"weights":{"x":1}}\nPDL_BELIEF_TRACE not-json\n';
+		assert.deepEqual(parseBeliefTrace(log), [{ species: 'tatsugiri', turn: 3, weights: { x: 1 } }]);
+	});
+
+	it('compares shadow traces with truth only after the private audit exists', () => {
+		const outputDirectory = mkdtempSync(join(tmpdir(), 'pdl-shadow-audit-'));
+		const exported = `Tatsugiri @ Choice Specs
+Ability: Commander
+Tera Type: Grass
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Draco Meteor
+- Muddy Water
+- Dragon Pulse
+- Icy Wind
+`;
+		const artifact = createTrialArtifact({ outputDirectory, trialId: 'shadow-0001', belief, manifest: {
+			schemaVersion: 1, pairId: 'shadow', side: 'forward',
+			p1: { teamId: 'adam', packed: 'a', exported, teraCaptains: [] },
+			p2: { teamId: 'steve', packed: 's', exported, teraCaptains: [] },
+		} });
+		const trueKey = 'grass|commander|choicespecs|timid|0,0,0,252,4,252|dracometeor|muddywater|dragonpulse|icywind';
+		writeFileSync(artifact.p1LogPath, `PDL_BELIEF_TRACE ${JSON.stringify({ turn: 1, species: 'tatsugiri', weights: { [trueKey]: 0.75, other: 0.25 } })}\n`);
+		writeFileSync(artifact.privateGroundTruthAuditPath, JSON.stringify({ p1: artifact.manifest.p1, p2: artifact.manifest.p2 }));
+
+		const audit = buildTrialEvidence(artifact, { status: 'failed', winnerTeamId: null, failureReason: 'fixture' });
+
+		assert.equal(audit.belief.truthComparison.comparableTraceCount, 1);
+		assert.equal(audit.belief.truthComparison.incorrectEliminations, 0);
+		assert.equal(audit.belief.truthComparison.meanTruthProbability, 0.75);
 	});
 
 	it('retains separate private captures and audits captain type plus team-wide use', () => {

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "run": "hardened-baseline-18-diagnostic-r1",
+    "beliefEngine": "legacy",
+    "searchMsPerWorld": 25,
+    "beliefWorldCount": 1,
+    "actionPolicy": "argmax"
+  },
+  "fixtures": [
+    {
+      "id": "rock-spin-loop",
+      "protocol": "rock-spin-loop.protocol",
+      "sourceTrial": "0001-adam-sun-vs-steve-1-forward",
+      "window": { "firstTurn": 15, "lastTurn": 17 },
+      "observedPattern": "Uxie selected Stealth Rock while Avalugg-Hisui selected Rapid Spin on three consecutive turns.",
+      "purpose": "Evaluate whether search and evaluation recognize an immediately reversible hazard exchange. This fixture does not prescribe an action."
+    },
+    {
+      "id": "recovery-loop",
+      "protocol": "recovery-loop.protocol",
+      "sourceTrial": "0016-adam-balance-vs-steve-2-reverse",
+      "window": { "firstTurn": 10, "lastTurn": 17 },
+      "observedPattern": "Magneton repeatedly selected Thunderbolt into Slowbro-Galar, which repeatedly selected Slack Off for eight turns before the attacker changed moves.",
+      "purpose": "Evaluate progress, PP, alternatives, and long-horizon resource handling. This fixture does not prescribe an action."
+    }
+  ]
+}

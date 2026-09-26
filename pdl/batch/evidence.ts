@@ -2,6 +2,8 @@ import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { foulBotName } from './run-trial';
 import type { TrialArtifact, TrialResult } from './types';
 import { parseBattleProtocol } from '../analysis/protocol-events';
+import { toID } from '../../sim/dex-data';
+import { Teams } from '../../sim/teams';
 
 export interface TeraAuditViolation {
 	readonly teamId: string;
@@ -19,6 +21,24 @@ export interface TrialEvidence {
 		readonly events: readonly unknown[];
 		readonly violations: readonly TeraAuditViolation[];
 	};
+	readonly belief: {
+		readonly p1: readonly unknown[];
+		readonly p2: readonly unknown[];
+		readonly truthComparison: BeliefTruthComparison | null;
+	};
+}
+
+export interface BeliefTruthComparison {
+	readonly traceCount: number;
+	readonly comparableTraceCount: number;
+	readonly incorrectEliminations: number;
+	readonly meanTruthProbability: number;
+	readonly meanMaximumProbability: number;
+	readonly meanBrierScore: number;
+	readonly overconfidentWrongTraces: number;
+	readonly initialMeanTruthProbability: number;
+	readonly terminalMeanTruthProbability: number;
+	readonly meanConvergence: number;
 }
 
 function read(path: string): string {
@@ -41,6 +61,85 @@ export function parseDecisionEvidence(log: string): readonly unknown[] {
 		try { evidence.push(JSON.parse(line.slice(index + marker.length))); } catch { /* preserved in raw log */ }
 	}
 	return evidence;
+}
+
+/** Parses posterior-shadow traces emitted from the exact public protocol state. */
+export function parseBeliefTrace(log: string): readonly unknown[] {
+	const traces: unknown[] = [];
+	for (const line of log.split(/\r?\n/)) {
+		const marker = 'PDL_BELIEF_TRACE ';
+		const index = line.indexOf(marker);
+		if (index < 0) continue;
+		try { traces.push(JSON.parse(line.slice(index + marker.length))); } catch { /* retained in raw log */ }
+	}
+	return traces;
+}
+
+function object(value: unknown): Record<string, unknown> | null {
+	return value && typeof value === 'object' && !Array.isArray(value) ? value as Record<string, unknown> : null;
+}
+
+function truthCandidateKeys(exported: string): Map<string, string> {
+	const keys = new Map<string, string>();
+	for (const set of Teams.import(exported) || []) {
+		const evs = [set.evs.hp, set.evs.atk, set.evs.def, set.evs.spa, set.evs.spd, set.evs.spe];
+		const tera = toID(set.teraType || 'typeless');
+		keys.set(toID(set.species), [tera === 'typeless' ? '' : tera, toID(set.ability || 'none'), toID(set.item || 'none'), toID(set.nature || 'serious'), evs.join(','), ...set.moves.map(toID)].join('|'));
+	}
+	return keys;
+}
+
+function compareBeliefTraces(
+	p1Traces: readonly unknown[], p2Traces: readonly unknown[], privateAuditPath: string,
+): BeliefTruthComparison | null {
+	if (!existsSync(privateAuditPath)) return null;
+	const privateAudit = object(JSON.parse(read(privateAuditPath)));
+	const p1 = object(privateAudit?.p1);
+	const p2 = object(privateAudit?.p2);
+	if (typeof p1?.exported !== 'string' || typeof p2?.exported !== 'string') return null;
+	const series = new Map<string, number[]>();
+	const measurements: number[] = [];
+	const maxima: number[] = [];
+	const brierScores: number[] = [];
+	let incorrectEliminations = 0;
+	let overconfidentWrongTraces = 0;
+	const compare = (side: 'p1' | 'p2', traces: readonly unknown[], truth: Map<string, string>) => {
+		for (const rawTrace of traces) {
+			const trace = object(rawTrace);
+			if (!trace || typeof trace.species !== 'string') continue;
+			const expected = truth.get(toID(trace.species));
+			const weights = object(trace.weights);
+			if (!expected || !weights) continue;
+			const probabilities = Object.values(weights).filter((value): value is number => typeof value === 'number' && Number.isFinite(value));
+			if (!probabilities.length) continue;
+			const truthProbability = typeof weights[expected] === 'number' ? weights[expected] as number : 0;
+			measurements.push(truthProbability);
+			const maximum = Math.max(...probabilities);
+			maxima.push(maximum);
+			brierScores.push(1 - (2 * truthProbability) + probabilities.reduce((sum, value) => sum + (value * value), 0));
+			if (truthProbability === 0) incorrectEliminations++;
+			if (maximum >= 0.9 && truthProbability < 0.1) overconfidentWrongTraces++;
+			const key = `${side}:${toID(trace.species)}`;
+			series.set(key, [...(series.get(key) || []), truthProbability]);
+		}
+	};
+	compare('p1', p1Traces, truthCandidateKeys(p2.exported));
+	compare('p2', p2Traces, truthCandidateKeys(p1.exported));
+	const average = (values: readonly number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
+	const initial = [...series.values()].map(values => values[0]);
+	const terminal = [...series.values()].map(values => values[values.length - 1] || 0);
+	return {
+		traceCount: p1Traces.length + p2Traces.length,
+		comparableTraceCount: measurements.length,
+		incorrectEliminations,
+		meanTruthProbability: average(measurements),
+		meanMaximumProbability: average(maxima),
+		meanBrierScore: average(brierScores),
+		overconfidentWrongTraces,
+		initialMeanTruthProbability: average(initial),
+		terminalMeanTruthProbability: average(terminal),
+		meanConvergence: average(terminal) - average(initial),
+	};
 }
 
 function captureCompleteness(protocol: string) {
@@ -90,14 +189,21 @@ export function buildTrialEvidence(artifact: TrialArtifact, result: TrialResult)
 	const violations: TeraAuditViolation[] = [];
 	for (const event of parsed.tera) {
 		const side = sides.get(event.teamId);
-		const captains = (side?.teraCaptains || []).map(toId);
+		const rawCaptains: unknown = side?.teraCaptains;
+		const captainObject = object(rawCaptains);
+		const captainValues = Array.isArray(rawCaptains)
+			? rawCaptains : captainObject ? Object.keys(captainObject) : [];
+		const captains = captainValues.map(toId);
 		const speciesId = toId(event.species);
+		const expectedType = captainObject && typeof captainObject[speciesId] === 'string'
+			? toId(captainObject[speciesId] as string) : null;
 		const isCaptain = captains.includes(speciesId)
 			|| (speciesId === 'avalugg' && captains.includes('avalugghisui'))
 			|| (speciesId === 'slowbro' && captains.includes('slowbrogalar'));
 		const count = (teraCount.get(event.teamId) || 0) + 1;
 		teraCount.set(event.teamId, count);
 		if (!isCaptain) violations.push({ ...event, reason: 'non-captain' });
+		if (expectedType && expectedType !== toId(event.type)) violations.push({ ...event, reason: 'mismatched-type' });
 		if (count > 1) violations.push({ ...event, reason: 'second-tera' });
 	}
 	const eventKey = (event: { teamId: string; species: string; type: string }) => `${event.teamId}:${event.species}:${event.type}`;
@@ -117,6 +223,7 @@ export function buildTrialEvidence(artifact: TrialArtifact, result: TrialResult)
 		auditStatus = 'inconclusive';
 	}
 
+	const beliefTraces = { p1: parseBeliefTrace(read(artifact.p1LogPath)), p2: parseBeliefTrace(read(artifact.p2LogPath)) };
 	const evidence = {
 		schemaVersion: 1,
 		trialId: artifact.trialId,
@@ -131,6 +238,7 @@ export function buildTrialEvidence(artifact: TrialArtifact, result: TrialResult)
 		},
 		protocol: { completeness, streamsAgree, resultCoherent, eventCounts: { p1Moves: parsed.moves.length, p2Moves: p2Parsed.moves.length, tera: parsed.tera.length } },
 		decisions: { p1: parseDecisionEvidence(read(artifact.p1LogPath)), p2: parseDecisionEvidence(read(artifact.p2LogPath)) },
+		belief: { ...beliefTraces, truthComparison: compareBeliefTraces(beliefTraces.p1, beliefTraces.p2, artifact.privateGroundTruthAuditPath) },
 		tera: { events: parsed.tera, violations },
 		privateCaptureSizes: { p1Bytes: Buffer.byteLength(p1Protocol), p2Bytes: Buffer.byteLength(p2Protocol) },
 	};

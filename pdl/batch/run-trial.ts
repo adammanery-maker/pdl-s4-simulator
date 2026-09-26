@@ -1,6 +1,6 @@
 import { execFileSync, spawn, type ChildProcessWithoutNullStreams } from 'child_process';
 import { createHash } from 'crypto';
-import { appendFileSync, existsSync, readFileSync, realpathSync, writeFileSync } from 'fs';
+import { appendFileSync, closeSync, existsSync, openSync, readFileSync, realpathSync, writeFileSync, writeSync } from 'fs';
 import { createServer, connect } from 'net';
 import { dirname, join, resolve } from 'path';
 import { finalizeTrialArtifact, writePrivateGroundTruthAudit } from './artifacts';
@@ -24,6 +24,7 @@ interface FoulPlayArgumentsInput {
 	readonly protocolPath: string;
 	readonly searchTimeMs: number;
 	readonly beliefSamples: number;
+	readonly beliefEngine?: 'legacy' | 'posterior-shadow' | 'posterior';
 }
 
 interface BotIdentity {
@@ -43,6 +44,7 @@ interface ProcessOutput {
 	readonly completion: Promise<{ readonly exitCode: number | null; readonly signal: NodeJS.Signals | null }>;
 	stdout: string;
 	stderr: string;
+	closeLog(): void;
 }
 
 const MODEL_CREDENTIALS = new Set([
@@ -155,6 +157,7 @@ export interface RunFoulPlayTrialInput {
 	readonly artifact: TrialArtifact;
 	readonly searchTimeMs: number;
 	readonly beliefSamples: number;
+	readonly beliefEngine?: 'legacy' | 'posterior-shadow' | 'posterior';
 	readonly timeoutMs: number;
 	readonly port?: number;
 }
@@ -172,6 +175,7 @@ export function foulPlayArguments(input: FoulPlayArgumentsInput): string[] {
 		'--pdl-team-id', input.teamId, '--belief-zero-policy', 'restore', '--team-name', input.teamPath,
 		'--protocol-log-path', input.protocolPath, '--local-no-security',
 		'--offline-runtime', '--search-engine', 'mcts', '--action-policy', 'argmax',
+		'--belief-engine', input.beliefEngine || 'legacy',
 		'--search-time-ms', String(input.searchTimeMs), '--search-parallelism', String(input.beliefSamples),
 		'--run-count', '1', '--log-level', 'INFO',
 	];
@@ -210,28 +214,35 @@ export function spawnCollectedWithCompleteLog(
 	env: NodeJS.ProcessEnv = offlineRuntimeEnvironment(),
 ): ProcessOutput {
 	const child = spawn(command, args, { cwd, stdio: 'pipe', detached: process.platform !== 'win32', env });
-	if (logPath) writeFileSync(logPath, '', 'utf8');
+	const logFd = logPath ? openSync(logPath, 'w') : null;
+	let logClosed = false;
+	const closeLog = () => {
+		if (logFd === null || logClosed) return;
+		closeSync(logFd);
+		logClosed = true;
+	};
 	let stdout = '';
 	let stderr = '';
 	child.stdout.setEncoding('utf8');
 	child.stderr.setEncoding('utf8');
 	child.stdout.on('data', chunk => {
 		stdout = appendProcessOutput(stdout, chunk);
-		if (logPath) appendCompleteProcessLog(logPath, chunk);
+		if (logFd !== null) writeSync(logFd, chunk, undefined, 'utf8');
 	});
 	child.stderr.on('data', chunk => {
 		stderr = appendProcessOutput(stderr, chunk);
-		if (logPath) appendCompleteProcessLog(logPath, chunk);
+		if (logFd !== null) writeSync(logFd, chunk, undefined, 'utf8');
 	});
 	const completion = new Promise<{ exitCode: number | null; signal: NodeJS.Signals | null }>(resolve => {
-		child.once('error', () => resolve({ exitCode: null, signal: null }));
-		child.once('close', (exitCode, signal) => resolve({ exitCode, signal }));
+		child.once('error', () => { closeLog(); resolve({ exitCode: null, signal: null }); });
+		child.once('close', (exitCode, signal) => { closeLog(); resolve({ exitCode, signal }); });
 	});
 	return {
 		child,
 		completion,
 		get stdout() { return stdout; },
 		get stderr() { return stderr; },
+		closeLog,
 	};
 }
 
@@ -407,7 +418,7 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			websocketUri, username: p2BotName, mode: 'accept_challenge',
 			teamId: input.artifact.manifest.p2.teamId, teamPath: input.artifact.p2TeamPath,
 			beliefPath: input.artifact.p2BeliefPath, protocolPath: input.artifact.p2ProtocolPath,
-			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples,
+			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine,
 		}));
 		p2 = spawnCollectedWithCompleteLog(p2Invocation.command, p2Invocation.args, input.foulPlayRoot, input.artifact.p2LogPath, {
 			...offlineRuntimeEnvironment(), TMPDIR: input.artifact.p2PrivateDirectory,
@@ -418,7 +429,7 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			websocketUri, username: p1BotName, mode: 'challenge_user', challengeUser: p2BotName,
 			teamId: input.artifact.manifest.p1.teamId, teamPath: input.artifact.p1TeamPath,
 			beliefPath: input.artifact.p1BeliefPath, protocolPath: input.artifact.p1ProtocolPath,
-			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples,
+			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine,
 		}));
 		p1 = spawnCollectedWithCompleteLog(p1Invocation.command, p1Invocation.args, input.foulPlayRoot, input.artifact.p1LogPath, {
 			...offlineRuntimeEnvironment(), TMPDIR: input.artifact.p1PrivateDirectory,
@@ -435,11 +446,16 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			}
 		} else {
 			// A child cannot self-certify by label alone: parse and validate what each
-			// running bot resolved from its actual command-line configuration.
-			parseRuntimeContractFromLog(p1.stdout);
-			parseRuntimeContractFromLog(p2.stdout);
+			// running bot resolved from its actual command-line configuration. The
+			// bounded in-memory tail deliberately drops early startup lines during
+			// verbose MCTS runs, so attestations and winner claims come from the
+			// complete parent-owned process logs after both clients exit.
+			const p1CompleteLog = readFileSync(input.artifact.p1LogPath, 'utf8');
+			const p2CompleteLog = readFileSync(input.artifact.p2LogPath, 'utf8');
+			parseRuntimeContractFromLog(p1CompleteLog);
+			parseRuntimeContractFromLog(p2CompleteLog);
 			const winnerTeamId = determineWinnerTeamId({
-				p1Log: p1.stdout, p2Log: p2.stdout,
+				p1Log: p1CompleteLog, p2Log: p2CompleteLog,
 				p1: { botName: p1BotName, teamId: input.artifact.manifest.p1.teamId },
 				p2: { botName: p2BotName, teamId: input.artifact.manifest.p2.teamId },
 			});
