@@ -80,6 +80,37 @@ uses damage to narrow EV, item, ability, or Tera beliefs, either:
 2. explicitly place an authoritative Showdown-compatible calculator behind
    the inference boundary, with conformance tests against Showdown.
 
-The report is intentionally a gate rather than a silent fallback. Other
-belief evidence may be designed independently, but no change may treat the
-current max-normal/critical result as an exact damage likelihood.
+Task 1B has completed option 2. The report remains a gate for poke-engine:
+no change may treat its max-normal/critical result as an exact likelihood.
+
+## Exact damage likelihoods for inference
+
+`pdl/inference/showdown-damage-likelihood.ts` is an isolated inference source,
+not a replacement for the native search transition engine. For a fully
+explicit public battle state and a caller-supplied belief hypothesis, it runs
+the vendored local Showdown executor once for each Gen 9 random factor from 85
+through 100. It uses Showdown's own `Battle#randomizer` integer operation, so
+duplicate final values retain their real multiplicities instead of being
+derived from maximum damage.
+
+The calculator accepts species, level, IVs, EVs, natures, moves, items,
+abilities, Tera, weather, terrain, status, boosts, and screens. Inputs must be
+public knowledge or values from the selected belief hypothesis. It accepts
+neither a live Foul Play battle object nor a submitted opponent team. Foul Play
+uses an explicit JSON stdin/stdout process boundary to invoke it.
+
+`calculations/mechanics-conformance/damage-likelihood.json` records complete
+factor-to-damage mappings, unique values, multiplicities, critical state,
+source revision, and typed immunity results for ordinary, Tera, weather,
+terrain, burn, screens, critical, stat-stage, Choice Specs, Life Orb, Assault
+Vest, and Volt Absorb fixtures. Its `EXACT` classification means the result is
+directly enumerated by local Showdown; it does **not** change the native
+probe's `KNOWN_APPROXIMATION` classification.
+
+Exact-HP observations sum multiplicities for the observed integer loss.
+Percentage-only observations enumerate every integer HP state consistent with
+Showdown's Gen 7+ `ceil(100 * hp / maxhp)` shared display, including its
+damaged-100% → 99% special case, and then sum compatible outcomes. Immunities
+are typed as `IMMUNE` with a source such as `ability: Volt Absorb`; no numeric
+damage likelihood is supplied for them. Calculator failures are typed as
+`CALCULATION_ERROR` and must fail closed.

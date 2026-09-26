@@ -7,6 +7,7 @@ const { mkdtempSync, readdirSync, readFileSync } = require('node:fs');
 const { tmpdir } = require('node:os');
 const { join } = require('node:path');
 const { runMechanicsConformance, writeMechanicsConformanceReport, REQUIRED_MECHANICS, COMPARISON_CLASSIFICATIONS } = require('../../../dist/pdl/conformance/showdown-fixture');
+const { runDamageLikelihoodConformance } = require('../../../dist/pdl/conformance/damage-likelihood-fixture');
 
 describe('PDL Showdown ↔ poke-engine mechanics conformance', () => {
 	it('records every required mechanic with an auditable public comparison', async function () {
@@ -74,5 +75,15 @@ describe('PDL Showdown ↔ poke-engine mechanics conformance', () => {
 
 		assert.notEqual(statStages.comparison.classification, 'MECHANICS_MISMATCH');
 		assert.equal(statStages.showdown.targetMaxHp, 714);
+	});
+
+	it('records exact local-Showdown likelihood distributions separately from poke-engine approximations', async function () {
+		this.timeout(30000);
+		const report = await runDamageLikelihoodConformance();
+
+		assert.equal(report.mechanicsSource, 'pokemon-showdown-local');
+		assert.equal(report.cases.every(result => result.classification === 'EXACT' || result.classification === 'IMMUNE'), true);
+		assert.equal(report.cases.some(result => result.id === 'terrain'), true);
+		assert.equal(report.cases.every(result => result.outcomeKind === 'DAMAGE' ? result.multiplicity === 16 : true), true);
 	});
 });

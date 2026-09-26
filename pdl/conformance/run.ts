@@ -1,9 +1,13 @@
 import { resolve } from 'node:path';
 import { writeMechanicsConformanceReport } from './showdown-fixture';
+import { writeDamageLikelihoodConformance } from './damage-likelihood-fixture';
 
 async function main() {
 	const outputDirectory = resolve(process.argv[2] || 'calculations/mechanics-conformance');
-	const paths = await writeMechanicsConformanceReport(outputDirectory);
+	const paths = [
+		...(await writeMechanicsConformanceReport(outputDirectory)),
+		await writeDamageLikelihoodConformance(outputDirectory),
+	];
 	process.stdout.write(`${JSON.stringify({ outputDirectory, reports: paths.length })}\n`);
 }
 
