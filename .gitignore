@@ -48,6 +48,7 @@ tmp/**/*
 .installed.cfg
 
 downloads
+calculations/mechanics-conformance/
 dist
 
 # egg related
