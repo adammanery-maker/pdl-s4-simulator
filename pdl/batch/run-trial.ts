@@ -5,7 +5,7 @@ import { createServer, connect } from 'net';
 import { dirname, join, resolve } from 'path';
 import { finalizeTrialArtifact, writePrivateGroundTruthAudit } from './artifacts';
 import type { TrialArtifact, TrialResult } from './types';
-import { CANONICAL_ENGINE_SOURCE_SHA256, CANONICAL_EVALUATOR_SHA256, CANONICAL_RUNTIME_ID } from './runtime';
+import { CANONICAL_ENGINE_SOURCE_SHA256, CANONICAL_EVALUATOR_ID, CANONICAL_EVALUATOR_SHA256, CANONICAL_RUNTIME_ID } from './runtime';
 
 const MAX_CAPTURED_PROCESS_OUTPUT = 1_000_000;
 
@@ -78,7 +78,7 @@ export function assertCanonicalFoulPlayRuntime(value: unknown): void {
 		|| runtime.resolvedConfiguration?.searchEngine !== 'mcts'
 		|| runtime.resolvedConfiguration?.actionPolicy !== 'argmax'
 		|| runtime.evaluator?.engine !== 'poke-engine'
-		|| runtime.evaluator?.version !== '0.0.48' || runtime.evaluator?.id !== 'genx-static-v0.0.48'
+		|| runtime.evaluator?.version !== '0.0.48' || runtime.evaluator?.id !== CANONICAL_EVALUATOR_ID
 		|| runtime.evaluator?.sourceSha256 !== CANONICAL_EVALUATOR_SHA256
 		|| runtime.evaluator?.engineSourceSha256 !== CANONICAL_ENGINE_SOURCE_SHA256
 		|| runtime.evaluator?.feature !== 'terastallization') {

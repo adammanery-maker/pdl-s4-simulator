@@ -93,14 +93,14 @@ async function main() {
 		for (const log of [p1Log, p2Log]) {
 			const runtime = logJson(log, 'PDL_RUNTIME_CONTRACT');
 			assert.equal(runtime.id, CANONICAL_RUNTIME_ID);
-			assert.equal(runtime.evaluator.id, 'genx-static-v0.0.48');
+			assert.equal(runtime.evaluator.id, 'genx-static-v0.0.48-boost-relevance-v1');
 			assert.match(log, /"hostedInferenceCalls":0/);
 			const rootEvaluation = logJson(log, 'PDL_ROOT_EVALUATIONS');
-			assert.equal(rootEvaluation.evaluator, 'genx-static-v0.0.48');
+			assert.equal(rootEvaluation.evaluator, 'genx-static-v0.0.48-boost-relevance-v1');
 			assert.ok(rootEvaluation.worlds[0].components.pokemon !== undefined);
 			const decision = logJson(log, 'PDL_DECISION_EVIDENCE');
 			assert.equal(decision.actionPolicy, 'argmax');
-			assert.equal(decision.evaluator.id, 'genx-static-v0.0.48');
+			assert.equal(decision.evaluator.id, 'genx-static-v0.0.48-boost-relevance-v1');
 			assert.doesNotMatch(log, /must-not-reach-runtime/);
 		}
 		assert.match(showdownLog, /127\.0\.0\.1:\d+/);
