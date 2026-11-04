@@ -1,0 +1,54 @@
+Scream Tail @ Leftovers
+Ability: Protosynthesis
+EVs: 252 HP / 4 Def / 252 Spe
+Timid Nature
+- Wish
+- Protect
+- Dazzling Gleam
+- Thunder Wave
+
+Milotic @ Leftovers
+Ability: Marvel Scale
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Recover
+- Surf
+- Flip Turn
+- Ice Beam
+
+Hitmontop @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Rapid Spin
+- Close Combat
+- Triple Axel
+- Mach Punch
+
+Pawmot @ Heavy-Duty Boots
+Ability: Iron Fist
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Double Shock
+- Close Combat
+- Revival Blessing
+- Mach Punch
+
+Charizard @ Heavy-Duty Boots
+Ability: Solar Power
+Tera Type: Steel
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Air Slash
+- Focus Blast
+- Roost
+
+Venusaur @ Leftovers
+Ability: Overgrow
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Giga Drain
+- Sludge Bomb
+- Synthesis
+- Earth Power

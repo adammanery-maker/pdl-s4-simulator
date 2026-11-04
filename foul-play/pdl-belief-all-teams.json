@@ -1,0 +1,2236 @@
+{
+  "schemaVersion": 1,
+  "snapshot": {
+    "id": "pdl-s4-live-roster:full-roster",
+    "source": "pdl-live:2026-08-02T19:32:51.362Z:transactions:admin-cb8b8380-8d2b-469f-a28d-422584cc5c46,admin-359b68e6-4cd9-42d7-ad41-65e43ce7b2bf,admin-77666b11-9dac-46e8-871d-09b4ceab0b26,admin-1f6e5fc1-c87e-4a70-a727-78ce9c934f2d,admin-7600675f-a4d1-4115-a29d-6c6cd509bece,admin-f3401cf6-25ff-4916-a93a-66fc147b7e60,admin-ce7e3117-0370-424f-b472-26f9eda0fe4e,admin-7c7b8cba-def2-4470-9838-f6010fe510ca,admin-51bb5115-3cf6-4c67-a847-c4112ea17afa,admin-a250c32a-e0bc-462e-8850-74bd6acf3ca3,admin-13fc55bd-0ffc-4baf-b825-46afdca07529,admin-c4e650c1-9c13-407f-87ef-a4d8c9da4cda,admin-550caeaf-0a2c-4ee2-b749-3e7b5b4bddda,admin-a432c512-ba6f-4978-a13f-465a3cdb1d10,admin-a9755fb0-3fd9-473e-a428-0067817f9c8f,admin-04e3d541-0dbd-47db-8b85-cd9286b1c748,admin-7cf50d98-6099-4a37-b61b-a6c7ed46d069,admin-45328f0b-e164-4421-829e-40aad11b6554,admin-acdb92ea-4514-4b5d-9ffa-56f4b1bd9978,admin-2f09d5fa-417b-4229-8337-c58e448fec3e,admin-91d320a5-9240-4ebc-a495-bfc3fa911d59,admin-9f8849c8-5e6a-439f-9e59-0947f926cc79,admin-c3d2d8d7-b6ca-4777-95ec-88794f91bae8,admin-5fc634b7-662e-4328-aed1-a553af26b469,admin-e9d0062e-470f-4c06-982a-6964a75d5cf1,admin-2b6426bd-13b4-4cf5-be33-8776ef38b4f5,admin-b5a15661-4161-4da2-924d-f23c881599df,admin-9cfedf88-66b9-4cd4-afdc-6452fdc3f825,admin-0abe2135-d908-4f26-891e-87c3d485e714,admin-4f083da3-13c0-4e22-98c6-0403df499523,admin-5e3cdfca-0b63-4ced-ba5c-00529aeb2758,admin-601c58b5-4438-4a6d-9445-ea91ea5dc984,admin-201f54a1-1175-4e56-ae3e-41c78ceacec7,admin-375c1637-f386-4ab2-8b67-803e38550ace,admin-ed91e91e-9b61-431e-92bb-054c2ec3a60e,admin-e143a3d8-611d-479b-b394-b61e0199a77e,admin-c426cb5d-5d49-4bcf-b1a9-a8c779caa830,admin-5c3cb999-7edf-4cc1-9802-0f43e8851a83,admin-28765954-30fa-4a99-813d-3f6da0375405",
+    "hash": "4d60118bb08206802743615c7716f90ebc8ed8c4a5b1418e5db2bd721afe7c66"
+  },
+  "teams": {
+    "adam": {
+      "draftedTeraTypes": [
+        "grass",
+        "ghost"
+      ],
+      "roster": [
+        {
+          "species": "tatsugiri",
+          "cost": 3
+        },
+        {
+          "species": "flamigo",
+          "cost": 11
+        },
+        {
+          "species": "whimsicott",
+          "cost": 5
+        },
+        {
+          "species": "scovillain",
+          "cost": 3
+        },
+        {
+          "species": "golem",
+          "cost": 1
+        },
+        {
+          "species": "uxie",
+          "cost": 7
+        },
+        {
+          "species": "magneton",
+          "cost": 3
+        },
+        {
+          "species": "incineroar",
+          "cost": 14
+        },
+        {
+          "species": "bruxish",
+          "cost": 2
+        },
+        {
+          "species": "brutebonnet",
+          "cost": 5
+        }
+      ]
+    },
+    "jon": {
+      "draftedTeraTypes": [
+        "dragon",
+        "ice"
+      ],
+      "roster": [
+        {
+          "species": "froslass",
+          "cost": 4
+        },
+        {
+          "species": "taurospaldeablaze",
+          "cost": 5
+        },
+        {
+          "species": "regirock",
+          "cost": 3
+        },
+        {
+          "species": "minior",
+          "cost": 3
+        },
+        {
+          "species": "golurk",
+          "cost": 4
+        },
+        {
+          "species": "drednaw",
+          "cost": 5
+        },
+        {
+          "species": "leafeon",
+          "cost": 2
+        },
+        {
+          "species": "delphox",
+          "cost": 5
+        },
+        {
+          "species": "goodra",
+          "cost": 8
+        },
+        {
+          "species": "cryogonal",
+          "cost": 3
+        }
+      ]
+    },
+    "greg": {
+      "draftedTeraTypes": [
+        "steel",
+        "ground"
+      ],
+      "roster": [
+        {
+          "species": "screamtail",
+          "cost": 12
+        },
+        {
+          "species": "milotic",
+          "cost": 8
+        },
+        {
+          "species": "hitmontop",
+          "cost": 5
+        },
+        {
+          "species": "charizard",
+          "cost": 4
+        },
+        {
+          "species": "venusaur",
+          "cost": 6
+        },
+        {
+          "species": "dusclops",
+          "cost": 2
+        },
+        {
+          "species": "tauros",
+          "cost": 3
+        },
+        {
+          "species": "pawmot",
+          "cost": 7
+        },
+        {
+          "species": "sandslash",
+          "cost": 2
+        },
+        {
+          "species": "hoopa",
+          "cost": 6
+        }
+      ]
+    },
+    "steve": {
+      "draftedTeraTypes": [
+        "fight",
+        "fire"
+      ],
+      "roster": [
+        {
+          "species": "grimmsnarl",
+          "cost": 8
+        },
+        {
+          "species": "avalugghisui",
+          "cost": 2
+        },
+        {
+          "species": "electivire",
+          "cost": 3
+        },
+        {
+          "species": "lycanroc",
+          "cost": 5
+        },
+        {
+          "species": "ambipom",
+          "cost": 5
+        },
+        {
+          "species": "slowbrogalar",
+          "cost": 9
+        },
+        {
+          "species": "electrodehisui",
+          "cost": 3
+        },
+        {
+          "species": "clawitzer",
+          "cost": 2
+        },
+        {
+          "species": "rotomheat",
+          "cost": 7
+        },
+        {
+          "species": "braviary",
+          "cost": 6
+        }
+      ]
+    },
+    "jordan": {
+      "draftedTeraTypes": [
+        "normal",
+        "poison"
+      ],
+      "roster": [
+        {
+          "species": "appletun",
+          "cost": 2
+        },
+        {
+          "species": "amoonguss",
+          "cost": 6
+        },
+        {
+          "species": "meloetta",
+          "cost": 8
+        },
+        {
+          "species": "porygon2",
+          "cost": 7
+        },
+        {
+          "species": "emboar",
+          "cost": 4
+        },
+        {
+          "species": "glastrier",
+          "cost": 3
+        },
+        {
+          "species": "shiftry",
+          "cost": 3
+        },
+        {
+          "species": "mudsdale",
+          "cost": 6
+        },
+        {
+          "species": "articunogalar",
+          "cost": 7
+        },
+        {
+          "species": "decidueye",
+          "cost": 9
+        }
+      ]
+    },
+    "connor": {
+      "draftedTeraTypes": [
+        "electric",
+        "flying"
+      ],
+      "roster": [
+        {
+          "species": "heracross",
+          "cost": 7
+        },
+        {
+          "species": "ribombee",
+          "cost": 10
+        },
+        {
+          "species": "poliwrath",
+          "cost": 3
+        },
+        {
+          "species": "muk",
+          "cost": 3
+        },
+        {
+          "species": "masquerain",
+          "cost": 2
+        },
+        {
+          "species": "frosmoth",
+          "cost": 3
+        },
+        {
+          "species": "qwilfishhisui",
+          "cost": 4
+        },
+        {
+          "species": "dudunsparce",
+          "cost": 7
+        },
+        {
+          "species": "toxicroak",
+          "cost": 5
+        },
+        {
+          "species": "orthworm",
+          "cost": 5
+        }
+      ]
+    },
+    "zander": {
+      "draftedTeraTypes": [
+        "dark",
+        "water"
+      ],
+      "roster": [
+        {
+          "species": "infernape",
+          "cost": 13
+        },
+        {
+          "species": "swampert",
+          "cost": 13
+        },
+        {
+          "species": "rotommow",
+          "cost": 5
+        },
+        {
+          "species": "copperajah",
+          "cost": 8
+        },
+        {
+          "species": "weezing",
+          "cost": 3
+        },
+        {
+          "species": "salazzle",
+          "cost": 5
+        },
+        {
+          "species": "honchkrow",
+          "cost": 1
+        },
+        {
+          "species": "cacturne",
+          "cost": 1
+        },
+        {
+          "species": "sceptile",
+          "cost": 3
+        },
+        {
+          "species": "drifblim",
+          "cost": 3
+        }
+      ]
+    },
+    "nick": {
+      "draftedTeraTypes": [
+        "fairy",
+        "rock"
+      ],
+      "roster": [
+        {
+          "species": "munkidori",
+          "cost": 13
+        },
+        {
+          "species": "duraludon",
+          "cost": 11
+        },
+        {
+          "species": "bombirdier",
+          "cost": 3
+        },
+        {
+          "species": "bastiodon",
+          "cost": 1
+        },
+        {
+          "species": "toucannon",
+          "cost": 1
+        },
+        {
+          "species": "jolteon",
+          "cost": 3
+        },
+        {
+          "species": "flygon",
+          "cost": 14
+        },
+        {
+          "species": "dipplin",
+          "cost": 2
+        },
+        {
+          "species": "coalossal",
+          "cost": 3
+        },
+        {
+          "species": "decidueyehisui",
+          "cost": 4
+        }
+      ]
+    }
+  },
+  "sets": {
+    "tatsugiri": [
+      {
+        "weight": 5137916.253219014,
+        "ability": "Storm Drain",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Rapid Spin",
+          "Draco Meteor",
+          "Surf",
+          "Nasty Plot"
+        ],
+        "teraType": "Dragon"
+      }
+    ],
+    "flamigo": [
+      {
+        "weight": 53357078.44848454,
+        "ability": "Scrappy",
+        "item": "Choice Scarf",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Brave Bird",
+          "U-turn",
+          "Roost"
+        ],
+        "teraType": null
+      }
+    ],
+    "whimsicott": [
+      {
+        "weight": 5330045.951950947,
+        "ability": "Prankster",
+        "item": "Heat Rock",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Encore",
+          "Moonblast",
+          "Sunny Day",
+          "Giga Drain"
+        ],
+        "teraType": null
+      }
+    ],
+    "scovillain": [
+      {
+        "weight": 12660340.888346568,
+        "ability": "Chlorophyll",
+        "item": "Choice Specs",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Flamethrower",
+          "Giga Drain",
+          "Solar Beam",
+          "Fire Blast"
+        ],
+        "teraType": "Fire"
+      }
+    ],
+    "golem": [
+      {
+        "weight": 3325311.430772569,
+        "ability": "Sturdy",
+        "item": "Custap Berry",
+        "nature": "Adamant",
+        "evs": [
+          4,
+          252,
+          0,
+          0,
+          0,
+          252
+        ],
+        "moves": [
+          "Explosion",
+          "Earthquake",
+          "Stealth Rock",
+          "Stone Edge"
+        ],
+        "teraType": "Rock"
+      }
+    ],
+    "uxie": [
+      {
+        "weight": 1127436.0268070004,
+        "ability": "Levitate",
+        "item": "Leftovers",
+        "nature": "Jolly",
+        "evs": [
+          252,
+          4,
+          0,
+          0,
+          0,
+          252
+        ],
+        "moves": [
+          "Stealth Rock",
+          "Psychic Noise",
+          "Knock Off",
+          "Memento"
+        ],
+        "teraType": null
+      }
+    ],
+    "magneton": [
+      {
+        "weight": 5377550.939500751,
+        "ability": "Analytic",
+        "item": "Eviolite",
+        "nature": "Modest",
+        "evs": [
+          172,
+          0,
+          0,
+          252,
+          0,
+          84
+        ],
+        "moves": [
+          "Flash Cannon",
+          "Volt Switch",
+          "Tri Attack",
+          "Thunderbolt"
+        ],
+        "teraType": "Ghost"
+      }
+    ],
+    "incineroar": [
+      {
+        "weight": 3219850.2594516007,
+        "ability": "Intimidate",
+        "item": "Heavy-Duty Boots",
+        "nature": "Careful",
+        "evs": [
+          248,
+          0,
+          0,
+          0,
+          212,
+          48
+        ],
+        "moves": [
+          "Knock Off",
+          "Flare Blitz",
+          "Will-O-Wisp",
+          "Parting Shot"
+        ],
+        "teraType": null
+      }
+    ],
+    "bruxish": [
+      {
+        "weight": 19306757.98387491,
+        "ability": "Strong Jaw",
+        "item": "Choice Scarf",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Psychic Fangs",
+          "Wave Crash",
+          "Crunch",
+          "Flip Turn"
+        ],
+        "teraType": "Water"
+      }
+    ],
+    "brutebonnet": [
+      {
+        "weight": 20936587.0059108,
+        "ability": "Protosynthesis",
+        "item": "Booster Energy",
+        "nature": "Adamant",
+        "evs": [
+          92,
+          252,
+          0,
+          0,
+          0,
+          164
+        ],
+        "moves": [
+          "Sucker Punch",
+          "Seed Bomb",
+          "Crunch",
+          "Close Combat"
+        ],
+        "teraType": null
+      }
+    ],
+    "froslass": [
+      {
+        "weight": 26620564.321947504,
+        "ability": "Cursed Body",
+        "item": "Focus Sash",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Spikes",
+          "Destiny Bond",
+          "Taunt",
+          "Poltergeist"
+        ],
+        "teraType": "Ice"
+      }
+    ],
+    "taurospaldeablaze": [
+      {
+        "weight": 26967130.597544417,
+        "ability": "Intimidate",
+        "item": "Choice Band",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Flare Blitz",
+          "Earthquake",
+          "Stone Edge"
+        ],
+        "teraType": null
+      }
+    ],
+    "regirock": [
+      {
+        "weight": 1752946.539321504,
+        "ability": "Clear Body",
+        "item": "Leftovers",
+        "nature": "Careful",
+        "evs": [
+          252,
+          4,
+          0,
+          0,
+          252,
+          0
+        ],
+        "moves": [
+          "Body Press",
+          "Iron Defense",
+          "Rest",
+          "Thunder Wave"
+        ],
+        "teraType": "Rock"
+      }
+    ],
+    "minior": [
+      {
+        "weight": 14675452.57881,
+        "ability": "Shields Down",
+        "item": "White Herb",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Shell Smash",
+          "Acrobatics",
+          "Earthquake",
+          "Stone Edge"
+        ],
+        "teraType": "Flying"
+      }
+    ],
+    "golurk": [
+      {
+        "weight": 15058285.31255858,
+        "ability": "No Guard",
+        "item": "Assault Vest",
+        "nature": "Adamant",
+        "evs": [
+          252,
+          252,
+          4,
+          0,
+          0,
+          0
+        ],
+        "moves": [
+          "Earthquake",
+          "Poltergeist",
+          "Dynamic Punch",
+          "Stone Edge"
+        ],
+        "teraType": "Ground"
+      }
+    ],
+    "drednaw": [
+      {
+        "weight": 18957159.678649317,
+        "ability": "Strong Jaw",
+        "item": "White Herb",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Shell Smash",
+          "Crunch",
+          "Liquidation",
+          "Earthquake"
+        ],
+        "teraType": null
+      }
+    ],
+    "leafeon": [
+      {
+        "weight": 656513.2842958103,
+        "ability": "Chlorophyll",
+        "item": "Life Orb",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Leaf Blade",
+          "Knock Off",
+          "Swords Dance",
+          "Quick Attack"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "delphox": [
+      {
+        "weight": 3178102.017283242,
+        "ability": "Blaze",
+        "item": "Choice Scarf",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Grass Knot",
+          "Overheat",
+          "Nasty Plot",
+          "Psyshock"
+        ],
+        "teraType": null
+      }
+    ],
+    "goodra": [
+      {
+        "weight": 691898.2869310374,
+        "ability": "Sap Sipper",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Draco Meteor",
+          "Knock Off",
+          "Flamethrower",
+          "Fire Blast"
+        ],
+        "teraType": null
+      }
+    ],
+    "cryogonal": [
+      {
+        "weight": 2426013.75892,
+        "ability": "Levitate",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Freeze-Dry",
+          "Rapid Spin",
+          "Recover",
+          "Haze"
+        ],
+        "teraType": "Ice"
+      }
+    ],
+    "screamtail": [
+      {
+        "weight": 1200459.3434064,
+        "ability": "Protosynthesis",
+        "item": "Leftovers",
+        "nature": "Timid",
+        "evs": [
+          40,
+          0,
+          0,
+          252,
+          0,
+          216
+        ],
+        "moves": [
+          "Psychic Noise",
+          "Wish",
+          "Protect",
+          "Encore"
+        ],
+        "teraType": null
+      }
+    ],
+    "milotic": [
+      {
+        "weight": 379121.0150574,
+        "ability": "Competitive",
+        "item": "Leftovers",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          252,
+          0,
+          4,
+          0
+        ],
+        "moves": [
+          "Recover",
+          "Scald",
+          "Ice Beam",
+          "Flip Turn"
+        ],
+        "teraType": null
+      }
+    ],
+    "hitmontop": [
+      {
+        "weight": 17705145.31112167,
+        "ability": "Technician",
+        "item": "Sitrus Berry",
+        "nature": "Adamant",
+        "evs": [
+          252,
+          100,
+          100,
+          0,
+          56,
+          0
+        ],
+        "moves": [
+          "Rapid Spin",
+          "Triple Axel",
+          "Mach Punch",
+          "Thief"
+        ],
+        "teraType": null
+      }
+    ],
+    "charizard": [
+      {
+        "weight": 2570560.7485428182,
+        "ability": "Blaze",
+        "item": "Choice Specs",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Scorching Sands",
+          "Belly Drum",
+          "Acrobatics",
+          "Flamethrower"
+        ],
+        "teraType": "Fire"
+      }
+    ],
+    "venusaur": [
+      {
+        "weight": 22148964.71467788,
+        "ability": "Chlorophyll",
+        "item": "Life Orb",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Giga Drain",
+          "Growth",
+          "Weather Ball",
+          "Sludge Bomb"
+        ],
+        "teraType": null
+      }
+    ],
+    "dusclops": [
+      {
+        "weight": 14613211.655335598,
+        "ability": "Pressure",
+        "item": "Eviolite",
+        "nature": "Calm",
+        "evs": [
+          252,
+          0,
+          4,
+          0,
+          252,
+          0
+        ],
+        "moves": [
+          "Will-O-Wisp",
+          "Pain Split",
+          "Night Shade",
+          "Haze"
+        ],
+        "teraType": "Ghost"
+      }
+    ],
+    "tauros": [
+      {
+        "weight": 7275900.916072225,
+        "ability": "Sheer Force",
+        "item": "Life Orb",
+        "nature": "Jolly",
+        "evs": [
+          4,
+          252,
+          0,
+          0,
+          0,
+          252
+        ],
+        "moves": [
+          "Body Slam",
+          "Iron Head",
+          "Earthquake",
+          "Throat Chop"
+        ],
+        "teraType": "Normal"
+      }
+    ],
+    "pawmot": [
+      {
+        "weight": 7059180.68118756,
+        "ability": "Iron Fist",
+        "item": "Life Orb",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Double Shock",
+          "Revival Blessing",
+          "Ice Punch"
+        ],
+        "teraType": null
+      }
+    ],
+    "sandslash": [
+      {
+        "weight": 2246774.1525789,
+        "ability": "Sand Rush",
+        "item": "Leftovers",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Earthquake",
+          "Rapid Spin",
+          "Knock Off",
+          "Stealth Rock"
+        ],
+        "teraType": "Ground"
+      }
+    ],
+    "hoopa": [
+      {
+        "weight": 2740580.3582093003,
+        "ability": "Magician",
+        "item": "Assault Vest",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Shadow Ball",
+          "Focus Blast",
+          "Psyshock",
+          "Trick"
+        ],
+        "teraType": null
+      }
+    ],
+    "grimmsnarl": [
+      {
+        "weight": 14460315.56829582,
+        "ability": "Prankster",
+        "item": "Leftovers",
+        "nature": "Careful",
+        "evs": [
+          232,
+          0,
+          0,
+          0,
+          252,
+          24
+        ],
+        "moves": [
+          "Spirit Break",
+          "Bulk Up",
+          "Sucker Punch",
+          "Substitute"
+        ],
+        "teraType": null
+      }
+    ],
+    "avalugghisui": [
+      {
+        "weight": 3122955.2053478435,
+        "ability": "Sturdy",
+        "item": "Custap Berry",
+        "nature": "Brave",
+        "evs": [
+          4,
+          252,
+          252,
+          0,
+          0,
+          0
+        ],
+        "moves": [
+          "Rapid Spin",
+          "Stealth Rock",
+          "Mountain Gale",
+          "Body Press"
+        ],
+        "teraType": "Ice"
+      }
+    ],
+    "electivire": [
+      {
+        "weight": 3952518.443623896,
+        "ability": "Motor Drive",
+        "item": "Choice Scarf",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Ice Punch",
+          "Supercell Slam",
+          "Earthquake",
+          "Bulk Up"
+        ],
+        "teraType": "Electric"
+      }
+    ],
+    "lycanroc": [
+      {
+        "weight": 2841734.534085884,
+        "ability": "Steadfast",
+        "item": "Focus Sash",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Accelerock",
+          "Swords Dance",
+          "Rock Blast",
+          "Close Combat"
+        ],
+        "teraType": null
+      }
+    ],
+    "ambipom": [
+      {
+        "weight": 19501999.876223803,
+        "ability": "Technician",
+        "item": "Silk Scarf",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Fake Out",
+          "U-turn",
+          "Knock Off",
+          "Triple Axel"
+        ],
+        "teraType": null
+      }
+    ],
+    "slowbrogalar": [
+      {
+        "weight": 827497.3904055075,
+        "ability": "Regenerator",
+        "item": "Rocky Helmet",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          228,
+          0,
+          0,
+          28
+        ],
+        "moves": [
+          "Slack Off",
+          "Flamethrower",
+          "Shell Side Arm",
+          "Calm Mind"
+        ],
+        "teraType": null
+      }
+    ],
+    "electrodehisui": [
+      {
+        "weight": 715566.8172612758,
+        "ability": "Soundproof",
+        "item": "Heavy-Duty Boots",
+        "nature": "Modest",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Volt Switch",
+          "Chloroblast",
+          "Leaf Storm",
+          "Taunt"
+        ],
+        "teraType": "Electric"
+      }
+    ],
+    "clawitzer": [
+      {
+        "weight": 4063870.7917344,
+        "ability": "Mega Launcher",
+        "item": "Choice Specs",
+        "nature": "Modest",
+        "evs": [
+          252,
+          0,
+          0,
+          252,
+          4,
+          0
+        ],
+        "moves": [
+          "Aura Sphere",
+          "Dragon Pulse",
+          "Water Pulse",
+          "Dark Pulse"
+        ],
+        "teraType": "Water"
+      }
+    ],
+    "rotomheat": [
+      {
+        "weight": 15752275.7631264,
+        "ability": "Levitate",
+        "item": "Choice Specs",
+        "nature": "Modest",
+        "evs": [
+          252,
+          0,
+          0,
+          252,
+          4,
+          0
+        ],
+        "moves": [
+          "Overheat",
+          "Volt Switch",
+          "Trick",
+          "Foul Play"
+        ],
+        "teraType": null
+      }
+    ],
+    "braviary": [
+      {
+        "weight": 1290743.3155957235,
+        "ability": "Defiant",
+        "item": "Choice Scarf",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Brave Bird",
+          "Close Combat",
+          "Defog",
+          "U-turn"
+        ],
+        "teraType": null
+      }
+    ],
+    "appletun": [
+      {
+        "weight": 20760547.987125114,
+        "ability": "Thick Fat",
+        "item": "Leftovers",
+        "nature": "Calm",
+        "evs": [
+          252,
+          0,
+          4,
+          0,
+          252,
+          0
+        ],
+        "moves": [
+          "Apple Acid",
+          "Recover",
+          "Leech Seed",
+          "Dragon Tail"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "amoonguss": [
+      {
+        "weight": 8151977.852549666,
+        "ability": "Regenerator",
+        "item": "Rocky Helmet",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          212,
+          0,
+          44,
+          0
+        ],
+        "moves": [
+          "Giga Drain",
+          "Foul Play",
+          "Sludge Bomb",
+          "Stun Spore"
+        ],
+        "teraType": null
+      }
+    ],
+    "meloetta": [
+      {
+        "weight": 5649430.839790501,
+        "ability": "Serene Grace",
+        "item": "Metronome",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Hyper Voice",
+          "Psychic",
+          "Shadow Ball",
+          "Knock Off"
+        ],
+        "teraType": null
+      }
+    ],
+    "porygon2": [
+      {
+        "weight": 15451238.197642319,
+        "ability": "Trace",
+        "item": "Eviolite",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          228,
+          0,
+          28,
+          0
+        ],
+        "moves": [
+          "Recover",
+          "Ice Beam",
+          "Shadow Ball",
+          "Charge Beam"
+        ],
+        "teraType": null
+      }
+    ],
+    "emboar": [
+      {
+        "weight": 4154154.7710855114,
+        "ability": "Reckless",
+        "item": "Choice Scarf",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Flare Blitz",
+          "Close Combat",
+          "Knock Off",
+          "Wild Charge"
+        ],
+        "teraType": "Fire"
+      }
+    ],
+    "glastrier": [
+      {
+        "weight": 7837997.823844001,
+        "ability": "Chilling Neigh",
+        "item": "Heavy-Duty Boots",
+        "nature": "Brave",
+        "evs": [
+          240,
+          252,
+          0,
+          0,
+          16,
+          0
+        ],
+        "moves": [
+          "High Horsepower",
+          "Icicle Crash",
+          "Swords Dance",
+          "Close Combat"
+        ],
+        "teraType": "Ice"
+      }
+    ],
+    "shiftry": [
+      {
+        "weight": 61138240.80950849,
+        "ability": "Wind Rider",
+        "item": "Focus Sash",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Knock Off",
+          "Tailwind",
+          "Leaf Blade",
+          "Explosion"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "mudsdale": [
+      {
+        "weight": 2625838.22191255,
+        "ability": "Stamina",
+        "item": "Leftovers",
+        "nature": "Impish",
+        "evs": [
+          252,
+          0,
+          252,
+          0,
+          4,
+          0
+        ],
+        "moves": [
+          "Earthquake",
+          "Body Press",
+          "Stealth Rock",
+          "Heavy Slam"
+        ],
+        "teraType": null
+      }
+    ],
+    "articunogalar": [
+      {
+        "weight": 1555304.6582324998,
+        "ability": "Competitive",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          248,
+          0,
+          8,
+          0,
+          0,
+          252
+        ],
+        "moves": [
+          "Recover",
+          "Calm Mind",
+          "Hurricane",
+          "Psyshock"
+        ],
+        "teraType": null
+      }
+    ],
+    "decidueye": [
+      {
+        "weight": 10539354.605105897,
+        "ability": "Long Reach",
+        "item": "Spell Tag",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Shadow Sneak",
+          "Leaf Blade",
+          "Swords Dance",
+          "Spirit Shackle"
+        ],
+        "teraType": null
+      }
+    ],
+    "heracross": [
+      {
+        "weight": 3608907.9856695,
+        "ability": "Guts",
+        "item": "Flame Orb",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Knock Off",
+          "Earthquake",
+          "Trailblaze"
+        ],
+        "teraType": null
+      }
+    ],
+    "ribombee": [
+      {
+        "weight": 38730528.71313931,
+        "ability": "Shield Dust",
+        "item": "Focus Sash",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Moonblast",
+          "Sticky Web",
+          "Quiver Dance",
+          "Tera Blast"
+        ],
+        "teraType": null
+      }
+    ],
+    "poliwrath": [
+      {
+        "weight": 63180535.27379564,
+        "ability": "Swift Swim",
+        "item": "Sitrus Berry",
+        "nature": "Jolly",
+        "evs": [
+          4,
+          252,
+          0,
+          0,
+          0,
+          252
+        ],
+        "moves": [
+          "Liquidation",
+          "Belly Drum",
+          "Drain Punch",
+          "Close Combat"
+        ],
+        "teraType": "Electric"
+      }
+    ],
+    "muk": [
+      {
+        "weight": 10929511.561789941,
+        "ability": "Poison Touch",
+        "item": "Heavy-Duty Boots",
+        "nature": "Careful",
+        "evs": [
+          248,
+          0,
+          36,
+          0,
+          216,
+          8
+        ],
+        "moves": [
+          "Knock Off",
+          "Rest",
+          "Sleep Talk",
+          "Haze"
+        ],
+        "teraType": "Poison"
+      }
+    ],
+    "masquerain": [
+      {
+        "weight": 19428881.398947902,
+        "ability": "Intimidate",
+        "item": "Heavy-Duty Boots",
+        "nature": "Modest",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Bug Buzz",
+          "Quiver Dance",
+          "Air Slash",
+          "Sticky Web"
+        ],
+        "teraType": "Bug"
+      }
+    ],
+    "frosmoth": [
+      {
+        "weight": 5406661.5963378735,
+        "ability": "Ice Scales",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Ice Beam",
+          "Quiver Dance",
+          "Giga Drain",
+          "Substitute"
+        ],
+        "teraType": "Ice"
+      }
+    ],
+    "qwilfishhisui": [
+      {
+        "weight": 55414158.09986629,
+        "ability": "Swift Swim",
+        "item": "Eviolite",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Crunch",
+          "Gunk Shot",
+          "Swords Dance",
+          "Liquidation"
+        ],
+        "teraType": "Poison"
+      }
+    ],
+    "dudunsparce": [
+      {
+        "weight": 1080160.1072585583,
+        "ability": "Rattled",
+        "item": "Throat Spray",
+        "nature": "Modest",
+        "evs": [
+          116,
+          0,
+          0,
+          252,
+          0,
+          140
+        ],
+        "moves": [
+          "Boomburst",
+          "Glare",
+          "Hex",
+          "Roost"
+        ],
+        "teraType": null
+      }
+    ],
+    "toxicroak": [
+      {
+        "weight": 25240921.399340168,
+        "ability": "Dry Skin",
+        "item": "Life Orb",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Sucker Punch",
+          "Swords Dance",
+          "Close Combat",
+          "Gunk Shot"
+        ],
+        "teraType": null
+      }
+    ],
+    "orthworm": [
+      {
+        "weight": 3032843.6285000006,
+        "ability": "Earth Eater",
+        "item": "Leftovers",
+        "nature": "Impish",
+        "evs": [
+          252,
+          0,
+          252,
+          0,
+          4,
+          0
+        ],
+        "moves": [
+          "Body Press",
+          "Heavy Slam",
+          "Spikes",
+          "Coil"
+        ],
+        "teraType": null
+      }
+    ],
+    "infernape": [
+      {
+        "weight": 4485267.039913954,
+        "ability": "Blaze",
+        "item": "Focus Sash",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Flare Blitz",
+          "U-turn",
+          "Stealth Rock"
+        ],
+        "teraType": null
+      }
+    ],
+    "swampert": [
+      {
+        "weight": 2502429.015451089,
+        "ability": "Torrent",
+        "item": "Leftovers",
+        "nature": "Careful",
+        "evs": [
+          252,
+          4,
+          0,
+          0,
+          252,
+          0
+        ],
+        "moves": [
+          "Earthquake",
+          "Flip Turn",
+          "Stealth Rock",
+          "Knock Off"
+        ],
+        "teraType": null
+      }
+    ],
+    "rotommow": [
+      {
+        "weight": 12535680.476160003,
+        "ability": "Levitate",
+        "item": "Choice Scarf",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Volt Switch",
+          "Leaf Storm",
+          "Trick",
+          "Thunderbolt"
+        ],
+        "teraType": null
+      }
+    ],
+    "copperajah": [
+      {
+        "weight": 3605882.5171898147,
+        "ability": "Sheer Force",
+        "item": "Leftovers",
+        "nature": "Careful",
+        "evs": [
+          252,
+          0,
+          0,
+          0,
+          228,
+          28
+        ],
+        "moves": [
+          "Knock Off",
+          "Stealth Rock",
+          "Heavy Slam",
+          "Whirlwind"
+        ],
+        "teraType": null
+      }
+    ],
+    "weezing": [
+      {
+        "weight": 12053134.734444432,
+        "ability": "Levitate",
+        "item": "Rocky Helmet",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          252,
+          4,
+          0,
+          0
+        ],
+        "moves": [
+          "Pain Split",
+          "Sludge Bomb",
+          "Will-O-Wisp",
+          "Toxic Spikes"
+        ],
+        "teraType": "Poison"
+      }
+    ],
+    "salazzle": [
+      {
+        "weight": 10102024.39367654,
+        "ability": "Corrosion",
+        "item": "Heavy-Duty Boots",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          4,
+          252,
+          0,
+          252
+        ],
+        "moves": [
+          "Sludge Bomb",
+          "Fire Blast",
+          "Nasty Plot",
+          "Encore"
+        ],
+        "teraType": null
+      }
+    ],
+    "honchkrow": [
+      {
+        "weight": 25980292.510494504,
+        "ability": "Moxie",
+        "item": "Heavy-Duty Boots",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Sucker Punch",
+          "Night Slash",
+          "Brave Bird",
+          "U-turn"
+        ],
+        "teraType": "Dark"
+      }
+    ],
+    "cacturne": [
+      {
+        "weight": 7145956.0037322985,
+        "ability": "Water Absorb",
+        "item": "Focus Sash",
+        "nature": "Naughty",
+        "evs": [
+          76,
+          176,
+          0,
+          160,
+          0,
+          96
+        ],
+        "moves": [
+          "Sucker Punch",
+          "Knock Off",
+          "Spikes",
+          "Leaf Storm"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "sceptile": [
+      {
+        "weight": 1102633.9997560165,
+        "ability": "Unburden",
+        "item": "Electric Seed",
+        "nature": "Adamant",
+        "evs": [
+          128,
+          252,
+          92,
+          0,
+          0,
+          36
+        ],
+        "moves": [
+          "Leaf Blade",
+          "Acrobatics",
+          "Swords Dance",
+          "Earthquake"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "drifblim": [
+      {
+        "weight": 1029710.9472419384,
+        "ability": "Aftermath",
+        "item": "Heavy-Duty Boots",
+        "nature": "Modest",
+        "evs": [
+          252,
+          0,
+          0,
+          252,
+          0,
+          4
+        ],
+        "moves": [
+          "Strength Sap",
+          "Defog",
+          "Hex",
+          "Will-O-Wisp"
+        ],
+        "teraType": "Dark"
+      }
+    ],
+    "munkidori": [
+      {
+        "weight": 34704956.7756829,
+        "ability": "Toxic Chain",
+        "item": "Choice Scarf",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Psychic",
+          "U-turn",
+          "Sludge Bomb",
+          "Trick"
+        ],
+        "teraType": null
+      }
+    ],
+    "duraludon": [
+      {
+        "weight": 5634311.192431593,
+        "ability": "Light Metal",
+        "item": "Eviolite",
+        "nature": "Modest",
+        "evs": [
+          160,
+          0,
+          0,
+          96,
+          252,
+          0
+        ],
+        "moves": [
+          "Flash Cannon",
+          "Draco Meteor",
+          "Stealth Rock",
+          "Thunder Wave"
+        ],
+        "teraType": null
+      }
+    ],
+    "bombirdier": [
+      {
+        "weight": 5090936.407977886,
+        "ability": "Big Pecks",
+        "item": "Heavy-Duty Boots",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Knock Off",
+          "Stealth Rock",
+          "Roost",
+          "Taunt"
+        ],
+        "teraType": "Rock"
+      }
+    ],
+    "bastiodon": [
+      {
+        "weight": 11261621.96909917,
+        "ability": "Sturdy",
+        "item": "Leftovers",
+        "nature": "Calm",
+        "evs": [
+          252,
+          0,
+          4,
+          0,
+          252,
+          0
+        ],
+        "moves": [
+          "Body Press",
+          "Iron Defense",
+          "Foul Play",
+          "Protect"
+        ],
+        "teraType": "Rock"
+      }
+    ],
+    "toucannon": [
+      {
+        "weight": 6992492.193574887,
+        "ability": "Skill Link",
+        "item": "Heavy-Duty Boots",
+        "nature": "Adamant",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Bullet Seed",
+          "Rock Blast",
+          "Beak Blast",
+          "Flame Charge"
+        ],
+        "teraType": "Normal"
+      }
+    ],
+    "jolteon": [
+      {
+        "weight": 20819719.268487815,
+        "ability": "Volt Absorb",
+        "item": "Choice Specs",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Volt Switch",
+          "Thunderbolt",
+          "Shadow Ball",
+          "Alluring Voice"
+        ],
+        "teraType": "Fairy"
+      }
+    ],
+    "flygon": [
+      {
+        "weight": 12202055.5179474,
+        "ability": "Levitate",
+        "item": "Loaded Dice",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Earthquake",
+          "Dragon Dance",
+          "Scale Shot",
+          "U-turn"
+        ],
+        "teraType": null
+      }
+    ],
+    "dipplin": [
+      {
+        "weight": 11488515.510432001,
+        "ability": "Sticky Hold",
+        "item": "Eviolite",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          240,
+          0,
+          0,
+          16
+        ],
+        "moves": [
+          "Recover",
+          "Giga Drain",
+          "Dragon Tail",
+          "Infestation"
+        ],
+        "teraType": "Grass"
+      }
+    ],
+    "coalossal": [
+      {
+        "weight": 4509774.617616862,
+        "ability": "Flame Body",
+        "item": "Heavy-Duty Boots",
+        "nature": "Bold",
+        "evs": [
+          252,
+          0,
+          252,
+          4,
+          0,
+          0
+        ],
+        "moves": [
+          "Rapid Spin",
+          "Stealth Rock",
+          "Flamethrower",
+          "Power Gem"
+        ],
+        "teraType": "Rock"
+      }
+    ],
+    "decidueyehisui": [
+      {
+        "weight": 963776.4459722243,
+        "ability": "Scrappy",
+        "item": "Covert Cloak",
+        "nature": "Adamant",
+        "evs": [
+          148,
+          252,
+          0,
+          0,
+          0,
+          108
+        ],
+        "moves": [
+          "Triple Arrows",
+          "U-turn",
+          "Roost",
+          "Leaf Blade"
+        ],
+        "teraType": "Grass"
+      }
+    ]
+  }
+}

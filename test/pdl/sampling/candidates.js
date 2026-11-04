@@ -47,6 +47,23 @@ function createSnapshot({ cost = 4, usage = {} } = {}) {
 }
 
 describe('PDL set candidate generation', () => {
+	it('represents Ditto with its sole legal move instead of inventing four moves', () => {
+		const input = JSON.parse(JSON.stringify(createSnapshot()));
+		input.roster.teams[0].roster[0] = { species: 'Ditto', cost: 5 };
+		input.usageBySpecies.ditto = {
+			moves: [{ name: 'Transform', weight: 100 }],
+			abilities: [{ name: 'Imposter', weight: 100 }],
+			items: [{ name: 'Choice Scarf', weight: 100 }],
+			natures: [{ name: 'Timid', weight: 100 }],
+			spreads: [{ name: 'timid-hp', weight: 100, evs: { hp: 252, atk: 0, def: 0, spa: 0, spd: 4, spe: 252 } }],
+		};
+		const candidates = generateSetCandidates({ snapshot: normalizePdlSamplingSnapshot(input), teamId: 'adam', species: 'Ditto' });
+		assert(candidates.length > 0);
+		assert(candidates.every(candidate => candidate.set));
+		assert(candidates.every(candidate => JSON.stringify(candidate.set.moves) === JSON.stringify(['Transform'])));
+		assert(candidates.every(candidate => !candidate.set.teraType));
+	});
+
 	it('builds four-move observed sets and filters non-PDL Tera types', () => {
 		const candidates = generateSetCandidates({ snapshot: createSnapshot(), teamId: 'adam', species: 'Tatsugiri' });
 

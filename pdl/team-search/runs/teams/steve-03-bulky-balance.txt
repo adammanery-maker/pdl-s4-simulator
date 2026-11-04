@@ -1,0 +1,57 @@
+Grimmsnarl @ Leftovers
+Ability: Prankster
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Bulk Up
+- Spirit Break
+- Sucker Punch
+- Substitute
+
+Ambipom @ Heavy-Duty Boots
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- U-turn
+- Knock Off
+- Triple Axel
+
+Slowbro-Galar @ Heavy-Duty Boots
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Psyshock
+- Slack Off
+- Thunder Wave
+
+Goodra @ Choice Specs
+Ability: Sap Sipper
+EVs: 4 Def / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Draco Meteor
+- Flamethrower
+- Thunderbolt
+- Sludge Bomb
+
+Drifblim @ Heavy-Duty Boots
+Ability: Aftermath
+Tera Type: Fire
+EVs: 252 HP / 252 Def / 4 Spe
+Bold Nature
+IVs: 0 Atk
+- Will-O-Wisp
+- Hex
+- Strength Sap
+- Defog
+
+Lycanroc @ Focus Sash
+Ability: Steadfast
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Stealth Rock
+- Accelerock
+- Stone Edge
+- Endeavor

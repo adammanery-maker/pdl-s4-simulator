@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: pdl-s4-simulator
+    runtime: docker
+    plan: free
+    region: ohio
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SHOWDOWN_PORT
+        value: 8000
+      - key: PANEL_PORT
+        value: 4173
+      - key: BIND_HOST
+        value: 0.0.0.0
+      - key: SHOWDOWN_HOST
+        value: localhost
+      - key: PYTHON_BIN
+        value: python3
+      - key: FOUL_ROOT
+        value: /app/foul-play
+      - key: BELIEF_PATH
+        value: /app/foul-play/pdl-belief-all-teams.json
+    healthCheckPath: /api/status

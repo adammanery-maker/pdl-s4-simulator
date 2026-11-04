@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "phase6-synthetic-demo",
+  "scenarioPath": "../../studies/adam-vs-steve-team-strategy/scenario.json",
+  "subjectTeamId": "adam",
+  "opponentTeamId": "steve",
+  "baseline": { "id": "synthetic-baseline", "teamPath": "demo-baseline.txt", "teraCaptains": ["Scovillain", "Tatsugiri"] },
+  "candidate": { "id": "synthetic-protect", "teamPath": "demo-candidate.txt", "teraCaptains": ["Scovillain", "Tatsugiri"] },
+  "change": { "type": "move", "species": "Drednaw", "from": "Ice Fang", "to": "Protect" },
+  "opponentBuildIds": ["steve-screens-hazards", "steve-volturn-unburden", "steve-hazard-warfare"],
+  "decisionDomains": ["ordinary-attacks", "ordinary-switching", "team-preview"]
+}

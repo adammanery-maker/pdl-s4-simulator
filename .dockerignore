@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.DS_Store
+*.log
+calculations
+foul-play/.venv
+foul-play/.git
+foul-play/.pytest_cache
+foul-play/.ruff_cache
+foul-play/**/__pycache__
+logs
+poke-engine/target
+poke-engine/diagnostics

@@ -48,7 +48,10 @@ tmp/**/*
 .installed.cfg
 
 downloads
-calculations/mechanics-conformance/
+calculations/
+poke-engine/target/
+poke-engine/diagnostics/
+foul-play/.venv/
 dist
 
 # egg related

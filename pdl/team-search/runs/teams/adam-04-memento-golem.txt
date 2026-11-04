@@ -1,0 +1,54 @@
+Flamigo @ Choice Scarf
+Ability: Scrappy
+EVs: 158 HP / 252 Atk / 100 Spe
+Adamant Nature
+- Close Combat
+- Brave Bird
+- U-turn
+- Upper Hand
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 212 HP / 252 Atk / 46 Spe
+Adamant Nature
+- Swords Dance
+- Flare Blitz
+- Knock Off
+- U-turn
+
+Drednaw @ White Herb
+Ability: Strong Jaw
+EVs: 180 HP / 252 Atk / 76 Spe
+Adamant Nature
+- Shell Smash
+- Liquidation
+- Crunch
+- Ice Fang
+
+Uxie @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 24 Def / 232 Spe
+Timid Nature
+- U-turn
+- Memento
+- Stealth Rock
+- Psychic Noise
+
+Golem @ Custap Berry
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Explosion
+- Earthquake
+- Stone Edge
+- Thunder Punch
+
+Whimsicott @ Rocky Helmet
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpA
+Modest Nature
+IVs: 0 Atk
+- Memento
+- Taunt
+- Encore
+- Moonblast

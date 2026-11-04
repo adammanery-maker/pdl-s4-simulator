@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "status": "legal-and-ready",
+  "manifestPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/adam-vs-steve-balance-uxie-combinations-20261007.json",
+  "manifestHash": "c46d4263fe89b3efa5f88808e9af98032a330e9eb5718c9a2a2f22ffba495a96",
+  "validationErrors": [],
+  "validTeams": 8,
+  "adamCandidates": [
+    {
+      "id": "adam-uxie-offensive-incin-standard",
+      "label": "1 - Offensive Uxie + Standard Incineroar",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/balance-uxie-combinations-20261007/adam-uxie-offensive-incin-standard.txt",
+      "teamHash": "cd24858991e69cda53dd6df2e2d655ba5dcc6b6649739e083cf2aad8e704a944"
+    },
+    {
+      "id": "adam-uxie-rocks-incin-standard",
+      "label": "2 - Coverage/Rocks Uxie + Standard Incineroar",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/balance-uxie-combinations-20261007/adam-uxie-rocks-incin-standard.txt",
+      "teamHash": "7054a63416c36853822a9bb9fa7a7a3ffa6f5b08f2b0845f324e001aae7c2b4c"
+    },
+    {
+      "id": "adam-uxie-offensive-incin-sd",
+      "label": "3 - Offensive Uxie + Swords Dance Incineroar",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/balance-uxie-combinations-20261007/adam-uxie-offensive-incin-sd.txt",
+      "teamHash": "c52ede77e77705180258bdf6dfa69b8f4b9b4821ab76d53638495c4df93ff704"
+    },
+    {
+      "id": "adam-uxie-rocks-incin-sd",
+      "label": "4 - Coverage/Rocks Uxie + Swords Dance Incineroar",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/balance-uxie-combinations-20261007/adam-uxie-rocks-incin-sd.txt",
+      "teamHash": "23b95fc731fd3f653d08e35ac21fcc3ad916ad04fb4a2a01085a8b0d9fab0910"
+    }
+  ],
+  "steveOpponents": [
+    {
+      "id": "steve-01-screens-bulky-offense",
+      "label": "Screens Bulky Offense",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-01-screens-bulky-offense.txt",
+      "teamHash": "1e4714ae5e61944a3d574dc2e47091df831f5263eb295e302b5310d29f2b6a55"
+    },
+    {
+      "id": "steve-02-volturn-offense",
+      "label": "Volturn Offense",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-02-volturn-offense.txt",
+      "teamHash": "b97c37ed93dfbbc485c7c1d49497b59bb63bd9201b5fe7bd8e70cd1a6e19cb20"
+    },
+    {
+      "id": "steve-03-bulky-balance",
+      "label": "Bulky Balance",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-03-bulky-balance.txt",
+      "teamHash": "16f011c34a8f561b377c95caecc15b34df453b496e4d7f618f804ba96d1579ae"
+    },
+    {
+      "id": "steve-04-screens-fast-offense",
+      "label": "Screens Fast Offense",
+      "teamPath": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-04-screens-fast-offense.txt",
+      "teamHash": "5318b3a359e2cba6876923ffb4c874ae18d27b4050189413b68bd1fe8f6d5e68"
+    }
+  ],
+  "setVerification": "All 24 Adam slots compared to exact saved sources; source team order preserved; four Steve team definitions unchanged.",
+  "expectedCounts": {
+    "adamCandidates": 4,
+    "steveOpponents": 4,
+    "orientations": 2,
+    "seedsPerCell": 5,
+    "battlesPerAdamCandidate": 40,
+    "totalBattles": 160
+  },
+  "runnerCalls": 0,
+  "counts": {
+    "adamCandidates": 4,
+    "steveOpponents": 4,
+    "orientations": 2,
+    "seedsPerCell": 5,
+    "battlesPerAdamCandidate": 40,
+    "totalBattles": 160
+  },
+  "dryRunDirectory": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/calculations/adam-vs-steve-balance-uxie-combinations-20261007-screen-5-dry-run",
+  "dryRunStatus": "dry-run",
+  "planner": "native-fixed-120k",
+  "runtime": "pdl-s4-foul-play-eval-fixediter-v1",
+  "alignedGroups": 40,
+  "allFourSeedStreamsAligned": true,
+  "originalInputsUnchanged": true,
+  "focusedTestsPassing": 26,
+  "formalBattlesLaunched": 0
+}

@@ -1,0 +1,810 @@
+{
+  "activeSpecies": "whimsicott",
+  "actor": "p2",
+  "bundleSha256": "84961b73b0ab424d26833a46ad09add3c5524cc3503c65a6f3f201dae50a2a27",
+  "configuration": {
+    "algorithm": "bounded-expectiminimax-exact-chance",
+    "depths": [
+      2,
+      4,
+      6
+    ],
+    "exactDamageBranchDepth": 1,
+    "nodeLimitPerWorldDepth": 100000,
+    "nonTerminalLeaf": "genx-static-v0.0.48-boost-relevance-v1",
+    "terminalUtility": {
+      "loss": 0.0,
+      "win": 1.0
+    }
+  },
+  "decisionOrdinal": 32,
+  "diagnosticSourceSha256": "141a086c9869bc822935512984fad8bb2d8243d3d250d45bc9edc9bc5665c962",
+  "frozenWorlds": [
+    {
+      "index": 0,
+      "stateSha256": "4595d70f7e3381bbdec3818fc5199d760f421ff8e6dd97e85f6f6f423b54e7c7",
+      "weight": 0.5
+    },
+    {
+      "index": 1,
+      "stateSha256": "23a3d72a4dea6439f98865686f4b1c607429abbae23d5ee97b7813ee00cb0033",
+      "weight": 0.5
+    }
+  ],
+  "legalRootActions": [
+    "encore",
+    "encore-tera",
+    "memento",
+    "memento-tera",
+    "moonblast",
+    "moonblast-tera",
+    "sunnyday",
+    "sunnyday-tera",
+    "switch scovillain",
+    "switch uxie"
+  ],
+  "requestType": "move",
+  "results": {
+    "d2": {
+      "actions": {
+        "encore": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "encore | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.53906596
+        },
+        "encore-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "encore-tera | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.31412226
+        },
+        "memento": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "memento | switch avalugghisui",
+            "switch scovillain | No Move"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.7652997699999999
+        },
+        "memento-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "memento-tera | switch avalugghisui",
+            "switch scovillain | No Move"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.560979905
+        },
+        "moonblast": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "moonblast | strengthsap",
+            "No Move | switch avalugghisui"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.5682017500000001
+        },
+        "moonblast-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "moonblast-tera | strengthsap",
+            "No Move | switch avalugghisui"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.34007011
+        },
+        "sunnyday": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "sunnyday | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.51711966
+        },
+        "sunnyday-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "sunnyday-tera | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.31412226
+        },
+        "switch scovillain": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch scovillain | strengthsap",
+            "fireblast | switch ambipom"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.46864518499999996
+        },
+        "switch uxie": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch uxie | strengthsap",
+            "psychicnoise | hex"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.49810531
+        }
+      },
+      "selectedAction": "memento",
+      "status": "complete",
+      "worlds": [
+        {
+          "actions": [
+            {
+              "action": "encore",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.53906596
+            },
+            {
+              "action": "encore-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore-tera | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.31412226
+            },
+            {
+              "action": "memento",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch avalugghisui",
+              "principalLine": [
+                "memento | switch avalugghisui",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.77566767
+            },
+            {
+              "action": "memento-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch avalugghisui",
+              "principalLine": [
+                "memento-tera | switch avalugghisui",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.57519907
+            },
+            {
+              "action": "moonblast",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "moonblast | strengthsap",
+                "No Move | switch avalugghisui"
+              ],
+              "terminalProbability": 0,
+              "value": 0.56802785
+            },
+            {
+              "action": "moonblast-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "moonblast-tera | strengthsap",
+                "No Move | switch avalugghisui"
+              ],
+              "terminalProbability": 0,
+              "value": 0.33991107
+            },
+            {
+              "action": "sunnyday",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "sunnyday | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.53906596
+            },
+            {
+              "action": "sunnyday-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "sunnyday-tera | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.31412226
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "switch scovillain | strengthsap",
+                "fireblast | switch ambipom"
+              ],
+              "terminalProbability": 0,
+              "value": 0.55367064
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "switch uxie | strengthsap",
+                "psychicnoise | hex"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5642385
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 24,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 120,
+          "schemaVersion": 1,
+          "selectedAction": "memento"
+        },
+        {
+          "actions": [
+            {
+              "action": "encore",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.53906596
+            },
+            {
+              "action": "encore-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore-tera | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.31412226
+            },
+            {
+              "action": "memento",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "memento | strengthsap",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.75493187
+            },
+            {
+              "action": "memento-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "memento-tera | strengthsap",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.54676074
+            },
+            {
+              "action": "moonblast",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "willowisp",
+              "principalLine": [
+                "moonblast | willowisp",
+                "No Move | switch avalugghisui"
+              ],
+              "terminalProbability": 0,
+              "value": 0.56837565
+            },
+            {
+              "action": "moonblast-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "willowisp",
+              "principalLine": [
+                "moonblast-tera | willowisp",
+                "No Move | switch avalugghisui"
+              ],
+              "terminalProbability": 0,
+              "value": 0.34022915
+            },
+            {
+              "action": "sunnyday",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "airslash",
+              "principalLine": [
+                "sunnyday | airslash",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.49517336
+            },
+            {
+              "action": "sunnyday-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "sunnyday-tera | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.31412226
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "airslash",
+              "principalLine": [
+                "switch scovillain | airslash",
+                "switch whimsicott | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.38361973
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "switch uxie | strengthsap",
+                "psychicnoise | strengthsap"
+              ],
+              "terminalProbability": 0,
+              "value": 0.43197212
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 24,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 134,
+          "schemaVersion": 1,
+          "selectedAction": "memento"
+        }
+      ]
+    },
+    "d4": {
+      "actions": {
+        "encore": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "encore | switch ambipom",
+            "memento | doubleedge",
+            "switch scovillain | No Move",
+            "growth | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.59485765
+        },
+        "encore-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "encore-tera | switch ambipom",
+            "memento | doubleedge",
+            "switch scovillain | No Move",
+            "growth | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.36542045
+        },
+        "memento": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "memento | switch ambipom",
+            "switch uxie | No Move",
+            "psychicnoise | fakeout",
+            "psychicnoise | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.500296415
+        },
+        "memento-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "memento-tera | switch ambipom",
+            "switch uxie | No Move",
+            "psychicnoise | fakeout",
+            "psychicnoise | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.28253065
+        },
+        "moonblast": {
+          "evaluatorTruncatedProbability": 1.0000000500000001,
+          "principalLine": [
+            "moonblast | strengthsap",
+            "No Move | switch avalugghisui",
+            "memento | stealthrock",
+            "switch uxie | No Move"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.8113589000000001
+        },
+        "moonblast-tera": {
+          "evaluatorTruncatedProbability": 1.0000000500000001,
+          "principalLine": [
+            "moonblast-tera | strengthsap",
+            "No Move | switch avalugghisui",
+            "memento | stealthrock",
+            "switch uxie | No Move"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.6275673749999999
+        },
+        "sunnyday": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "sunnyday | strengthsap",
+            "moonblast | strengthsap",
+            "No Move | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.61226311
+        },
+        "sunnyday-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "sunnyday-tera | strengthsap",
+            "moonblast | strengthsap",
+            "No Move | switch ambipom",
+            "switch uxie | doubleedge"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.450932075
+        },
+        "switch scovillain": {
+          "evaluatorTruncatedProbability": 0.99999997,
+          "principalLine": [
+            "switch scovillain | strengthsap",
+            "fireblast | switch ambipom",
+            "No Move | switch avalugghisui",
+            "fireblast | rockblast"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.45789185
+        },
+        "switch uxie": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch uxie | switch ambipom",
+            "switch whimsicott | doubleedge",
+            "switch uxie | switch avalugghisui",
+            "uturn | switch drifblim"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.53501875
+        }
+      },
+      "selectedAction": "moonblast",
+      "status": "complete",
+      "worlds": [
+        {
+          "actions": [
+            {
+              "action": "encore",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore | switch ambipom",
+                "memento | doubleedge",
+                "switch scovillain | No Move",
+                "growth | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.6143431
+            },
+            {
+              "action": "encore-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore-tera | switch ambipom",
+                "memento | doubleedge",
+                "switch scovillain | No Move",
+                "growth | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3841679
+            },
+            {
+              "action": "memento",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "memento | switch ambipom",
+                "switch uxie | No Move",
+                "psychicnoise | fakeout",
+                "psychicnoise | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.51501393
+            },
+            {
+              "action": "memento-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "memento-tera | switch ambipom",
+                "switch uxie | No Move",
+                "psychicnoise | fakeout",
+                "psychicnoise | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.29371142
+            },
+            {
+              "action": "moonblast",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "moonblast | strengthsap",
+                "No Move | switch avalugghisui",
+                "memento | stealthrock",
+                "switch uxie | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.81518173
+            },
+            {
+              "action": "moonblast-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "moonblast-tera | strengthsap",
+                "No Move | switch avalugghisui",
+                "memento | stealthrock",
+                "switch uxie | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.63333195
+            },
+            {
+              "action": "sunnyday",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "sunnyday | strengthsap",
+                "moonblast | strengthsap",
+                "No Move | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.69112676
+            },
+            {
+              "action": "sunnyday-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "sunnyday-tera | strengthsap",
+                "moonblast | strengthsap",
+                "No Move | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.46702105
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "switch scovillain | strengthsap",
+                "fireblast | switch ambipom",
+                "No Move | switch avalugghisui",
+                "fireblast | rockblast"
+              ],
+              "terminalProbability": 0,
+              "value": 0.56767565
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "switch uxie | switch ambipom",
+                "switch whimsicott | doubleedge",
+                "switch uxie | switch avalugghisui",
+                "uturn | switch drifblim"
+              ],
+              "terminalProbability": 0,
+              "value": 0.6133356
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 16931,
+          "depth": 4,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 41091,
+          "schemaVersion": 1,
+          "selectedAction": "moonblast"
+        },
+        {
+          "actions": [
+            {
+              "action": "encore",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore | switch ambipom",
+                "memento | doubleedge",
+                "switch scovillain | No Move",
+                "growth | switch drifblim"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5753722
+            },
+            {
+              "action": "encore-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch ambipom",
+              "principalLine": [
+                "encore-tera | switch ambipom",
+                "memento | doubleedge",
+                "switch scovillain | No Move",
+                "growth | switch drifblim"
+              ],
+              "terminalProbability": 0,
+              "value": 0.346673
+            },
+            {
+              "action": "memento",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "memento | strengthsap",
+                "switch scovillain | No Move",
+                "crunch | switch avalugghisui",
+                "fireblast | switch ambipom"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4855789
+            },
+            {
+              "action": "memento-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "memento-tera | strengthsap",
+                "switch scovillain | No Move",
+                "crunch | switch avalugghisui",
+                "fireblast | switch ambipom"
+              ],
+              "terminalProbability": 0,
+              "value": 0.27134988
+            },
+            {
+              "action": "moonblast",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "switch avalugghisui",
+              "principalLine": [
+                "moonblast | switch avalugghisui",
+                "moonblast | switch drifblim",
+                "No Move | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.80753607
+            },
+            {
+              "action": "moonblast-tera",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "switch avalugghisui",
+              "principalLine": [
+                "moonblast-tera | switch avalugghisui",
+                "moonblast | switch drifblim",
+                "No Move | switch ambipom",
+                "switch uxie | doubleedge"
+              ],
+              "terminalProbability": 0,
+              "value": 0.6218028
+            },
+            {
+              "action": "sunnyday",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "airslash",
+              "principalLine": [
+                "sunnyday | airslash",
+                "switch scovillain | No Move",
+                "solarbeam | switch ambipom",
+                "No Move | switch drifblim"
+              ],
+              "terminalProbability": 0,
+              "value": 0.53339946
+            },
+            {
+              "action": "sunnyday-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "hex",
+              "principalLine": [
+                "sunnyday-tera | hex",
+                "memento | switch ambipom",
+                "switch scovillain | No Move",
+                "growth | fakeout"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4348431
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "airslash",
+              "principalLine": [
+                "switch scovillain | airslash",
+                "switch whimsicott | No Move",
+                "memento | strengthsap",
+                "switch uxie | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.34810805
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "strengthsap",
+              "principalLine": [
+                "switch uxie | strengthsap",
+                "uturn | hex",
+                "switch scovillain | No Move",
+                "fireblast | switch ambipom"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4567019
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 29264,
+          "depth": 4,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 65690,
+          "schemaVersion": 1,
+          "selectedAction": "moonblast"
+        }
+      ]
+    },
+    "d6": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    }
+  },
+  "runtime": {
+    "engine": "poke-engine",
+    "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+    "engineVersion": "0.0.48",
+    "evaluator": "genx-static-v0.0.48-boost-relevance-v1",
+    "evaluatorSourceSha256": "5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397"
+  },
+  "schemaVersion": 1,
+  "trialId": "0006-adam-sun-vs-steve-hazard-warfare-reverse"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "purpose": "offline-only Phase 4 setup sequence diagnostic summary",
+  "runtime": {
+    "id": "pdl-s4-foul-play-showdown-local-v5",
+    "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+    "evaluator": "genx-static-v0.0.48-boost-relevance-v1",
+    "evaluatorSourceSha256": "5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397"
+  },
+  "originalHealthyMementoRootFloors": {
+    "0": {"visits": 645, "meanUtility": 0.3936, "maxDepth": 4, "meanDepth": 2.865, "postFloorLeader": "psychicnoise"},
+    "1000": {"visits": 1000, "meanUtility": 0.3732, "maxDepth": 4, "meanDepth": 2.997, "postFloorLeader": "psychicnoise"},
+    "5000": {"visits": 5000, "meanUtility": 0.3235, "maxDepth": 5, "meanDepth": 3.540, "postFloorLeader": "psychicnoise"},
+    "10000": {"visits": 10000, "meanUtility": 0.3090, "maxDepth": 6, "meanDepth": 3.800, "postFloorLeader": "psychicnoise"},
+    "25000": {"visits": 25000, "meanUtility": 0.2920, "maxDepth": 6, "meanDepth": 4.140, "postFloorLeader": "psychicnoise"}
+  },
+  "positiveControl": {
+    "lineage": "shell-safe frozen world -> legal Uxie switch -> Memento -> legal Drednaw replacement -> Shell Smash",
+    "m0": {"selected120k": "stealthrock", "selected500k": "stealthrock", "mementoUtility500k": 0.3714},
+    "m1": {"selected500k": "switch drednaw", "support": 0.985},
+    "m2": {"selected500k": "shellsmash", "support": 0.505},
+    "m3": {"selected500k": "crunch", "support": 0.394}
+  },
+  "historicalInventory": {
+    "sun": {"trials": 150, "sunnyDayLegal": 1216, "selected": 71, "rejected": 1145, "turnLe20": 809},
+    "memento": {"trials": 150, "mementoLegal": 1430, "selected": 73, "rejected": 1357, "turnLe20": 815}
+  },
+  "decisionGate": "none"
+}

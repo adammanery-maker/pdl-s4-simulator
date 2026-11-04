@@ -1,0 +1,58 @@
+Mismagius @ Heavy-Duty Boots
+Ability: Levitate
+Tera Type: Steel
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Shadow Ball
+- Mystical Fire
+- Nasty Plot
+- Thunderbolt
+
+Jolteon @ Choice Specs
+Ability: Volt Absorb
+Tera Type: Dragon
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Volt Switch
+- Thunderbolt
+- Shadow Ball
+- Alluring Voice
+
+Copperajah @ Leftovers
+Ability: Sheer Force
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Heavy Slam
+- Knock Off
+- Stealth Rock
+- Earthquake
+
+Flygon @ Choice Scarf
+Ability: Levitate
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- U-turn
+- Stone Edge
+
+Milotic @ Leftovers
+Ability: Marvel Scale
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Scald
+- Recover
+- Ice Beam
+- Haze
+
+Heracross @ Flame Orb
+Ability: Guts
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Facade
+- Knock Off
+- Megahorn

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "phase6-aa-gate",
+  "scenarioPath": "../../studies/adam-vs-steve-team-strategy/scenario.json",
+  "subjectTeamId": "adam",
+  "opponentTeamId": "steve",
+  "baseline": { "id": "aa-a", "teamPath": "demo-baseline.txt", "teraCaptains": ["Scovillain", "Tatsugiri"] },
+  "candidate": { "id": "aa-a-copy", "teamPath": "demo-baseline.txt", "teraCaptains": ["Scovillain", "Tatsugiri"] },
+  "change": { "type": "identity" },
+  "opponentBuildIds": ["steve-screens-hazards", "steve-volturn-unburden", "steve-hazard-warfare"],
+  "decisionDomains": ["ordinary-attacks", "ordinary-switching", "team-preview"]
+}

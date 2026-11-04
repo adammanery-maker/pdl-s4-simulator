@@ -1,0 +1,56 @@
+Ribombee @ Focus Sash
+Ability: Shield Dust
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sticky Web
+- Moonblast
+- Bug Buzz
+- Stun Spore
+
+Heracross @ Flame Orb
+Ability: Guts
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Megahorn
+- Close Combat
+- Knock Off
+- Facade
+
+Frosmoth @ Heavy-Duty Boots
+Ability: Ice Scales
+Tera Type: Ice
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Quiver Dance
+- Ice Beam
+- Bug Buzz
+- Giga Drain
+
+Muk @ Assault Vest
+Ability: Poison Touch
+Tera Type: Flying
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Poison Jab
+- Knock Off
+- Drain Punch
+- Shadow Sneak
+
+Orthworm @ Sitrus Berry
+Ability: Earth Eater
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Stealth Rock
+- Iron Head
+- Body Press
+- Earthquake
+
+Poliwrath @ Leftovers
+Ability: Water Absorb
+Tera Type: Electric
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Liquidation
+- Drain Punch
+- Bulk Up
+- Ice Punch

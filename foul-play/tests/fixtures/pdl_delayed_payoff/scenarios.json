@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "searchMsPerWorld": 250,
+  "requestedWorlds": 1,
+  "seed": 0,
+  "scenarios": {
+    "useful-memento": {
+      "fixture": "memento",
+      "actor": "p1",
+      "turn": 25,
+      "focusAction": "memento"
+    },
+    "useless-memento": {
+      "fixture": "memento",
+      "actor": "p1",
+      "turn": 25,
+      "focusAction": "memento",
+      "unavailableUserSpecies": [
+        "drednaw"
+      ]
+    },
+    "useful-sun": {
+      "fixture": "sun",
+      "actor": "p1",
+      "turn": 5,
+      "focusAction": "sunnyday"
+    },
+    "useless-sun": {
+      "fixture": "sun",
+      "actor": "p1",
+      "turn": 5,
+      "focusAction": "sunnyday",
+      "unavailableUserSpecies": [
+        "scovillain"
+      ]
+    },
+    "dangerous-shell-smash": {
+      "fixture": "shell-danger",
+      "actor": "p2",
+      "turn": 1,
+      "focusAction": "shellsmash"
+    },
+    "safe-shell-smash": {
+      "fixture": "shell-safe",
+      "actor": "p1",
+      "turn": 6,
+      "focusAction": "shellsmash"
+    },
+    "healthy-useful-memento": {
+      "fixture": "healthy-memento",
+      "actor": "p1",
+      "turn": 4,
+      "focusAction": "memento"
+    },
+    "healthy-useless-memento": {
+      "fixture": "healthy-memento",
+      "actor": "p1",
+      "turn": 4,
+      "focusAction": "memento",
+      "unavailableUserSpecies": [
+        "drednaw"
+      ]
+    },
+    "sun-handoff": {
+      "fixture": "sun",
+      "actor": "p1",
+      "turn": 7,
+      "focusAction": "switch scovillain"
+    },
+    "sun-handoff-no-scovillain": {
+      "fixture": "sun",
+      "actor": "p1",
+      "turn": 7,
+      "focusAction": "switch scovillain",
+      "unavailableUserSpecies": [
+        "scovillain"
+      ]
+    },
+    "sun-growth-window": {
+      "fixture": "sun",
+      "actor": "p1",
+      "turn": 8,
+      "focusAction": "growth"
+    }
+  }
+}

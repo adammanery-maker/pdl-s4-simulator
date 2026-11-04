@@ -1,0 +1,109 @@
+diff --git a/Cargo.toml b/Cargo.toml
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -1,6 +1,7 @@
+ [package]
+ name = "poke-engine"
+ version = "0.0.48"
++build = "build.rs"
+ authors = ["pmariglia <pmariglia@github.com>"]
+ edition = "2018"
+ license-file = "LICENSE"
+diff --git a/build.rs b/build.rs
+new file mode 100644
+--- /dev/null
++++ b/build.rs
+@@ -0,0 +1,49 @@
++use std::fs::{self, File};
++use std::io::{self, Write};
++use std::path::{Path, PathBuf};
++use std::process::{Command, Stdio};
++
++fn collect(directory: &Path, files: &mut Vec<PathBuf>) -> io::Result<()> {
++    for entry in fs::read_dir(directory)? {
++        let path = entry?.path();
++        if path.is_dir() {
++            collect(&path, files)?;
++        } else if path.extension().is_some_and(|extension| extension == "rs") {
++            files.push(path);
++        }
++    }
++    Ok(())
++}
++
++fn main() -> io::Result<()> {
++    let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").expect("Cargo manifest directory"));
++    let mut files = vec![root.join("Cargo.toml"), root.join("Cargo.lock"), root.join("build.rs"), root.join("poke-engine-py/Cargo.toml")];
++    collect(&root.join("src"), &mut files)?;
++    collect(&root.join("poke-engine-py/src"), &mut files)?;
++    files.sort();
++
++    let mut hasher = Command::new("/usr/bin/shasum")
++        .args(["-a", "256"])
++        .stdin(Stdio::piped())
++        .stdout(Stdio::piped())
++        .spawn()
++        .expect("Canonical macOS runtime requires /usr/bin/shasum to attest poke-engine source");
++    {
++        let stdin = hasher.stdin.as_mut().expect("sha256 stdin");
++        for path in &files {
++            let relative = path.strip_prefix(&root).expect("source inside engine root");
++            println!("cargo:rerun-if-changed={}", relative.display());
++            stdin.write_all(relative.to_string_lossy().as_bytes())?;
++            stdin.write_all(&[0])?;
++            stdin.write_all(&fs::read(path)?)?;
++            stdin.write_all(&[0])?;
++        }
++    }
++    let output = hasher.wait_with_output()?;
++    assert!(output.status.success(), "shasum failed while attesting poke-engine source");
++    let digest = String::from_utf8(output.stdout).expect("sha256 output");
++    let digest = digest.split_whitespace().next().expect("sha256 digest");
++    let generated = PathBuf::from(std::env::var("OUT_DIR").expect("Cargo output directory")).join("pdl_engine_fingerprint.rs");
++    File::create(generated)?.write_all(format!("pub const PDL_ENGINE_SOURCE_SHA256: &str = \"{digest}\";\\n").as_bytes())?;
++    Ok(())
++}
+diff --git a/src/lib.rs b/src/lib.rs
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -1,3 +1,10 @@
++include!(concat!(env!("OUT_DIR"), "/pdl_engine_fingerprint.rs"));
++
++/// Fingerprint of the complete engine and binding sources compiled into this build.
++pub fn pdl_engine_source_sha256() -> &'static str {
++    PDL_ENGINE_SOURCE_SHA256
++}
++
+ #[cfg(feature = "gen1")]
+ #[path = "gen1/mod.rs"]
+ pub mod engine;
+diff --git a/poke-engine-py/python/poke_engine/poke_engine.pyi b/poke-engine-py/python/poke_engine/poke_engine.pyi
+--- a/poke-engine-py/python/poke_engine/poke_engine.pyi
++++ b/poke-engine-py/python/poke_engine/poke_engine.pyi
+@@ -491,3 +491,4 @@ def evaluate_state(state: State) -> float: ...
+ def evaluate_state_breakdown(state: State) -> EvaluationBreakdown: ...
+ def evaluator_metadata() -> Tuple[str, str, str]: ...
+ def evaluator_source() -> str: ...
++def engine_source_sha256() -> str: ...
+diff --git a/poke-engine-py/src/lib.rs b/poke-engine-py/src/lib.rs
+--- a/poke-engine-py/src/lib.rs
++++ b/poke-engine-py/src/lib.rs
+@@ -72,5 +72,11 @@ fn evaluator_source() -> &'static str {
+     include_str!("../../src/genx/evaluate.rs")
+ }
+ 
++/// Fingerprint the complete engine and binding source tree used by MCTS.
++#[pyfunction]
++fn engine_source_sha256() -> &'static str {
++    poke_engine::pdl_engine_source_sha256()
++}
++
+ fn movechoice_to_string(side: &Side, move_choice: &MoveChoice) -> String {
+     match move_choice {
+@@ -1183,5 +1189,6 @@ fn py_poke_engine(m: &Bound<'_, PyModule>) -> PyResult<()> {
+     m.add_function(wrap_pyfunction!(evaluate_state_breakdown, m)?)?;
+     m.add_function(wrap_pyfunction!(evaluator_metadata, m)?)?;
+     m.add_function(wrap_pyfunction!(evaluator_source, m)?)?;
++    m.add_function(wrap_pyfunction!(engine_source_sha256, m)?)?;
+     m.add_class::<PyEvaluationBreakdown>()?;
+     m.add_class::<PyState>()?;

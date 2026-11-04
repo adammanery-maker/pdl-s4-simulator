@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "bounded-expectiminimax-current-engine-chance",
+  "configuration": {
+    "depths": [2, 4, 6],
+    "exactDamageBranchDepth": 1,
+    "nodeLimitPerWorldDepth": 100000,
+    "terminalUtility": {"win": 1.0, "loss": 0.0},
+    "nonTerminalLeaf": "genx-static-v0.0.48-boost-relevance-v1"
+  },
+  "fixtures": [
+    {"id": "balance-hazard-control", "d2": "stealthrock", "d4": "intractable", "d6": "intractable", "label": "UNRESOLVED"},
+    {"id": "drednaw-shell-smash", "d2": "shellsmash", "d4": "intractable", "d6": "intractable", "label": "UNRESOLVED"},
+    {"id": "memento-window", "d2": "partingshot", "d4": "intractable", "d6": "intractable", "label": "UNRESOLVED"},
+    {"id": "sun-positioning-a", "d2": "switch whimsicott", "d4": "intractable", "d6": "intractable", "label": "UNRESOLVED"},
+    {"id": "sun-positioning-b", "d2": "memento", "d4": "moonblast", "d6": "intractable", "label": "DEPTH SENSITIVE"},
+    {"id": "sunny-day-a", "d2": "memento", "d4": "intractable", "d6": "intractable", "label": "UNRESOLVED"}
+  ],
+  "completedDepthCounts": {"d2": 6, "d4": 1, "d6": 0},
+  "completedLeafProvenance": {"terminalPercent": 0.0, "evaluatorTruncatedPercent": 100.0}
+}

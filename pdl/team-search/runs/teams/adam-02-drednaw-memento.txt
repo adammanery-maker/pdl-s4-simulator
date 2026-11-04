@@ -1,0 +1,53 @@
+Flamigo @ Choice Scarf
+Ability: Scrappy
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Brave Bird
+- U-turn
+- Roost
+
+Drednaw @ White Herb
+Ability: Strong Jaw
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Shell Smash
+- Crunch
+- Liquidation
+- Ice Fang
+
+Whimsicott @ Heavy-Duty Boots
+Ability: Prankster
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Moonblast
+- U-turn
+- Memento
+- Encore
+
+Tatsugiri @ Heavy-Duty Boots
+Ability: Storm Drain
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Draco Meteor
+- Rapid Spin
+- Surf
+- Nasty Plot
+
+Magneton @ Eviolite
+Ability: Analytic
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Volt Switch
+- Flash Cannon
+- Magnet Rise
+- Thunderbolt
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 248 HP / 212 SpD / 48 Spe
+Careful Nature
+- Knock Off
+- Flare Blitz
+- Parting Shot
+- Will-O-Wisp

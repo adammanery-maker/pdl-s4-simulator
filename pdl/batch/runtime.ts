@@ -1,6 +1,6 @@
-export const CANONICAL_RUNTIME_ID = 'pdl-s4-foul-play-showdown-local-v3';
+export const CANONICAL_RUNTIME_ID = 'pdl-s4-foul-play-showdown-local-v5';
 export const CANONICAL_EVALUATOR_SHA256 = '5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397';
-export const CANONICAL_ENGINE_SOURCE_SHA256 = 'b9144342c8a48c244a02ab022c9c1652d7a0941ac2112d64300f119c152b64ef';
+export const CANONICAL_ENGINE_SOURCE_SHA256 = 'c3662dc2f231fca047dc05141f0af8c395d50b43869492dbd56c386d4c2f5eda';
 export const CANONICAL_EVALUATOR_ID = 'genx-static-v0.0.48-boost-relevance-v1';
 
 /** Revision identity attached to mechanics artifacts, kept outside the bot runtime contract. */

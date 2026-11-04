@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "ordinary-attacks": { "status": "GREEN", "evidence": "Current Showdown mechanics authority, conformance coverage, and stable Native fixture actions." },
+  "ordinary-switching": { "status": "YELLOW", "evidence": "Usable for exploration; long continuation value remains evaluator dependent." },
+  "hazards": { "status": "YELLOW", "evidence": "Mechanics conformant, but prior Rocks/Spin cycles require pathology review." },
+  "status": { "status": "GREEN", "evidence": "Current mechanics coverage and no broad Phase 5 instability." },
+  "sun-initiation": { "status": "YELLOW", "evidence": "Sunny Day action rankings were planner and depth sensitive." },
+  "sun-positioning": { "status": "YELLOW", "evidence": "Stable planner disagreements remain evaluator-truncated." },
+  "growth": { "status": "YELLOW", "evidence": "Growth-loop regression improved, but setup conversion requires log inspection." },
+  "memento": { "status": "YELLOW", "evidence": "Sequencing disagreement remains horizon sensitive." },
+  "shell-smash": { "status": "YELLOW", "evidence": "Native/H8 disagreement and horizon sensitivity remain." },
+  "team-preview": { "status": "RED", "evidence": "Current non-BSS poke-engine preview continuation is not independently adjudicated." }
+}

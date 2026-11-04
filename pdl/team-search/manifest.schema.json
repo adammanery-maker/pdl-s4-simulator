@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PDL supplied-pool team-search manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "league",
+    "beliefPath",
+    "adamCandidates",
+    "steveOpponents"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-]*$"
+    },
+    "beliefPath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "league": {
+      "type": "object",
+      "required": [
+        "adam",
+        "steve"
+      ],
+      "properties": {
+        "adam": {
+          "$ref": "#/$defs/registration"
+        },
+        "steve": {
+          "$ref": "#/$defs/registration"
+        }
+      }
+    },
+    "adamCandidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/team"
+      }
+    },
+    "steveOpponents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/team"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "team": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "teamPath"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9-]*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "teamPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "teamHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "teraCaptains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "strategyPolicy": {
+          "enum": [
+            "sun-lead-only-v1",
+            "sun-sequence-v1"
+          ]
+        }
+      }
+    },
+    "registration": {
+      "type": "object",
+      "required": [
+        "draftedTeraTypes",
+        "teraCaptains",
+        "roster"
+      ],
+      "properties": {
+        "draftedTeraTypes": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "teraCaptains": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "roster": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "species",
+              "cost"
+            ],
+            "properties": {
+              "species": {
+                "type": "string"
+              },
+              "cost": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

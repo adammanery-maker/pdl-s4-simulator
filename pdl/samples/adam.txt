@@ -1,0 +1,56 @@
+Whimsicott @ Heat Rock
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 Spe
+Timid Nature
+- Sunny Day
+- Moonblast
+- Encore
+- U-turn
+
+Scovillain @ Life Orb
+Ability: Chlorophyll
+Tera Type: Grass
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Solar Beam
+- Flamethrower
+- Growth
+- Giga Drain
+
+Brute Bonnet @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Bullet Seed
+- Crunch
+- Close Combat
+- Taunt
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 248 HP / 8 Atk / 252 SpD
+Careful Nature
+- Flare Blitz
+- Knock Off
+- Parting Shot
+- Will-O-Wisp
+
+Tatsugiri @ Heavy-Duty Boots
+Ability: Storm Drain
+Tera Type: Dragon
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Rapid Spin
+- Draco Meteor
+- Surf
+- Nasty Plot
+
+Golem @ Custap Berry
+Ability: Sturdy
+Tera Type: Ghost
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Explosion

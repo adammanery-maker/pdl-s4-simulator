@@ -20,7 +20,7 @@ export function createTrialArtifact(input: CreateTrialArtifactInput): TrialArtif
 	mkdirSync(p2PrivateDirectory, { mode: 0o700 });
 	const manifest = {
 		...input.manifest,
-		metadata: { ...input.manifest.metadata, runtime: CANONICAL_RUNTIME },
+		metadata: { ...input.manifest.metadata, runtime: input.manifest.metadata?.runtime || CANONICAL_RUNTIME },
 	};
 	const artifact: TrialArtifact = {
 		trialId: input.trialId,
@@ -34,6 +34,8 @@ export function createTrialArtifact(input: CreateTrialArtifactInput): TrialArtif
 		p2TeamPath: join(p2PrivateDirectory, 'team.txt'),
 		p1ProtocolPath: join(p1PrivateDirectory, 'protocol.log'),
 		p2ProtocolPath: join(p2PrivateDirectory, 'protocol.log'),
+		p1DecisionBundlePath: join(p1PrivateDirectory, 'decision-bundles.jsonl'),
+		p2DecisionBundlePath: join(p2PrivateDirectory, 'decision-bundles.jsonl'),
 		p1LogPath: join(directory, 'p1.log'),
 		p2LogPath: join(directory, 'p2.log'),
 		showdownLogPath: join(directory, 'showdown.log'),

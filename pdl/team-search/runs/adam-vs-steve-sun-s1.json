@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "id": "adam-vs-steve-initial",
+  "beliefPath": "adam-vs-steve-initial-priors.json",
+  "league": {
+    "adam": {
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Tatsugiri",
+        "Scovillain"
+      ],
+      "roster": [
+        {
+          "species": "Tatsugiri",
+          "cost": 3
+        },
+        {
+          "species": "Flamigo",
+          "cost": 11
+        },
+        {
+          "species": "Whimsicott",
+          "cost": 5
+        },
+        {
+          "species": "Drednaw",
+          "cost": 5
+        },
+        {
+          "species": "Scovillain",
+          "cost": 3
+        },
+        {
+          "species": "Golem",
+          "cost": 1
+        },
+        {
+          "species": "Leafeon",
+          "cost": 2
+        },
+        {
+          "species": "Uxie",
+          "cost": 7
+        },
+        {
+          "species": "Magneton",
+          "cost": 3
+        },
+        {
+          "species": "Incineroar",
+          "cost": 14
+        }
+      ]
+    },
+    "steve": {
+      "draftedTeraTypes": [
+        "Fighting",
+        "Fire"
+      ],
+      "teraCaptains": [
+        "Avalugg-Hisui",
+        "Drifblim"
+      ],
+      "roster": [
+        {
+          "species": "Grimmsnarl",
+          "cost": 8
+        },
+        {
+          "species": "Avalugg-Hisui",
+          "cost": 2
+        },
+        {
+          "species": "Drifblim",
+          "cost": 3
+        },
+        {
+          "species": "Electivire",
+          "cost": 3
+        },
+        {
+          "species": "Lycanroc",
+          "cost": 5
+        },
+        {
+          "species": "Delphox",
+          "cost": 5
+        },
+        {
+          "species": "Goodra",
+          "cost": 8
+        },
+        {
+          "species": "Ambipom",
+          "cost": 5
+        },
+        {
+          "species": "Slowbro-Galar",
+          "cost": 9
+        },
+        {
+          "species": "Electrode-Hisui",
+          "cost": 3
+        }
+      ]
+    }
+  },
+  "adamCandidates": [
+    {
+      "id": "adam-03-sun-drednaw",
+      "label": "Sun Drednaw",
+      "teamPath": "teams/adam-03-sun-drednaw.txt",
+      "weight": 1,
+      "teamHash": "22f59cfad9f13b0a5d415a5bb80a2a14bea847fb6769fd3567e6b5b6a560431c",
+      "strategyPolicy": "sun-lead-only-v1"
+    }
+  ],
+  "steveOpponents": [
+    {
+      "id": "steve-01-screens-bulky-offense",
+      "label": "Screens Bulky Offense",
+      "teamPath": "teams/steve-01-screens-bulky-offense.txt",
+      "weight": 1,
+      "teamHash": "1e4714ae5e61944a3d574dc2e47091df831f5263eb295e302b5310d29f2b6a55"
+    },
+    {
+      "id": "steve-02-volturn-offense",
+      "label": "Volturn Offense",
+      "teamPath": "teams/steve-02-volturn-offense.txt",
+      "weight": 1,
+      "teamHash": "b97c37ed93dfbbc485c7c1d49497b59bb63bd9201b5fe7bd8e70cd1a6e19cb20"
+    },
+    {
+      "id": "steve-03-bulky-balance",
+      "label": "Bulky Balance",
+      "teamPath": "teams/steve-03-bulky-balance.txt",
+      "weight": 1,
+      "teamHash": "16f011c34a8f561b377c95caecc15b34df453b496e4d7f618f804ba96d1579ae"
+    },
+    {
+      "id": "steve-04-screens-fast-offense",
+      "label": "Screens Fast Offense",
+      "teamPath": "teams/steve-04-screens-fast-offense.txt",
+      "weight": 1,
+      "teamHash": "5318b3a359e2cba6876923ffb4c874ae18d27b4050189413b68bd1fe8f6d5e68"
+    }
+  ],
+  "metadata": {
+    "purpose": "exploratory",
+    "captainSource": "User-confirmed registrations",
+    "adamDraftedTeraTypesSource": "Canonical local PDL live snapshot (2026-09-23) and user confirmation",
+    "steveRosterSource": "User-supplied current roster for this run",
+    "costSource": "pdl-vercel-app/src/data/league-pokemon.seed.json",
+    "priorPolicy": "One shared roster-wide local candidate prior, fixed independently of the selected trial. No opponent ground-truth file reaches the agent.",
+    "experiment": "S1",
+    "strategyPolicy": "sun-lead-only-v1",
+    "seedAlignment": "Retains adam-vs-steve-initial namespace to align all 24 cells with the completed baseline.",
+    "baselineResultsPath": "../../../calculations/adam-vs-steve-initial-quick"
+  }
+}

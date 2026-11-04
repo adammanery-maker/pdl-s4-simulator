@@ -1,0 +1,58 @@
+Charizard @ Heavy-Duty Boots
+Ability: Blaze
+Tera Type: Water
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Flamethrower
+- Air Slash
+- Roost
+- Will-O-Wisp
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+Tera Type: Fairy
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Rapid Spin
+- Knock Off
+- Stealth Rock
+
+Alcremie @ Leftovers
+Ability: Aroma Veil
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Calm Mind
+- Acid Armor
+- Stored Power
+- Recover
+
+Vaporeon @ Leftovers
+Ability: Water Absorb
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Scald
+- Wish
+- Protect
+- Flip Turn
+
+Torterra @ Leftovers
+Ability: Overgrow
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Wood Hammer
+- Stealth Rock
+- Synthesis
+
+Tauros @ Choice Scarf
+Ability: Intimidate
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Body Slam
+- Earthquake
+- Iron Head
+- Close Combat

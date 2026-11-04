@@ -1,0 +1,57 @@
+Grimmsnarl @ Heavy-Duty Boots
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Taunt
+- Parting Shot
+
+Ambipom @ Silk Scarf
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- U-turn
+- Knock Off
+- Triple Axel
+
+Electrode-Hisui @ Heavy-Duty Boots
+Ability: Static
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Volt Switch
+- Chloroblast
+- Thunderbolt
+- Taunt
+
+Lycanroc @ Focus Sash
+Ability: Steadfast
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Stealth Rock
+- Accelerock
+- Stone Edge
+- Endeavor
+
+Delphox @ Life Orb
+Ability: Blaze
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Nasty Plot
+- Flamethrower
+- Psyshock
+- Grass Knot
+
+Drifblim @ Sitrus Berry
+Ability: Unburden
+Tera Type: Fire
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Calm Mind
+- Shadow Ball
+- Air Slash
+- Strength Sap

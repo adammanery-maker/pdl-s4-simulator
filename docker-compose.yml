@@ -1,0 +1,21 @@
+services:
+  showdown-bot-arena:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pdl-showdown-bot-arena
+    ports:
+      - "8000:8000"
+      - "4173:4173"
+    environment:
+      - SHOWDOWN_PORT=8000
+      - PANEL_PORT=4173
+      - BIND_HOST=0.0.0.0
+      - SHOWDOWN_HOST=localhost
+      - PYTHON_BIN=python3
+      - FOUL_ROOT=/app/foul-play
+      - BELIEF_PATH=/app/foul-play/pdl-belief-all-teams.json
+    volumes:
+      - ../pdl-s4-foul-play:/app/foul-play:ro
+      - /app/foul-play/.venv
+    restart: unless-stopped

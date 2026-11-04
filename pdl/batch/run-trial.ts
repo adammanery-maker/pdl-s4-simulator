@@ -4,8 +4,11 @@ import { appendFileSync, closeSync, existsSync, openSync, readFileSync, realpath
 import { createServer, connect } from 'net';
 import { dirname, join, resolve } from 'path';
 import { finalizeTrialArtifact, writePrivateGroundTruthAudit } from './artifacts';
-import type { TrialArtifact, TrialResult } from './types';
+import type { PdlSunPolicy, TrialArtifact, TrialResult } from './types';
 import { CANONICAL_ENGINE_SOURCE_SHA256, CANONICAL_EVALUATOR_ID, CANONICAL_EVALUATOR_SHA256, CANONICAL_RUNTIME_ID } from './runtime';
+
+const EVALUATION_RUNTIME_ID = 'pdl-s4-foul-play-eval-fixediter-v1';
+import type { PRNGSeed } from '../../sim/prng';
 
 const MAX_CAPTURED_PROCESS_OUTPUT = 1_000_000;
 
@@ -19,12 +22,16 @@ interface FoulPlayArgumentsInput {
 	readonly mode: 'challenge_user' | 'accept_challenge';
 	readonly challengeUser?: string;
 	readonly teamId: string;
+	readonly sunPolicy?: PdlSunPolicy;
+	readonly candidateId?: string;
 	readonly teamPath: string;
 	readonly beliefPath: string;
 	readonly protocolPath: string;
+	readonly decisionBundlePath: string;
 	readonly searchTimeMs: number;
 	readonly beliefSamples: number;
 	readonly beliefEngine?: 'legacy' | 'posterior-shadow' | 'posterior';
+	readonly evaluation?: { readonly fixedIterations: number; readonly mctsSeed: string; readonly beliefSeed: string; readonly worldSeed: string; readonly worldWorkers: number };
 }
 
 interface BotIdentity {
@@ -62,15 +69,16 @@ export function offlineRuntimeEnvironment(source: NodeJS.ProcessEnv = process.en
 		&& !/^(OPENAI|ANTHROPIC|CLAUDE|GEMINI|GOOGLE|MISTRAL|COHERE|OPENROUTER|TOGETHER|FIREWORKS|REPLICATE|AI21|CEREBRAS|DEEPSEEK|GROQ|XAI|PERPLEXITY|HUGGINGFACE|HF|AZURE_OPENAI|AWS_BEDROCK|VERTEX)_/.test(name)));
 }
 
-export function assertCanonicalFoulPlayRuntime(value: unknown): void {
+export function assertCanonicalFoulPlayRuntime(value: unknown, evaluation = false): void {
 	if (!value || typeof value !== 'object') throw new Error('Foul Play runtime contract is not an object.');
 	const runtime = value as {
 		id?: unknown; agent?: unknown; authoritativeEngine?: unknown; searchEngine?: unknown;
 		actionPolicy?: unknown; informationBoundary?: unknown; networkPolicy?: unknown; modelInference?: unknown;
-		resolvedConfiguration?: { offlineRuntime?: unknown; searchEngine?: unknown; actionPolicy?: unknown };
+		resolvedConfiguration?: { offlineRuntime?: unknown; searchEngine?: unknown; actionPolicy?: unknown; fixedIterations?: unknown; searchThreads?: unknown; seedScheme?: unknown };
 		evaluator?: { engine?: unknown; version?: unknown; id?: unknown; sourceSha256?: unknown; engineSourceSha256?: unknown; feature?: unknown };
 	};
-	if (runtime.id !== CANONICAL_RUNTIME_ID || runtime.agent !== 'foul-play'
+	if ((evaluation && (runtime.resolvedConfiguration?.fixedIterations !== 120000 || runtime.resolvedConfiguration?.searchThreads !== 1 || runtime.resolvedConfiguration?.seedScheme !== 'sha256-v1'))
+		|| runtime.id !== (evaluation ? EVALUATION_RUNTIME_ID : CANONICAL_RUNTIME_ID) || runtime.agent !== 'foul-play'
 		|| runtime.authoritativeEngine !== 'pokemon-showdown-local' || runtime.searchEngine !== 'poke-engine-mcts'
 		|| runtime.actionPolicy !== 'argmax' || runtime.informationBoundary !== 'pdl.observed-battle.v1'
 		|| runtime.networkPolicy !== 'showdown-loopback-only' || runtime.modelInference !== 'forbidden'
@@ -86,7 +94,7 @@ export function assertCanonicalFoulPlayRuntime(value: unknown): void {
 	}
 }
 
-export function parseRuntimeContractFromLog(log: string): unknown {
+export function parseRuntimeContractFromLog(log: string, evaluation = false): unknown {
 	const marker = 'PDL_RUNTIME_CONTRACT ';
 	const payloads = log.split(/\r?\n/)
 		.filter(line => line.includes(marker))
@@ -94,8 +102,20 @@ export function parseRuntimeContractFromLog(log: string): unknown {
 	if (payloads.length !== 1) throw new Error(`Expected exactly one bot runtime attestation, found ${payloads.length}.`);
 	let contract: unknown;
 	try { contract = JSON.parse(payloads[0]); } catch { throw new Error('Bot emitted invalid runtime-attestation JSON.'); }
-	assertCanonicalFoulPlayRuntime(contract);
+	assertCanonicalFoulPlayRuntime(contract, evaluation);
 	return contract;
+}
+
+/** Experimental policy attestation is separate from the unchanged native engine contract. */
+export function assertSunPolicyRuntime(contract: unknown, expected?: PdlSunPolicy): void {
+	const configuration = (contract as { resolvedConfiguration?: { sunPolicy?: unknown, candidateId?: unknown } }).resolvedConfiguration;
+	if (expected) {
+		if (configuration?.sunPolicy !== expected || configuration.candidateId !== 'adam-03-sun-drednaw') {
+			throw new Error('Foul Play did not attest the requested Sun policy and candidate.');
+		}
+	} else if (configuration?.sunPolicy && configuration.sunPolicy !== 'none') {
+		throw new Error('Unrequested Sun policy appeared in the bot runtime.');
+	}
 }
 
 function sbplString(path: string): string {
@@ -155,11 +175,19 @@ export interface RunFoulPlayTrialInput {
 	readonly simulatorRoot: string;
 	readonly foulPlayRoot: string;
 	readonly artifact: TrialArtifact;
+	readonly sunPolicies?: Readonly<Partial<Record<'p1' | 'p2', PdlSunPolicy>>>;
 	readonly searchTimeMs: number;
 	readonly beliefSamples: number;
 	readonly beliefEngine?: 'legacy' | 'posterior-shadow' | 'posterior';
+	readonly evaluation?: { readonly fixedIterations: number; readonly mctsSeed: string; readonly beliefSeed: string; readonly worldSeed: string; readonly worldWorkers: number };
 	readonly timeoutMs: number;
+	/** Offline diagnostic only. Omission preserves Showdown's normal RNG seed. */
+	readonly battleSeed?: PRNGSeed;
 	readonly port?: number;
+}
+
+export function isValidBattleSeed(seed: string): seed is PRNGSeed {
+	return /^(?:gen5,[0-9a-fA-F]{16}|\d+,\d+,\d+,\d+|sodium,[^\s,]+)$/.test(seed);
 }
 
 function winnerNames(log: string): string[] {
@@ -174,11 +202,20 @@ export function foulPlayArguments(input: FoulPlayArgumentsInput): string[] {
 		'--pokemon-format', 'gen9pdls4', '--pdl-belief-data', input.beliefPath,
 		'--pdl-team-id', input.teamId, '--belief-zero-policy', 'restore', '--team-name', input.teamPath,
 		'--protocol-log-path', input.protocolPath, '--local-no-security',
+		'--pdl-decision-bundle-path', input.decisionBundlePath,
 		'--offline-runtime', '--search-engine', 'mcts', '--action-policy', 'argmax',
 		'--belief-engine', input.beliefEngine || 'legacy',
-		'--search-time-ms', String(input.searchTimeMs), '--search-parallelism', String(input.beliefSamples),
+		'--search-time-ms', String(input.searchTimeMs), '--search-parallelism', String(input.evaluation ? 1 : input.beliefSamples),
+		'--search-threads', String(input.evaluation ? 1 : 1),
 		'--run-count', '1', '--log-level', 'INFO',
 	];
+	if (input.sunPolicy) {
+		if (input.teamId !== 'adam' || input.candidateId !== 'adam-03-sun-drednaw') {
+			throw new Error('Sun policy is restricted to Adam candidate adam-03-sun-drednaw.');
+		}
+		args.push('--pdl-sun-policy', input.sunPolicy, '--pdl-candidate-id', input.candidateId);
+	}
+	if (input.evaluation) args.push('--evaluation-fixed-iterations', String(input.evaluation.fixedIterations), '--evaluation-mcts-seed', input.evaluation.mctsSeed, '--evaluation-belief-seed', input.evaluation.beliefSeed, '--evaluation-world-seed', input.evaluation.worldSeed, '--evaluation-world-workers', String(input.evaluation.worldWorkers));
 	if (input.challengeUser) args.push('--user-to-challenge', input.challengeUser);
 	return args;
 }
@@ -388,8 +425,8 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 	let result: TrialResult;
 	try {
 		const runtime = input.artifact.manifest.metadata?.runtime as { id?: unknown } | undefined;
-		if (runtime?.id !== CANONICAL_RUNTIME_ID) {
-			throw new Error(`Trial manifest must declare canonical runtime ${CANONICAL_RUNTIME_ID}.`);
+		if (runtime?.id !== (input.evaluation ? EVALUATION_RUNTIME_ID : CANONICAL_RUNTIME_ID)) {
+			throw new Error(`Trial manifest must declare the selected runtime.`);
 		}
 		preflightFoulPlayRuntime(input.foulPlayRoot);
 		const artifactRoot = resolve(input.artifact.directory);
@@ -398,10 +435,17 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			throw new Error('Canonical private artifacts must be outside the Foul Play source root.');
 		}
 		const port = input.port ?? await availablePort();
+		if (input.battleSeed !== undefined && !isValidBattleSeed(input.battleSeed)) {
+			throw new Error(`Invalid diagnostic Showdown battle seed: ${input.battleSeed}`);
+		}
 		writeFileSync(input.artifact.networkAuditPath, '', 'utf8');
 		writeFileSync(input.artifact.p1NetworkAuditPath, '', 'utf8');
 		writeFileSync(input.artifact.p2NetworkAuditPath, '', 'utf8');
-		const showdownEnvironment = { ...offlineRuntimeEnvironment(), PSBINDADDR: '127.0.0.1' };
+		const showdownEnvironment = {
+			...offlineRuntimeEnvironment(),
+			PSBINDADDR: '127.0.0.1',
+			...(input.battleSeed ? { PDL_DIAGNOSTIC_BATTLE_SEED: input.battleSeed } : {}),
+		};
 		showdown = spawnCollectedWithCompleteLog(
 			process.execPath,
 			['pokemon-showdown', 'start', '--no-security', String(port)],
@@ -418,10 +462,12 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			websocketUri, username: p2BotName, mode: 'accept_challenge',
 			teamId: input.artifact.manifest.p2.teamId, teamPath: input.artifact.p2TeamPath,
 			beliefPath: input.artifact.p2BeliefPath, protocolPath: input.artifact.p2ProtocolPath,
-			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine,
+			decisionBundlePath: input.artifact.p2DecisionBundlePath,
+			sunPolicy: input.sunPolicies?.p2, candidateId: input.artifact.manifest.metadata?.adamCandidateId as string | undefined,
+			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine, evaluation: input.evaluation,
 		}));
 		p2 = spawnCollectedWithCompleteLog(p2Invocation.command, p2Invocation.args, input.foulPlayRoot, input.artifact.p2LogPath, {
-			...offlineRuntimeEnvironment(), TMPDIR: input.artifact.p2PrivateDirectory,
+			...offlineRuntimeEnvironment(), PYTHONHASHSEED: '0', TMPDIR: input.artifact.p2PrivateDirectory,
 			PDL_OFFLINE_NETWORK_AUDIT_PATH: input.artifact.p2NetworkAuditPath,
 		});
 		await waitForLog(p2, /Waiting for a gen9pdls4 challenge/, Math.min(input.timeoutMs, 10_000));
@@ -429,10 +475,12 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			websocketUri, username: p1BotName, mode: 'challenge_user', challengeUser: p2BotName,
 			teamId: input.artifact.manifest.p1.teamId, teamPath: input.artifact.p1TeamPath,
 			beliefPath: input.artifact.p1BeliefPath, protocolPath: input.artifact.p1ProtocolPath,
-			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine,
+			decisionBundlePath: input.artifact.p1DecisionBundlePath,
+			sunPolicy: input.sunPolicies?.p1, candidateId: input.artifact.manifest.metadata?.adamCandidateId as string | undefined,
+			searchTimeMs: input.searchTimeMs, beliefSamples: input.beliefSamples, beliefEngine: input.beliefEngine, evaluation: input.evaluation,
 		}));
 		p1 = spawnCollectedWithCompleteLog(p1Invocation.command, p1Invocation.args, input.foulPlayRoot, input.artifact.p1LogPath, {
-			...offlineRuntimeEnvironment(), TMPDIR: input.artifact.p1PrivateDirectory,
+			...offlineRuntimeEnvironment(), PYTHONHASHSEED: '0', TMPDIR: input.artifact.p1PrivateDirectory,
 			PDL_OFFLINE_NETWORK_AUDIT_PATH: input.artifact.p1NetworkAuditPath,
 		});
 		const terminal = await awaitBots(p1, p2, input.timeoutMs);
@@ -452,8 +500,8 @@ export async function runFoulPlayTrial(input: RunFoulPlayTrialInput): Promise<Tr
 			// complete parent-owned process logs after both clients exit.
 			const p1CompleteLog = readFileSync(input.artifact.p1LogPath, 'utf8');
 			const p2CompleteLog = readFileSync(input.artifact.p2LogPath, 'utf8');
-			parseRuntimeContractFromLog(p1CompleteLog);
-			parseRuntimeContractFromLog(p2CompleteLog);
+			assertSunPolicyRuntime(parseRuntimeContractFromLog(p1CompleteLog, Boolean(input.evaluation)), input.sunPolicies?.p1);
+			assertSunPolicyRuntime(parseRuntimeContractFromLog(p2CompleteLog, Boolean(input.evaluation)), input.sunPolicies?.p2);
 			const winnerTeamId = determineWinnerTeamId({
 				p1Log: p1CompleteLog, p2Log: p2CompleteLog,
 				p1: { botName: p1BotName, teamId: input.artifact.manifest.p1.teamId },

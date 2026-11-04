@@ -47,6 +47,7 @@
     "pdl:test-mechanics-conformance": "node build && node dist/pdl/conformance/run && mocha test/pdl/conformance/mechanics.js",
     "pdl:simulate": "node build && node dist/pdl/cli/simulate-matchup",
     "pdl:simulate-fixed": "node build && node dist/pdl/cli/simulate-fixed-matchup",
+    "pdl:explore-ablation": "node build && node dist/pdl/cli/explore-ablation",
     "pdl:experiment": "node build && node dist/pdl/cli/experiment",
     "pdl:play-bot": "node build && node dist/pdl/cli/play-bot",
     "pdl:control-panel": "node build && node dist/pdl/cli/control-panel",
@@ -55,7 +56,11 @@
     "full-test": "eslint --max-warnings 0 && npm run tsc && mocha --timeout 8000 --forbid-only -g \".*\" && npm run test-npm",
     "full-test-ci": "eslint --max-warnings 0 && tsc && (([ \"$SKIPSIMTESTS\" = true ] && mocha --timeout 8000 --forbid-only -g \".*\" --exclude \"test/{sim,random-battles}/**\") || mocha --timeout 8000 --forbid-only -g \".*\") && npm run test-npm",
     "pdl:validate-team-strategy": "node build && node dist/pdl/cli/validate-team-strategy-study",
-    "pdl:analyze-team-strategy": "node build && node dist/pdl/cli/analyze-team-strategy-study"
+    "pdl:analyze-team-strategy": "node build && node dist/pdl/cli/analyze-team-strategy-study",
+    "pdl:prepare-team-search": "node build && node dist/pdl/cli/prepare-team-search",
+    "pdl:prepare-matchup-search": "node build && node dist/pdl/cli/prepare-matchup-search",
+    "pdl:team-search": "node build && node dist/pdl/cli/team-search",
+    "pdl:test-team-search": "node build && mocha --no-config test/pdl/team-search/*.js"
   },
   "bin": "./pokemon-showdown",
   "homepage": "http://pokemonshowdown.com",

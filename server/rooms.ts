@@ -46,6 +46,22 @@ import { type PartialModlogEntry, mainModlog } from './modlog';
 import { Replays } from './replays';
 import * as crypto from 'crypto';
 import type { SubProcessesConfig } from './config-loader';
+import type { PRNGSeed } from '../sim/prng';
+
+/**
+ * Narrow, opt-in seam for offline diagnostic corpus generation. The regular
+ * server does not set this environment variable, so its battle RNG behavior
+ * is unchanged. Validate here as defense in depth because this process owns
+ * the authoritative Showdown BattleStream.
+ */
+function diagnosticBattleSeed(): PRNGSeed | undefined {
+	const seed = process.env.PDL_DIAGNOSTIC_BATTLE_SEED;
+	if (!seed) return undefined;
+	if (!/^(?:gen5,[0-9a-fA-F]{16}|\d+,\d+,\d+,\d+|sodium,[^\s,]+)$/.test(seed)) {
+		throw new Error('PDL_DIAGNOSTIC_BATTLE_SEED is not a valid PRNG seed.');
+	}
+	return seed as PRNGSeed;
+}
 
 /*********************************************************
  * the Room object.
@@ -2185,6 +2201,13 @@ export const Rooms = {
 	 * No need for UI; this function sends popups to users.
 	 */
 	createBattle(options: RoomBattleOptions & Partial<RoomSettings>) {
+		// Never replace a caller-supplied seed (input-log replay and test
+		// harnesses own theirs). This branch is only reachable when the
+		// dedicated local corpus runner explicitly supplies its environment.
+		if (!options.seed) {
+			const diagnosticSeed = diagnosticBattleSeed();
+			if (diagnosticSeed) options = {...options, seed: diagnosticSeed};
+		}
 		const players = options.players.map(player => player.user);
 		const format = Dex.formats.get(options.format);
 		if (players.length > format.playerCount) {

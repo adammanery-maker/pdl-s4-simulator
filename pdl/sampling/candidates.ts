@@ -171,7 +171,11 @@ export function generateSetCandidates(input: GenerateSetCandidatesInput): SetCan
 		if (!choices[component].length) return [rejectedCandidate(`Missing observed ${component} for ${input.species}.`)];
 	}
 
+	// Ditto's legal learnset contains only Transform; a complete set has one move.
 	const moveCombinations = distinctMoveCombinations(choices.moves);
+	if (speciesId === 'ditto' && choices.moves.length === 1 && toID(choices.moves[0].name) === 'transform') {
+		moveCombinations.push([choices.moves[0]]);
+	}
 	if (!moveCombinations.length) {
 		return [rejectedCandidate(`At least four distinct observed moves are required for ${input.species}.`, { moves: choices.moves })];
 	}

@@ -6,9 +6,10 @@ import { SHOWDOWN_COMMIT } from '../simulate';
 import { createTrialArtifact } from '../batch/artifacts';
 import { CANONICAL_RUNTIME } from '../batch/runtime';
 import { buildTrialEvidence, type AuditStatus, type BeliefTruthComparison } from '../batch/evidence';
-import { runFoulPlayTrial } from '../batch/run-trial';
+import { isValidBattleSeed, runFoulPlayTrial } from '../batch/run-trial';
 import type { TrialResult } from '../batch/types';
 import { loadFixedScenario, privateBeliefFor, type FixedBuild, type FixedScenarioTeam } from '../fixed/scenario';
+import type { PRNGSeed } from '../../sim/prng';
 
 export interface FixedMatchupOptions {
 	readonly scenarioPath: string;
@@ -21,6 +22,8 @@ export interface FixedMatchupOptions {
 	readonly beliefEngine: 'legacy' | 'posterior-shadow' | 'posterior';
 	readonly maxTrials: number | null;
 	readonly resume: boolean;
+	/** Versioned, trial-id keyed diagnostic seed map. Optional for old studies. */
+	readonly battleSeedsPath: string | null;
 }
 
 function positiveInteger(value: string, name: string): number {
@@ -57,7 +60,20 @@ export function parseFixedMatchupArguments(argv: readonly string[]): FixedMatchu
 		beliefEngine: beliefEngine as FixedMatchupOptions['beliefEngine'],
 		maxTrials: values.has('max-trials') ? positiveInteger(required('max-trials'), 'max-trials') : null,
 		resume: values.get('resume') === 'true',
+		battleSeedsPath: values.get('battle-seeds') || null,
 	};
+}
+
+function loadBattleSeeds(path: string | null): ReadonlyMap<string, PRNGSeed> {
+	if (path === null) return new Map();
+	const parsed: unknown = JSON.parse(readFileSync(path, 'utf8'));
+	if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+		throw new Error('--battle-seeds must contain a JSON object keyed by trial id.');
+	}
+	const entries = Object.entries(parsed as Record<string, unknown>);
+	const invalid = entries.find(([, seed]) => typeof seed !== 'string' || !isValidBattleSeed(seed));
+	if (invalid) throw new Error(`Invalid battle seed for trial ${invalid[0]}.`);
+	return new Map(entries.map(([trialId, seed]) => [trialId, seed as PRNGSeed]));
 }
 
 function safeId(value: string): string {
@@ -125,6 +141,7 @@ export function summarizeFixedRecords(records: readonly FixedTrialRecord[], team
 export async function runFixedMatchupTournament(options: FixedMatchupOptions): Promise<string> {
 	if (options.repetitions % 2 !== 0) throw new Error('--repetitions must be even so every fixed matchup is side-balanced.');
 	const scenario = loadFixedScenario(options.scenarioPath);
+	const battleSeeds = loadBattleSeeds(options.battleSeedsPath);
 	const outputDirectory = resolve(options.outputDirectory);
 	if (existsSync(outputDirectory)) {
 		if (!options.resume) throw new Error(`Output directory already exists: ${outputDirectory}. Pass --resume true only to append a previous partial fixed run.`);
@@ -145,6 +162,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 	const existingArtifactIds = new Set(existingRecords.map(record => record.artifact));
 	writeFileSync(`${outputDirectory}/run.json`, `${JSON.stringify({
 		schemaVersion: 1, runtime: CANONICAL_RUNTIME, scenarioId: scenario.id, showdownCommit: SHOWDOWN_COMMIT, foulPlayCommit, simulatorCommit, nodeVersion, pythonVersion, scenarioHash, options,
+		battleSeedMap: options.battleSeedsPath ? { path: options.battleSeedsPath, sha256: createHash('sha256').update(readFileSync(options.battleSeedsPath)).digest('hex'), entries: battleSeeds.size } : null,
 		estimateSemantics: 'Repeated completed battles are empirical Monte Carlo trials. Native MCTS policy support and state values are search estimates, not match-win probabilities.',
 	}, null, 2)}\n`);
 	const records: FixedTrialRecord[] = [...existingRecords];
@@ -161,6 +179,8 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 				const p1Build = reversed ? secondBuild : firstBuild;
 				const p2Build = reversed ? firstBuild : secondBuild;
 				const id = `${String(serial).padStart(4, '0')}-${safeId(matchupId)}-${reversed ? 'reverse' : 'forward'}`;
+				const battleSeed = options.battleSeedsPath ? battleSeeds.get(id) : undefined;
+				if (options.battleSeedsPath && !battleSeed) throw new Error(`No documented battle seed for ${id}.`);
 				const pairId = `${safeId(matchupId)}-${Math.floor(repetition / 2) + 1}`;
 				const side = reversed ? 'reverse' as const : 'forward' as const;
 				const artifactDirectory = join(outputDirectory, 'trials', id);
@@ -171,12 +191,12 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 					manifest: {
 						schemaVersion: 1, pairId, side,
 						p1: sideArtifact(p1Team, p1Build), p2: sideArtifact(p2Team, p2Build),
-						metadata: { scenarioId: scenario.id, matchupId, repetition: repetition + 1, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, timeoutMs: options.timeoutMs, informationModel: 'separate private team and own fixed-Tera inputs; weighted opponent set beliefs' },
+						metadata: { scenarioId: scenario.id, matchupId, repetition: repetition + 1, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, timeoutMs: options.timeoutMs, battleSeed: battleSeed || null, informationModel: 'separate private team and own fixed-Tera inputs; weighted opponent set beliefs' },
 					},
 					p1Belief: privateBeliefFor(scenario, p1Team.teamId, p1Build),
 					p2Belief: privateBeliefFor(scenario, p2Team.teamId, p2Build),
 				});
-				const result = await runFoulPlayTrial({ simulatorRoot, foulPlayRoot, artifact, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, beliefEngine: options.beliefEngine, timeoutMs: options.timeoutMs });
+				const result = await runFoulPlayTrial({ simulatorRoot, foulPlayRoot, artifact, searchTimeMs: options.searchTimeMs, beliefSamples: options.beliefSamples, beliefEngine: options.beliefEngine, timeoutMs: options.timeoutMs, battleSeed });
 				const evidence = buildTrialEvidence(artifact, result);
 				const record = {
 					pairId, side, matchupId, repetition: repetition + 1, result,
@@ -197,7 +217,7 @@ export async function runFixedMatchupTournament(options: FixedMatchupOptions): P
 		requestedPairs: aggregate.pairs.length, completedPairs: aggregate.completedPairIds.size, incompletePairs: aggregate.incompletePairs,
 		aggregatedTrials: aggregate.aggregatedTrials.length, wins: aggregate.wins, ties: aggregate.ties,
 		violatingTrials: aggregate.violatingTrials, inconclusiveTrials: aggregate.inconclusiveTrials,
-		empiricalMonteCarlo: { applicable: aggregate.completedPairIds.size > 0, independentRandomness: 'Each battle launches fresh Showdown and Foul Play processes; no deterministic battle seed is reused.', inclusionRule: 'Only clean terminal forward/reverse pairs are aggregated.' },
+		empiricalMonteCarlo: { applicable: aggregate.completedPairIds.size > 0, independentRandomness: options.battleSeedsPath ? 'Each trial uses its documented fixed Showdown seed; no cross-build causal interpretation is implied.' : 'Each battle launches fresh Showdown and Foul Play processes; no deterministic battle seed is reused.', inclusionRule: 'Only clean terminal forward/reverse pairs are aggregated.' },
 		searchValues: 'Native MCTS state evaluations and policy support; not match-win probabilities.',
 		posteriorShadow,
 	};

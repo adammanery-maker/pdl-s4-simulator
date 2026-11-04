@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pdl.phase6.exploratory-ablation.v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "scenarioPath", "subjectTeamId", "opponentTeamId", "baseline", "candidate", "change", "opponentBuildIds", "decisionDomains"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "scenarioPath": { "type": "string", "minLength": 1 },
+    "subjectTeamId": { "type": "string", "minLength": 1 },
+    "opponentTeamId": { "type": "string", "minLength": 1 },
+    "baseline": { "$ref": "#/$defs/team" },
+    "candidate": { "$ref": "#/$defs/team" },
+    "change": { "type": "object", "required": ["type"], "properties": { "type": { "enum": ["identity", "roster-slot", "move", "item", "ability", "nature", "ev-spread", "tera-type", "captain-eligibility"] } } },
+    "opponentBuildIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+    "decisionDomains": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } }
+  },
+  "$defs": { "team": { "type": "object", "required": ["id", "teamPath", "teraCaptains"], "properties": { "id": { "type": "string" }, "teamPath": { "type": "string" }, "teraCaptains": { "type": "array", "items": { "type": "string" } } } } }
+}

@@ -1,0 +1,56 @@
+Munkidori @ Choice Scarf
+Ability: Toxic Chain
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sludge Wave
+- Psychic
+- U-turn
+- Trick
+
+Duraludon @ Eviolite
+Ability: Light Metal
+EVs: 160 HP / 96 SpA / 252 SpD
+Modest Nature
+- Stealth Rock
+- Draco Meteor
+- Flash Cannon
+- Thunder Wave
+
+Flygon @ Loaded Dice
+Ability: Levitate
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Scale Shot
+- Earthquake
+- Fire Punch
+
+Jolteon @ Life Orb
+Ability: Volt Absorb
+Tera Type: Fairy
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Calm Mind
+- Thunderbolt
+- Alluring Voice
+- Shadow Ball
+
+Bombirdier @ Heavy-Duty Boots
+Ability: Big Pecks
+Tera Type: Flying
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Knock Off
+- Brave Bird
+- Parting Shot
+- Roost
+
+Coalossal @ Heavy-Duty Boots
+Ability: Flame Body
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Rapid Spin
+- Flamethrower
+- Body Press
+- Will-O-Wisp

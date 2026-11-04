@@ -1,0 +1,56 @@
+Uxie @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 196 Def / 60 Spe
+Bold Nature
+- Knock Off
+- U-turn
+- Thunder Wave
+- Psychic Noise
+
+Tatsugiri @ Heavy-Duty Boots
+Ability: Storm Drain
+Tera Type: Grass
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Draco Meteor
+- Hydro Pump
+- Rapid Spin
+- Nasty Plot
+
+Incineroar @ Heavy-Duty Boots
+Ability: Intimidate
+EVs: 248 HP / 8 Def / 252 SpD
+Careful Nature
+- Knock Off
+- Flare Blitz
+- Parting Shot
+- Will-O-Wisp
+
+Drednaw @ Choice Band
+Ability: Strong Jaw
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Liquidation
+- Stone Edge
+- Crunch
+- Protect
+
+Golem @ Rocky Helmet
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Roar
+
+Magneton @ Choice Scarf
+Ability: Analytic
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack

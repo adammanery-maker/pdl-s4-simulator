@@ -1,0 +1,56 @@
+Infernape @ Choice Scarf
+Ability: Blaze
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Flare Blitz
+- Close Combat
+- Stone Edge
+- U-turn
+
+Swampert @ Rocky Helmet
+Ability: Torrent
+EVs: 252 HP / 252 Def / 4 SpD
+Relaxed Nature
+- Stealth Rock
+- Earthquake
+- Flip Turn
+- Knock Off
+
+Copperajah @ Assault Vest
+Ability: Sheer Force
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Iron Head
+- Earthquake
+- Knock Off
+- Heat Crash
+
+Weezing @ Rocky Helmet
+Ability: Levitate
+Tera Type: Water
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Flamethrower
+- Will-O-Wisp
+- Pain Split
+
+Rotom-Mow @ Choice Specs
+Ability: Levitate
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Leaf Storm
+- Thunderbolt
+- Volt Switch
+- Trick
+
+Sceptile @ Life Orb
+Ability: Overgrow
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Earthquake
+- Rock Slide

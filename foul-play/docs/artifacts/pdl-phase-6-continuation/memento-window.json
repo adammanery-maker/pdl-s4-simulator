@@ -1,0 +1,506 @@
+{
+  "activeSpecies": "incineroar",
+  "actor": "p1",
+  "bundleSha256": "8a3a30b204007a9ab8e29fe1e2a0bb32b37b2df912993cc1840923bed3d4c680",
+  "configuration": {
+    "algorithm": "bounded-expectiminimax-exact-chance",
+    "depths": [
+      2,
+      4,
+      6
+    ],
+    "exactDamageBranchDepth": 1,
+    "nodeLimitPerWorldDepth": 100000,
+    "nonTerminalLeaf": "genx-static-v0.0.48-boost-relevance-v1",
+    "terminalUtility": {
+      "loss": 0.0,
+      "win": 1.0
+    }
+  },
+  "decisionOrdinal": 5,
+  "diagnosticSourceSha256": "141a086c9869bc822935512984fad8bb2d8243d3d250d45bc9edc9bc5665c962",
+  "frozenWorlds": [
+    {
+      "index": 0,
+      "stateSha256": "810dd5391d2b2982c133d88404470a0fbca1fcb66a58f5e1045a75dd20a0d4d1",
+      "weight": 0.5
+    },
+    {
+      "index": 1,
+      "stateSha256": "0f3f198c77e3c90f0928fb2f7da8bfbe0b680efb781b8b83d5a744fa98232438",
+      "weight": 0.5
+    }
+  ],
+  "legalRootActions": [
+    "flareblitz",
+    "flareblitz-tera",
+    "knockoff",
+    "knockoff-tera",
+    "partingshot",
+    "partingshot-tera",
+    "switch drednaw",
+    "switch magneton",
+    "switch tatsugiri",
+    "switch uxie",
+    "switch whimsicott",
+    "willowisp",
+    "willowisp-tera"
+  ],
+  "requestType": "move",
+  "results": {
+    "d2": {
+      "actions": {
+        "flareblitz": {
+          "evaluatorTruncatedProbability": 1.0000001,
+          "principalLine": [
+            "flareblitz | slackoff",
+            "partingshot | switch lycanroc"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.51221475
+        },
+        "flareblitz-tera": {
+          "evaluatorTruncatedProbability": 1.0000001,
+          "principalLine": [
+            "flareblitz-tera | slackoff",
+            "partingshot | switch lycanroc"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.33390483000000004
+        },
+        "knockoff": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "knockoff | slackoff",
+            "partingshot | switch lycanroc"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.58335338
+        },
+        "knockoff-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "knockoff-tera | switch grimmsnarl",
+            "partingshot | partingshot"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.16730434
+        },
+        "partingshot": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "partingshot | slackoff",
+            "switch whimsicott | slackoff"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.59266657
+        },
+        "partingshot-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "partingshot-tera | slackoff",
+            "switch whimsicott | slackoff"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.3629692
+        },
+        "switch drednaw": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch drednaw | switch grimmsnarl",
+            "switch incineroar | switch slowbrogalar"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.42459040000000003
+        },
+        "switch magneton": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch magneton | flamethrower",
+            "flashcannon | switch goodra"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.30785470000000004
+        },
+        "switch tatsugiri": {
+          "evaluatorTruncatedProbability": 1.0000000500000001,
+          "principalLine": [
+            "switch tatsugiri | sludgebomb",
+            "nastyplot | slackoff"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.38349357
+        },
+        "switch uxie": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch uxie | switch lycanroc",
+            "stealthrock | swordsdance"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.39611264999999996
+        },
+        "switch whimsicott": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch whimsicott | sludgebomb",
+            "moonblast | slackoff"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.22248005999999998
+        },
+        "willowisp": {
+          "evaluatorTruncatedProbability": 0.99999997,
+          "principalLine": [
+            "willowisp | surf",
+            "partingshot | switch lycanroc"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.5723529300000001
+        },
+        "willowisp-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "willowisp-tera | switch grimmsnarl",
+            "knockoff | partingshot"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.15160583
+        }
+      },
+      "selectedAction": "partingshot",
+      "status": "complete",
+      "worlds": [
+        {
+          "actions": [
+            {
+              "action": "flareblitz",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "flareblitz | slackoff",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5611598
+            },
+            {
+              "action": "flareblitz-tera",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "flareblitz-tera | slackoff",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.33371484
+            },
+            {
+              "action": "knockoff",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "knockoff | slackoff",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.60173476
+            },
+            {
+              "action": "knockoff-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "knockoff-tera | switch grimmsnarl",
+                "partingshot | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.16730434
+            },
+            {
+              "action": "partingshot",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "partingshot | slackoff",
+                "switch whimsicott | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.59266657
+            },
+            {
+              "action": "partingshot-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "partingshot-tera | slackoff",
+                "switch whimsicott | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3629692
+            },
+            {
+              "action": "switch drednaw",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch drednaw | switch grimmsnarl",
+                "switch incineroar | switch slowbrogalar"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4398547
+            },
+            {
+              "action": "switch magneton",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "flamethrower",
+              "principalLine": [
+                "switch magneton | flamethrower",
+                "flashcannon | switch goodra"
+              ],
+              "terminalProbability": 0,
+              "value": 0.2998289
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "sludgebomb",
+              "principalLine": [
+                "switch tatsugiri | sludgebomb",
+                "nastyplot | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.40261644
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "switch uxie | switch lycanroc",
+                "stealthrock | swordsdance"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4278546
+            },
+            {
+              "action": "switch whimsicott",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "sludgebomb",
+              "principalLine": [
+                "switch whimsicott | sludgebomb",
+                "moonblast | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.22266507
+            },
+            {
+              "action": "willowisp",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "surf",
+              "principalLine": [
+                "willowisp | surf",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5716649
+            },
+            {
+              "action": "willowisp-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "willowisp-tera | switch grimmsnarl",
+                "knockoff | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.13420698
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 6,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 521,
+          "schemaVersion": 1,
+          "selectedAction": "knockoff"
+        },
+        {
+          "actions": [
+            {
+              "action": "flareblitz",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "flareblitz | switch lycanroc",
+                "switch uxie | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4632697
+            },
+            {
+              "action": "flareblitz-tera",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "flareblitz-tera | slackoff",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.33409482
+            },
+            {
+              "action": "knockoff",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "knockoff | switch lycanroc",
+                "switch uxie | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.564972
+            },
+            {
+              "action": "knockoff-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "knockoff-tera | switch grimmsnarl",
+                "partingshot | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.16730434
+            },
+            {
+              "action": "partingshot",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "partingshot | slackoff",
+                "switch whimsicott | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.59266657
+            },
+            {
+              "action": "partingshot-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "slackoff",
+              "principalLine": [
+                "partingshot-tera | slackoff",
+                "switch whimsicott | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3629692
+            },
+            {
+              "action": "switch drednaw",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch drednaw | switch grimmsnarl",
+                "shellsmash | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4093261
+            },
+            {
+              "action": "switch magneton",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "flamethrower",
+              "principalLine": [
+                "switch magneton | flamethrower",
+                "flashcannon | switch goodra"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3158805
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch tatsugiri | switch grimmsnarl",
+                "switch incineroar | spiritbreak"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3643707
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch uxie | switch grimmsnarl",
+                "switch incineroar | spiritbreak"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3643707
+            },
+            {
+              "action": "switch whimsicott",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "sludgebomb",
+              "principalLine": [
+                "switch whimsicott | sludgebomb",
+                "moonblast | slackoff"
+              ],
+              "terminalProbability": 0,
+              "value": 0.22229505
+            },
+            {
+              "action": "willowisp",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "sludgebomb",
+              "principalLine": [
+                "willowisp | sludgebomb",
+                "partingshot | switch lycanroc"
+              ],
+              "terminalProbability": 0,
+              "value": 0.57304096
+            },
+            {
+              "action": "willowisp-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "willowisp-tera | switch grimmsnarl",
+                "knockoff | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.16900468
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 6,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 483,
+          "schemaVersion": 1,
+          "selectedAction": "partingshot"
+        }
+      ]
+    },
+    "d4": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    },
+    "d6": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    }
+  },
+  "runtime": {
+    "engine": "poke-engine",
+    "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+    "engineVersion": "0.0.48",
+    "evaluator": "genx-static-v0.0.48-boost-relevance-v1",
+    "evaluatorSourceSha256": "5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397"
+  },
+  "schemaVersion": 1,
+  "trialId": "0007-adam-shell-smash-vs-steve-screens-hazards-forward"
+}

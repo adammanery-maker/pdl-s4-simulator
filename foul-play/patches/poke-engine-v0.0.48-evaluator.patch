@@ -1,0 +1,153 @@
+diff --git a/poke-engine-py/python/poke_engine/poke_engine.pyi b/poke-engine-py/python/poke_engine/poke_engine.pyi
+index 96306e4..beb38ec 100644
+--- a/poke-engine-py/python/poke_engine/poke_engine.pyi
++++ b/poke-engine-py/python/poke_engine/poke_engine.pyi
+@@ -478,3 +478,15 @@ def calculate_damage(
+     :return: List of damage values
+     """
+     ...
++class EvaluationBreakdown:
++    pokemon: float
++    hazards: float
++    active_effects: float
++    boosts: float
++    tera: float
++    side_conditions: float
++    total: float
++
++def evaluate_state(state: State) -> float: ...
++def evaluate_state_breakdown(state: State) -> EvaluationBreakdown: ...
++def evaluator_metadata() -> Tuple[str, str, str]: ...
+diff --git a/poke-engine-py/src/lib.rs b/poke-engine-py/src/lib.rs
+index 032da2e..b2d0317 100644
+--- a/poke-engine-py/src/lib.rs
++++ b/poke-engine-py/src/lib.rs
+@@ -9,6 +9,7 @@ use poke_engine::engine::generate_instructions::{
+     calculate_both_damage_rolls, generate_instructions_from_move_pair,
+ };
+ use poke_engine::engine::items::Items;
++use poke_engine::engine::evaluate::{evaluate, evaluate_breakdown};
+ use poke_engine::engine::state::{MoveChoice, PokemonVolatileStatus, Terrain, Weather};
+ use poke_engine::instruction::{Instruction, StateInstructions};
+ use poke_engine::mcts::{perform_mcts, MctsResult, MctsSideResult};
+@@ -23,6 +24,44 @@ use poke_engine::state::{
+ use std::str::FromStr;
+ use std::time::Duration;
+ 
++#[derive(Clone)]
++#[pyclass(name = "EvaluationBreakdown", module = "poke_engine", get_all)]
++pub struct PyEvaluationBreakdown {
++    pub pokemon: f32,
++    pub hazards: f32,
++    pub active_effects: f32,
++    pub boosts: f32,
++    pub tera: f32,
++    pub side_conditions: f32,
++    pub total: f32,
++}
++
++#[pyfunction]
++fn evaluate_state(state: PyState) -> f32 {
++    let state: State = state.into();
++    evaluate(&state)
++}
++
++#[pyfunction]
++fn evaluate_state_breakdown(state: PyState) -> PyEvaluationBreakdown {
++    let state: State = state.into();
++    let result = evaluate_breakdown(&state);
++    PyEvaluationBreakdown {
++        pokemon: result.pokemon,
++        hazards: result.hazards,
++        active_effects: result.active_effects,
++        boosts: result.boosts,
++        tera: result.tera,
++        side_conditions: result.side_conditions,
++        total: result.total,
++    }
++}
++
++#[pyfunction]
++fn evaluator_metadata() -> (&'static str, &'static str, &'static str) {
++    ("poke-engine", "0.0.48", "genx-static-v0.0.48")
++}
++
+ fn movechoice_to_string(side: &Side, move_choice: &MoveChoice) -> String {
+     match move_choice {
+         MoveChoice::Switch(_) => {
+@@ -1130,6 +1169,10 @@ fn py_poke_engine(m: &Bound<'_, PyModule>) -> PyResult<()> {
+     m.add_function(wrap_pyfunction!(generate_instructions, m)?)?;
+     m.add_function(wrap_pyfunction!(id, m)?)?;
+     m.add_function(wrap_pyfunction!(mcts, m)?)?;
++    m.add_function(wrap_pyfunction!(evaluate_state, m)?)?;
++    m.add_function(wrap_pyfunction!(evaluate_state_breakdown, m)?)?;
++    m.add_function(wrap_pyfunction!(evaluator_metadata, m)?)?;
++    m.add_class::<PyEvaluationBreakdown>()?;
+     m.add_class::<PyState>()?;
+     m.add_class::<PySide>()?;
+     m.add_class::<PySideConditions>()?;
+diff --git a/src/genx/evaluate.rs b/src/genx/evaluate.rs
+index e46f7f8..bab5115 100644
+--- a/src/genx/evaluate.rs
++++ b/src/genx/evaluate.rs
+@@ -267,3 +267,60 @@ pub fn evaluate(state: &State) -> f32 {
+ 
+     score
+ }
++
++#[derive(Clone, Copy, Debug, Default)]
++pub struct EvaluationBreakdown {
++    pub pokemon: f32,
++    pub hazards: f32,
++    pub active_effects: f32,
++    pub boosts: f32,
++    pub tera: f32,
++    pub side_conditions: f32,
++    pub total: f32,
++}
++
++/// Exposes the terms of the exact static evaluator used by MCTS.
++///
++/// `total` is obtained by calling `evaluate` itself so instrumentation cannot
++/// silently replace the search evaluator with a look-alike implementation.
++pub fn evaluate_breakdown(state: &State) -> EvaluationBreakdown {
++    let mut result = EvaluationBreakdown::default();
++    for (sign, side) in [(1.0_f32, &state.side_one), (-1.0_f32, &state.side_two)] {
++        let mut used_tera = false;
++        let mut iter = side.pokemon.into_iter();
++        while let Some(pokemon) = iter.next() {
++            if pokemon.hp > 0 {
++                result.pokemon += sign * evaluate_pokemon(pokemon);
++                result.hazards += sign * evaluate_hazards(pokemon, side);
++                if iter.pokemon_index == side.active_index {
++                    if side.volatile_statuses.contains(&PokemonVolatileStatus::LEECHSEED) {
++                        result.active_effects += sign * LEECH_SEED;
++                    }
++                    if side.volatile_statuses.contains(&PokemonVolatileStatus::SUBSTITUTE) {
++                        result.active_effects += sign * SUBSTITUTE;
++                    }
++                    if side.volatile_statuses.contains(&PokemonVolatileStatus::CONFUSION) {
++                        result.active_effects += sign * CONFUSION;
++                    }
++                    result.boosts += sign * get_boost_multiplier(side.attack_boost) * POKEMON_ATTACK_BOOST;
++                    result.boosts += sign * get_boost_multiplier(side.defense_boost) * POKEMON_DEFENSE_BOOST;
++                    result.boosts += sign * get_boost_multiplier(side.special_attack_boost) * POKEMON_SPECIAL_ATTACK_BOOST;
++                    result.boosts += sign * get_boost_multiplier(side.special_defense_boost) * POKEMON_SPECIAL_DEFENSE_BOOST;
++                    result.boosts += sign * get_boost_multiplier(side.speed_boost) * POKEMON_SPEED_BOOST;
++                }
++            }
++            used_tera |= pokemon.terastallized;
++        }
++        if used_tera {
++            result.tera += sign * USED_TERA;
++        }
++        result.side_conditions += sign * side.side_conditions.reflect as f32 * REFLECT;
++        result.side_conditions += sign * side.side_conditions.light_screen as f32 * LIGHT_SCREEN;
++        result.side_conditions += sign * side.side_conditions.aurora_veil as f32 * AURORA_VEIL;
++        result.side_conditions += sign * side.side_conditions.safeguard as f32 * SAFE_GUARD;
++        result.side_conditions += sign * side.side_conditions.tailwind as f32 * TAILWIND;
++        result.side_conditions += sign * side.side_conditions.healing_wish as f32 * HEALING_WISH;
++    }
++    result.total = evaluate(state);
++    result
++}

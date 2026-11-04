@@ -1,0 +1,2558 @@
+{
+  "fixturesRoot": "/Users/amanery/PDL Vercel App/pdl-s4-foul-play/tests/fixtures/pdl_delayed_payoff",
+  "runtime": {
+    "requestedWorlds": 1,
+    "searchMsPerWorld": 250,
+    "seed": 0
+  },
+  "scenarios": {
+    "dangerous-shell-smash": {
+      "fixture": "shell-danger",
+      "focusAction": "shellsmash",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.56825193460838,
+        "selected": "shellsmash",
+        "support": 0.5063447895100068
+      },
+      "mutation": [],
+      "position": {
+        "active": {
+          "opponent": "bruxish",
+          "user": "drednaw"
+        },
+        "observationDigest": "fe0196a2d2ac6cb33b6835b6d6108c11a94cb5c0c3523726644633d7907e9d38",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 277.0,
+              "maxHp": 277,
+              "moves": [],
+              "species": "bruxish",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 441.0,
+                "maxHp": 441,
+                "moves": [],
+                "species": "drifblim",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "electivire",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "grimmsnarl",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "slowbrogalar",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 1,
+          "user": {
+            "active": {
+              "hp": 332,
+              "maxHp": 332,
+              "moves": [
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "shellsmash"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "liquidation"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "stoneedge"
+                },
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "crunch"
+                }
+              ],
+              "species": "drednaw",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 319,
+                "maxHp": 319,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "encore"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "moonblast"
+                  }
+                ],
+                "species": "whimsicott",
+                "status": "None"
+              },
+              {
+                "hp": 354,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "thunderwave"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 241,
+                "maxHp": 241,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 393,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "shellsmash",
+        "turn": 1
+      },
+      "wallClockDecisionMs": 546.7762080006651
+    },
+    "healthy-useful-memento": {
+      "fixture": "healthy-memento",
+      "focusAction": "memento",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.4005258279574795,
+        "selected": "psychicnoise",
+        "support": 0.005275367472735893
+      },
+      "mutation": [],
+      "position": {
+        "active": {
+          "opponent": "avalugghisui",
+          "user": "uxie"
+        },
+        "observationDigest": "6037ad0608d9c937b35a880b2d78f0fd5d3f9993ca33b75b7e03f27675a0e425",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 241.63,
+              "maxHp": 331,
+              "moves": [
+                {
+                  "currentPp": 15,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "bodypress"
+                }
+              ],
+              "species": "avalugghisui",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "delphox",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "lycanroc",
+                "status": "None"
+              },
+              {
+                "hp": 321.0,
+                "maxHp": 321,
+                "moves": [],
+                "species": "goodra",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "spiritbreak"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  }
+                ],
+                "species": "grimmsnarl",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 4,
+          "user": {
+            "active": {
+              "hp": 317,
+              "maxHp": 354,
+              "moves": [
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "stealthrock"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "thunderwave"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "psychicnoise"
+                }
+              ],
+              "species": "uxie",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 319,
+                "maxHp": 319,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "encore"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "moonblast"
+                  }
+                ],
+                "species": "whimsicott",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 241,
+                "maxHp": 241,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 393,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 332,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shellsmash"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "liquidation"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "stoneedge"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "drednaw",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "psychicnoise",
+        "turn": 4
+      },
+      "wallClockDecisionMs": 538.8746659955359
+    },
+    "healthy-useless-memento": {
+      "fixture": "healthy-memento",
+      "focusAction": "memento",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.3985095615446918,
+        "selected": "psychicnoise",
+        "support": 0.004589732528041415
+      },
+      "mutation": [
+        "drednaw"
+      ],
+      "position": {
+        "active": {
+          "opponent": "avalugghisui",
+          "user": "uxie"
+        },
+        "observationDigest": "f154baa13b324bd8b7ef9537eb22b85a3fd916180a4be148b3bfa4e720114ca6",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 241.63,
+              "maxHp": 331,
+              "moves": [
+                {
+                  "currentPp": 15,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "bodypress"
+                }
+              ],
+              "species": "avalugghisui",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "delphox",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "lycanroc",
+                "status": "None"
+              },
+              {
+                "hp": 321.0,
+                "maxHp": 321,
+                "moves": [],
+                "species": "goodra",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "spiritbreak"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  }
+                ],
+                "species": "grimmsnarl",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 4,
+          "user": {
+            "active": {
+              "hp": 317,
+              "maxHp": 354,
+              "moves": [
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "stealthrock"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "thunderwave"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "psychicnoise"
+                }
+              ],
+              "species": "uxie",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 319,
+                "maxHp": 319,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "encore"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "moonblast"
+                  }
+                ],
+                "species": "whimsicott",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 241,
+                "maxHp": 241,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 393,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 332,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shellsmash"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "liquidation"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "stoneedge"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "drednaw",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "psychicnoise",
+        "turn": 4
+      },
+      "wallClockDecisionMs": 543.3789170056116
+    },
+    "safe-shell-smash": {
+      "fixture": "shell-safe",
+      "focusAction": "shellsmash",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.6486934816736208,
+        "selected": "shellsmash",
+        "support": 0.5121028387096774
+      },
+      "mutation": [],
+      "position": {
+        "active": {
+          "opponent": "slowbrogalar",
+          "user": "drednaw"
+        },
+        "observationDigest": "eb8550444c551f03ceb3d3e024e34696d94852cdc45c1158a3b5648c785f4a09",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 185.36,
+              "maxHp": 331,
+              "moves": [
+                {
+                  "currentPp": 22,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "flamethrower"
+                },
+                {
+                  "currentPp": 7,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "slackoff"
+                }
+              ],
+              "species": "slowbrogalar",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "lycanroc",
+                "status": "None"
+              },
+              {
+                "hp": 441.0,
+                "maxHp": 441,
+                "moves": [],
+                "species": "drifblim",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "avalugghisui",
+                "status": "None"
+              },
+              {
+                "hp": 122.47000000000001,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 47,
+                    "disabled": false,
+                    "maxPp": 48,
+                    "name": "lightscreen"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  }
+                ],
+                "species": "grimmsnarl",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 6,
+          "user": {
+            "active": {
+              "hp": 332,
+              "maxHp": 332,
+              "moves": [
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "shellsmash"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "liquidation"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "stoneedge"
+                },
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "crunch"
+                }
+              ],
+              "species": "drednaw",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 319,
+                "maxHp": 319,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "encore"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "moonblast"
+                  }
+                ],
+                "species": "whimsicott",
+                "status": "None"
+              },
+              {
+                "hp": 354,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "thunderwave"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 393,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 0,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 11,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "shellsmash",
+        "turn": 6
+      },
+      "wallClockDecisionMs": 543.1867090010201
+    },
+    "useful-memento": {
+      "fixture": "memento",
+      "focusAction": "memento",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.4192215192566199,
+        "selected": "memento",
+        "support": 0.6763713852376138
+      },
+      "mutation": [],
+      "position": {
+        "active": {
+          "opponent": "bruxish",
+          "user": "whimsicott"
+        },
+        "observationDigest": "dbfec431d6bc3fa72c653982b73837fa76215ce11e2e372366b3f00c9d1c0fe9",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 132.96,
+              "maxHp": 277,
+              "moves": [
+                {
+                  "currentPp": 20,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "crunch"
+                }
+              ],
+              "species": "bruxish",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 441.0,
+                "maxHp": 441,
+                "moves": [],
+                "species": "drifblim",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 14.55,
+                "maxHp": 291,
+                "moves": [
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "earthquake"
+                  },
+                  {
+                    "currentPp": 22,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "supercellslam"
+                  }
+                ],
+                "species": "electivire",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 14,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "sludgebomb"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "slackoff"
+                  }
+                ],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 18,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "spiritbreak"
+                  },
+                  {
+                    "currentPp": 30,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  }
+                ],
+                "species": "grimmsnarl",
+                "status": "brn"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 1,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 25,
+          "user": {
+            "active": {
+              "hp": 29,
+              "maxHp": 319,
+              "moves": [
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "taunt"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "encore"
+                },
+                {
+                  "currentPp": 22,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "moonblast"
+                }
+              ],
+              "species": "whimsicott",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 175,
+                "maxHp": 332,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shellsmash"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "liquidation"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "stoneedge"
+                  },
+                  {
+                    "currentPp": 22,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "drednaw",
+                "status": "psn"
+              },
+              {
+                "hp": 0,
+                "maxHp": 0,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 37,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "thunderwave"
+                  },
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 50,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 28,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 29,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "memento",
+        "turn": 25
+      },
+      "wallClockDecisionMs": 546.5452920034295
+    },
+    "useful-sun": {
+      "fixture": "sun",
+      "focusAction": "sunnyday",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.39748910139623855,
+        "selected": "sunnyday",
+        "support": 0.6502901459854015
+      },
+      "mutation": [],
+      "position": {
+        "active": {
+          "opponent": "electivire",
+          "user": "whimsicott"
+        },
+        "observationDigest": "4aa67b0cf6df74c8016f770dc18a704e8e65d6a286a9e968dbe068f15e670eb0",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 291.0,
+              "maxHp": 291,
+              "moves": [
+                {
+                  "currentPp": 23,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "supercellslam"
+                }
+              ],
+              "species": "electivire",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "grimmsnarl",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "wavecrash"
+                  }
+                ],
+                "species": "bruxish",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 441,
+                "moves": [
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shadowball"
+                  }
+                ],
+                "species": "drifblim",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 5,
+          "user": {
+            "active": {
+              "hp": 188,
+              "maxHp": 319,
+              "moves": [
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "sunnyday"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "encore"
+                },
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "moonblast"
+                }
+              ],
+              "species": "whimsicott",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 354,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "sunnyday"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "uturn"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 241,
+                "maxHp": 241,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 0,
+                "moves": [
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              },
+              {
+                "hp": 244,
+                "maxHp": 271,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "growth"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "fireblast"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "solarbeam"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "scovillain",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "sunnyday",
+        "turn": 5
+      },
+      "wallClockDecisionMs": 548.8568330038106
+    },
+    "useless-memento": {
+      "fixture": "memento",
+      "focusAction": "memento",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.3963945915670434,
+        "selected": "memento",
+        "support": 0.6233658536585366
+      },
+      "mutation": [
+        "drednaw"
+      ],
+      "position": {
+        "active": {
+          "opponent": "bruxish",
+          "user": "whimsicott"
+        },
+        "observationDigest": "6c8fa3b2189fb4a3e71b30d89f7b705c5c842ed218c406b24ae799c616928013",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 132.96,
+              "maxHp": 277,
+              "moves": [
+                {
+                  "currentPp": 20,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "crunch"
+                }
+              ],
+              "species": "bruxish",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 441.0,
+                "maxHp": 441,
+                "moves": [],
+                "species": "drifblim",
+                "status": "None"
+              },
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 14.55,
+                "maxHp": 291,
+                "moves": [
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "earthquake"
+                  },
+                  {
+                    "currentPp": 22,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "supercellslam"
+                  }
+                ],
+                "species": "electivire",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 14,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "sludgebomb"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "slackoff"
+                  }
+                ],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 331,
+                "moves": [
+                  {
+                    "currentPp": 18,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "spiritbreak"
+                  },
+                  {
+                    "currentPp": 30,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "taunt"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  }
+                ],
+                "species": "grimmsnarl",
+                "status": "brn"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 1,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 25,
+          "user": {
+            "active": {
+              "hp": 29,
+              "maxHp": 319,
+              "moves": [
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 32,
+                  "disabled": false,
+                  "maxPp": 32,
+                  "name": "taunt"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "encore"
+                },
+                {
+                  "currentPp": 22,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "moonblast"
+                }
+              ],
+              "species": "whimsicott",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 332,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shellsmash"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "liquidation"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "stoneedge"
+                  },
+                  {
+                    "currentPp": 22,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "drednaw",
+                "status": "psn"
+              },
+              {
+                "hp": 0,
+                "maxHp": 0,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 37,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "memento"
+                  },
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "thunderwave"
+                  },
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 50,
+                "maxHp": 393,
+                "moves": [
+                  {
+                    "currentPp": 28,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 29,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "memento",
+        "turn": 25
+      },
+      "wallClockDecisionMs": 539.5547500011162
+    },
+    "useless-sun": {
+      "fixture": "sun",
+      "focusAction": "sunnyday",
+      "metrics": {
+        "legal": true,
+        "meanRolloutUtility": 0.30188581008928816,
+        "selected": "encore",
+        "support": 0.02505446153846154
+      },
+      "mutation": [
+        "scovillain"
+      ],
+      "position": {
+        "active": {
+          "opponent": "electivire",
+          "user": "whimsicott"
+        },
+        "observationDigest": "0afa99194ab78d60ea4a06d9d34c4077477cb14da1502aa1c8e6caf0ce16eef4",
+        "publicState": {
+          "field": "None",
+          "opponent": {
+            "active": {
+              "hp": 291.0,
+              "maxHp": 291,
+              "moves": [
+                {
+                  "currentPp": 23,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "supercellslam"
+                }
+              ],
+              "species": "electivire",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 291.0,
+                "maxHp": 291,
+                "moves": [],
+                "species": "ambipom",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "grimmsnarl",
+                "status": "None"
+              },
+              {
+                "hp": 331.0,
+                "maxHp": 331,
+                "moves": [],
+                "species": "slowbrogalar",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 15,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "wavecrash"
+                  }
+                ],
+                "species": "bruxish",
+                "status": "None"
+              },
+              {
+                "hp": 0.0,
+                "maxHp": 441,
+                "moves": [
+                  {
+                    "currentPp": 23,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "shadowball"
+                  }
+                ],
+                "species": "drifblim",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "spikes": 0,
+              "stealthrock": 0,
+              "stickyweb": 0,
+              "tailwind": 0,
+              "toxic_count": 0,
+              "toxicspikes": 0
+            }
+          },
+          "trickRoom": false,
+          "turn": 5,
+          "user": {
+            "active": {
+              "hp": 188,
+              "maxHp": 319,
+              "moves": [
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "sunnyday"
+                },
+                {
+                  "currentPp": 16,
+                  "disabled": false,
+                  "maxPp": 16,
+                  "name": "memento"
+                },
+                {
+                  "currentPp": 8,
+                  "disabled": false,
+                  "maxPp": 8,
+                  "name": "encore"
+                },
+                {
+                  "currentPp": 24,
+                  "disabled": false,
+                  "maxPp": 24,
+                  "name": "moonblast"
+                }
+              ],
+              "species": "whimsicott",
+              "status": "None"
+            },
+            "reserve": [
+              {
+                "hp": 354,
+                "maxHp": 354,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "sunnyday"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "stealthrock"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "uturn"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "psychicnoise"
+                  }
+                ],
+                "species": "uxie",
+                "status": "None"
+              },
+              {
+                "hp": 277,
+                "maxHp": 277,
+                "moves": [
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "dracometeor"
+                  },
+                  {
+                    "currentPp": 8,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "hydropump"
+                  },
+                  {
+                    "currentPp": 64,
+                    "disabled": false,
+                    "maxPp": 64,
+                    "name": "rapidspin"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "nastyplot"
+                  }
+                ],
+                "species": "tatsugiri",
+                "status": "None"
+              },
+              {
+                "hp": 241,
+                "maxHp": 241,
+                "moves": [
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "thunderbolt"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "flashcannon"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "voltswitch"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "triattack"
+                  }
+                ],
+                "species": "magneton",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 0,
+                "moves": [
+                  {
+                    "currentPp": 31,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "knockoff"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "flareblitz"
+                  },
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "partingshot"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "willowisp"
+                  }
+                ],
+                "species": "incineroar",
+                "status": "None"
+              },
+              {
+                "hp": 0,
+                "maxHp": 271,
+                "moves": [
+                  {
+                    "currentPp": 32,
+                    "disabled": false,
+                    "maxPp": 32,
+                    "name": "growth"
+                  },
+                  {
+                    "currentPp": 7,
+                    "disabled": false,
+                    "maxPp": 8,
+                    "name": "fireblast"
+                  },
+                  {
+                    "currentPp": 16,
+                    "disabled": false,
+                    "maxPp": 16,
+                    "name": "solarbeam"
+                  },
+                  {
+                    "currentPp": 24,
+                    "disabled": false,
+                    "maxPp": 24,
+                    "name": "crunch"
+                  }
+                ],
+                "species": "scovillain",
+                "status": "None"
+              }
+            ],
+            "sideConditions": {
+              "auroraveil": 0,
+              "lightscreen": 0,
+              "mist": 0,
+              "protect": 0,
+              "reflect": 0,
+              "safeguard": 0,
+              "tailwind": 0,
+              "toxic_count": 0
+            }
+          },
+          "weather": "None"
+        },
+        "recordedAction": "sunnyday",
+        "turn": 5
+      },
+      "wallClockDecisionMs": 537.7802919974783
+    }
+  },
+  "schemaVersion": 1
+}

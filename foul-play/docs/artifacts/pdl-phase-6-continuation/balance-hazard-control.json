@@ -1,0 +1,507 @@
+{
+  "activeSpecies": "golem",
+  "actor": "p2",
+  "bundleSha256": "b8de68398a9ba083a10fbb265d607d551cfee3835be41941485fd77f54c7e46d",
+  "configuration": {
+    "algorithm": "bounded-expectiminimax-current-engine-chance",
+    "depths": [
+      2,
+      4,
+      6
+    ],
+    "exactDamageBranchDepth": 1,
+    "nodeLimitPerWorldDepth": 100000,
+    "nonTerminalLeaf": "genx-static-v0.0.48-boost-relevance-v1",
+    "terminalUtility": {
+      "loss": 0.0,
+      "win": 1.0
+    }
+  },
+  "decisionOrdinal": 10,
+  "diagnosticSourceSha256": "3025b4f1cd3c8b70a42c09d0656b7408d85ac7f3d45339e86029649d004a98b8",
+  "frozenWorlds": [
+    {
+      "index": 0,
+      "stateSha256": "5dc73644020f37fe63dc7667a74ce24cb091eeb700813e8157b3fa7541ef69a8",
+      "weight": 0.5
+    },
+    {
+      "index": 1,
+      "stateSha256": "e53015e1995b88a17bd36b5b180824df1906ffaf3bda6b2daafa7b085914a176",
+      "weight": 0.5
+    }
+  ],
+  "legalRootActions": [
+    "earthquake",
+    "earthquake-tera",
+    "roar",
+    "roar-tera",
+    "stealthrock",
+    "stealthrock-tera",
+    "stoneedge",
+    "stoneedge-tera",
+    "switch drednaw",
+    "switch incineroar",
+    "switch magneton",
+    "switch tatsugiri",
+    "switch uxie"
+  ],
+  "requestType": "move",
+  "results": {
+    "d2": {
+      "actions": {
+        "earthquake": {
+          "evaluatorTruncatedProbability": 0.99999994,
+          "principalLine": [
+            "earthquake | bodypress",
+            "earthquake | bodypress"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.340988
+        },
+        "earthquake-tera": {
+          "evaluatorTruncatedProbability": 0.99999994,
+          "principalLine": [
+            "earthquake-tera | bodypress",
+            "earthquake | bodypress"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.19009864
+        },
+        "roar": {
+          "evaluatorTruncatedProbability": 0.9999999,
+          "principalLine": [
+            "roar | bodypress",
+            "stealthrock | flamethrower"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.259392575
+        },
+        "roar-tera": {
+          "evaluatorTruncatedProbability": 0.9999999,
+          "principalLine": [
+            "roar-tera | bodypress",
+            "stealthrock | shellsidearm"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.14014286999999997
+        },
+        "stealthrock": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "stealthrock | bodypress",
+            "switch incineroar | switch delphox"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.39916664
+        },
+        "stealthrock-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "stealthrock-tera | bodypress",
+            "switch incineroar | switch delphox"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.23158596
+        },
+        "stoneedge": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "stoneedge | bodypress",
+            "earthquake | bodypress"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.34037212
+        },
+        "stoneedge-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "stoneedge-tera | bodypress",
+            "earthquake | bodypress"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.18905248
+        },
+        "switch drednaw": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch drednaw | bodypress",
+            "liquidation | bodypress"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.18774262
+        },
+        "switch incineroar": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch incineroar | switch lycanroc",
+            "knockoff | accelerock"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.19992417
+        },
+        "switch magneton": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch magneton | bodypress",
+            "flashcannon | switch goodra"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.21193603
+        },
+        "switch tatsugiri": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch tatsugiri | switch goodra",
+            "rapidspin | dracometeor"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.28122216499999997
+        },
+        "switch uxie": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch uxie | switch lycanroc",
+            "knockoff | swordsdance"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.25863144
+        }
+      },
+      "selectedAction": "stealthrock",
+      "status": "complete",
+      "worlds": [
+        {
+          "actions": [
+            {
+              "action": "earthquake",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "earthquake | bodypress",
+                "earthquake | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.340988
+            },
+            {
+              "action": "earthquake-tera",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "earthquake-tera | bodypress",
+                "earthquake | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.19009864
+            },
+            {
+              "action": "roar",
+              "evaluatorTruncatedProbability": 0.9999999,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "roar | bodypress",
+                "stealthrock | flamethrower"
+              ],
+              "terminalProbability": 0,
+              "value": 0.2518625
+            },
+            {
+              "action": "roar-tera",
+              "evaluatorTruncatedProbability": 0.9999999,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "roar-tera | bodypress",
+                "stealthrock | shellsidearm"
+              ],
+              "terminalProbability": 0,
+              "value": 0.13831411
+            },
+            {
+              "action": "stealthrock",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stealthrock | bodypress",
+                "switch incineroar | switch delphox"
+              ],
+              "terminalProbability": 0,
+              "value": 0.39916664
+            },
+            {
+              "action": "stealthrock-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stealthrock-tera | bodypress",
+                "switch incineroar | switch delphox"
+              ],
+              "terminalProbability": 0,
+              "value": 0.23158596
+            },
+            {
+              "action": "stoneedge",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stoneedge | bodypress",
+                "earthquake | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.34037212
+            },
+            {
+              "action": "stoneedge-tera",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stoneedge-tera | bodypress",
+                "earthquake | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.18905248
+            },
+            {
+              "action": "switch drednaw",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "switch drednaw | bodypress",
+                "liquidation | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.18774262
+            },
+            {
+              "action": "switch incineroar",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "switch incineroar | switch lycanroc",
+                "knockoff | accelerock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.19992417
+            },
+            {
+              "action": "switch magneton",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "switch magneton | bodypress",
+                "flashcannon | switch goodra"
+              ],
+              "terminalProbability": 0,
+              "value": 0.21704817
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch goodra",
+              "principalLine": [
+                "switch tatsugiri | switch goodra",
+                "rapidspin | dracometeor"
+              ],
+              "terminalProbability": 0,
+              "value": 0.26670793
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "switch uxie | switch lycanroc",
+                "knockoff | swordsdance"
+              ],
+              "terminalProbability": 0,
+              "value": 0.25863144
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-current-engine-chance",
+          "cacheHits": 104,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 467,
+          "schemaVersion": 1,
+          "selectedAction": "stealthrock"
+        },
+        {
+          "actions": [
+            {
+              "action": "earthquake",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "earthquake | bodypress",
+                "earthquake | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.340988
+            },
+            {
+              "action": "earthquake-tera",
+              "evaluatorTruncatedProbability": 0.99999994,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "earthquake-tera | bodypress",
+                "earthquake | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.19009864
+            },
+            {
+              "action": "roar",
+              "evaluatorTruncatedProbability": 0.9999999,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "roar | bodypress",
+                "stealthrock | flamethrower"
+              ],
+              "terminalProbability": 0,
+              "value": 0.26692265
+            },
+            {
+              "action": "roar-tera",
+              "evaluatorTruncatedProbability": 0.9999999,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "roar-tera | bodypress",
+                "stealthrock | sludgebomb"
+              ],
+              "terminalProbability": 0,
+              "value": 0.14197163
+            },
+            {
+              "action": "stealthrock",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stealthrock | bodypress",
+                "switch incineroar | switch delphox"
+              ],
+              "terminalProbability": 0,
+              "value": 0.39916664
+            },
+            {
+              "action": "stealthrock-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stealthrock-tera | bodypress",
+                "switch incineroar | switch delphox"
+              ],
+              "terminalProbability": 0,
+              "value": 0.23158596
+            },
+            {
+              "action": "stoneedge",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stoneedge | bodypress",
+                "earthquake | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.34037212
+            },
+            {
+              "action": "stoneedge-tera",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "stoneedge-tera | bodypress",
+                "earthquake | stealthrock"
+              ],
+              "terminalProbability": 0,
+              "value": 0.18905248
+            },
+            {
+              "action": "switch drednaw",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "switch drednaw | bodypress",
+                "liquidation | bodypress"
+              ],
+              "terminalProbability": 0,
+              "value": 0.18774262
+            },
+            {
+              "action": "switch incineroar",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch delphox",
+              "principalLine": [
+                "switch incineroar | switch delphox",
+                "knockoff | flamethrower"
+              ],
+              "terminalProbability": 0,
+              "value": 0.19992417
+            },
+            {
+              "action": "switch magneton",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "bodypress",
+              "principalLine": [
+                "switch magneton | bodypress",
+                "flashcannon | switch goodra"
+              ],
+              "terminalProbability": 0,
+              "value": 0.20682389
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch tatsugiri | switch grimmsnarl",
+                "switch incineroar | spiritbreak"
+              ],
+              "terminalProbability": 0,
+              "value": 0.2957364
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch lycanroc",
+              "principalLine": [
+                "switch uxie | switch lycanroc",
+                "knockoff | swordsdance"
+              ],
+              "terminalProbability": 0,
+              "value": 0.25863144
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-current-engine-chance",
+          "cacheHits": 104,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 463,
+          "schemaVersion": 1,
+          "selectedAction": "stealthrock"
+        }
+      ]
+    },
+    "d4": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    },
+    "d6": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    }
+  },
+  "runtime": {
+    "engine": "poke-engine",
+    "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+    "engineVersion": "0.0.48",
+    "evaluator": "genx-static-v0.0.48-boost-relevance-v1",
+    "evaluatorSourceSha256": "5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397"
+  },
+  "schemaVersion": 1,
+  "trialId": "0014-adam-balance-vs-steve-screens-hazards-reverse",
+  "wrapperSourceSha256": "c869dc2b046987a82fe8186f7d5581aa62ce4abdf5618b16bf7499a30ad8418d"
+}

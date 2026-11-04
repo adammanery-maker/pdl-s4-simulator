@@ -1,0 +1,54 @@
+Porygon2 @ Eviolite
+Ability: Trace
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Recover
+- Thunderbolt
+- Psychic
+- Thunder Wave
+
+Meloetta @ Leftovers
+Ability: Serene Grace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Calm Mind
+- Substitute
+- Hyper Voice
+- Shadow Ball
+
+Amoonguss @ Rocky Helmet
+Ability: Regenerator
+EVs: 252 HP / 188 Def / 68 SpD
+Bold Nature
+- Giga Drain
+- Sludge Bomb
+- Synthesis
+- Stun Spore
+
+Emboar @ Choice Scarf
+Ability: Reckless
+Tera Type: Fire
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Flare Blitz
+- Close Combat
+- Wild Charge
+- Knock Off
+
+Decidueye @ Heavy-Duty Boots
+Ability: Long Reach
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Spirit Shackle
+- Leaf Blade
+- Shadow Sneak
+- Defog
+
+Articuno-Galar @ Heavy-Duty Boots
+Ability: Competitive
+EVs: 248 HP / 8 SpA / 252 Spe
+Timid Nature
+- Freezing Glare
+- Air Slash
+- U-turn
+- Recover

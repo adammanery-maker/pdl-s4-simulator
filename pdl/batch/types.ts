@@ -1,5 +1,7 @@
 import type { FoulPlayBeliefData } from '../sampling/foul-play-export';
 
+export type PdlSunPolicy = 'sun-lead-only-v1' | 'sun-sequence-v1';
+
 export type TrialStatus = 'completed' | 'tied' | 'rejected' | 'failed' | 'timed_out';
 
 export interface TrialSideArtifact {
@@ -36,6 +38,8 @@ export interface TrialArtifact {
 	readonly p2TeamPath: string;
 	readonly p1ProtocolPath: string;
 	readonly p2ProtocolPath: string;
+	readonly p1DecisionBundlePath: string;
+	readonly p2DecisionBundlePath: string;
 	readonly p1LogPath: string;
 	readonly p2LogPath: string;
 	readonly showdownLogPath: string;

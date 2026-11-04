@@ -1,0 +1,1378 @@
+{
+  "jordan": [
+    {
+      "index": 1,
+      "id": "JD01",
+      "name": "offensive control balance",
+      "description": "Porygon2 + Meloetta balance with Scarf Emboar and boots Articuno-Galar",
+      "cost": 41,
+      "capLimit": 55,
+      "pokemon": [
+        "Porygon2",
+        "Meloetta",
+        "Amoonguss",
+        "Emboar",
+        "Decidueye",
+        "Articuno-Galar"
+      ],
+      "export": "Porygon2 @ Eviolite\nAbility: Trace\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Thunderbolt\n- Psychic\n- Thunder Wave\n\nMeloetta @ Leftovers\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nEmboar @ Choice Scarf\nAbility: Reckless\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- Close Combat\n- Wild Charge\n- Knock Off\n\nDecidueye @ Heavy-Duty Boots\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak\n- Defog\n\nArticuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- U-turn\n- Recover"
+    },
+    {
+      "index": 2,
+      "id": "JD02",
+      "name": "double-wincon bulky balance",
+      "description": "Bulky wincon balance featuring Calm Mind Meloetta and Stamina Mudsdale",
+      "cost": 32,
+      "capLimit": 55,
+      "pokemon": [
+        "Porygon2",
+        "Meloetta",
+        "Amoonguss",
+        "Glastrier",
+        "Appletun",
+        "Mudsdale"
+      ],
+      "export": "Porygon2 @ Eviolite\nAbility: Trace\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Recover\n- Tri Attack\n- Thunderbolt\n- Thunder Wave\n\nMeloetta @ Metronome\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nGlastrier @ Heavy-Duty Boots\nAbility: Chilling Neigh\nTera Type: Poison\nEVs: 128 HP / 252 Atk / 4 SpD / 124 Spe\nAdamant Nature\n- Swords Dance\n- Icicle Crash\n- Close Combat\n- High Horsepower\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Apple Acid\n- Recover\n- Leech Seed\n- Dragon Tail\n\nMudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Body Press\n- Roar"
+    },
+    {
+      "index": 3,
+      "id": "JD03",
+      "name": "tailwind band offense",
+      "description": "Tailwind pivot offense with Articuno-Galar and Choice Band Decidueye",
+      "cost": 37,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Meloetta",
+        "Emboar",
+        "Decidueye",
+        "Shiftry",
+        "Mudsdale"
+      ],
+      "export": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- Shadow Ball\n- U-turn\n\nMeloetta @ Leftovers\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nEmboar @ Choice Band\nAbility: Reckless\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Flare Blitz\n- Close Combat\n- Wild Charge\n- Knock Off\n\nDecidueye @ Heavy-Duty Boots\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak\n- Defog\n\nShiftry @ Focus Sash\nAbility: Wind Rider\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Tailwind\n- Knock Off\n- Leaf Blade\n- Sucker Punch\n\nMudsdale @ Rocky Helmet\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Heavy Slam\n- Body Press"
+    },
+    {
+      "index": 4,
+      "id": "JD04",
+      "name": "trick room bulky breakers",
+      "description": "Trick Room breakers with Porygon2, Mudsdale, and bulky Glastrier",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Porygon2",
+        "Mudsdale",
+        "Appletun",
+        "Amoonguss",
+        "Glastrier"
+      ],
+      "export": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\nIVs: 0 Spe\n- Trick Room\n- Freezing Glare\n- U-turn\n- Recover\n\nPorygon2 @ Eviolite\nAbility: Download\nEVs: 252 HP / 252 SpA / 4 SpD\nQuiet Nature\nIVs: 0 Spe\n- Recover\n- Tri Attack\n- Thunderbolt\n- Psychic\n\nMudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\nIVs: 0 Spe\n- Stealth Rock\n- Earthquake\n- Body Press\n- Heavy Slam\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 252 SpA / 4 SpD\nQuiet Nature\nIVs: 0 Spe\n- Apple Acid\n- Dragon Pulse\n- Recover\n- Leech Seed\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nRelaxed Nature\nIVs: 0 Spe\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Toxic\n\nGlastrier @ Heavy-Duty Boots\nAbility: Chilling Neigh\nTera Type: Normal\nEVs: 252 HP / 252 Atk / 4 SpD\nBrave Nature\nIVs: 0 Spe\n- Swords Dance\n- Icicle Crash\n- Close Combat\n- High Horsepower"
+    },
+    {
+      "index": 5,
+      "id": "JD05",
+      "name": "hazard-control balance",
+      "description": "Hazard-control balance with Defog Decidueye and Rocky Helmet Amoonguss",
+      "cost": 40,
+      "capLimit": 55,
+      "pokemon": [
+        "Mudsdale",
+        "Porygon2",
+        "Meloetta",
+        "Amoonguss",
+        "Emboar",
+        "Decidueye"
+      ],
+      "export": "Mudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Body Press\n- Roar\n\nPorygon2 @ Eviolite\nAbility: Trace\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Recover\n- Tri Attack\n- Thunderbolt\n- Thunder Wave\n\nMeloetta @ Leftovers\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nEmboar @ Choice Scarf\nAbility: Reckless\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- Close Combat\n- Wild Charge\n- Knock Off\n\nDecidueye @ Heavy-Duty Boots\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak\n- Defog"
+    },
+    {
+      "index": 6,
+      "id": "JD06",
+      "name": "tailwind pivot offense",
+      "description": "Fast Tailwind pivot offense with Scarf Emboar and Shiftry",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Porygon2",
+        "Appletun",
+        "Meloetta",
+        "Emboar",
+        "Shiftry"
+      ],
+      "export": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- U-turn\n- Recover\n\nPorygon2 @ Eviolite\nAbility: Trace\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Thunderbolt\n- Psychic\n- Thunder Wave\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Iron Defense\n- Apple Acid\n- Recover\n- Dragon Tail\n\nMeloetta @ Leftovers\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nEmboar @ Choice Band\nAbility: Reckless\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Flare Blitz\n- Close Combat\n- Wild Charge\n- Knock Off\n\nShiftry @ Heavy-Duty Boots\nAbility: Wind Rider\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Tailwind\n- Defog\n- Knock Off\n- Leaf Blade"
+    },
+    {
+      "index": 7,
+      "id": "JD07",
+      "name": "pressure and wallbreaking balance",
+      "description": "High wallbreaking pressure with Articuno-Galar and Meloetta",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Mudsdale",
+        "Appletun",
+        "Meloetta",
+        "Amoonguss",
+        "Emboar"
+      ],
+      "export": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- U-turn\n- Recover\n\nMudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Body Press\n- Roar\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Apple Acid\n- Recover\n- Leech Seed\n- Dragon Tail\n\nMeloetta @ Metronome\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nEmboar @ Choice Band\nAbility: Reckless\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Flare Blitz\n- Close Combat\n- Wild Charge\n- Knock Off"
+    },
+    {
+      "index": 8,
+      "id": "JD08",
+      "name": "appletun + glastrier bulk",
+      "description": "Physical bulk core with Appletun, Mudsdale, and Glastrier",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Porygon2",
+        "Mudsdale",
+        "Glastrier",
+        "Amoonguss",
+        "Decidueye",
+        "Appletun"
+      ],
+      "export": "Porygon2 @ Eviolite\nAbility: Download\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Recover\n- Tri Attack\n- Thunderbolt\n- Psychic\n\nMudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Defense\n- Body Press\n- Earthquake\n\nGlastrier @ Heavy-Duty Boots\nAbility: Chilling Neigh\nTera Type: Poison\nEVs: 128 HP / 252 Atk / 4 SpD / 124 Spe\nAdamant Nature\n- Swords Dance\n- Icicle Crash\n- Close Combat\n- High Horsepower\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nDecidueye @ Heavy-Duty Boots\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak\n- Defog\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Apple Acid\n- Recover\n- Leech Seed\n- Dragon Tail"
+    },
+    {
+      "index": 9,
+      "id": "JD09",
+      "name": "ice band + hazard pressure",
+      "description": "Ice Band pressure with Choice Band Glastrier and Amoonguss",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Appletun",
+        "Mudsdale",
+        "Amoonguss",
+        "Glastrier",
+        "Decidueye"
+      ],
+      "export": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- Shadow Ball\n- U-turn\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Apple Acid\n- Recover\n- Leech Seed\n- Light Screen\n\nMudsdale @ Rocky Helmet\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Heavy Slam\n- Body Press\n\nAmoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 188 Def / 68 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Stun Spore\n\nGlastrier @ Choice Band\nAbility: Chilling Neigh\nTera Type: Normal\nEVs: 128 HP / 252 Atk / 4 SpD / 124 Spe\nAdamant Nature\n- Icicle Crash\n- Close Combat\n- High Horsepower\n- Crunch\n\nDecidueye @ Heavy-Duty Boots\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak\n- Defog"
+    },
+    {
+      "index": 10,
+      "id": "JD10",
+      "name": "tailwind glastrier cleanup",
+      "description": "Late-game Tailwind cleanup with Glastrier and Scarf Emboar",
+      "cost": 30,
+      "capLimit": 55,
+      "pokemon": [
+        "Articuno-Galar",
+        "Porygon2",
+        "Appletun",
+        "Meloetta",
+        "Glastrier",
+        "Shiftry"
+      ],
+      "export": "Articuno-Galar @ Choice Scarf\nAbility: Competitive\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Freezing Glare\n- Air Slash\n- Shadow Ball\n- U-turn\n\nPorygon2 @ Eviolite\nAbility: Trace\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Thunderbolt\n- Psychic\n- Thunder Wave\n\nAppletun @ Leftovers\nAbility: Thick Fat\nTera Type: Normal\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Apple Acid\n- Recover\n- Leech Seed\n- Dragon Tail\n\nMeloetta @ Leftovers\nAbility: Serene Grace\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Substitute\n- Hyper Voice\n- Shadow Ball\n\nGlastrier @ Heavy-Duty Boots\nAbility: Chilling Neigh\nTera Type: Poison\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Swords Dance\n- Icicle Crash\n- Close Combat\n- High Horsepower\n\nShiftry @ Heavy-Duty Boots\nAbility: Wind Rider\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Tailwind\n- Defog\n- Knock Off\n- Leaf Blade"
+    }
+  ],
+  "nick": [
+    {
+      "index": 1,
+      "id": "N01",
+      "name": "balanced paralysis + spin",
+      "description": "Paralysis spread with Jolteon + Rapid Spin Coalossal hazard control",
+      "cost": 47,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Jolteon",
+        "Bombirdier",
+        "Coalossal"
+      ],
+      "export": "Munkidori @ Choice Scarf\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 160 HP / 96 SpA / 252 SpD\nModest Nature\n- Stealth Rock\n- Draco Meteor\n- Flash Cannon\n- Thunder Wave\n\nFlygon @ Loaded Dice\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Scale Shot\n- Earthquake\n- Fire Punch\n\nJolteon @ Life Orb\nAbility: Volt Absorb\nTera Type: Fairy\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Calm Mind\n- Thunderbolt\n- Alluring Voice\n- Shadow Ball\n\nBombirdier @ Heavy-Duty Boots\nAbility: Big Pecks\nTera Type: Flying\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Knock Off\n- Brave Bird\n- Parting Shot\n- Roost\n\nCoalossal @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Rapid Spin\n- Flamethrower\n- Body Press\n- Will-O-Wisp"
+    },
+    {
+      "index": 2,
+      "id": "N02",
+      "name": "choice pivot pressure",
+      "description": "Choice pivot momentum with Specs Munkidori and Band Decidueye-Hisui",
+      "cost": 48,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Jolteon",
+        "Bombirdier",
+        "Decidueye-Hisui"
+      ],
+      "export": "Munkidori @ Choice Specs\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Roar\n- Body Press\n- Flash Cannon\n\nFlygon @ Choice Scarf\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Outrage\n- U-turn\n- Stone Edge\n\nJolteon @ Choice Specs\nAbility: Volt Absorb\nTera Type: Fairy\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Volt Switch\n- Alluring Voice\n- Shadow Ball\n\nBombirdier @ Heavy-Duty Boots\nAbility: Big Pecks\nTera Type: Dark\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Knock Off\n- Drill Run\n- Parting Shot\n- Roost\n\nDecidueye-Hisui @ Choice Band\nAbility: Scrappy\nTera Type: Fighting\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Triple Arrows\n- Leaf Blade\n- Knock Off\n- Shadow Sneak"
+    },
+    {
+      "index": 3,
+      "id": "N03",
+      "name": "dragon dance + spikes",
+      "description": "Dragon Dance Flygon cleaner with Bombirdier hazard pressure",
+      "cost": 47,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Jolteon",
+        "Bombirdier",
+        "Coalossal"
+      ],
+      "export": "Munkidori @ Choice Scarf\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Thunder Wave\n- Body Press\n- Draco Meteor\n\nFlygon @ Clear Amulet\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Dragon Claw\n- Earthquake\n- Fire Punch\n\nJolteon @ Flame Orb\nAbility: Quick Feet\nTera Type: Rock\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Volt Switch\n- Alluring Voice\n- Shadow Ball\n\nBombirdier @ Focus Sash\nAbility: Big Pecks\nTera Type: Flying\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Brave Bird\n- Drill Run\n- Tailwind\n\nCoalossal @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 8 Def / 252 SpD\nCalm Nature\n- Rapid Spin\n- Flamethrower\n- Spikes\n- Earth Power"
+    },
+    {
+      "index": 4,
+      "id": "N04",
+      "name": "groundbreaker pressure",
+      "description": "Assault Vest Decidueye-Hisui and Eviolite Duraludon bulky breaker core",
+      "cost": 47,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Bombirdier",
+        "Dipplin",
+        "Decidueye-Hisui"
+      ],
+      "export": "Munkidori @ Choice Specs\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 160 HP / 96 SpA / 252 SpD\nModest Nature\n- Stealth Rock\n- Draco Meteor\n- Flash Cannon\n- Thunder Wave\n\nFlygon @ Choice Band\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Outrage\n- U-turn\n- First Impression\n\nBombirdier @ Heavy-Duty Boots\nAbility: Rocky Payload\nTera Type: Rock\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Stone Edge\n- Drill Run\n- Parting Shot\n\nDipplin @ Eviolite\nAbility: Sticky Hold\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Recover\n- Growth\n- Giga Drain\n- Dragon Tail\n\nDecidueye-Hisui @ Choice Band\nAbility: Scrappy\nTera Type: Fighting\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Triple Arrows\n- Leaf Blade\n- Knock Off\n- Shadow Sneak"
+    },
+    {
+      "index": 5,
+      "id": "N05",
+      "name": "water-ground counterplay",
+      "description": "Water-Ground counterplay with Dipplin and Flame Body Coalossal",
+      "cost": 46,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Jolteon",
+        "Dipplin",
+        "Coalossal"
+      ],
+      "export": "Munkidori @ Choice Scarf\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Leftovers\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Thunder Wave\n- Flash Cannon\n- Draco Meteor\n\nFlygon @ Loaded Dice\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Scale Shot\n- Earthquake\n- Fire Punch\n\nJolteon @ Life Orb\nAbility: Volt Absorb\nTera Type: Fairy\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Calm Mind\n- Thunderbolt\n- Alluring Voice\n- Shadow Ball\n\nDipplin @ Eviolite\nAbility: Sticky Hold\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Recover\n- Giga Drain\n- Syrup Bomb\n- Dragon Tail\n\nCoalossal @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Rapid Spin\n- Flamethrower\n- Body Press\n- Spikes"
+    },
+    {
+      "index": 6,
+      "id": "N06",
+      "name": "double steel stallbreak",
+      "description": "Double Steel wall with Eviolite Duraludon and Bastiodon stallbreak",
+      "cost": 44,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Bombirdier",
+        "Dipplin",
+        "Bastiodon"
+      ],
+      "export": "Munkidori @ Choice Specs\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Roar\n- Body Press\n- Flash Cannon\n\nFlygon @ Choice Scarf\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Dragon Claw\n- Stone Edge\n- U-turn\n\nBombirdier @ Heavy-Duty Boots\nAbility: Big Pecks\nTera Type: Flying\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Knock Off\n- Brave Bird\n- Parting Shot\n- Roost\n\nDipplin @ Eviolite\nAbility: Supersweet Syrup\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Recover\n- Giga Drain\n- Syrup Bomb\n- Dragon Tail\n\nBastiodon @ Leftovers\nAbility: Soundproof\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Body Press\n- Iron Defense\n- Foul Play\n- Metal Burst"
+    },
+    {
+      "index": 7,
+      "id": "N07",
+      "name": "electric-ground core",
+      "description": "Electric-Ground core with Jolteon, Flygon, and Decidueye-Hisui",
+      "cost": 47,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Jolteon",
+        "Decidueye-Hisui",
+        "Dipplin"
+      ],
+      "export": "Munkidori @ Choice Scarf\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fake Out\n- Sludge Wave\n- Psychic\n- U-turn\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Thunder Wave\n- Body Press\n- Roar\n\nFlygon @ Leftovers\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Dragon Claw\n- Earthquake\n- Stone Edge\n\nJolteon @ Choice Specs\nAbility: Volt Absorb\nTera Type: Electric\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Volt Switch\n- Alluring Voice\n- Shadow Ball\n\nDecidueye-Hisui @ Choice Band\nAbility: Scrappy\nTera Type: Fighting\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Triple Arrows\n- Leaf Blade\n- Knock Off\n- Shadow Sneak\n\nDipplin @ Eviolite\nAbility: Sticky Hold\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Recover\n- Giga Drain\n- Dragon Pulse\n- Dragon Tail"
+    },
+    {
+      "index": 8,
+      "id": "N08",
+      "name": "physical-special split",
+      "description": "Physical-Special split offense with Specs Munkidori and Scarf Flygon",
+      "cost": 48,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Flygon",
+        "Bombirdier",
+        "Coalossal",
+        "Decidueye-Hisui"
+      ],
+      "export": "Munkidori @ Choice Specs\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 160 HP / 96 SpA / 252 SpD\nModest Nature\n- Stealth Rock\n- Draco Meteor\n- Flash Cannon\n- Thunder Wave\n\nFlygon @ Choice Scarf\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Outrage\n- Stone Edge\n- U-turn\n\nBombirdier @ Focus Sash\nAbility: Rocky Payload\nTera Type: Rock\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Stone Edge\n- Brave Bird\n- Tailwind\n\nCoalossal @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 8 Def / 252 SpD\nCalm Nature\n- Rapid Spin\n- Flamethrower\n- Earth Power\n- Will-O-Wisp\n\nDecidueye-Hisui @ Choice Band\nAbility: Scrappy\nTera Type: Fighting\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Triple Arrows\n- Leaf Blade\n- Knock Off\n- Shadow Sneak"
+    },
+    {
+      "index": 9,
+      "id": "N09",
+      "name": "dual ground offense",
+      "description": "Ground-Fighting dual offensive pressure with Flygon and Decidueye-Hisui",
+      "cost": 48,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Jolteon",
+        "Bombirdier",
+        "Decidueye-Hisui",
+        "Flygon"
+      ],
+      "export": "Munkidori @ Choice Scarf\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Eviolite\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Thunder Wave\n- Body Press\n- Draco Meteor\n\nJolteon @ Life Orb\nAbility: Volt Absorb\nTera Type: Electric\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Volt Switch\n- Weather Ball\n- Shadow Ball\n\nBombirdier @ Heavy-Duty Boots\nAbility: Big Pecks\nTera Type: Fairy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Brave Bird\n- Roost\n- Parting Shot\n\nDecidueye-Hisui @ Choice Band\nAbility: Scrappy\nTera Type: Fighting\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Triple Arrows\n- Leaf Blade\n- Knock Off\n- Shadow Sneak\n\nFlygon @ Clear Amulet\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Dragon Claw\n- Earthquake\n- Fire Punch"
+    },
+    {
+      "index": 10,
+      "id": "N10",
+      "name": "sturdy-custap offense",
+      "description": "Sturdy Custap lead with Bastiodon and Dragon Dance Flygon",
+      "cost": 45,
+      "capLimit": 55,
+      "pokemon": [
+        "Munkidori",
+        "Duraludon",
+        "Jolteon",
+        "Bombirdier",
+        "Flygon",
+        "Bastiodon"
+      ],
+      "export": "Munkidori @ Choice Specs\nAbility: Toxic Chain\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sludge Wave\n- Psychic\n- U-turn\n- Trick\n\nDuraludon @ Leftovers\nAbility: Light Metal\nEVs: 252 HP / 4 SpA / 252 SpD\nCalm Nature\n- Stealth Rock\n- Roar\n- Body Press\n- Draco Meteor\n\nJolteon @ Flame Orb\nAbility: Quick Feet\nTera Type: Electric\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Thunderbolt\n- Volt Switch\n- Alluring Voice\n- Shadow Ball\n\nBombirdier @ Focus Sash\nAbility: Rocky Payload\nTera Type: Rock\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Stone Edge\n- Brave Bird\n- Tailwind\n\nFlygon @ Choice Scarf\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Outrage\n- U-turn\n- First Impression\n\nBastiodon @ Custap Berry\nAbility: Sturdy\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Metal Burst\n- Body Press\n- Iron Defense\n- Foul Play"
+    }
+  ],
+  "jon": [
+    {
+      "index": 1,
+      "id": "J01",
+      "name": "Rain Swift Swim & AV Goodra",
+      "description": "Drednaw Swift Swim cleaner with Assault Vest Goodra and Spikes Froslass",
+      "cost": 28,
+      "capLimit": 55,
+      "pokemon": [
+        "Goodra",
+        "Drednaw",
+        "Froslass",
+        "Delphox",
+        "Golurk",
+        "Leafeon"
+      ],
+      "export": "Goodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nDrednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Liquidation\n- Stone Edge\n- Earthquake\n- Rain Dance\n\nFroslass @ Focus Sash\nAbility: Cursed Body\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Shadow Ball\n- Will-O-Wisp\n- Destiny Bond\n\nDelphox @ Choice Scarf\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Psychic\n- Shadow Ball\n- Trick\n\nGolurk @ Choice Band\nAbility: No Guard\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Poltergeist\n- Dynamic Punch\n- Stone Edge\n\nLeafeon @ Leftovers\nAbility: Leaf Guard\nTera Type: Dragon\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Leaf Blade\n- Knock Off\n- Synthesis"
+    },
+    {
+      "index": 2,
+      "id": "J02",
+      "name": "Double Shell Smash Offense",
+      "description": "Dual Shell Smash threat with Minior and Drednaw supported by Delphox",
+      "cost": 30,
+      "capLimit": 55,
+      "pokemon": [
+        "Minior",
+        "Drednaw",
+        "Delphox",
+        "Goodra",
+        "Tauros-Paldea-Blaze",
+        "Froslass"
+      ],
+      "export": "Minior @ White Herb\nAbility: Shields Down\nTera Type: Flying\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Shell Smash\n- Acrobatics\n- Stone Edge\n- Earthquake\n\nDrednaw @ White Herb\nAbility: Strong Jaw\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Shell Smash\n- Liquidation\n- Crunch\n- Ice Fang\n\nDelphox @ Choice Specs\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Psyshock\n- Shadow Ball\n- Focus Blast\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 252 HP / 252 SpA / 4 Spe\nModest Nature\n- Dragon Pulse\n- Ice Beam\n- Thunderbolt\n- Sludge Bomb\n\nTauros-Paldea-Blaze @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Flare Blitz\n- Will-O-Wisp\n- Bulk Up\n\nFroslass @ Heavy-Duty Boots\nAbility: Cursed Body\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Ice Beam\n- Shadow Ball\n- Taunt"
+    },
+    {
+      "index": 3,
+      "id": "J03",
+      "name": "Sun Punishment & Swords Dance Leafeon",
+      "description": "Tauros Sunny Day pivot into Chlorophyll Leafeon sweep and Delphox",
+      "cost": 26,
+      "capLimit": 55,
+      "pokemon": [
+        "Tauros-Paldea-Blaze",
+        "Leafeon",
+        "Delphox",
+        "Goodra",
+        "Regirock",
+        "Cryogonal"
+      ],
+      "export": "Tauros-Paldea-Blaze @ Heat Rock\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Sunny Day\n- Close Combat\n- Flare Blitz\n- Will-O-Wisp\n\nLeafeon @ Life Orb\nAbility: Chlorophyll\nTera Type: Ice\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Solar Blade\n- Leaf Blade\n- Knock Off\n- Swords Dance\n\nDelphox @ Choice Specs\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Psychic\n- Solar Beam\n- Shadow Ball\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Flamethrower\n- Thunderbolt\n- Sludge Bomb\n\nRegirock @ Leftovers\nAbility: Clear Body\nTera Type: Dragon\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Body Press\n- Stone Edge\n- Thunder Wave\n\nCryogonal @ Heavy-Duty Boots\nAbility: Levitate\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Freeze-Dry\n- Recover\n- Ice Beam"
+    },
+    {
+      "index": 4,
+      "id": "J04",
+      "name": "Bulky Hazard & Status Balance",
+      "description": "Stealth Rock Regirock + Spikes Froslass with Rapid Spin Cryogonal",
+      "cost": 27,
+      "capLimit": 55,
+      "pokemon": [
+        "Regirock",
+        "Cryogonal",
+        "Goodra",
+        "Froslass",
+        "Golurk",
+        "Tauros-Paldea-Blaze"
+      ],
+      "export": "Regirock @ Leftovers\nAbility: Clear Body\nTera Type: Rock\nEVs: 252 HP / 16 Def / 240 SpD\nImpish Nature\n- Stealth Rock\n- Body Press\n- Thunder Wave\n- Heavy Slam\n\nCryogonal @ Heavy-Duty Boots\nAbility: Levitate\nTera Type: Ice\nEVs: 252 HP / 4 SpD / 252 Spe\nCalm Nature\n- Rapid Spin\n- Recover\n- Freeze-Dry\n- Knock Off\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 252 HP / 252 SpA / 4 Spe\nModest Nature\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nFroslass @ Heavy-Duty Boots\nAbility: Cursed Body\nTera Type: Ghost\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Spikes\n- Will-O-Wisp\n- Shadow Ball\n- Taunt\n\nGolurk @ Leftovers\nAbility: No Guard\nTera Type: Ground\nEVs: 212 HP / 252 Atk / 44 Spe\nAdamant Nature\n- Earthquake\n- Poltergeist\n- Dynamic Punch\n- Stealth Rock\n\nTauros-Paldea-Blaze @ Leftovers\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Raging Bull\n- Will-O-Wisp\n- Stone Edge"
+    },
+    {
+      "index": 5,
+      "id": "J05",
+      "name": "Mixed Breaker Hyper Offense",
+      "description": "Choice Band Golurk + Specs Delphox with Minior cleaner",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Delphox",
+        "Golurk",
+        "Minior",
+        "Drednaw",
+        "Goodra",
+        "Froslass"
+      ],
+      "export": "Delphox @ Choice Specs\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Psychic\n- Shadow Ball\n- Focus Blast\n\nGolurk @ Choice Band\nAbility: No Guard\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Poltergeist\n- Earthquake\n- Dynamic Punch\n- Stone Edge\n\nMinior @ White Herb\nAbility: Shields Down\nTera Type: Rock\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Shell Smash\n- Acrobatics\n- Stone Edge\n- Earthquake\n\nDrednaw @ Choice Band\nAbility: Strong Jaw\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Liquidation\n- Stone Edge\n- Crunch\n- Ice Fang\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Sludge Bomb\n- Flamethrower\n- Thunderbolt\n\nFroslass @ Focus Sash\nAbility: Cursed Body\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Shadow Ball\n- Destiny Bond\n- Will-O-Wisp"
+    },
+    {
+      "index": 6,
+      "id": "J06",
+      "name": "Assault Vest Goodra + Will-O-Wisp Attrition",
+      "description": "Intimidate Tauros and Wisp Froslass softening threats for AV Goodra",
+      "cost": 25,
+      "capLimit": 55,
+      "pokemon": [
+        "Goodra",
+        "Tauros-Paldea-Blaze",
+        "Froslass",
+        "Cryogonal",
+        "Regirock",
+        "Leafeon"
+      ],
+      "export": "Goodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Flamethrower\n- Thunderbolt\n- Ice Beam\n\nTauros-Paldea-Blaze @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Will-O-Wisp\n- Close Combat\n- Flare Blitz\n- Stone Edge\n\nFroslass @ Leftovers\nAbility: Cursed Body\nTera Type: Ghost\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Will-O-Wisp\n- Hex\n- Spikes\n- Taunt\n\nCryogonal @ Heavy-Duty Boots\nAbility: Levitate\nTera Type: Ice\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Rapid Spin\n- Recover\n- Freeze-Dry\n- Ice Beam\n\nRegirock @ Leftovers\nAbility: Clear Body\nTera Type: Dragon\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Body Press\n- Thunder Wave\n- Stone Edge\n\nLeafeon @ Leftovers\nAbility: Leaf Guard\nTera Type: Grass\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Leaf Blade\n- Knock Off\n- Synthesis"
+    },
+    {
+      "index": 7,
+      "id": "J07",
+      "name": "Ghost-Spikes Spinblock Control",
+      "description": "Froslass Spikes + Golurk spinblocker with Drednaw breaker",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Froslass",
+        "Golurk",
+        "Drednaw",
+        "Delphox",
+        "Goodra",
+        "Regirock"
+      ],
+      "export": "Froslass @ Focus Sash\nAbility: Cursed Body\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Shadow Ball\n- Destiny Bond\n- Taunt\n\nGolurk @ Assault Vest\nAbility: No Guard\nTera Type: Ground\nEVs: 172 HP / 252 Atk / 84 Spe\nAdamant Nature\n- Earthquake\n- Poltergeist\n- Dynamic Punch\n- Stone Edge\n\nDrednaw @ White Herb\nAbility: Strong Jaw\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Shell Smash\n- Liquidation\n- Crunch\n- Ice Fang\n\nDelphox @ Choice Scarf\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Psychic\n- Shadow Ball\n- Trick\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 252 HP / 252 SpA / 4 Spe\nModest Nature\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nRegirock @ Leftovers\nAbility: Clear Body\nTera Type: Rock\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Body Press\n- Stone Edge\n- Thunder Wave"
+    },
+    {
+      "index": 8,
+      "id": "J08",
+      "name": "Calm Mind Delphox + Shell Smash Drednaw",
+      "description": "Delphox setup sweeper backed by Drednaw and Cryogonal hazard removal",
+      "cost": 26,
+      "capLimit": 55,
+      "pokemon": [
+        "Delphox",
+        "Drednaw",
+        "Cryogonal",
+        "Goodra",
+        "Minior",
+        "Leafeon"
+      ],
+      "export": "Delphox @ Leftovers\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Calm Mind\n- Flamethrower\n- Psyshock\n- Shadow Ball\n\nDrednaw @ White Herb\nAbility: Strong Jaw\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Shell Smash\n- Liquidation\n- Crunch\n- Ice Fang\n\nCryogonal @ Heavy-Duty Boots\nAbility: Levitate\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Freeze-Dry\n- Recover\n- Ice Beam\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Sludge Bomb\n- Flamethrower\n- Thunderbolt\n\nMinior @ White Herb\nAbility: Shields Down\nTera Type: Flying\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Shell Smash\n- Acrobatics\n- Stone Edge\n- Earthquake\n\nLeafeon @ Choice Band\nAbility: Leaf Guard\nTera Type: Dragon\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Leaf Blade\n- Knock Off\n- Double-Edge\n- Quick Attack"
+    },
+    {
+      "index": 9,
+      "id": "J09",
+      "name": "Fast Choice Pressure & Intimidate Pivot",
+      "description": "Scarf Delphox + Band Tauros with Golurk breaker and Froslass speed",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Delphox",
+        "Tauros-Paldea-Blaze",
+        "Golurk",
+        "Goodra",
+        "Froslass",
+        "Minior"
+      ],
+      "export": "Delphox @ Choice Scarf\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Psychic\n- Shadow Ball\n- Dazzling Gleam\n\nTauros-Paldea-Blaze @ Choice Band\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Flare Blitz\n- Earthquake\n- Stone Edge\n\nGolurk @ Assault Vest\nAbility: No Guard\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Poltergeist\n- Dynamic Punch\n- Stone Edge\n\nGoodra @ Expert Belt\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nFroslass @ Focus Sash\nAbility: Cursed Body\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Shadow Ball\n- Will-O-Wisp\n- Destiny Bond\n\nMinior @ White Herb\nAbility: Shields Down\nTera Type: Rock\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Shell Smash\n- Acrobatics\n- Stone Edge\n- Earthquake"
+    },
+    {
+      "index": 10,
+      "id": "J10",
+      "name": "Dragon Tera Defensive Rock & Ice Offense",
+      "description": "Tera Dragon Regirock wall with Cryogonal Freeze-Dry and Tauros pivot",
+      "cost": 27,
+      "capLimit": 55,
+      "pokemon": [
+        "Regirock",
+        "Cryogonal",
+        "Goodra",
+        "Tauros-Paldea-Blaze",
+        "Golurk",
+        "Froslass"
+      ],
+      "export": "Regirock @ Leftovers\nAbility: Clear Body\nTera Type: Dragon\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Body Press\n- Stone Edge\n- Thunder Wave\n\nCryogonal @ Heavy-Duty Boots\nAbility: Levitate\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Freeze-Dry\n- Recover\n- Ice Beam\n\nGoodra @ Assault Vest\nAbility: Sap Sipper\nEVs: 248 HP / 252 SpA / 8 Spe\nModest Nature\n- Draco Meteor\n- Thunderbolt\n- Flamethrower\n- Sludge Bomb\n\nTauros-Paldea-Blaze @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Flare Blitz\n- Will-O-Wisp\n- Bulk Up\n\nGolurk @ Choice Band\nAbility: No Guard\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Poltergeist\n- Dynamic Punch\n- Stone Edge\n\nFroslass @ Heavy-Duty Boots\nAbility: Cursed Body\nTera Type: Ice\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Spikes\n- Shadow Ball\n- Will-O-Wisp\n- Taunt"
+    }
+  ],
+  "zander": [
+    {
+      "index": 1,
+      "id": "Z01",
+      "name": "Variation 1",
+      "description": "Balanced wallbreaker core with Mixed Infernape and bulky Swampert pivot",
+      "cost": 45,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Swampert",
+        "Copperajah",
+        "Weezing",
+        "Rotom-Mow",
+        "Sceptile"
+      ],
+      "export": "Infernape @ Choice Scarf\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- Close Combat\n- Stone Edge\n- U-turn\n\nSwampert @ Rocky Helmet\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Knock Off\n\nCopperajah @ Assault Vest\nAbility: Sheer Force\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Iron Head\n- Earthquake\n- Knock Off\n- Heat Crash\n\nWeezing @ Rocky Helmet\nAbility: Levitate\nTera Type: Water\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\nIVs: 0 Atk\n- Sludge Bomb\n- Flamethrower\n- Will-O-Wisp\n- Pain Split\n\nRotom-Mow @ Choice Specs\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Leaf Storm\n- Thunderbolt\n- Volt Switch\n- Trick\n\nSceptile @ Life Orb\nAbility: Overgrow\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Leaf Blade\n- Earthquake\n- Rock Slide"
+    },
+    {
+      "index": 2,
+      "id": "Z02",
+      "name": "Variation 2",
+      "description": "Heavy hazard & offensive pressure with Copperajah and Toxic Salazzle",
+      "cost": 45,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Swampert",
+        "Copperajah",
+        "Honchkrow",
+        "Rotom-Mow",
+        "Salazzle"
+      ],
+      "export": "Infernape @ Life Orb\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Scorching Sands\n- Aura Sphere\n- Flamethrower\n- U-turn\n\nSwampert @ Choice Band\nAbility: Torrent\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Waterfall\n- Earthquake\n- Ice Punch\n- Flip Turn\n\nCopperajah @ Leftovers\nAbility: Sheer Force\nEVs: 248 HP / 232 SpD / 28 Spe\nCareful Nature\n- Iron Head\n- Stealth Rock\n- Earthquake\n- Knock Off\n\nHonchkrow @ Heavy-Duty Boots\nAbility: Super Luck\nTera Type: Flying\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Brave Bird\n- Night Slash\n- Sucker Punch\n- Roost\n\nRotom-Mow @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\nIVs: 0 Atk\n- Leaf Storm\n- Thunderbolt\n- Volt Switch\n- Will-O-Wisp\n\nSalazzle @ Heavy-Duty Boots\nAbility: Corrosion\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Fire Blast\n- Sludge Bomb\n- Nasty Plot\n- Encore"
+    },
+    {
+      "index": 3,
+      "id": "Z03",
+      "name": "Variation 3",
+      "description": "Physical wallbreaker core with Weezing Levitate and Drifblim Unburden",
+      "cost": 41,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Swampert",
+        "Copperajah",
+        "Weezing",
+        "Drifblim",
+        "Cacturne"
+      ],
+      "export": "Infernape @ Choice Scarf\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- Close Combat\n- Stone Edge\n- U-turn\n\nSwampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Knock Off\n\nCopperajah @ Leftovers\nAbility: Sheer Force\nEVs: 248 HP / 232 SpD / 28 Spe\nCareful Nature\n- Iron Head\n- Earthquake\n- Knock Off\n- Whirlwind\n\nWeezing @ Black Sludge\nAbility: Neutralizing Gas\nTera Type: Poison\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\nIVs: 0 Atk\n- Toxic Spikes\n- Sludge Bomb\n- Will-O-Wisp\n- Pain Split\n\nDrifblim @ Sitrus Berry\nAbility: Unburden\nTera Type: Ghost\nEVs: 12 HP / 244 Def / 252 Spe\nTimid Nature\n- Acrobatics\n- Shadow Ball\n- Calm Mind\n- Will-O-Wisp\n\nCacturne @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spikes\n- Knock Off\n- Sucker Punch\n- Seed Bomb"
+    },
+    {
+      "index": 4,
+      "id": "Z04",
+      "name": "Variation 4",
+      "description": "High speed cleaner Sceptile with Drifblim and Band Copperajah",
+      "cost": 41,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Swampert",
+        "Copperajah",
+        "Honchkrow",
+        "Sceptile",
+        "Drifblim"
+      ],
+      "export": "Infernape @ Life Orb\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Scorching Sands\n- Aura Sphere\n- Flamethrower\n- U-turn\n\nSwampert @ Choice Band\nAbility: Torrent\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Waterfall\n- Earthquake\n- Ice Punch\n- Flip Turn\n\nCopperajah @ Leftovers\nAbility: Sheer Force\nEVs: 248 HP / 232 SpD / 28 Spe\nCareful Nature\n- Iron Head\n- Stealth Rock\n- Earthquake\n- Knock Off\n\nHonchkrow @ Heavy-Duty Boots\nAbility: Moxie\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Brave Bird\n- Night Slash\n- Sucker Punch\n- Roost\n\nSceptile @ Choice Specs\nAbility: Overgrow\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Leaf Storm\n- Giga Drain\n- Focus Blast\n- Dragon Pulse\n\nDrifblim @ Sitrus Berry\nAbility: Unburden\nTera Type: Ghost\nEVs: 12 HP / 244 Def / 252 Spe\nTimid Nature\n- Acrobatics\n- Shadow Ball\n- Calm Mind\n- Will-O-Wisp"
+    },
+    {
+      "index": 5,
+      "id": "Z05",
+      "name": "Variation 5",
+      "description": "Corrosion stallbreaker Salazzle with Water Absorb Cacturne",
+      "cost": 43,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Swampert",
+        "Copperajah",
+        "Weezing",
+        "Salazzle",
+        "Cacturne"
+      ],
+      "export": "Infernape @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- Close Combat\n- Knock Off\n- U-turn\n\nSwampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Ice Punch\n\nCopperajah @ Assault Vest\nAbility: Sheer Force\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Iron Head\n- Earthquake\n- Knock Off\n- Heat Crash\n\nWeezing @ Black Sludge\nAbility: Levitate\nTera Type: Dark\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\nIVs: 0 Atk\n- Sludge Bomb\n- Will-O-Wisp\n- Taunt\n- Pain Split\n\nSalazzle @ Heavy-Duty Boots\nAbility: Corrosion\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\nIVs: 0 Atk\n- Flamethrower\n- Sludge Bomb\n- Toxic\n- Encore\n\nCacturne @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Spikes\n- Knock Off\n- Sucker Punch\n- Seed Bomb"
+    },
+    {
+      "index": 6,
+      "id": "Z06",
+      "name": "Rain Dance Swampert & Swift Swim Offense",
+      "description": "Swampert Damp/Rain Dance breaker with Rotom-Mow Leaf Storm and Scarf Infernape",
+      "cost": 38,
+      "capLimit": 55,
+      "pokemon": [
+        "Swampert",
+        "Infernape",
+        "Rotom-Mow",
+        "Weezing",
+        "Drifblim",
+        "Honchkrow"
+      ],
+      "export": "Swampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 4 Atk / 252 Def\nRelaxed Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Ice Beam\n\nInfernape @ Choice Scarf\nAbility: Blaze\nEVs: 252 Atk / 4 SpA / 252 Spe\nHasty Nature\n- Flare Blitz\n- Close Combat\n- U-turn\n- Overheat\n\nRotom-Mow @ Choice Specs\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Trick\n\nWeezing @ Black Sludge\nAbility: Levitate\nTera Type: Poison\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Sludge Bomb\n- Will-O-Wisp\n- Pain Split\n- Toxic Spikes\n\nDrifblim @ Sitrus Berry\nAbility: Unburden\nTera Type: Flying\nEVs: 12 HP / 244 Def / 252 Spe\nTimid Nature\n- Acrobatics\n- Shadow Ball\n- Calm Mind\n- Will-O-Wisp\n\nHonchkrow @ Life Orb\nAbility: Moxie\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Brave Bird\n- Sucker Punch\n- Night Slash\n- Roost"
+    },
+    {
+      "index": 7,
+      "id": "Z07",
+      "name": "Corrosion Stallbreaker & Heavy Slam Pressure",
+      "description": "Salazzle Toxic stallbreak with Copperajah Heavy Slam and Weezing support",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Salazzle",
+        "Copperajah",
+        "Swampert",
+        "Weezing",
+        "Sceptile",
+        "Honchkrow"
+      ],
+      "export": "Salazzle @ Black Sludge\nAbility: Corrosion\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Toxic\n- Flamethrower\n- Protect\n- Substitute\n\nCopperajah @ Leftovers\nAbility: Heavy Metal\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Heavy Slam\n- Earthquake\n- Stealth Rock\n- Knock Off\n\nSwampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Earthquake\n- Flip Turn\n- Toxic\n- Roar\n\nWeezing @ Rocky Helmet\nAbility: Levitate\nTera Type: Poison\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Sludge Bomb\n- Will-O-Wisp\n- Pain Split\n- Clear Smog\n\nSceptile @ Life Orb\nAbility: Overgrow\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Dragon Pulse\n- Focus Blast\n- Giga Drain\n\nHonchkrow @ Heavy-Duty Boots\nAbility: Moxie\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Sucker Punch\n- Night Slash\n- U-turn"
+    },
+    {
+      "index": 8,
+      "id": "Z08",
+      "name": "Swords Dance Sceptile & Nasty Plot Infernape",
+      "description": "Dual setup sweeping offense with Sceptile and Nasty Plot Infernape",
+      "cost": 38,
+      "capLimit": 55,
+      "pokemon": [
+        "Infernape",
+        "Sceptile",
+        "Rotom-Mow",
+        "Swampert",
+        "Drifblim",
+        "Cacturne"
+      ],
+      "export": "Infernape @ Life Orb\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Fire Blast\n- Focus Blast\n- Grass Knot\n\nSceptile @ Sitrus Berry\nAbility: Unburden\nTera Type: Grass\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Leaf Blade\n- Acrobatics\n- Earthquake\n\nRotom-Mow @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Trick\n\nSwampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 4 Atk / 252 Def\nRelaxed Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Ice Beam\n\nDrifblim @ Heavy-Duty Boots\nAbility: Unburden\nTera Type: Ghost\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Shadow Ball\n- Tailwind\n- Destiny Bond\n- Will-O-Wisp\n\nCacturne @ Focus Sash\nAbility: Water Absorb\nTera Type: Dark\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Sucker Punch\n- Seed Bomb\n- Spikes\n- Destiny Bond"
+    },
+    {
+      "index": 9,
+      "id": "Z09",
+      "name": "Moxie Cleaner & Spikes Stack",
+      "description": "Spikes stacking Weezing/Copperajah enabling late-game Moxie Honchkrow sweep",
+      "cost": 41,
+      "capLimit": 55,
+      "pokemon": [
+        "Honchkrow",
+        "Copperajah",
+        "Swampert",
+        "Weezing",
+        "Infernape",
+        "Drifblim"
+      ],
+      "export": "Honchkrow @ Heavy-Duty Boots\nAbility: Moxie\nTera Type: Flying\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Sucker Punch\n- Night Slash\n- Roost\n\nCopperajah @ Assault Vest\nAbility: Heavy Metal\nEVs: 172 HP / 252 Atk / 84 Spe\nAdamant Nature\n- Heavy Slam\n- Earthquake\n- Heat Crash\n- Power Whip\n\nSwampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Flip Turn\n- Protect\n\nWeezing @ Black Sludge\nAbility: Levitate\nTera Type: Water\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Toxic Spikes\n- Sludge Bomb\n- Will-O-Wisp\n- Pain Split\n\nInfernape @ Choice Band\nAbility: Iron Fist\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Flare Blitz\n- Mach Punch\n- U-turn\n\nDrifblim @ Heavy-Duty Boots\nAbility: Unburden\nTera Type: Dark\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Defog\n- Will-O-Wisp\n- Hex\n- Strength Sap"
+    },
+    {
+      "index": 10,
+      "id": "Z10",
+      "name": "VoltTurn Momentum & Bulky Pivot",
+      "description": "Continuous momentum core with Swampert Flip Turn, Rotom Volt Switch, and Infernape U-turn",
+      "cost": 45,
+      "capLimit": 55,
+      "pokemon": [
+        "Swampert",
+        "Rotom-Mow",
+        "Infernape",
+        "Copperajah",
+        "Weezing",
+        "Sceptile"
+      ],
+      "export": "Swampert @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 4 Atk / 252 Def\nRelaxed Nature\n- Flip Turn\n- Earthquake\n- Stealth Rock\n- Ice Beam\n\nRotom-Mow @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Volt Switch\n- Leaf Storm\n- Trick\n- Thunderbolt\n\nInfernape @ Choice Scarf\nAbility: Blaze\nEVs: 252 Atk / 4 SpA / 252 Spe\nHasty Nature\n- U-turn\n- Close Combat\n- Overheat\n- Stone Edge\n\nCopperajah @ Leftovers\nAbility: Heavy Metal\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Heavy Slam\n- Earthquake\n- Power Whip\n- Stealth Rock\n\nWeezing @ Rocky Helmet\nAbility: Levitate\nTera Type: Dark\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Sludge Bomb\n- Will-O-Wisp\n- Taunt\n- Pain Split\n\nSceptile @ Life Orb\nAbility: Overgrow\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Giga Drain\n- Leaf Storm\n- Dragon Pulse\n- Focus Blast"
+    }
+  ],
+  "steve": [
+    {
+      "index": 1,
+      "id": "S01",
+      "name": "Prankster Dual Screens & Setup Sweeper",
+      "description": "Grimmsnarl Reflect/Light Screen into Nasty Plot Slowbro-Galar sweep",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Grimmsnarl",
+        "Slowbro-Galar",
+        "Lycanroc",
+        "Clawitzer",
+        "Electivire",
+        "Avalugg-Hisui"
+      ],
+      "export": "Grimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 140 Def / 116 SpD\nCareful Nature\n- Reflect\n- Light Screen\n- Parting Shot\n- Spirit Break\n\nSlowbro-Galar @ Black Sludge\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Nasty Plot\n- Sludge Bomb\n- Psychic\n- Slack Off\n\nLycanroc @ Life Orb\nAbility: Sand Rush\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Stone Edge\n- Accelerock\n- Close Combat\n\nClawitzer @ Choice Specs\nAbility: Mega Launcher\nTera Type: Water\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nElectivire @ Expert Belt\nAbility: Motor Drive\nTera Type: Fighting\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Wild Charge\n- Cross Chop\n- Ice Punch\n- Flamethrower\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Fighting\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Mountain Gale\n- Body Press\n- Rapid Spin\n- Recover"
+    },
+    {
+      "index": 2,
+      "id": "S02",
+      "name": "VoltTurn Momentum & Fast Pivoting",
+      "description": "Rotom-Heat Overheat pivot + Electrode-Hisui fast Volt Switch and Ambipom Fake Out",
+      "cost": 27,
+      "capLimit": 55,
+      "pokemon": [
+        "Rotom-Heat",
+        "Electrode-Hisui",
+        "Ambipom",
+        "Clawitzer",
+        "Grimmsnarl",
+        "Avalugg-Hisui"
+      ],
+      "export": "Rotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Pain Split\n\nElectrode-Hisui @ Life Orb\nAbility: Soundproof\nTera Type: Electric\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Giga Drain\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Hit\n- U-turn\n- Knock Off\n\nClawitzer @ Choice Scarf\nAbility: Mega Launcher\nTera Type: Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Thunder Wave\n- Spirit Break\n- Parting Shot\n- Reflect\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Rock\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Rapid Spin\n- Mountain Gale\n- Body Press"
+    },
+    {
+      "index": 3,
+      "id": "S03",
+      "name": "Choice Scarf Rotom-Heat & Regenerator Tank",
+      "description": "Fast Scarf Rotom-Heat with Assault Vest Slowbro-Galar and Technician Ambipom",
+      "cost": 32,
+      "capLimit": 55,
+      "pokemon": [
+        "Rotom-Heat",
+        "Slowbro-Galar",
+        "Ambipom",
+        "Electivire",
+        "Braviary",
+        "Clawitzer"
+      ],
+      "export": "Rotom-Heat @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Trick\n- Thunderbolt\n\nSlowbro-Galar @ Assault Vest\nAbility: Regenerator\nEVs: 248 HP / 252 SpA / 8 SpD\nModest Nature\n- Sludge Bomb\n- Psyshock\n- Flamethrower\n- Surf\n\nAmbipom @ Life Orb\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Hit\n- Low Kick\n- U-turn\n\nElectivire @ Life Orb\nAbility: Motor Drive\nTera Type: Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Wild Charge\n- Cross Chop\n- Ice Punch\n- Earthquake\n\nBraviary @ Heavy-Duty Boots\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- Roost\n- U-turn\n\nClawitzer @ Choice Specs\nAbility: Mega Launcher\nTera Type: Water\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Dragon Pulse"
+    },
+    {
+      "index": 4,
+      "id": "S04",
+      "name": "Defiant Braviary & Tailwind Hyper Offense",
+      "description": "Defiant Braviary punishing Defog with Lycanroc and Clawitzer wallbreaking",
+      "cost": 26,
+      "capLimit": 55,
+      "pokemon": [
+        "Braviary",
+        "Lycanroc",
+        "Clawitzer",
+        "Electrode-Hisui",
+        "Grimmsnarl",
+        "Avalugg-Hisui"
+      ],
+      "export": "Braviary @ Heavy-Duty Boots\nAbility: Defiant\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- Tailwind\n- Roost\n\nLycanroc @ Focus Sash\nAbility: Sand Rush\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Stone Edge\n- Accelerock\n- Close Combat\n\nClawitzer @ Life Orb\nAbility: Mega Launcher\nTera Type: Fire\nEVs: 252 SpA / 4 Def / 252 Spe\nModest Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nElectrode-Hisui @ Focus Sash\nAbility: Soundproof\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Thunderbolt\n- Volt Switch\n- Taunt\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 140 Def / 116 SpD\nCareful Nature\n- Thunder Wave\n- Spirit Break\n- Parting Shot\n- Reflect\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Fighting\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Mountain Gale\n- Body Press\n- Rapid Spin\n- Stone Edge"
+    },
+    {
+      "index": 5,
+      "id": "S05",
+      "name": "Trick Room & Heavy Physical Breakers",
+      "description": "Slowbro-Galar Trick Room setter into Band Avalugg-Hisui and Specs Clawitzer",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Slowbro-Galar",
+        "Avalugg-Hisui",
+        "Clawitzer",
+        "Electivire",
+        "Grimmsnarl",
+        "Rotom-Heat"
+      ],
+      "export": "Slowbro-Galar @ Colbur Berry\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpA\nQuiet Nature\nIVs: 0 Spe\n- Trick Room\n- Nasty Plot\n- Sludge Bomb\n- Psychic\n\nAvalugg-Hisui @ Choice Band\nAbility: Sturdy\nTera Type: Fighting\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\nIVs: 0 Spe\n- Mountain Gale\n- Stone Edge\n- Body Press\n- Earthquake\n\nClawitzer @ Choice Specs\nAbility: Mega Launcher\nTera Type: Water\nEVs: 248 HP / 252 SpA / 8 SpD\nQuiet Nature\nIVs: 0 Spe\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nElectivire @ Expert Belt\nAbility: Motor Drive\nTera Type: Fighting\nEVs: 252 HP / 252 Atk / 4 SpD\nBrave Nature\nIVs: 0 Spe\n- Wild Charge\n- Cross Chop\n- Ice Punch\n- Earthquake\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Thunder Wave\n- Spirit Break\n- Parting Shot\n- Taunt\n\nRotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 248 HP / 252 Def / 8 SpA\nBold Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Pain Split"
+    },
+    {
+      "index": 6,
+      "id": "S06",
+      "name": "Lycanroc Stealth Rock & Fast Cleaner",
+      "description": "Stealth Rock Lycanroc with Technician Fake Out Ambipom and Scarf Clawitzer",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Lycanroc",
+        "Ambipom",
+        "Slowbro-Galar",
+        "Rotom-Heat",
+        "Clawitzer",
+        "Electivire"
+      ],
+      "export": "Lycanroc @ Focus Sash\nAbility: Sand Rush\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stealth Rock\n- Stone Edge\n- Accelerock\n- Endeavor\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Hit\n- Knock Off\n- U-turn\n\nSlowbro-Galar @ Black Sludge\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Calm Mind\n- Sludge Bomb\n- Psyshock\n- Slack Off\n\nRotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Defog\n\nClawitzer @ Choice Scarf\nAbility: Mega Launcher\nTera Type: Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nElectivire @ Life Orb\nAbility: Motor Drive\nTera Type: Electric\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Wild Charge\n- Flamethrower\n- Ice Punch\n- Cross Chop"
+    },
+    {
+      "index": 7,
+      "id": "S07",
+      "name": "Tera Fire Clawitzer Wallbreaker & Sun Pivot",
+      "description": "Tera Fire Clawitzer resisting Grass/Steel with Electrode-Hisui speed",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Clawitzer",
+        "Electrode-Hisui",
+        "Rotom-Heat",
+        "Braviary",
+        "Slowbro-Galar",
+        "Avalugg-Hisui"
+      ],
+      "export": "Clawitzer @ Life Orb\nAbility: Mega Launcher\nTera Type: Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nElectrode-Hisui @ Heavy-Duty Boots\nAbility: Soundproof\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Foul Play\n\nRotom-Heat @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Trick\n\nBraviary @ Heavy-Duty Boots\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- Roost\n- U-turn\n\nSlowbro-Galar @ Assault Vest\nAbility: Regenerator\nEVs: 248 HP / 252 SpA / 8 SpD\nModest Nature\n- Sludge Bomb\n- Psyshock\n- Flamethrower\n- Surf\n\nAvalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Fighting\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Mountain Gale\n- Body Press\n- Rapid Spin\n- Recover"
+    },
+    {
+      "index": 8,
+      "id": "S08",
+      "name": "Bulk Up Braviary & Regenerator Stallbreak",
+      "description": "Leftovers Bulk Up Braviary wincon with Regenerator Slowbro-Galar and Grimmsnarl",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Braviary",
+        "Slowbro-Galar",
+        "Grimmsnarl",
+        "Electivire",
+        "Clawitzer",
+        "Ambipom"
+      ],
+      "export": "Braviary @ Leftovers\nAbility: Defiant\nEVs: 248 HP / 8 Atk / 252 SpD\nCareful Nature\n- Bulk Up\n- Roost\n- Brave Bird\n- Substitute\n\nSlowbro-Galar @ Black Sludge\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Sludge Bomb\n- Psychic\n- Slack Off\n- Thunder Wave\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 140 Def / 116 SpD\nCareful Nature\n- Reflect\n- Light Screen\n- Parting Shot\n- Spirit Break\n\nElectivire @ Assault Vest\nAbility: Motor Drive\nTera Type: Fighting\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Wild Charge\n- Cross Chop\n- Ice Punch\n- Earthquake\n\nClawitzer @ Choice Specs\nAbility: Mega Launcher\nTera Type: Water\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Hit\n- U-turn\n- Knock Off"
+    },
+    {
+      "index": 9,
+      "id": "S09",
+      "name": "Tera Fight Avalugg-Hisui Body Press Sweep",
+      "description": "Tera Fighting Avalugg-Hisui turning weakness into massive Body Press STAB",
+      "cost": 34,
+      "capLimit": 55,
+      "pokemon": [
+        "Avalugg-Hisui",
+        "Grimmsnarl",
+        "Rotom-Heat",
+        "Slowbro-Galar",
+        "Electrode-Hisui",
+        "Lycanroc"
+      ],
+      "export": "Avalugg-Hisui @ Heavy-Duty Boots\nAbility: Sturdy\nTera Type: Fighting\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Iron Defense\n- Body Press\n- Mountain Gale\n- Recover\n\nGrimmsnarl @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Thunder Wave\n- Spirit Break\n- Parting Shot\n- Taunt\n\nRotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Pain Split\n\nSlowbro-Galar @ Black Sludge\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Nasty Plot\n- Sludge Bomb\n- Psychic\n- Slack Off\n\nElectrode-Hisui @ Life Orb\nAbility: Soundproof\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Giga Drain\n\nLycanroc @ Life Orb\nAbility: Sand Rush\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Accelerock\n- Close Combat\n- Swords Dance"
+    },
+    {
+      "index": 10,
+      "id": "S10",
+      "name": "All-Out Speed & Priority Blitz",
+      "description": "Electrode-Hisui 150 base Speed + Ambipom Fake Out + Lycanroc Accelerock priority",
+      "cost": 28,
+      "capLimit": 55,
+      "pokemon": [
+        "Electrode-Hisui",
+        "Ambipom",
+        "Lycanroc",
+        "Clawitzer",
+        "Rotom-Heat",
+        "Braviary"
+      ],
+      "export": "Electrode-Hisui @ Life Orb\nAbility: Soundproof\nTera Type: Electric\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Thunderbolt\n- Foul Play\n\nAmbipom @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Hit\n- Knock Off\n- U-turn\n\nLycanroc @ Life Orb\nAbility: Sand Rush\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Accelerock\n- Close Combat\n- Sucker Punch\n\nClawitzer @ Choice Scarf\nAbility: Mega Launcher\nTera Type: Water\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Water Pulse\n- Aura Sphere\n- Dark Pulse\n- Ice Beam\n\nRotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Will-O-Wisp\n- Trick\n\nBraviary @ Choice Band\nAbility: Defiant\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- U-turn\n- Double-Edge"
+    }
+  ],
+  "connor": [
+    {
+      "index": 1,
+      "id": "C01",
+      "name": "Sticky Web Hyper Offense",
+      "description": "Ribombee Sticky Web into Guts Heracross and Quiver Dance Frosmoth sweepers",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Ribombee",
+        "Heracross",
+        "Frosmoth",
+        "Muk",
+        "Orthworm",
+        "Poliwrath"
+      ],
+      "export": "Ribombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Bug Buzz\n- Stun Spore\n\nHeracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Facade\n\nFrosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Ice Beam\n- Bug Buzz\n- Giga Drain\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nOrthworm @ Sitrus Berry\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Earthquake\n\nPoliwrath @ Leftovers\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 HP / 252 Atk / 4 Spe\nAdamant Nature\n- Liquidation\n- Drain Punch\n- Bulk Up\n- Ice Punch"
+    },
+    {
+      "index": 2,
+      "id": "C02",
+      "name": "Coil & Body Press Defensive Iron Wall",
+      "description": "Orthworm Iron Defense/Body Press + Dudunsparce Coil wincon core",
+      "cost": 28,
+      "capLimit": 55,
+      "pokemon": [
+        "Orthworm",
+        "Dudunsparce",
+        "Frosmoth",
+        "Heracross",
+        "Muk",
+        "Poliwrath"
+      ],
+      "export": "Orthworm @ Leftovers\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Iron Defense\n- Body Press\n- Stealth Rock\n- Heavy Slam\n\nDudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Coil\n- Body Slam\n- Roost\n- Earthquake\n\nFrosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nTera Type: Flying\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Ice Beam\n- Giga Drain\n- Substitute\n\nHeracross @ Choice Scarf\nAbility: Moxie\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Megahorn\n- Knock Off\n- Stone Edge\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 248 HP / 252 Atk / 8 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Ice Punch\n\nPoliwrath @ Sitrus Berry\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Belly Drum\n- Liquidation\n- Drain Punch\n- Ice Punch"
+    },
+    {
+      "index": 3,
+      "id": "C03",
+      "name": "Toxic Spikes & Intimidate Hazard Control",
+      "description": "Qwilfish-Hisui Spikes/Barb Barrage with Muk Poison Touch and Heracross breaker",
+      "cost": 34,
+      "capLimit": 55,
+      "pokemon": [
+        "Qwilfish-Hisui",
+        "Muk",
+        "Heracross",
+        "Dudunsparce",
+        "Poliwrath",
+        "Ribombee"
+      ],
+      "export": "Qwilfish-Hisui @ Eviolite\nAbility: Intimidate\nTera Type: Dark\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Spikes\n- Toxic Spikes\n- Barb Barrage\n- Crunch\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nHeracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Facade\n- Swords Dance\n\nDudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Body Slam\n- Roost\n- Stealth Rock\n- Glare\n\nPoliwrath @ Leftovers\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Scald\n- Circle Throw\n- Rest\n- Sleep Talk\n\nRibombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Stun Spore\n- U-turn"
+    },
+    {
+      "index": 4,
+      "id": "C04",
+      "name": "Swift Swim & Dry Skin Rain Offense",
+      "description": "Poliwrath Swift Swim Rain Dance with Toxicroak Dry Skin recovery",
+      "cost": 29,
+      "capLimit": 55,
+      "pokemon": [
+        "Poliwrath",
+        "Toxicroak",
+        "Masquerain",
+        "Orthworm",
+        "Heracross",
+        "Dudunsparce"
+      ],
+      "export": "Poliwrath @ Life Orb\nAbility: Swift Swim\nTera Type: Electric\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Rain Dance\n- Liquidation\n- Close Combat\n- Ice Punch\n\nToxicroak @ Life Orb\nAbility: Dry Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Gunk Shot\n- Drain Punch\n- Sucker Punch\n\nMasquerain @ Focus Sash\nAbility: Intimidate\nTera Type: Flying\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Hydro Pump\n- Hurricane\n- U-turn\n\nOrthworm @ Sitrus Berry\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Earthquake\n\nHeracross @ Choice Band\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Stone Edge\n\nDudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Body Slam\n- Roost\n- Earthquake\n- Coil"
+    },
+    {
+      "index": 5,
+      "id": "C05",
+      "name": "Serene Grace Glare & Parashuffle",
+      "description": "Dudunsparce Glare paralysis with Ribombee Stun Spore and Guts Heracross",
+      "cost": 35,
+      "capLimit": 55,
+      "pokemon": [
+        "Dudunsparce",
+        "Ribombee",
+        "Heracross",
+        "Orthworm",
+        "Muk",
+        "Poliwrath"
+      ],
+      "export": "Dudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 164 Def / 92 SpD\nCareful Nature\n- Body Slam\n- Roost\n- Bite\n- Glare\n\nRibombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Stun Spore\n- U-turn\n\nHeracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Facade\n\nOrthworm @ Leftovers\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Protect\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nPoliwrath @ Leftovers\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 HP / 252 Atk / 4 Spe\nAdamant Nature\n- Bulk Up\n- Liquidation\n- Drain Punch\n- Ice Punch"
+    },
+    {
+      "index": 6,
+      "id": "C06",
+      "name": "Dual Hazard Pressure & Defog Clear",
+      "description": "Qwilfish-Hisui Spikes + Orthworm Stealth Rock with Ribombee Defog support",
+      "cost": 34,
+      "capLimit": 55,
+      "pokemon": [
+        "Qwilfish-Hisui",
+        "Orthworm",
+        "Ribombee",
+        "Heracross",
+        "Frosmoth",
+        "Toxicroak"
+      ],
+      "export": "Qwilfish-Hisui @ Eviolite\nAbility: Intimidate\nTera Type: Dark\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Spikes\n- Barb Barrage\n- Taunt\n- Toxic Spikes\n\nOrthworm @ Leftovers\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Earthquake\n\nRibombee @ Heavy-Duty Boots\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- U-turn\n- Roost\n\nHeracross @ Choice Band\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Stone Edge\n\nFrosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Ice Beam\n- Bug Buzz\n- Giga Drain\n\nToxicroak @ Life Orb\nAbility: Dry Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Gunk Shot\n- Close Combat\n- Sucker Punch\n- Swords Dance"
+    },
+    {
+      "index": 7,
+      "id": "C07",
+      "name": "Double Quiver Dance Special Pressure",
+      "description": "Ribombee and Frosmoth dual Quiver Dance sweepers with Assault Vest Muk tank",
+      "cost": 26,
+      "capLimit": 55,
+      "pokemon": [
+        "Ribombee",
+        "Frosmoth",
+        "Muk",
+        "Orthworm",
+        "Poliwrath",
+        "Masquerain"
+      ],
+      "export": "Ribombee @ Life Orb\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Moonblast\n- Bug Buzz\n- Psychic\n\nFrosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nTera Type: Flying\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Ice Beam\n- Bug Buzz\n- Giga Drain\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nOrthworm @ Sitrus Berry\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Protect\n\nPoliwrath @ Leftovers\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 HP / 252 Atk / 4 Spe\nAdamant Nature\n- Bulk Up\n- Liquidation\n- Drain Punch\n- Ice Punch\n\nMasquerain @ Focus Sash\nAbility: Intimidate\nTera Type: Flying\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Air Slash\n- Hydro Pump\n- U-turn"
+    },
+    {
+      "index": 8,
+      "id": "C08",
+      "name": "Poison-Dark Bulky Offense & Priority",
+      "description": "Muk AV + Qwilfish-Hisui + Sucker Punch Toxicroak with Heracross cleanup",
+      "cost": 36,
+      "capLimit": 55,
+      "pokemon": [
+        "Muk",
+        "Qwilfish-Hisui",
+        "Toxicroak",
+        "Heracross",
+        "Dudunsparce",
+        "Ribombee"
+      ],
+      "export": "Muk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nQwilfish-Hisui @ Eviolite\nAbility: Intimidate\nTera Type: Dark\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Barb Barrage\n- Crunch\n- Spikes\n- Taunt\n\nToxicroak @ Life Orb\nAbility: Dry Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Gunk Shot\n- Drain Punch\n- Sucker Punch\n\nHeracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Facade\n\nDudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Body Slam\n- Roost\n- Coil\n- Earthquake\n\nRibombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Bug Buzz\n- Stun Spore"
+    },
+    {
+      "index": 9,
+      "id": "C09",
+      "name": "Choice Scarf Heracross & Web Support",
+      "description": "Ribombee Webs into fast Choice Scarf Moxie Heracross cleaning the endgame",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Heracross",
+        "Ribombee",
+        "Orthworm",
+        "Poliwrath",
+        "Muk",
+        "Frosmoth"
+      ],
+      "export": "Heracross @ Choice Scarf\nAbility: Moxie\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Megahorn\n- Knock Off\n- Stone Edge\n\nRibombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Stun Spore\n- U-turn\n\nOrthworm @ Leftovers\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Earthquake\n\nPoliwrath @ Sitrus Berry\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Belly Drum\n- Liquidation\n- Drain Punch\n- Ice Punch\n\nMuk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nFrosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nTera Type: Ice\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Ice Beam\n- Bug Buzz\n- Giga Drain"
+    },
+    {
+      "index": 10,
+      "id": "C10",
+      "name": "Tera Flying Muk & Tera Electric Poliwrath",
+      "description": "Ground-immune Tera Flying Muk + Electric Tera Belly Drum Poliwrath breakers",
+      "cost": 35,
+      "capLimit": 55,
+      "pokemon": [
+        "Muk",
+        "Poliwrath",
+        "Ribombee",
+        "Heracross",
+        "Orthworm",
+        "Dudunsparce"
+      ],
+      "export": "Muk @ Assault Vest\nAbility: Poison Touch\nTera Type: Flying\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Poison Jab\n- Knock Off\n- Drain Punch\n- Shadow Sneak\n\nPoliwrath @ Sitrus Berry\nAbility: Water Absorb\nTera Type: Electric\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Belly Drum\n- Liquidation\n- Drain Punch\n- Ice Punch\n\nRibombee @ Focus Sash\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Stun Spore\n- U-turn\n\nHeracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Megahorn\n- Close Combat\n- Knock Off\n- Facade\n\nOrthworm @ Leftovers\nAbility: Earth Eater\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Iron Head\n- Body Press\n- Protect\n\nDudunsparce @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Body Slam\n- Roost\n- Earthquake\n- Coil"
+    }
+  ],
+  "adam": [
+    {
+      "index": 1,
+      "id": "A01",
+      "name": "Sun Offense & Chlorophyll Sweep",
+      "description": "Whimsicott Sunny Day setter with Chlorophyll Scovillain and Protosynthesis Brute Bonnet",
+      "cost": 31,
+      "capLimit": 55,
+      "pokemon": [
+        "Whimsicott",
+        "Scovillain",
+        "Brute Bonnet",
+        "Incineroar",
+        "Tatsugiri",
+        "Golem"
+      ],
+      "export": "Whimsicott @ Heat Rock\nAbility: Prankster\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Sunny Day\n- Moonblast\n- Encore\n- U-turn\n\nScovillain @ Life Orb\nAbility: Chlorophyll\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Solar Beam\n- Flamethrower\n- Growth\n- Giga Drain\n\nBrute Bonnet @ Booster Energy\nAbility: Protosynthesis\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Bullet Seed\n- Crunch\n- Close Combat\n- Taunt\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Atk / 252 SpD\nCareful Nature\n- Flare Blitz\n- Knock Off\n- Parting Shot\n- Will-O-Wisp\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Dragon\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Draco Meteor\n- Surf\n- Nasty Plot\n\nGolem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Explosion"
+    },
+    {
+      "index": 2,
+      "id": "A02",
+      "name": "Bulky Pivot Disruptor",
+      "description": "Incineroar Parting Shot + Uxie Stealth Rock with Magneton Volt Switch and Tatsugiri Spin",
+      "cost": 33,
+      "capLimit": 55,
+      "pokemon": [
+        "Incineroar",
+        "Uxie",
+        "Magneton",
+        "Tatsugiri",
+        "Whimsicott",
+        "Golem"
+      ],
+      "export": "Incineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Parting Shot\n- Knock Off\n- Flare Blitz\n- Will-O-Wisp\n\nUxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Psychic\n- U-turn\n- Thunder Wave\n\nMagneton @ Eviolite\nAbility: Analytic\nTera Type: Electric\nEVs: 248 HP / 8 Def / 252 SpA\nModest Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tera Blast\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Water\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Rapid Spin\n- Surf\n- Draco Meteor\n- Taunt\n\nWhimsicott @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Leech Seed\n- Encore\n- U-turn\n\nGolem @ Choice Band\nAbility: Sturdy\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Stone Edge\n- Heavy Slam\n- Sucker Punch"
+    },
+    {
+      "index": 3,
+      "id": "A03",
+      "name": "Stored Power Uxie & Chlorophyll Matchup Team",
+      "description": "Replay-proven team used vs Jordan: Calm Mind Uxie with Scovillain and Bruxish",
+      "cost": 21,
+      "capLimit": 55,
+      "pokemon": [
+        "Uxie",
+        "Scovillain",
+        "Bruxish",
+        "Whimsicott",
+        "Golem",
+        "Tatsugiri"
+      ],
+      "export": "Uxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 Spe\nBold Nature\n- Calm Mind\n- Stored Power\n- Draining Kiss\n- Stealth Rock\n\nScovillain @ Mirror Herb\nAbility: Chlorophyll\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Solar Beam\n- Trailblaze\n- Giga Drain\n\nBruxish @ Choice Band\nAbility: Strong Jaw\nTera Type: Water\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Psychic Fangs\n- Wave Crash\n- Aqua Jet\n- Crunch\n\nWhimsicott @ Heat Rock\nAbility: Prankster\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Sunny Day\n- Moonblast\n- Encore\n- U-turn\n\nGolem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Explosion\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Dragon\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Draco Meteor\n- Surf\n- Nasty Plot"
+    },
+    {
+      "index": 4,
+      "id": "A04",
+      "name": "Intimidate & Parting Shot Scarf Flamigo",
+      "description": "Double pivot Intimidate Incineroar + Eviolite Magneton into Scrappy Scarf Flamigo clean",
+      "cost": 39,
+      "capLimit": 55,
+      "pokemon": [
+        "Flamigo",
+        "Incineroar",
+        "Uxie",
+        "Magneton",
+        "Tatsugiri",
+        "Golem"
+      ],
+      "export": "Flamigo @ Choice Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Brave Bird\n- U-turn\n- Roost\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Parting Shot\n- Knock Off\n- Flare Blitz\n- Will-O-Wisp\n\nUxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Psychic\n- U-turn\n- Thunder Wave\n\nMagneton @ Eviolite\nAbility: Analytic\nTera Type: Steel\nEVs: 248 HP / 8 Def / 252 SpA\nModest Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Discharge\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Surf\n- Draco Meteor\n- Nasty Plot\n\nGolem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Sucker Punch"
+    },
+    {
+      "index": 5,
+      "id": "A05",
+      "name": "Strong Jaw Bruxish & Tailwind Speed Blitz",
+      "description": "Whimsicott Tailwind setter with Choice Band Bruxish and Scarf Flamigo",
+      "cost": 27,
+      "capLimit": 55,
+      "pokemon": [
+        "Bruxish",
+        "Whimsicott",
+        "Flamigo",
+        "Magneton",
+        "Tatsugiri",
+        "Scovillain"
+      ],
+      "export": "Bruxish @ Choice Band\nAbility: Strong Jaw\nTera Type: Water\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Wave Crash\n- Psychic Fangs\n- Aqua Jet\n- Crunch\n\nWhimsicott @ Focus Sash\nAbility: Prankster\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Tailwind\n- Moonblast\n- Energy Ball\n- Encore\n\nFlamigo @ Choice Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- U-turn\n- Roost\n\nMagneton @ Eviolite\nAbility: Magnet Pull\nTera Type: Electric\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tera Blast\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Draco Meteor\n- Surf\n- Nasty Plot\n\nScovillain @ Life Orb\nAbility: Chlorophyll\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Giga Drain\n- Stomping Tantrum\n- Growth"
+    },
+    {
+      "index": 6,
+      "id": "A06",
+      "name": "Loaded Dice Brute Bonnet Hazard Pressure",
+      "description": "Brute Bonnet Bullet Seed breaker + Custap Golem lead and Incineroar support",
+      "cost": 35,
+      "capLimit": 55,
+      "pokemon": [
+        "Brute Bonnet",
+        "Golem",
+        "Incineroar",
+        "Uxie",
+        "Tatsugiri",
+        "Whimsicott"
+      ],
+      "export": "Brute Bonnet @ Loaded Dice\nAbility: Protosynthesis\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Bullet Seed\n- Crunch\n- Close Combat\n- Taunt\n\nGolem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Explosion\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Atk / 252 SpD\nCareful Nature\n- Flare Blitz\n- Knock Off\n- Parting Shot\n- Will-O-Wisp\n\nUxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Psychic\n- U-turn\n- Thunder Wave\n- Stealth Rock\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Water\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Rapid Spin\n- Surf\n- Draco Meteor\n- Nasty Plot\n\nWhimsicott @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Leech Seed\n- Encore\n- U-turn"
+    },
+    {
+      "index": 7,
+      "id": "A07",
+      "name": "Choice Band Golem & Trick Room Offense",
+      "description": "Uxie Trick Room into Choice Band Golem and Analytic Specs Magneton wallbreaking",
+      "cost": 30,
+      "capLimit": 55,
+      "pokemon": [
+        "Uxie",
+        "Golem",
+        "Magneton",
+        "Incineroar",
+        "Bruxish",
+        "Tatsugiri"
+      ],
+      "export": "Uxie @ Colbur Berry\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\nIVs: 0 Spe\n- Trick Room\n- Stealth Rock\n- Psychic\n- U-turn\n\nGolem @ Choice Band\nAbility: Sturdy\nTera Type: Ground\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\nIVs: 0 Spe\n- Earthquake\n- Stone Edge\n- Heavy Slam\n- Sucker Punch\n\nMagneton @ Choice Specs\nAbility: Analytic\nTera Type: Electric\nEVs: 248 HP / 252 SpA / 8 SpD\nQuiet Nature\nIVs: 0 Spe\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Tri Attack\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Atk / 4 SpD\nBrave Nature\nIVs: 0 Spe\n- Flare Blitz\n- Knock Off\n- Parting Shot\n- Fake Out\n\nBruxish @ Life Orb\nAbility: Strong Jaw\nTera Type: Water\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\nIVs: 0 Spe\n- Wave Crash\n- Psychic Fangs\n- Aqua Jet\n- Crunch\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Dragon\nEVs: 252 HP / 252 SpA / 4 SpD\nQuiet Nature\nIVs: 0 Spe\n- Draco Meteor\n- Surf\n- Nasty Plot\n- Rapid Spin"
+    },
+    {
+      "index": 8,
+      "id": "A08",
+      "name": "Tera Ghost Golem Custap Sturdy Lead",
+      "description": "Spin-blocking Tera Ghost Golem ensuring Stealth Rock + Scarf Flamigo cleanup",
+      "cost": 37,
+      "capLimit": 55,
+      "pokemon": [
+        "Golem",
+        "Flamigo",
+        "Tatsugiri",
+        "Whimsicott",
+        "Incineroar",
+        "Magneton"
+      ],
+      "export": "Golem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Explosion\n\nFlamigo @ Choice Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Brave Bird\n- U-turn\n- Roost\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Surf\n- Draco Meteor\n- Rapid Spin\n\nWhimsicott @ Focus Sash\nAbility: Prankster\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Tailwind\n- Encore\n- U-turn\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Knock Off\n- Flare Blitz\n- Parting Shot\n- Will-O-Wisp\n\nMagneton @ Eviolite\nAbility: Analytic\nTera Type: Electric\nEVs: 248 HP / 8 Def / 252 SpA\nModest Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Discharge"
+    },
+    {
+      "index": 9,
+      "id": "A09",
+      "name": "Nasty Plot Tatsugiri & Life Orb Scovillain HO",
+      "description": "Fast hyper offense pairing Nasty Plot Tatsugiri with Chlorophyll Scovillain and Flamigo",
+      "cost": 25,
+      "capLimit": 55,
+      "pokemon": [
+        "Tatsugiri",
+        "Scovillain",
+        "Flamigo",
+        "Whimsicott",
+        "Bruxish",
+        "Golem"
+      ],
+      "export": "Tatsugiri @ Life Orb\nAbility: Storm Drain\nTera Type: Dragon\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Draco Meteor\n- Surf\n- Rapid Spin\n\nScovillain @ Choice Specs\nAbility: Chlorophyll\nTera Type: Grass\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Solar Beam\n- Giga Drain\n- Flamethrower\n\nFlamigo @ Choice Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Brave Bird\n- U-turn\n- Roost\n\nWhimsicott @ Heat Rock\nAbility: Prankster\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Sunny Day\n- Moonblast\n- Encore\n- U-turn\n\nBruxish @ Choice Band\nAbility: Strong Jaw\nTera Type: Water\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Wave Crash\n- Psychic Fangs\n- Aqua Jet\n- Crunch\n\nGolem @ Custap Berry\nAbility: Sturdy\nTera Type: Ghost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Stone Edge\n- Earthquake\n- Explosion"
+    },
+    {
+      "index": 10,
+      "id": "A10",
+      "name": "Dual Screens Uxie & Swords Dance Brute Bonnet",
+      "description": "Uxie Reflect/Light Screen into Swords Dance Brute Bonnet and bulky Incineroar",
+      "cost": 43,
+      "capLimit": 55,
+      "pokemon": [
+        "Uxie",
+        "Brute Bonnet",
+        "Incineroar",
+        "Tatsugiri",
+        "Magneton",
+        "Flamigo"
+      ],
+      "export": "Uxie @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 Spe\nBold Nature\n- Reflect\n- Light Screen\n- Stealth Rock\n- U-turn\n\nBrute Bonnet @ Booster Energy\nAbility: Protosynthesis\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Bullet Seed\n- Crunch\n- Taunt\n\nIncineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Flare Blitz\n- Knock Off\n- Parting Shot\n- Will-O-Wisp\n\nTatsugiri @ Heavy-Duty Boots\nAbility: Storm Drain\nTera Type: Ghost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Surf\n- Draco Meteor\n- Rapid Spin\n\nMagneton @ Eviolite\nAbility: Analytic\nTera Type: Steel\nEVs: 248 HP / 8 Def / 252 SpA\nModest Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Discharge\n\nFlamigo @ Choice Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Brave Bird\n- U-turn\n- Roost"
+    }
+  ],
+  "greg": [
+    {
+      "index": 1,
+      "id": "G01",
+      "name": "Wish & Flip Turn Bulky Balance",
+      "description": "Scream Tail Wish/Protect with Milotic Marvel Scale and Rapid Spin Hitmontop",
+      "cost": 42,
+      "capLimit": 55,
+      "pokemon": [
+        "Scream Tail",
+        "Milotic",
+        "Hitmontop",
+        "Pawmot",
+        "Charizard",
+        "Venusaur"
+      ],
+      "export": "Scream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Close Combat\n- Triple Axel\n- Mach Punch\n\nPawmot @ Heavy-Duty Boots\nAbility: Iron Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Double Shock\n- Close Combat\n- Revival Blessing\n- Mach Punch\n\nCharizard @ Heavy-Duty Boots\nAbility: Solar Power\nTera Type: Steel\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Air Slash\n- Focus Blast\n- Roost\n\nVenusaur @ Leftovers\nAbility: Overgrow\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Earth Power"
+    },
+    {
+      "index": 2,
+      "id": "G02",
+      "name": "Trick Room Dusclops & Band Tauros",
+      "description": "Dusclops Trick Room setter into Choice Band Tauros and Life Orb Hoopa breakers",
+      "cost": 36,
+      "capLimit": 55,
+      "pokemon": [
+        "Dusclops",
+        "Tauros",
+        "Hoopa",
+        "Milotic",
+        "Hitmontop",
+        "Scream Tail"
+      ],
+      "export": "Dusclops @ Eviolite\nAbility: Pressure\nTera Type: Steel\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\nIVs: 0 Spe\n- Trick Room\n- Will-O-Wisp\n- Night Shade\n- Pain Split\n\nTauros @ Choice Band\nAbility: Intimidate\nTera Type: Ground\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\nIVs: 0 Spe\n- Body Slam\n- Close Combat\n- Earthquake\n- Throat Chop\n\nHoopa @ Life Orb\nAbility: Magician\nEVs: 248 HP / 252 SpA / 8 SpD\nQuiet Nature\nIVs: 0 Spe\n- Shadow Ball\n- Psyshock\n- Focus Blast\n- Thunderbolt\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpA\nRelaxed Nature\nIVs: 0 Spe\n- Recover\n- Surf\n- Ice Beam\n- Haze\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\nIVs: 0 Spe\n- Close Combat\n- Rapid Spin\n- Mach Punch\n- Sucker Punch\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\nIVs: 0 Spe\n- Wish\n- Protect\n- Dazzling Gleam\n- Stealth Rock"
+    },
+    {
+      "index": 3,
+      "id": "G03",
+      "name": "Sun Synergy & Solar Power Charizard",
+      "description": "Scream Tail Sunny Day into Solar Power Specs Charizard and Chlorophyll Venusaur",
+      "cost": 39,
+      "capLimit": 55,
+      "pokemon": [
+        "Charizard",
+        "Venusaur",
+        "Scream Tail",
+        "Milotic",
+        "Sandslash",
+        "Pawmot"
+      ],
+      "export": "Charizard @ Choice Specs\nAbility: Solar Power\nTera Type: Steel\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Solar Beam\n- Air Slash\n- Focus Blast\n\nVenusaur @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Growth\n- Giga Drain\n- Sludge Bomb\n- Weather Ball\n\nScream Tail @ Heat Rock\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Sunny Day\n- Wish\n- Dazzling Gleam\n- Stealth Rock\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nSandslash @ Leftovers\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Rapid Spin\n- Earthquake\n- Knock Off\n\nPawmot @ Choice Scarf\nAbility: Volt Absorb\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Double Shock\n- Close Combat\n- Ice Punch\n- Revival Blessing"
+    },
+    {
+      "index": 4,
+      "id": "G04",
+      "name": "Revival Blessing & Specs Hoopa Offense",
+      "description": "Pawmot Revival Blessing second-life with Specs Hoopa and Boots Charizard",
+      "cost": 36,
+      "capLimit": 55,
+      "pokemon": [
+        "Pawmot",
+        "Hoopa",
+        "Charizard",
+        "Hitmontop",
+        "Scream Tail",
+        "Sandslash"
+      ],
+      "export": "Pawmot @ Heavy-Duty Boots\nAbility: Iron Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Revival Blessing\n- Double Shock\n- Close Combat\n- Mach Punch\n\nHoopa @ Choice Specs\nAbility: Magician\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Psyshock\n- Focus Blast\n- Dark Pulse\n\nCharizard @ Heavy-Duty Boots\nAbility: Solar Power\nTera Type: Steel\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Air Slash\n- Roost\n- Focus Blast\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Close Combat\n- Triple Axel\n- Mach Punch\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nSandslash @ Focus Sash\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Rapid Spin\n- Earthquake\n- Knock Off"
+    },
+    {
+      "index": 5,
+      "id": "G05",
+      "name": "Dual Intimidate & Hazard Clear Control",
+      "description": "Hitmontop Intimidate + Tauros Intimidate with Sandslash Rapid Spin and Milotic",
+      "cost": 36,
+      "capLimit": 55,
+      "pokemon": [
+        "Hitmontop",
+        "Tauros",
+        "Sandslash",
+        "Milotic",
+        "Scream Tail",
+        "Venusaur"
+      ],
+      "export": "Hitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Close Combat\n- Triple Axel\n- Mach Punch\n\nTauros @ Leftovers\nAbility: Intimidate\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Body Slam\n- Close Combat\n- Earthquake\n- Throat Chop\n\nSandslash @ Leftovers\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Rapid Spin\n- Earthquake\n- Knock Off\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nVenusaur @ Black Sludge\nAbility: Overgrow\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Earth Power"
+    },
+    {
+      "index": 6,
+      "id": "G06",
+      "name": "Nasty Plot Hoopa & Specially Defensive Milotic",
+      "description": "Nasty Plot Hoopa stallbreaker with Marvel Scale Milotic and Dusclops wall",
+      "cost": 37,
+      "capLimit": 55,
+      "pokemon": [
+        "Hoopa",
+        "Milotic",
+        "Scream Tail",
+        "Dusclops",
+        "Charizard",
+        "Hitmontop"
+      ],
+      "export": "Hoopa @ Life Orb\nAbility: Magician\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Shadow Ball\n- Psyshock\n- Focus Blast\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Recover\n- Surf\n- Ice Beam\n- Flip Turn\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Stealth Rock\n\nDusclops @ Eviolite\nAbility: Pressure\nTera Type: Steel\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Will-O-Wisp\n- Night Shade\n- Pain Split\n- Taunt\n\nCharizard @ Heavy-Duty Boots\nAbility: Solar Power\nTera Type: Steel\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Air Slash\n- Roost\n- Focus Blast\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Close Combat\n- Sucker Punch\n- Mach Punch"
+    },
+    {
+      "index": 7,
+      "id": "G07",
+      "name": "Toxic & Will-O-Wisp Attrition Stall",
+      "description": "Milotic Toxic + Dusclops Wisp + Scream Tail Wish/Protect passive damage stall",
+      "cost": 35,
+      "capLimit": 55,
+      "pokemon": [
+        "Milotic",
+        "Dusclops",
+        "Scream Tail",
+        "Sandslash",
+        "Venusaur",
+        "Hitmontop"
+      ],
+      "export": "Milotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Toxic\n- Recover\n- Surf\n- Protect\n\nDusclops @ Eviolite\nAbility: Pressure\nTera Type: Steel\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Will-O-Wisp\n- Night Shade\n- Pain Split\n- Confuse Ray\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 252 Def / 4 Spe\nBold Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Stealth Rock\n\nSandslash @ Leftovers\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Earthquake\n- Knock Off\n- Stealth Rock\n\nVenusaur @ Black Sludge\nAbility: Overgrow\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Synthesis\n- Leech Seed\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Close Combat\n- Rapid Spin\n- Toxic\n- Mach Punch"
+    },
+    {
+      "index": 8,
+      "id": "G08",
+      "name": "Choice Band Tauros & Fast Pawmot Punchers",
+      "description": "Choice Band Tauros wallbreaking with Iron Fist Pawmot and Charizard cleanup",
+      "cost": 36,
+      "capLimit": 55,
+      "pokemon": [
+        "Tauros",
+        "Pawmot",
+        "Charizard",
+        "Milotic",
+        "Scream Tail",
+        "Sandslash"
+      ],
+      "export": "Tauros @ Choice Band\nAbility: Intimidate\nTera Type: Normal\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Body Slam\n- Close Combat\n- Earthquake\n- Throat Chop\n\nPawmot @ Choice Band\nAbility: Iron Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Double Shock\n- Close Combat\n- Mach Punch\n- Ice Punch\n\nCharizard @ Heavy-Duty Boots\nAbility: Solar Power\nTera Type: Steel\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Air Slash\n- Focus Blast\n- Roost\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nSandslash @ Leftovers\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Rapid Spin\n- Earthquake\n- Knock Off"
+    },
+    {
+      "index": 9,
+      "id": "G09",
+      "name": "Tera Ground Sandslash Swords Dance Sweeper",
+      "description": "Swords Dance Sandslash with Tera Ground Earthquake STAB and Intimidate support",
+      "cost": 40,
+      "capLimit": 55,
+      "pokemon": [
+        "Sandslash",
+        "Scream Tail",
+        "Milotic",
+        "Pawmot",
+        "Venusaur",
+        "Hitmontop"
+      ],
+      "export": "Sandslash @ Life Orb\nAbility: Sand Rush\nTera Type: Ground\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Earthquake\n- Stone Edge\n- Rapid Spin\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nPawmot @ Heavy-Duty Boots\nAbility: Iron Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Double Shock\n- Close Combat\n- Revival Blessing\n- Mach Punch\n\nVenusaur @ Life Orb\nAbility: Overgrow\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Giga Drain\n- Sludge Bomb\n- Earth Power\n- Synthesis\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Close Combat\n- Rapid Spin\n- Triple Axel\n- Mach Punch"
+    },
+    {
+      "index": 10,
+      "id": "G10",
+      "name": "Dragon Dance Tera Steel Charizard Defiance",
+      "description": "Tera Steel Charizard Dragon Dance sweeper with Hoopa special breaker support",
+      "cost": 37,
+      "capLimit": 55,
+      "pokemon": [
+        "Charizard",
+        "Hoopa",
+        "Milotic",
+        "Scream Tail",
+        "Hitmontop",
+        "Dusclops"
+      ],
+      "export": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nTera Type: Steel\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Flare Blitz\n- Acrobatics\n- Roost\n\nHoopa @ Choice Specs\nAbility: Magician\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Psyshock\n- Focus Blast\n- Thunderbolt\n\nMilotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Surf\n- Flip Turn\n- Ice Beam\n\nScream Tail @ Leftovers\nAbility: Protosynthesis\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Thunder Wave\n\nHitmontop @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Close Combat\n- Triple Axel\n- Sucker Punch\n\nDusclops @ Eviolite\nAbility: Pressure\nTera Type: Steel\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Will-O-Wisp\n- Night Shade\n- Pain Split\n- Taunt"
+    }
+  ]
+}

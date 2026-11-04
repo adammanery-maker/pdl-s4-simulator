@@ -1,0 +1,57 @@
+Grimmsnarl @ Leftovers
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Parting Shot
+- Thunder Wave
+
+Slowbro-Galar @ Heavy-Duty Boots
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Psyshock
+- Slack Off
+- Thunder Wave
+
+Electrode-Hisui @ Heavy-Duty Boots
+Ability: Static
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Volt Switch
+- Leaf Storm
+- Thunderbolt
+- Taunt
+
+Avalugg-Hisui @ Custap Berry
+Ability: Sturdy
+Tera Type: Fighting
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Stealth Rock
+- Rapid Spin
+- Mountain Gale
+- Body Press
+
+Delphox @ Choice Scarf
+Ability: Blaze
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Overheat
+- Psyshock
+- Grass Knot
+- Trick
+
+Goodra @ Assault Vest
+Ability: Sap Sipper
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Draco Meteor
+- Flamethrower
+- Thunderbolt
+- Knock Off

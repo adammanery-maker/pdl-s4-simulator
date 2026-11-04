@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "aurora-vs-borealis-example",
+  "candidateParticipant": {
+    "id": "aurora",
+    "label": "Hypothetical Aurora",
+    "draftedTeraTypes": ["Fairy", "Water"],
+    "teraCaptains": ["Charizard", "Sandslash"],
+    "roster": [
+      { "species": "Charizard", "cost": 4 },
+      { "species": "Sandslash", "cost": 2 },
+      { "species": "Alcremie", "cost": 3 },
+      { "species": "Vaporeon", "cost": 13 },
+      { "species": "Torterra", "cost": 7 },
+      { "species": "Tauros", "cost": 3 }
+    ]
+  },
+  "opponentParticipant": {
+    "id": "borealis",
+    "label": "Hypothetical Borealis",
+    "draftedTeraTypes": ["Steel", "Dragon"],
+    "teraCaptains": ["Mismagius", "Jolteon"],
+    "roster": [
+      { "species": "Mismagius", "cost": 4 },
+      { "species": "Jolteon", "cost": 3 },
+      { "species": "Copperajah", "cost": 8 },
+      { "species": "Flygon", "cost": 14 },
+      { "species": "Milotic", "cost": 8 },
+      { "species": "Heracross", "cost": 7 }
+    ]
+  },
+  "candidateTeams": [
+    {
+      "id": "aurora-balance-a",
+      "label": "Aurora Balance A",
+      "teamPath": "teams/aurora-balance-a.txt"
+    },
+    {
+      "id": "aurora-balance-b",
+      "label": "Aurora Balance B",
+      "teamPath": "teams/aurora-balance-b.txt"
+    }
+  ],
+  "opponentTeams": [
+    {
+      "id": "borealis-balance",
+      "label": "Borealis Balance",
+      "teamPath": "teams/borealis-balance.txt"
+    }
+  ],
+  "metadata": {
+    "purpose": "participant-neutral preparation example"
+  }
+}

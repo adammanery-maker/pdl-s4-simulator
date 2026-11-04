@@ -1,0 +1,282 @@
+{
+  "activeSpecies": "magneton",
+  "actor": "p2",
+  "bundleSha256": "3e4a31f193528b9c1609b616dee01309841f4ccb0078031c503ea2ddafef473d",
+  "configuration": {
+    "algorithm": "bounded-expectiminimax-exact-chance",
+    "depths": [
+      2,
+      4,
+      6
+    ],
+    "exactDamageBranchDepth": 1,
+    "nodeLimitPerWorldDepth": 100000,
+    "nonTerminalLeaf": "genx-static-v0.0.48-boost-relevance-v1",
+    "terminalUtility": {
+      "loss": 0.0,
+      "win": 1.0
+    }
+  },
+  "decisionOrdinal": 6,
+  "diagnosticSourceSha256": "141a086c9869bc822935512984fad8bb2d8243d3d250d45bc9edc9bc5665c962",
+  "frozenWorlds": [
+    {
+      "index": 0,
+      "stateSha256": "17d7557e8a5adc7f8551a48354875e3f0aa0416a7204a22e01520b26371736a2",
+      "weight": 0.5
+    },
+    {
+      "index": 1,
+      "stateSha256": "bf98e8ba4e951e9a63ad9002445fb73129c299984781e910e5fdb2100bb202df",
+      "weight": 0.5
+    }
+  ],
+  "legalRootActions": [
+    "flashcannon",
+    "flashcannon-tera",
+    "switch scovillain",
+    "switch tatsugiri",
+    "switch uxie",
+    "switch whimsicott"
+  ],
+  "requestType": "move",
+  "results": {
+    "d2": {
+      "actions": {
+        "flashcannon": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "flashcannon | earthquake",
+            "switch scovillain | No Move"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.42606981
+        },
+        "flashcannon-tera": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "flashcannon-tera | supercellslam",
+            "switch whimsicott | supercellslam"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.2965464
+        },
+        "switch scovillain": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch scovillain | switch bruxish",
+            "switch uxie | crunch"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.51815725
+        },
+        "switch tatsugiri": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch tatsugiri | supercellslam",
+            "switch whimsicott | supercellslam"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.41207397
+        },
+        "switch uxie": {
+          "evaluatorTruncatedProbability": 1.0,
+          "principalLine": [
+            "switch uxie | switch grimmsnarl",
+            "sunnyday | partingshot"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.571832025
+        },
+        "switch whimsicott": {
+          "evaluatorTruncatedProbability": 1.0000000500000001,
+          "principalLine": [
+            "switch whimsicott | icepunch",
+            "memento | switch grimmsnarl"
+          ],
+          "terminalProbability": 0.0,
+          "value": 0.5744361499999999
+        }
+      },
+      "selectedAction": "switch whimsicott",
+      "status": "complete",
+      "worlds": [
+        {
+          "actions": [
+            {
+              "action": "flashcannon",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "earthquake",
+              "principalLine": [
+                "flashcannon | earthquake",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.41084418
+            },
+            {
+              "action": "flashcannon-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "supercellslam",
+              "principalLine": [
+                "flashcannon-tera | supercellslam",
+                "switch whimsicott | supercellslam"
+              ],
+              "terminalProbability": 0,
+              "value": 0.33311588
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch bruxish",
+              "principalLine": [
+                "switch scovillain | switch bruxish",
+                "switch uxie | crunch"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5858114
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "supercellslam",
+              "principalLine": [
+                "switch tatsugiri | supercellslam",
+                "switch whimsicott | supercellslam"
+              ],
+              "terminalProbability": 0,
+              "value": 0.42569464
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch uxie | switch grimmsnarl",
+                "sunnyday | partingshot"
+              ],
+              "terminalProbability": 0,
+              "value": 0.61166465
+            },
+            {
+              "action": "switch whimsicott",
+              "evaluatorTruncatedProbability": 1.0000001,
+              "opponentBestResponse": "icepunch",
+              "principalLine": [
+                "switch whimsicott | icepunch",
+                "memento | switch grimmsnarl"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5936462
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 24,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 274,
+          "schemaVersion": 1,
+          "selectedAction": "switch uxie"
+        },
+        {
+          "actions": [
+            {
+              "action": "flashcannon",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "earthquake",
+              "principalLine": [
+                "flashcannon | earthquake",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.44129544
+            },
+            {
+              "action": "flashcannon-tera",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "supercellslam",
+              "principalLine": [
+                "flashcannon-tera | supercellslam",
+                "switch scovillain | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.25997692
+            },
+            {
+              "action": "switch scovillain",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "earthquake",
+              "principalLine": [
+                "switch scovillain | earthquake",
+                "switch uxie | supercellslam"
+              ],
+              "terminalProbability": 0,
+              "value": 0.4505031
+            },
+            {
+              "action": "switch tatsugiri",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "supercellslam",
+              "principalLine": [
+                "switch tatsugiri | supercellslam",
+                "switch magneton | No Move"
+              ],
+              "terminalProbability": 0,
+              "value": 0.3984533
+            },
+            {
+              "action": "switch uxie",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "switch grimmsnarl",
+              "principalLine": [
+                "switch uxie | switch grimmsnarl",
+                "sunnyday | reflect"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5319994
+            },
+            {
+              "action": "switch whimsicott",
+              "evaluatorTruncatedProbability": 1,
+              "opponentBestResponse": "icepunch",
+              "principalLine": [
+                "switch whimsicott | icepunch",
+                "memento | switch grimmsnarl"
+              ],
+              "terminalProbability": 0,
+              "value": 0.5552261
+            }
+          ],
+          "algorithm": "bounded-expectiminimax-exact-chance",
+          "cacheHits": 18,
+          "depth": 2,
+          "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+          "exactDamageDepth": 1,
+          "nodeLimit": 100000,
+          "nodes": 238,
+          "schemaVersion": 1,
+          "selectedAction": "switch whimsicott"
+        }
+      ]
+    },
+    "d4": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    },
+    "d6": {
+      "error": "current continuation adjudicator rejected: node limit 100000 exceeded",
+      "status": "intractable"
+    }
+  },
+  "runtime": {
+    "engine": "poke-engine",
+    "engineSourceSha256": "13ac9863be2fb05143429b5bd2faaf2366dec4fce33e2764badce3f7a7b776c7",
+    "engineVersion": "0.0.48",
+    "evaluator": "genx-static-v0.0.48-boost-relevance-v1",
+    "evaluatorSourceSha256": "5c013486e9a07bb04f345518431e648a2884893e8a7acc69991c8a3f8bbde397"
+  },
+  "schemaVersion": 1,
+  "trialId": "0004-adam-sun-vs-steve-volturn-unburden-reverse"
+}

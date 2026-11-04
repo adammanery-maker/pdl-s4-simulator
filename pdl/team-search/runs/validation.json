@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "manifestHash": "745d81ec2f6d8e21b1a7e0283027ecab04a812b093aa8cefc4e53f8a996da37a",
+  "teams": [
+    {
+      "id": "adam-01-balance-uxie",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/adam-01-balance-uxie.txt",
+      "teamHash": "d63ce80daff34166f7ca995f3404e601bd3edc66768841409e6df302b9adf023",
+      "eligibleCaptains": [
+        "tatsugiri"
+      ],
+      "resolvedTeraTypes": {
+        "tatsugiri": "Dragon"
+      },
+      "errors": []
+    },
+    {
+      "id": "adam-02-drednaw-memento",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/adam-02-drednaw-memento.txt",
+      "teamHash": "954aea3fcf4b84babf3a4e58c58c728ce3474043b8b8b3c85812387eed5a8163",
+      "eligibleCaptains": [
+        "tatsugiri"
+      ],
+      "resolvedTeraTypes": {
+        "tatsugiri": "Dragon"
+      },
+      "errors": []
+    },
+    {
+      "id": "adam-03-sun-drednaw",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/adam-03-sun-drednaw.txt",
+      "teamHash": "22f59cfad9f13b0a5d415a5bb80a2a14bea847fb6769fd3567e6b5b6a560431c",
+      "eligibleCaptains": [
+        "scovillain"
+      ],
+      "resolvedTeraTypes": {
+        "scovillain": "Grass"
+      },
+      "errors": []
+    },
+    {
+      "id": "adam-04-memento-golem",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/adam-04-memento-golem.txt",
+      "teamHash": "f91f97d739cf66bd13cb2526aed35641099b6b6639bd377ebba4d8b007bf2c34",
+      "eligibleCaptains": [],
+      "resolvedTeraTypes": {},
+      "errors": []
+    },
+    {
+      "id": "steve-01-screens-bulky-offense",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-01-screens-bulky-offense.txt",
+      "teamHash": "1e4714ae5e61944a3d574dc2e47091df831f5263eb295e302b5310d29f2b6a55",
+      "eligibleCaptains": [
+        "avalugghisui"
+      ],
+      "resolvedTeraTypes": {
+        "avalugghisui": "Fighting"
+      },
+      "errors": []
+    },
+    {
+      "id": "steve-02-volturn-offense",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-02-volturn-offense.txt",
+      "teamHash": "b97c37ed93dfbbc485c7c1d49497b59bb63bd9201b5fe7bd8e70cd1a6e19cb20",
+      "eligibleCaptains": [
+        "avalugghisui"
+      ],
+      "resolvedTeraTypes": {
+        "avalugghisui": "Fighting"
+      },
+      "errors": []
+    },
+    {
+      "id": "steve-03-bulky-balance",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-03-bulky-balance.txt",
+      "teamHash": "16f011c34a8f561b377c95caecc15b34df453b496e4d7f618f804ba96d1579ae",
+      "eligibleCaptains": [
+        "drifblim"
+      ],
+      "resolvedTeraTypes": {
+        "drifblim": "Fire"
+      },
+      "errors": []
+    },
+    {
+      "id": "steve-04-screens-fast-offense",
+      "path": "/Users/amanery/PDL Vercel App/pdl-s4-simulator/pdl/team-search/runs/teams/steve-04-screens-fast-offense.txt",
+      "teamHash": "5318b3a359e2cba6876923ffb4c874ae18d27b4050189413b68bd1fe8f6d5e68",
+      "eligibleCaptains": [
+        "drifblim"
+      ],
+      "resolvedTeraTypes": {
+        "drifblim": "Fire"
+      },
+      "errors": []
+    }
+  ],
+  "validationErrors": []
+}

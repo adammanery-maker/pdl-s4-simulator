@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "snapshot": {
+    "id": "pdl-s4-test-snapshot-2026-08-11",
+    "source": "test-fixture"
+  },
+  "teams": {
+    "adam": {
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Tatsugiri",
+        "Golem"
+      ],
+      "roster": [
+        {
+          "species": "Tatsugiri",
+          "cost": 4
+        },
+        {
+          "species": "Flamigo",
+          "cost": 6
+        },
+        {
+          "species": "Golem",
+          "cost": 2
+        }
+      ]
+    },
+    "connor": {
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Ribombee"
+      ],
+      "roster": [
+        {
+          "species": "Flygon",
+          "cost": 6
+        },
+        {
+          "species": "Ribombee",
+          "cost": 3
+        }
+      ]
+    }
+  },
+  "sets": {
+    "tatsugiri": [
+      {
+        "weight": 0.75,
+        "ability": "Commander",
+        "item": "Choice Specs",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Draco Meteor",
+          "Muddy Water",
+          "Dragon Pulse",
+          "Icy Wind"
+        ],
+        "teraType": "grass"
+      }
+    ],
+    "flamigo": [
+      {
+        "weight": 1,
+        "ability": "Scrappy",
+        "item": "Choice Scarf",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Close Combat",
+          "Brave Bird",
+          "U-turn",
+          "Throat Chop"
+        ],
+        "teraType": null
+      }
+    ],
+    "golem": [
+      {
+        "weight": 1,
+        "ability": "Sturdy",
+        "item": "Leftovers",
+        "nature": "Adamant",
+        "evs": [
+          252,
+          252,
+          0,
+          0,
+          4,
+          0
+        ],
+        "moves": [
+          "Earthquake",
+          "Stone Edge",
+          "Stealth Rock",
+          "Explosion"
+        ],
+        "teraType": "rock"
+      }
+    ],
+    "flygon": [
+      {
+        "weight": 1,
+        "ability": "Levitate",
+        "item": "Heavy-Duty Boots",
+        "nature": "Jolly",
+        "evs": [
+          0,
+          252,
+          0,
+          0,
+          4,
+          252
+        ],
+        "moves": [
+          "Earthquake",
+          "Dragon Claw",
+          "U-turn",
+          "Roost"
+        ],
+        "teraType": null
+      }
+    ],
+    "ribombee": [
+      {
+        "weight": 1,
+        "ability": "Shield Dust",
+        "item": "Focus Sash",
+        "nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          252,
+          4,
+          252
+        ],
+        "moves": [
+          "Moonblast",
+          "Bug Buzz",
+          "Sticky Web",
+          "Stun Spore"
+        ],
+        "teraType": "fairy"
+      }
+    ]
+  }
+}

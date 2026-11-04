@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "adam-vs-steve-initial",
+  "beliefPath": "adam-vs-steve-initial-priors.json",
+  "league": {
+    "adam": {
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Tatsugiri",
+        "Scovillain"
+      ],
+      "roster": [
+        {
+          "species": "Tatsugiri",
+          "cost": 3
+        },
+        {
+          "species": "Flamigo",
+          "cost": 11
+        },
+        {
+          "species": "Whimsicott",
+          "cost": 5
+        },
+        {
+          "species": "Drednaw",
+          "cost": 5
+        },
+        {
+          "species": "Scovillain",
+          "cost": 3
+        },
+        {
+          "species": "Golem",
+          "cost": 1
+        },
+        {
+          "species": "Leafeon",
+          "cost": 2
+        },
+        {
+          "species": "Uxie",
+          "cost": 7
+        },
+        {
+          "species": "Magneton",
+          "cost": 3
+        },
+        {
+          "species": "Incineroar",
+          "cost": 14
+        }
+      ]
+    },
+    "steve": {
+      "draftedTeraTypes": [
+        "Fighting",
+        "Fire"
+      ],
+      "teraCaptains": [
+        "Avalugg-Hisui",
+        "Drifblim"
+      ],
+      "roster": [
+        {
+          "species": "Grimmsnarl",
+          "cost": 8
+        },
+        {
+          "species": "Avalugg-Hisui",
+          "cost": 2
+        },
+        {
+          "species": "Drifblim",
+          "cost": 3
+        },
+        {
+          "species": "Electivire",
+          "cost": 3
+        },
+        {
+          "species": "Lycanroc",
+          "cost": 5
+        },
+        {
+          "species": "Delphox",
+          "cost": 5
+        },
+        {
+          "species": "Goodra",
+          "cost": 8
+        },
+        {
+          "species": "Ambipom",
+          "cost": 5
+        },
+        {
+          "species": "Slowbro-Galar",
+          "cost": 9
+        },
+        {
+          "species": "Electrode-Hisui",
+          "cost": 3
+        }
+      ]
+    }
+  },
+  "adamCandidates": [
+    {
+      "id": "adam-uxie-offensive-incin-standard",
+      "label": "1 - Offensive Uxie + Standard Incineroar",
+      "teamPath": "teams/balance-uxie-combinations-20261007/adam-uxie-offensive-incin-standard.txt",
+      "weight": 1,
+      "notes": "Exact saved sets; shared control Scarf Flamigo, Tatsugiri, Specs Magneton and Offensive Whimsicott. Uxie/Incineroar combination only.",
+      "teamHash": "cd24858991e69cda53dd6df2e2d655ba5dcc6b6649739e083cf2aad8e704a944"
+    },
+    {
+      "id": "adam-uxie-rocks-incin-standard",
+      "label": "2 - Coverage/Rocks Uxie + Standard Incineroar",
+      "teamPath": "teams/balance-uxie-combinations-20261007/adam-uxie-rocks-incin-standard.txt",
+      "weight": 1,
+      "notes": "Exact saved sets; shared control Scarf Flamigo, Tatsugiri, Specs Magneton and Offensive Whimsicott. Uxie/Incineroar combination only.",
+      "teamHash": "7054a63416c36853822a9bb9fa7a7a3ffa6f5b08f2b0845f324e001aae7c2b4c"
+    },
+    {
+      "id": "adam-uxie-offensive-incin-sd",
+      "label": "3 - Offensive Uxie + Swords Dance Incineroar",
+      "teamPath": "teams/balance-uxie-combinations-20261007/adam-uxie-offensive-incin-sd.txt",
+      "weight": 1,
+      "notes": "Exact saved sets; shared control Scarf Flamigo, Tatsugiri, Specs Magneton and Offensive Whimsicott. Uxie/Incineroar combination only.",
+      "teamHash": "c52ede77e77705180258bdf6dfa69b8f4b9b4821ab76d53638495c4df93ff704"
+    },
+    {
+      "id": "adam-uxie-rocks-incin-sd",
+      "label": "4 - Coverage/Rocks Uxie + Swords Dance Incineroar",
+      "teamPath": "teams/balance-uxie-combinations-20261007/adam-uxie-rocks-incin-sd.txt",
+      "weight": 1,
+      "notes": "Exact saved sets; shared control Scarf Flamigo, Tatsugiri, Specs Magneton and Offensive Whimsicott. Uxie/Incineroar combination only.",
+      "teamHash": "23b95fc731fd3f653d08e35ac21fcc3ad916ad04fb4a2a01085a8b0d9fab0910"
+    }
+  ],
+  "steveOpponents": [
+    {
+      "id": "steve-01-screens-bulky-offense",
+      "label": "Screens Bulky Offense",
+      "teamPath": "teams/steve-01-screens-bulky-offense.txt",
+      "weight": 1,
+      "teamHash": "1e4714ae5e61944a3d574dc2e47091df831f5263eb295e302b5310d29f2b6a55"
+    },
+    {
+      "id": "steve-02-volturn-offense",
+      "label": "Volturn Offense",
+      "teamPath": "teams/steve-02-volturn-offense.txt",
+      "weight": 1,
+      "teamHash": "b97c37ed93dfbbc485c7c1d49497b59bb63bd9201b5fe7bd8e70cd1a6e19cb20"
+    },
+    {
+      "id": "steve-03-bulky-balance",
+      "label": "Bulky Balance",
+      "teamPath": "teams/steve-03-bulky-balance.txt",
+      "weight": 1,
+      "teamHash": "16f011c34a8f561b377c95caecc15b34df453b496e4d7f618f804ba96d1579ae"
+    },
+    {
+      "id": "steve-04-screens-fast-offense",
+      "label": "Screens Fast Offense",
+      "teamPath": "teams/steve-04-screens-fast-offense.txt",
+      "weight": 1,
+      "teamHash": "5318b3a359e2cba6876923ffb4c874ae18d27b4050189413b68bd1fe8f6d5e68"
+    }
+  ],
+  "metadata": {
+    "purpose": "exploratory",
+    "captainSource": "User-confirmed registrations",
+    "adamDraftedTeraTypesSource": "Canonical local PDL live snapshot (2026-09-23) and user confirmation",
+    "steveRosterSource": "User-supplied current roster for this run",
+    "costSource": "pdl-vercel-app/src/data/league-pokemon.seed.json",
+    "priorPolicy": "One shared roster-wide local candidate prior, fixed independently of the selected trial. No opponent ground-truth file reaches the agent.",
+    "experiment": "Balance Uxie 2x2 Uxie/Incineroar combinations, 2026-10-07",
+    "baselineTeam": "teams/adam-01-balance-uxie.txt",
+    "seedAlignment": "Retain adam-vs-steve-initial namespace; identical opponent/orientation/seed-index streams for every Adam variation.",
+    "changePolicy": "Copy all set blocks exactly from the previous variation batch. Four fixed slots; complete 2x2 Uxie/Incineroar combinations. No other fields altered.",
+    "opponentPoolSource": "The same four Steve opponents explicitly requested for this run.",
+    "matchCountConvention": "10 total battles per Adam/Steve matchup = 5 seeds per orientation, mirrored.",
+    "totalScheduledBattles": 160
+  }
+}

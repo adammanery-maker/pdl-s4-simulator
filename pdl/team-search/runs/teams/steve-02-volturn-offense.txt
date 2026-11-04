@@ -1,0 +1,57 @@
+Ambipom @ Silk Scarf
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- U-turn
+- Knock Off
+- Triple Axel
+
+Electrode-Hisui @ Heavy-Duty Boots
+Ability: Static
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Volt Switch
+- Leaf Storm
+- Thunder Wave
+- Taunt
+
+Slowbro-Galar @ Eject Button
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Psyshock
+- Slack Off
+- Toxic
+
+Electivire @ Air Balloon
+Ability: Motor Drive
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Supercell Slam
+- Ice Punch
+- Earthquake
+- Volt Switch
+
+Delphox @ Heavy-Duty Boots
+Ability: Blaze
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Nasty Plot
+- Flamethrower
+- Psyshock
+- Grass Knot
+
+Avalugg-Hisui @ Custap Berry
+Ability: Sturdy
+Tera Type: Fighting
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Stealth Rock
+- Rapid Spin
+- Mountain Gale
+- Body Press

@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "adam-vs-steve-initial",
+  "beliefPath": "adam-vs-steve-initial-priors.json",
+  "league": {
+    "adam": {
+      "draftedTeraTypes": [
+        "Grass",
+        "Ghost"
+      ],
+      "teraCaptains": [
+        "Tatsugiri",
+        "Scovillain"
+      ],
+      "roster": [
+        {
+          "species": "Tatsugiri",
+          "cost": 3
+        },
+        {
+          "species": "Flamigo",
+          "cost": 11
+        },
+        {
+          "species": "Whimsicott",
+          "cost": 5
+        },
+        {
+          "species": "Drednaw",
+          "cost": 5
+        },
+        {
+          "species": "Scovillain",
+          "cost": 3
+        },
+        {
+          "species": "Golem",
+          "cost": 1
+        },
+        {
+          "species": "Leafeon",
+          "cost": 2
+        },
+        {
+          "species": "Uxie",
+          "cost": 7
+        },
+        {
+          "species": "Magneton",
+          "cost": 3
+        },
+        {
+          "species": "Incineroar",
+          "cost": 14
+        }
+      ]
+    },
+    "steve": {
+      "draftedTeraTypes": [
+        "Fighting",
+        "Fire"
+      ],
+      "teraCaptains": [
+        "Avalugg-Hisui",
+        "Drifblim"
+      ],
+      "roster": [
+        {
+          "species": "Grimmsnarl",
+          "cost": 8
+        },
+        {
+          "species": "Avalugg-Hisui",
+          "cost": 2
+        },
+        {
+          "species": "Drifblim",
+          "cost": 3
+        },
+        {
+          "species": "Electivire",
+          "cost": 3
+        },
+        {
+          "species": "Lycanroc",
+          "cost": 5
+        },
+        {
+          "species": "Delphox",
+          "cost": 5
+        },
+        {
+          "species": "Goodra",
+          "cost": 8
+        },
+        {
+          "species": "Ambipom",
+          "cost": 5
+        },
+        {
+          "species": "Slowbro-Galar",
+          "cost": 9
+        },
+        {
+          "species": "Electrode-Hisui",
+          "cost": 3
+        }
+      ]
+    }
+  },
+  "adamCandidates": [
+    {
+      "id": "adam-01-balance-uxie",
+      "label": "1 - Balance Uxie / Unchanged Control",
+      "teamPath": "teams/adam-01-balance-uxie.txt",
+      "weight": 1,
+      "teamHash": "d63ce80daff34166f7ca995f3404e601bd3edc66768841409e6df302b9adf023",
+      "notes": "Unchanged original Balance Uxie export."
+    },
+    {
+      "id": "adam-balance-uxie-flamigo-band",
+      "label": "2 - Balance Uxie / Choice Band Flamigo",
+      "teamPath": "teams/balance-uxie-variations-20261007/adam-balance-uxie-flamigo-band.txt",
+      "weight": 1,
+      "notes": "Only the Flamigo slot differs from original Balance Uxie; unspecified fields retained.",
+      "teamHash": "c17b28419bbb015bad6d0a4dcb63d913f6d96abb59e74af455a0454cb4edb179"
+    },
+    {
+      "id": "adam-balance-uxie-incineroar-swords-dance",
+      "label": "3 - Balance Uxie / Swords Dance Incineroar",
+      "teamPath": "teams/balance-uxie-variations-20261007/adam-balance-uxie-incineroar-swords-dance.txt",
+      "weight": 1,
+      "notes": "Only the Incineroar slot differs from original Balance Uxie; unspecified fields retained.",
+      "teamHash": "642d4a0feeeaffee8c99b50e4066570cb79c30c3efdec581a708719eedc9129c"
+    },
+    {
+      "id": "adam-balance-uxie-whimsicott-coverage",
+      "label": "4 - Balance Uxie / Offensive Whimsicott",
+      "teamPath": "teams/balance-uxie-variations-20261007/adam-balance-uxie-whimsicott-coverage.txt",
+      "weight": 1,
+      "notes": "Only the Whimsicott slot differs from original Balance Uxie; unspecified fields retained.",
+      "teamHash": "cd24858991e69cda53dd6df2e2d655ba5dcc6b6649739e083cf2aad8e704a944"
+    },
+    {
+      "id": "adam-balance-uxie-uxie-coverage-rocks",
+      "label": "5 - Balance Uxie / Coverage and Rocks Uxie",
+      "teamPath": "teams/balance-uxie-variations-20261007/adam-balance-uxie-uxie-coverage-rocks.txt",
+      "weight": 1,
+      "notes": "Only the Uxie slot differs from original Balance Uxie; unspecified fields retained.",
+      "teamHash": "0467a922cc1a2f20c52ee3ddca3773c25f012b7967ff78028d7e83279905744c"
+    }
+  ],
+  "steveOpponents": [
+    {
+      "id": "steve-01-screens-bulky-offense",
+      "label": "Screens Bulky Offense",
+      "teamPath": "teams/steve-01-screens-bulky-offense.txt",
+      "weight": 1,
+      "teamHash": "1e4714ae5e61944a3d574dc2e47091df831f5263eb295e302b5310d29f2b6a55"
+    },
+    {
+      "id": "steve-02-volturn-offense",
+      "label": "Volturn Offense",
+      "teamPath": "teams/steve-02-volturn-offense.txt",
+      "weight": 1,
+      "teamHash": "b97c37ed93dfbbc485c7c1d49497b59bb63bd9201b5fe7bd8e70cd1a6e19cb20"
+    },
+    {
+      "id": "steve-03-bulky-balance",
+      "label": "Bulky Balance",
+      "teamPath": "teams/steve-03-bulky-balance.txt",
+      "weight": 1,
+      "teamHash": "16f011c34a8f561b377c95caecc15b34df453b496e4d7f618f804ba96d1579ae"
+    },
+    {
+      "id": "steve-04-screens-fast-offense",
+      "label": "Screens Fast Offense",
+      "teamPath": "teams/steve-04-screens-fast-offense.txt",
+      "weight": 1,
+      "teamHash": "5318b3a359e2cba6876923ffb4c874ae18d27b4050189413b68bd1fe8f6d5e68"
+    }
+  ],
+  "metadata": {
+    "purpose": "exploratory",
+    "captainSource": "User-confirmed registrations",
+    "adamDraftedTeraTypesSource": "Canonical local PDL live snapshot (2026-09-23) and user confirmation",
+    "steveRosterSource": "User-supplied current roster for this run",
+    "costSource": "pdl-vercel-app/src/data/league-pokemon.seed.json",
+    "priorPolicy": "One shared roster-wide local candidate prior, fixed independently of the selected trial. No opponent ground-truth file reaches the agent.",
+    "experiment": "Balance Uxie single-slot variations, 2026-10-07",
+    "baselineTeam": "teams/adam-01-balance-uxie.txt",
+    "seedAlignment": "Retain adam-vs-steve-initial namespace; identical opponent/orientation/seed-index streams for every Adam variation.",
+    "changePolicy": "Control unchanged; each alternative changes only the one user-specified Pokemon slot. Unspecified fields, including Uxie IVs: 0 Atk, retained.",
+    "opponentPoolSource": "The same four Steve opponents explicitly requested for this run.",
+    "matchCountConvention": "20 total battles per Adam variant versus each Steve team = 10 seeds per orientation, mirrored (screen preset).",
+    "totalScheduledBattles": 400
+  }
+}

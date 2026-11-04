@@ -1,0 +1,18 @@
+>battle-gen9pdls4-trace
+|teampreview|6
+|start
+|switch|p1a: Tatsugiri|Tatsugiri, L100|301/301
+|switch|p2a: Weezing|Weezing, L100|100/100
+|turn|1
+|-sidestart|p2: Zander|move: Stealth Rock
+|-weather|RainDance
+|-fieldstart|move: Electric Terrain
+|-fieldstart|move: Trick Room
+|-terastallize|p1a: Tatsugiri|Dragon
+|-boost|p1a: Tatsugiri|spa|2
+|-boost|p1a: Tatsugiri|accuracy|1
+|-boost|p1a: Tatsugiri|evasion|1
+|-status|p2a: Weezing|brn
+|-damage|p1a: Tatsugiri|200/301
+|turn|2
+|request|{"rqid": 9, "forceSwitch": [true]}

@@ -1,0 +1,35 @@
+diff --git a/poke-engine-py/python/poke_engine/poke_engine.pyi b/poke-engine-py/python/poke_engine/poke_engine.pyi
+--- a/poke-engine-py/python/poke_engine/poke_engine.pyi
++++ b/poke-engine-py/python/poke_engine/poke_engine.pyi
+@@ -490,3 +490,4 @@
+ def evaluate_state(state: State) -> float: ...
+ def evaluate_state_breakdown(state: State) -> EvaluationBreakdown: ...
+ def evaluator_metadata() -> Tuple[str, str, str]: ...
++def evaluator_source() -> str: ...
+diff --git a/poke-engine-py/src/lib.rs b/poke-engine-py/src/lib.rs
+--- a/poke-engine-py/src/lib.rs
++++ b/poke-engine-py/src/lib.rs
+@@ -61,6 +61,16 @@
+ fn evaluator_metadata() -> (&'static str, &'static str, &'static str) {
+     ("poke-engine", "0.0.48", "genx-static-v0.0.48")
+ }
+ 
++/// Returns the evaluator source embedded into this compiled extension.
++///
++/// Consumers hash these exact bytes, so changing the evaluator implementation
++/// necessarily changes the runtime attestation even when a human-readable
++/// version label is accidentally left unchanged.
++#[pyfunction]
++fn evaluator_source() -> &'static str {
++    include_str!("../../src/genx/evaluate.rs")
++}
++
+ fn movechoice_to_string(side: &Side, move_choice: &MoveChoice) -> String {
+     match move_choice {
+@@ -1175,5 +1185,6 @@
+     m.add_function(wrap_pyfunction!(evaluate_state, m)?)?;
+     m.add_function(wrap_pyfunction!(evaluate_state_breakdown, m)?)?;
+     m.add_function(wrap_pyfunction!(evaluator_metadata, m)?)?;
++    m.add_function(wrap_pyfunction!(evaluator_source, m)?)?;
+     m.add_class::<PyEvaluationBreakdown>()?;
+     m.add_class::<PyState>()?;
