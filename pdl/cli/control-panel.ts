@@ -108,6 +108,8 @@ interface ActiveBot {
 }
 
 let showdown: ManagedProcess | null = null;
+let lastShowdownLog = '';
+let lastShowdownExit = '';
 const activeBots = new Map<string, ActiveBot>();
 let panelNotice = 'Ready.';
 
@@ -228,20 +230,28 @@ async function startShowdown(): Promise<void> {
 		return;
 	}
 	const root = resolve(__dirname, '..', '..', '..');
-	showdown = spawnCollected(process.execPath, ['pokemon-showdown', 'start', '--skip-build', '--no-security', String(SHOWDOWN_PORT)], root, () => {
+	showdown = spawnCollected(process.execPath, ['pokemon-showdown', 'start', '--skip-build', '--no-security', String(SHOWDOWN_PORT)], root, (code, signal) => {
+		if (showdown) {
+			lastShowdownLog = `${showdown.stdout}\n${showdown.stderr}`.trim();
+			lastShowdownExit = `code: ${code}, signal: ${signal}`;
+		}
 		showdown = null;
-		panelNotice = 'Panel-managed Showdown stopped.';
+		panelNotice = `Panel-managed Showdown stopped${lastShowdownExit ? ` (${lastShowdownExit})` : ''}.`;
 	});
-	const deadline = Date.now() + 10_000;
+	const timeoutLimit = IS_CLOUD_CONSTRAINED ? 35_000 : 10_000;
+	const deadline = Date.now() + timeoutLimit;
 	while (Date.now() < deadline) {
 		if (await portIsOpen(SHOWDOWN_PORT)) {
 			panelNotice = 'Local Showdown is running.';
 			return;
 		}
-		if (showdown.child.exitCode !== null) throw new Error(`Showdown exited:\n${showdown.stderr}`);
+		if (showdown.child.exitCode !== null) {
+			const err = showdown.stderr || showdown.stdout || 'No startup output was captured.';
+			throw new Error(`Showdown exited:\n${err}`);
+		}
 		await new Promise(resolvePromise => setTimeout(resolvePromise, 100));
 	}
-	throw new Error('Timed out starting local Showdown.');
+	throw new Error(`Timed out starting local Showdown after ${timeoutLimit / 1000}s.`);
 }
 
 async function startBot(start: ControlStart): Promise<void> {
@@ -299,7 +309,8 @@ async function startBot(start: ControlStart): Promise<void> {
 		startedAt: Date.now(),
 	});
 
-	const deadline = Date.now() + 10_000;
+	const timeoutLimit = IS_CLOUD_CONSTRAINED ? 35_000 : 10_000;
+	const deadline = Date.now() + timeoutLimit;
 	while (Date.now() < deadline) {
 		if (/Waiting for a gen9pdls4 challenge/.test(startedBot.stdout)) {
 			panelNotice = `${psUsername} is online and waiting for challenges!`;
@@ -310,7 +321,7 @@ async function startBot(start: ControlStart): Promise<void> {
 	}
 	stop(startedBot);
 	activeBots.delete(teamKey);
-	throw new Error(`Timed out waiting for ${psUsername} to connect.`);
+	throw new Error(`Timed out waiting for ${psUsername} to connect after ${timeoutLimit / 1000}s.`);
 }
 
 function stopBot(teamId?: string): void {
@@ -390,7 +401,7 @@ async function status() {
 			: panelNotice,
 		clientUrl: buildControlClientUrl(),
 		botLog: latestBot ? `${latestBot.child.stdout}${latestBot.child.stderr}`.slice(-2000) : '',
-		showdownLog: showdown ? `${showdown.stdout}${showdown.stderr}`.slice(-1000) : '',
+		showdownLog: (showdown ? `${showdown.stdout}${showdown.stderr}` : lastShowdownLog).slice(-2000),
 		teams: Object.keys(belief().teams),
 	};
 }

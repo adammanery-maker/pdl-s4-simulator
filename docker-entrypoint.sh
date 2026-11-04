@@ -70,8 +70,8 @@ echo "[Showdown] Starting Pokémon Showdown on port $SHOWDOWN_PORT with Gen 9 PD
 node --max-old-space-size=160 pokemon-showdown start --skip-build --no-security "$SHOWDOWN_PORT" &
 SHOWDOWN_PID=$!
 
-# Wait briefly for Showdown to bind socket
-for i in {1..15}; do
+# Wait up to 45 seconds for Showdown to bind socket
+for i in {1..90}; do
   if node -e "const s = require('net').connect({host:'127.0.0.1', port:$SHOWDOWN_PORT}, () => { s.destroy(); process.exit(0); }); s.on('error', () => process.exit(1));" 2>/dev/null; then
     echo "[Showdown] Ready and listening on port $SHOWDOWN_PORT."
     break
