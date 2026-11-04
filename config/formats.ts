@@ -19,6 +19,39 @@ The column value will be ignored for repeat sections.
 
 export const Formats: import('../sim/dex-formats').FormatList = [
 
+	// PDL Season 4 Metagames
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "PDL S4",
+		column: 1,
+	},
+	{
+		name: "[Gen 9] PDL S4",
+		mod: 'gen9',
+		ruleset: [
+			'Standard NatDex', 'Sleep Moves Clause', '!Sleep Clause Mod',
+			'Min Team Size = 6', 'Max Team Size = 6', 'Z-Move Clause', 'Dynamax Clause',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Shadow Tag', "King's Rock", 'Razor Fang',
+			'Baton Pass', 'Last Respects', 'Shed Tail', 'Light Clay', 'Drought', 'Quick Claw',
+		],
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				pokemon.canMegaEvo = null;
+				pokemon.canUltraBurst = null;
+			}
+		},
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species);
+			const item = this.dex.items.get(set.item);
+			if (species.isMega || species.isPrimal || species.forme === 'Ultra' || item.megaStone) {
+				return [`${set.name || set.species} cannot use Mega Evolution, Primal Reversion, or Ultra Burst in PDL S4.`];
+			}
+		},
+	},
+
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////
 
