@@ -108,31 +108,39 @@ export function parseControlStart(value: ControlStartInput): ControlStart {
 	return { teamId, opponentTeamId, matches, teamExport: text(value.teamExport, 'Team export') };
 }
 
+export function encodeShowdownHost(host: string): string {
+	const clean = host.replace(/^https?:\/\//, '').replace(/\/$/, '');
+	return clean
+		.replace(/-/g, '---')
+		.replace(/\./g, '-')
+		.replace(/:/g, '--');
+}
+
 /** Current maintained Showdown rewrite client pointed at this local server. */
 export function buildControlClientUrl(): string {
 	if (process.env.PUBLIC_URL) {
 		const clean = process.env.PUBLIC_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${clean}`;
+		return `https://${encodeShowdownHost(clean)}.psim.us/newclient`;
 	}
 	if (process.env.FLY_APP_NAME) {
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${process.env.FLY_APP_NAME}.fly.dev`;
+		return `https://${encodeShowdownHost(`${process.env.FLY_APP_NAME}.fly.dev`)}.psim.us/newclient`;
 	}
 	if (process.env.RAILWAY_PUBLIC_DOMAIN) {
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${process.env.RAILWAY_PUBLIC_DOMAIN}`;
+		return `https://${encodeShowdownHost(process.env.RAILWAY_PUBLIC_DOMAIN)}.psim.us/newclient`;
 	}
 	if (process.env.RENDER_EXTERNAL_HOSTNAME) {
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${process.env.RENDER_EXTERNAL_HOSTNAME}`;
+		return `https://${encodeShowdownHost(process.env.RENDER_EXTERNAL_HOSTNAME)}.psim.us/newclient`;
 	}
 	if (process.env.SPACE_HOST) {
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${process.env.SPACE_HOST}`;
+		return `https://${encodeShowdownHost(process.env.SPACE_HOST)}.psim.us/newclient`;
 	}
 	if (process.env.SPACE_ID) {
 		const clean = process.env.SPACE_ID.replace('/', '-').toLowerCase();
-		return `https://play.pokemonshowdown.com/testclient-new.html?~~${clean}.hf.space`;
+		return `https://${encodeShowdownHost(`${clean}.hf.space`)}.psim.us/newclient`;
 	}
 	const host = process.env.SHOWDOWN_HOST || 'localhost';
 	const port = process.env.SHOWDOWN_PORT ? Number(process.env.SHOWDOWN_PORT) : SHOWDOWN_PORT;
-	return `https://play.pokemonshowdown.com/testclient-new.html?~~${host}:${port}`;
+	return `https://${encodeShowdownHost(`${host}:${port}`)}.psim.us/newclient`;
 }
 
 let cachedBelief: BeliefFile | null = null;
