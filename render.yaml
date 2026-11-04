@@ -21,4 +21,8 @@ services:
         value: /app/foul-play
       - key: BELIEF_PATH
         value: /app/foul-play/pdl-belief-all-teams.json
+      - key: CLOUD_CONSTRAINED
+        value: "true"
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=160"
     healthCheckPath: /api/status

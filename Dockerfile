@@ -54,6 +54,8 @@ RUN chmod +x /app/simulator/docker-entrypoint.sh && \
     chmod -R 777 /app /tmp
 
 ENV NODE_ENV=production \
+    NODE_OPTIONS="--max-old-space-size=160" \
+    CLOUD_CONSTRAINED=true \
     SHOWDOWN_PORT=8000 \
     PANEL_PORT=7860 \
     BIND_HOST=0.0.0.0 \

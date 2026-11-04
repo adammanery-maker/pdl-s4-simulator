@@ -10,6 +10,13 @@ import { validatePdlTeam } from '../validate-team';
 
 const PANEL_PORT = Number(process.env.PORT) || Number(process.env.PANEL_PORT) || (process.env.SPACE_ID ? 7860 : 4173);
 const SHOWDOWN_PORT = Number(process.env.SHOWDOWN_PORT) || 8000;
+const IS_CLOUD_CONSTRAINED = Boolean(
+	process.env.RENDER ||
+	process.env.RENDER_EXTERNAL_HOSTNAME ||
+	process.env.FLY_APP_NAME ||
+	process.env.SPACE_ID ||
+	process.env.CLOUD_CONSTRAINED === 'true'
+);
 const FOUL_ROOT = process.env.FOUL_ROOT || (existsSync(resolve(__dirname, '../../../../pdl-s4-foul-play')) ? resolve(__dirname, '../../../../pdl-s4-foul-play') : '/Users/amanery/PDL Vercel App/pdl-s4-foul-play');
 const SAMPLES_DIR = existsSync(resolve(__dirname, '../samples'))
 	? resolve(__dirname, '../samples')
@@ -245,6 +252,18 @@ async function startBot(start: ControlStart): Promise<void> {
 	const coachName = teamKey[0].toUpperCase() + teamKey.slice(1);
 	const psUsername = `PDL ${coachName}`;
 
+	// In cloud-constrained environments (e.g. Render 512MB RAM free tier),
+	// keep at most 1 active bot running to prevent OOM kills.
+	if (IS_CLOUD_CONSTRAINED) {
+		for (const [key, b] of activeBots.entries()) {
+			if (key !== teamKey) {
+				stop(b.child);
+				activeBots.delete(key);
+				console.log(`[Cloud Memory Guard] Stopped ${b.username} to reserve memory for ${psUsername}`);
+			}
+		}
+	}
+
 	// Stop only this coach's prior bot if already running
 	const existing = activeBots.get(teamKey);
 	if (existing && existing.child.child.exitCode === null) {
@@ -255,12 +274,14 @@ async function startBot(start: ControlStart): Promise<void> {
 	const venvPython = join(FOUL_ROOT, '.venv', 'bin', 'python');
 	const python = process.env.PYTHON_BIN || (existsSync(venvPython) ? venvPython : 'python3');
 	const teamPath = saveControlBotTeam(start.teamExport, teamKey);
+	const searchTimeMs = IS_CLOUD_CONSTRAINED ? '150' : '250';
+	const logLevel = IS_CLOUD_CONSTRAINED ? 'WARNING' : 'INFO';
 	const startedBot = spawnCollected(python, [
 		'run.py', '--websocket-uri', `ws://127.0.0.1:${SHOWDOWN_PORT}/showdown/websocket`,
 		'--ps-username', psUsername, '--bot-mode', 'accept_challenge', '--pokemon-format', PDL_FORMAT_ID,
 		'--pdl-belief-data', BELIEF_PATH, '--pdl-team-id', teamKey, '--belief-zero-policy', 'restore', '--team-name', teamPath,
 		'--room-name', 'lobby',
-		'--local-no-security', '--search-time-ms', '250', '--run-count', String(start.matches), '--log-level', 'INFO',
+		'--local-no-security', '--search-time-ms', searchTimeMs, '--run-count', String(start.matches), '--log-level', logLevel,
 		'--offline-runtime', '--search-engine', 'mcts', '--action-policy', 'argmax',
 	], FOUL_ROOT, () => {
 		if (activeBots.get(teamKey)?.child === startedBot) {
@@ -312,6 +333,16 @@ function stopBot(teamId?: string): void {
 
 async function startAllBots(matches = 100): Promise<void> {
 	await startShowdown();
+	if (IS_CLOUD_CONSTRAINED) {
+		console.log('[Cloud Memory Guard] startAllBots skipped on 512MB cloud free tier. Operating in single-active-bot lazy mode.');
+		const defaultSlug = 'connor';
+		if (!activeBots.has(defaultSlug)) {
+			const teamExport = getSampleTeam(defaultSlug, 1);
+			await startBot({ teamId: defaultSlug, matches, teamExport });
+		}
+		panelNotice = `Cloud simulator running in memory-optimized single bot mode (${activeBots.get(defaultSlug)?.username || 'PDL Connor'}).`;
+		return;
+	}
 	const coachSlugs = Object.keys(belief().teams);
 	for (const slug of coachSlugs) {
 		try {
@@ -341,18 +372,25 @@ async function status() {
 	const runningCount = Object.keys(activeBotsSummary).length;
 	const anyBotRunning = runningCount > 0;
 	const latestBot = Array.from(activeBots.values()).pop();
+	const mem = process.memoryUsage();
 	return {
 		showdown: Boolean((showdown && showdown.child.exitCode === null) || runningPort),
 		port8000: runningPort,
 		bot: anyBotRunning,
 		runningBotsCount: runningCount,
 		activeBots: activeBotsSummary,
+		cloudConstrained: IS_CLOUD_CONSTRAINED,
+		memory: {
+			rssMb: Math.round(mem.rss / 1024 / 1024),
+			heapUsedMb: Math.round(mem.heapUsed / 1024 / 1024),
+			heapTotalMb: Math.round(mem.heapTotal / 1024 / 1024),
+		},
 		notice: anyBotRunning
 			? `${runningCount} PDL bot(s) online: ${Object.values(activeBotsSummary).map(b => b.username).join(', ')}`
 			: panelNotice,
 		clientUrl: buildControlClientUrl(),
-		botLog: latestBot ? `${latestBot.child.stdout}${latestBot.child.stderr}`.slice(-4000) : '',
-		showdownLog: showdown ? `${showdown.stdout}${showdown.stderr}`.slice(-2000) : '',
+		botLog: latestBot ? `${latestBot.child.stdout}${latestBot.child.stderr}`.slice(-2000) : '',
+		showdownLog: showdown ? `${showdown.stdout}${showdown.stderr}`.slice(-1000) : '',
 		teams: Object.keys(belief().teams),
 	};
 }
@@ -493,7 +531,20 @@ if (require.main === module) {
 	const bindHost = process.env.BIND_HOST || '0.0.0.0';
 	server.listen(PANEL_PORT, bindHost, () => {
 		process.stdout.write(`PDL Foul Play control panel: http://${bindHost}:${PANEL_PORT}\n`);
-		void startAllBots().catch(err => console.error('Failed to start all bots on boot:', err));
+		if (IS_CLOUD_CONSTRAINED) {
+			console.log('[Control Panel] Cloud constrained environment detected (512MB RAM ceiling). Pre-warming single default bot (Connor)...');
+			const defaultSlug = 'connor';
+			try {
+				const teamExport = getSampleTeam(defaultSlug, 1);
+				void startBot({ teamId: defaultSlug, matches: 100, teamExport }).catch(err =>
+					console.error(`Failed to pre-warm default bot ${defaultSlug}:`, err)
+				);
+			} catch (err) {
+				console.error('Failed to load default sample team:', err);
+			}
+		} else {
+			void startAllBots().catch(err => console.error('Failed to start all bots on boot:', err));
+		}
 	});
 	process.once('SIGINT', () => { stopBot(); stop(showdown); server.close(); });
 	process.once('SIGTERM', () => { stopBot(); stop(showdown); server.close(); });

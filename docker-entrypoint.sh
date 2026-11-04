@@ -66,8 +66,8 @@ trap shutdown SIGINT SIGTERM SIGHUP
 
 # 1. Start Pokémon Showdown Server in background (skip runtime rebuild since image is pre-built)
 mkdir -p logs/repl logs/chat logs/modlog logs/tickets
-echo "[Showdown] Starting Pokémon Showdown on port $SHOWDOWN_PORT with Gen 9 PDL S4 format..."
-node pokemon-showdown start --skip-build --no-security "$SHOWDOWN_PORT" &
+echo "[Showdown] Starting Pokémon Showdown on port $SHOWDOWN_PORT with Gen 9 PDL S4 format (heap clamped to 160MB)..."
+node --max-old-space-size=160 pokemon-showdown start --skip-build --no-security "$SHOWDOWN_PORT" &
 SHOWDOWN_PID=$!
 
 # Wait briefly for Showdown to bind socket
@@ -80,8 +80,8 @@ for i in {1..15}; do
 done
 
 # 2. Start Bot Control Panel Daemon
-echo "[Control Panel] Starting PDL Foul Play Control Panel daemon on port $PANEL_PORT..."
-node dist/pdl/cli/control-panel.js &
+echo "[Control Panel] Starting PDL Foul Play Control Panel daemon on port $PANEL_PORT (heap clamped to 80MB)..."
+node --max-old-space-size=80 dist/pdl/cli/control-panel.js &
 PANEL_PID=$!
 
 echo "[PDL Arena] Services running."
