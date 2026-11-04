@@ -83,13 +83,25 @@ export function formatProcessExit(processOutput: Pick<ManagedProcess, 'stdout' |
 }
 
 /** Writes the current panel build to a stable path Foul Play can reopen for every challenge. */
-export function saveControlBotTeam(teamExport: string): string {
-	writeFileSync(PANEL_TEAM_PATH, teamExport, 'utf8');
-	return PANEL_TEAM_PATH;
+export function saveControlBotTeam(teamExport: string, teamId?: string): string {
+	const suffix = teamId ? `-${teamId.toLowerCase()}` : '';
+	const tmpDir = existsSync('/tmp') ? '/tmp' : '/private/tmp';
+	const path = join(tmpDir, `pdl-foul-play-control-team${suffix}.txt`);
+	writeFileSync(path, teamExport, 'utf8');
+	return path;
+}
+
+interface ActiveBot {
+	readonly teamId: string;
+	readonly username: string;
+	readonly child: ManagedProcess;
+	readonly matches: number;
+	readonly teamExport: string;
+	readonly startedAt: number;
 }
 
 let showdown: ManagedProcess | null = null;
-let bot: ManagedProcess | null = null;
+const activeBots = new Map<string, ActiveBot>();
 let panelNotice = 'Ready.';
 
 function text(value: unknown, field: string): string {
@@ -155,7 +167,12 @@ function toLeague(data: BeliefFile) {
 	return { teams: Object.entries(data.teams).map(([id, team]) => ({
 		id,
 		name: id[0].toUpperCase() + id.slice(1),
-		draftedTeraTypes: [...team.draftedTeraTypes],
+		draftedTeraTypes: team.draftedTeraTypes.map(t => {
+			const norm = t.toLowerCase();
+			if (norm === 'fight') return 'Fighting';
+			if (norm === 'psych') return 'Psychic';
+			return norm[0].toUpperCase() + norm.slice(1);
+		}),
 		roster: team.roster.map(pokemon => ({ ...pokemon })),
 	})) };
 }
@@ -221,48 +238,120 @@ async function startShowdown(): Promise<void> {
 }
 
 async function startBot(start: ControlStart): Promise<void> {
-	if (bot?.child.exitCode === null) {
-		stop(bot);
-		bot = null;
-	}
 	validateBotTeam(start);
 	await startShowdown();
+
+	const teamKey = start.teamId.toLowerCase();
+	const coachName = teamKey[0].toUpperCase() + teamKey.slice(1);
+	const psUsername = `PDL ${coachName}`;
+
+	// Stop only this coach's prior bot if already running
+	const existing = activeBots.get(teamKey);
+	if (existing && existing.child.child.exitCode === null) {
+		stop(existing.child);
+		activeBots.delete(teamKey);
+	}
+
 	const venvPython = join(FOUL_ROOT, '.venv', 'bin', 'python');
 	const python = process.env.PYTHON_BIN || (existsSync(venvPython) ? venvPython : 'python3');
-	const teamPath = saveControlBotTeam(start.teamExport);
+	const teamPath = saveControlBotTeam(start.teamExport, teamKey);
 	const startedBot = spawnCollected(python, [
 		'run.py', '--websocket-uri', `ws://127.0.0.1:${SHOWDOWN_PORT}/showdown/websocket`,
-		'--ps-username', 'PDL Foul Play', '--bot-mode', 'accept_challenge', '--pokemon-format', PDL_FORMAT_ID,
-		'--pdl-belief-data', BELIEF_PATH, '--pdl-team-id', start.teamId, '--belief-zero-policy', 'restore', '--team-name', teamPath,
+		'--ps-username', psUsername, '--bot-mode', 'accept_challenge', '--pokemon-format', PDL_FORMAT_ID,
+		'--pdl-belief-data', BELIEF_PATH, '--pdl-team-id', teamKey, '--belief-zero-policy', 'restore', '--team-name', teamPath,
+		'--room-name', 'lobby',
 		'--local-no-security', '--search-time-ms', '250', '--run-count', String(start.matches), '--log-level', 'INFO',
 		'--offline-runtime', '--search-engine', 'mcts', '--action-policy', 'argmax',
 	], FOUL_ROOT, () => {
-		if (bot === startedBot) bot = null;
-		panelNotice = 'PDL Foul Play stopped.';
+		if (activeBots.get(teamKey)?.child === startedBot) {
+			activeBots.delete(teamKey);
+			panelNotice = `${psUsername} stopped.`;
+		}
 	});
-	bot = startedBot;
+
+	activeBots.set(teamKey, {
+		teamId: teamKey,
+		username: psUsername,
+		child: startedBot,
+		matches: start.matches,
+		teamExport: start.teamExport,
+		startedAt: Date.now(),
+	});
+
 	const deadline = Date.now() + 10_000;
 	while (Date.now() < deadline) {
 		if (/Waiting for a gen9pdls4 challenge/.test(startedBot.stdout)) {
-			panelNotice = `PDL Foul Play is waiting for up to ${start.matches} matches as ${start.teamId}.`;
+			panelNotice = `${psUsername} is online and waiting for challenges!`;
 			return;
 		}
 		if (startedBot.child.exitCode !== null) throw new Error(formatProcessExit(startedBot));
 		await new Promise(resolvePromise => setTimeout(resolvePromise, 100));
 	}
 	stop(startedBot);
-	throw new Error('Timed out waiting for Foul Play to connect.');
+	activeBots.delete(teamKey);
+	throw new Error(`Timed out waiting for ${psUsername} to connect.`);
+}
+
+function stopBot(teamId?: string): void {
+	if (teamId && teamId !== 'all') {
+		const teamKey = teamId.toLowerCase();
+		const existing = activeBots.get(teamKey);
+		if (existing) {
+			stop(existing.child);
+			activeBots.delete(teamKey);
+			panelNotice = `${existing.username} stopped.`;
+		}
+	} else {
+		for (const [, b] of activeBots.entries()) {
+			stop(b.child);
+		}
+		activeBots.clear();
+		panelNotice = 'All PDL bots stopped.';
+	}
+}
+
+async function startAllBots(matches = 100): Promise<void> {
+	await startShowdown();
+	const coachSlugs = Object.keys(belief().teams);
+	for (const slug of coachSlugs) {
+		try {
+			const existing = activeBots.get(slug);
+			if (existing && existing.child.child.exitCode === null) continue;
+			const teamExport = getSampleTeam(slug, 1);
+			await startBot({ teamId: slug, matches, teamExport });
+		} catch (err) {
+			console.error(`Error starting bot for ${slug}:`, err);
+		}
+	}
+	panelNotice = `All ${activeBots.size} PDL coach bots are online and ready!`;
 }
 
 async function status() {
 	const runningPort = await portIsOpen(SHOWDOWN_PORT);
+	const activeBotsSummary: Record<string, { username: string; running: boolean; matches: number }> = {};
+	for (const [key, b] of activeBots.entries()) {
+		if (b.child.child.exitCode === null) {
+			activeBotsSummary[key] = {
+				username: b.username,
+				running: true,
+				matches: b.matches,
+			};
+		}
+	}
+	const runningCount = Object.keys(activeBotsSummary).length;
+	const anyBotRunning = runningCount > 0;
+	const latestBot = Array.from(activeBots.values()).pop();
 	return {
 		showdown: Boolean((showdown && showdown.child.exitCode === null) || runningPort),
 		port8000: runningPort,
-		bot: Boolean(bot && bot.child.exitCode === null),
-		notice: panelNotice,
+		bot: anyBotRunning,
+		runningBotsCount: runningCount,
+		activeBots: activeBotsSummary,
+		notice: anyBotRunning
+			? `${runningCount} PDL bot(s) online: ${Object.values(activeBotsSummary).map(b => b.username).join(', ')}`
+			: panelNotice,
 		clientUrl: buildControlClientUrl(),
-		botLog: bot ? `${bot.stdout}${bot.stderr}`.slice(-4000) : '',
+		botLog: latestBot ? `${latestBot.child.stdout}${latestBot.child.stderr}`.slice(-4000) : '',
 		showdownLog: showdown ? `${showdown.stdout}${showdown.stderr}`.slice(-2000) : '',
 		teams: Object.keys(belief().teams),
 	};
@@ -361,8 +450,23 @@ async function handle(request: IncomingMessage, response: ServerResponse): Promi
 			return;
 		}
 		if (request.method === 'POST' && request.url === '/api/showdown') { await startShowdown(); respond(response, 200, await status()); return; }
-		if (request.method === 'POST' && request.url === '/api/start') { await startBot(parseControlStart(await body(request) as ControlStartInput)); respond(response, 200, await status()); return; }
-		if (request.method === 'POST' && request.url === '/api/stop') { stop(bot); bot = null; panelNotice = 'PDL Foul Play stopped.'; respond(response, 200, await status()); return; }
+		if (request.method === 'POST' && request.url === '/api/start-all') { await startAllBots(); respond(response, 200, await status()); return; }
+		if (request.method === 'POST' && request.url === '/api/start') {
+			const input = await body(request) as ControlStartInput;
+			if (input.teamId === 'all') {
+				await startAllBots(Number(input.matches) || 100);
+			} else {
+				await startBot(parseControlStart(input));
+			}
+			respond(response, 200, await status());
+			return;
+		}
+		if (request.method === 'POST' && request.url === '/api/stop') {
+			const payload = await body(request) as { teamId?: string };
+			stopBot(payload?.teamId);
+			respond(response, 200, await status());
+			return;
+		}
 		if (request.url?.startsWith('/showdown') || request.url?.startsWith('/action.php')) {
 			proxyToShowdown(request, response);
 			return;
@@ -387,6 +491,10 @@ if (require.main === module) {
 		socket.on('error', () => showdownSocket.destroy());
 	});
 	const bindHost = process.env.BIND_HOST || '0.0.0.0';
-	server.listen(PANEL_PORT, bindHost, () => process.stdout.write(`PDL Foul Play control panel: http://${bindHost}:${PANEL_PORT}\n`));
-	process.once('SIGINT', () => { stop(bot); stop(showdown); server.close(); });
+	server.listen(PANEL_PORT, bindHost, () => {
+		process.stdout.write(`PDL Foul Play control panel: http://${bindHost}:${PANEL_PORT}\n`);
+		void startAllBots().catch(err => console.error('Failed to start all bots on boot:', err));
+	});
+	process.once('SIGINT', () => { stopBot(); stop(showdown); server.close(); });
+	process.once('SIGTERM', () => { stopBot(); stop(showdown); server.close(); });
 }
