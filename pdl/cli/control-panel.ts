@@ -135,9 +135,12 @@ export function buildControlClientUrl(): string {
 	return `https://play.pokemonshowdown.com/testclient-new.html?~~${host}:${port}`;
 }
 
+let cachedBelief: BeliefFile | null = null;
 function belief(): BeliefFile {
+	if (cachedBelief) return cachedBelief;
 	if (!existsSync(BELIEF_PATH)) throw new Error(`Missing local belief file: ${BELIEF_PATH}`);
-	return JSON.parse(readFileSync(BELIEF_PATH, 'utf8')) as BeliefFile;
+	cachedBelief = JSON.parse(readFileSync(BELIEF_PATH, 'utf8')) as BeliefFile;
+	return cachedBelief;
 }
 
 function toLeague(data: BeliefFile) {
