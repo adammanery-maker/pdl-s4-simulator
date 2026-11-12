@@ -3,13 +3,14 @@
 require('../../main');
 
 const assert = require('node:assert/strict');
-const { readFileSync } = require('node:fs');
+const { readdirSync, readFileSync } = require('node:fs');
 const {
 	buildControlClientUrl,
 	formatProcessExit,
 	parseControlStart,
 	renderControlPanelHtml,
 	saveControlBotTeam,
+	saveRandomBotTeamsDir,
 	getSampleTeam,
 } = require('../../../dist/pdl/cli/control-panel');
 
@@ -28,7 +29,7 @@ describe('PDL Foul Play control panel contract', () => {
 	});
 
 	it('opens the maintained rewrite client against the local Showdown port', () => {
-		assert.equal(buildControlClientUrl(), 'https://play.pokemonshowdown.com/testclient-new.html?~~localhost:8000');
+		assert.equal(buildControlClientUrl(), 'https://localhost--8000.psim.us/newclient');
 	});
 
 	it('formats cloud deployment client URLs for Fly.io, Railway, and Render', () => {
@@ -37,15 +38,15 @@ describe('PDL Foul Play control panel contract', () => {
 		const oldPublic = process.env.PUBLIC_URL;
 		try {
 			process.env.FLY_APP_NAME = 'my-pdl-bot';
-			assert.equal(buildControlClientUrl(), 'https://play.pokemonshowdown.com/testclient-new.html?~~my-pdl-bot.fly.dev');
+			assert.equal(buildControlClientUrl(), 'https://my---pdl---bot-fly-dev.psim.us/newclient');
 			delete process.env.FLY_APP_NAME;
 
 			process.env.RAILWAY_PUBLIC_DOMAIN = 'pdl-production.up.railway.app';
-			assert.equal(buildControlClientUrl(), 'https://play.pokemonshowdown.com/testclient-new.html?~~pdl-production.up.railway.app');
+			assert.equal(buildControlClientUrl(), 'https://pdl---production-up-railway-app.psim.us/newclient');
 			delete process.env.RAILWAY_PUBLIC_DOMAIN;
 
 			process.env.PUBLIC_URL = 'https://custom-bot.example.com/';
-			assert.equal(buildControlClientUrl(), 'https://play.pokemonshowdown.com/testclient-new.html?~~custom-bot.example.com');
+			assert.equal(buildControlClientUrl(), 'https://custom---bot-example-com.psim.us/newclient');
 		} finally {
 			if (oldFly !== undefined) process.env.FLY_APP_NAME = oldFly; else delete process.env.FLY_APP_NAME;
 			if (oldRailway !== undefined) process.env.RAILWAY_PUBLIC_DOMAIN = oldRailway; else delete process.env.RAILWAY_PUBLIC_DOMAIN;
@@ -86,5 +87,16 @@ describe('PDL Foul Play control panel contract', () => {
 		const nickTeam = getSampleTeam('nick');
 		assert.match(nickTeam, /Flygon/);
 		assert.throws(() => getSampleTeam('nonexistent_coach'), /No saved sample file/);
+	});
+
+	it('supports random mode without explicit teamExport and writes all 10 preset teams to a directory', () => {
+		const start = parseControlStart({ teamId: 'connor', matches: 100, teamMode: 'random' });
+		assert.equal(start.teamId, 'connor');
+		assert.equal(start.teamMode, 'random');
+		assert(start.teamExport.length > 0);
+
+		const dir = saveRandomBotTeamsDir('adam');
+		const files = readdirSync(dir).filter(f => f.endsWith('.txt'));
+		assert.equal(files.length, 10);
 	});
 });

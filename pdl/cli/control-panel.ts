@@ -1,6 +1,6 @@
 import { spawn, type ChildProcessWithoutNullStreams } from 'child_process';
 import { createServer, request as httpRequest, type IncomingMessage, type ServerResponse } from 'http';
-import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs';
 import { connect } from 'net';
 import { join, resolve } from 'path';
 import { TeamValidator } from '../../sim/team-validator';
@@ -61,18 +61,40 @@ export function getSampleTeam(teamId: string, variationIndex = 1): string {
 	return readFileSync(path, 'utf8');
 }
 
+export function getAllSampleTeams(teamId: string): string[] {
+	const normalized = (teamId || '').toLowerCase().trim();
+	const catalogPath = join(SAMPLES_DIR, 'pdl-all-coaches-10teams.json');
+	if (existsSync(catalogPath)) {
+		try {
+			const catalog = JSON.parse(readFileSync(catalogPath, 'utf8'));
+			const list = catalog[normalized];
+			if (Array.isArray(list) && list.length > 0) {
+				const exports = list
+					.map((item: any) => (typeof item?.export === 'string' ? item.export.trim() : ''))
+					.filter(Boolean);
+				if (exports.length > 0) return exports;
+			}
+		} catch {
+			// fall back to single sample team
+		}
+	}
+	return [getSampleTeam(normalized, 1)];
+}
+
 interface ControlStartInput {
 	teamId: unknown;
 	opponentTeamId?: unknown;
 	matches: unknown;
-	teamExport: unknown;
+	teamExport?: unknown;
+	teamMode?: unknown;
 }
 
 export interface ControlStart {
 	readonly teamId: string;
 	readonly opponentTeamId?: string;
 	readonly matches: number;
-	readonly teamExport: string;
+	readonly teamExport?: string;
+	readonly teamMode?: 'random' | 'custom';
 }
 
 interface BeliefRosterPokemon { readonly species: string; readonly cost: number; }
@@ -98,12 +120,27 @@ export function saveControlBotTeam(teamExport: string, teamId?: string): string 
 	return path;
 }
 
+/** Writes all 10 preset teams for a coach to a directory so Foul Play picks one at random per battle. */
+export function saveRandomBotTeamsDir(teamId: string): string {
+	const teamKey = teamId.toLowerCase();
+	const tmpDir = existsSync('/tmp') ? '/tmp' : '/private/tmp';
+	const dirPath = join(tmpDir, `pdl-foul-play-random-${teamKey}`);
+	rmSync(dirPath, { recursive: true, force: true });
+	mkdirSync(dirPath, { recursive: true });
+	const teams = getAllSampleTeams(teamKey);
+	teams.forEach((teamExport, idx) => {
+		writeFileSync(join(dirPath, `team-${idx + 1}.txt`), teamExport, 'utf8');
+	});
+	return dirPath;
+}
+
 interface ActiveBot {
 	readonly teamId: string;
 	readonly username: string;
 	readonly child: ManagedProcess;
 	readonly matches: number;
 	readonly teamExport: string;
+	readonly mode: 'random' | 'custom';
 	readonly startedAt: number;
 }
 
@@ -126,7 +163,11 @@ export function parseControlStart(value: ControlStartInput): ControlStart {
 	if (teamId === rawOpponent) throw new Error('Bot and opponent rosters must be different.');
 	const matches = typeof value.matches === 'number' ? value.matches : Number(value.matches);
 	if (!Number.isInteger(matches) || matches < 1 || matches > 1000) throw new Error('Matches must be a whole number from 1 to 1000.');
-	return { teamId, opponentTeamId, matches, teamExport: text(value.teamExport, 'Team export') };
+	const teamMode = value.teamMode === 'random' ? 'random' : 'custom';
+	const teamExport = teamMode === 'random'
+		? (typeof value.teamExport === 'string' && value.teamExport.trim() ? value.teamExport.trim() : getSampleTeam(teamId, 1))
+		: text(value.teamExport, 'Team export');
+	return { teamId, opponentTeamId, matches, teamExport, teamMode };
 }
 
 export function encodeShowdownHost(host: string): string {
@@ -255,10 +296,17 @@ async function startShowdown(): Promise<void> {
 }
 
 async function startBot(start: ControlStart): Promise<void> {
-	validateBotTeam(start);
+	const teamMode: 'random' | 'custom' = start.teamMode === 'random' ? 'random' : 'custom';
+	const teamKey = start.teamId.toLowerCase();
+	if (teamMode === 'random') {
+		const data = belief();
+		if (!data.teams[teamKey]) throw new Error(`No local PDL roster data exists for ${teamKey}.`);
+		if (!getAllSampleTeams(teamKey).length) throw new Error(`No preset teams found for ${teamKey}.`);
+	} else {
+		validateBotTeam(start);
+	}
 	await startShowdown();
 
-	const teamKey = start.teamId.toLowerCase();
 	const coachName = teamKey[0].toUpperCase() + teamKey.slice(1);
 	const psUsername = `PDL ${coachName}`;
 
@@ -283,7 +331,9 @@ async function startBot(start: ControlStart): Promise<void> {
 
 	const venvPython = join(FOUL_ROOT, '.venv', 'bin', 'python');
 	const python = process.env.PYTHON_BIN || (existsSync(venvPython) ? venvPython : 'python3');
-	const teamPath = saveControlBotTeam(start.teamExport, teamKey);
+	const teamPath = teamMode === 'random'
+		? saveRandomBotTeamsDir(teamKey)
+		: saveControlBotTeam(start.teamExport, teamKey);
 	const searchTimeMs = IS_CLOUD_CONSTRAINED ? '150' : '250';
 	const logLevel = IS_CLOUD_CONSTRAINED ? 'WARNING' : 'INFO';
 	const startedBot = spawnCollected(python, [
@@ -306,6 +356,7 @@ async function startBot(start: ControlStart): Promise<void> {
 		child: startedBot,
 		matches: start.matches,
 		teamExport: start.teamExport,
+		mode: teamMode,
 		startedAt: Date.now(),
 	});
 
@@ -313,7 +364,7 @@ async function startBot(start: ControlStart): Promise<void> {
 	const deadline = Date.now() + timeoutLimit;
 	while (Date.now() < deadline) {
 		if (/Waiting for a gen9pdls4 challenge/.test(startedBot.stdout)) {
-			panelNotice = `${psUsername} is online and waiting for challenges!`;
+			panelNotice = `${psUsername} is online${teamMode === 'random' ? ' (random 10-team mode)' : ''} and waiting for challenges!`;
 			return;
 		}
 		if (startedBot.child.exitCode !== null) throw new Error(formatProcessExit(startedBot));
@@ -349,7 +400,7 @@ async function startAllBots(matches = 100): Promise<void> {
 		const defaultSlug = 'connor';
 		if (!activeBots.has(defaultSlug)) {
 			const teamExport = getSampleTeam(defaultSlug, 1);
-			await startBot({ teamId: defaultSlug, matches, teamExport });
+			await startBot({ teamId: defaultSlug, matches, teamExport, teamMode: 'random' });
 		}
 		panelNotice = `Cloud simulator running in memory-optimized single bot mode (${activeBots.get(defaultSlug)?.username || 'PDL Connor'}).`;
 		return;
@@ -360,7 +411,7 @@ async function startAllBots(matches = 100): Promise<void> {
 			const existing = activeBots.get(slug);
 			if (existing && existing.child.child.exitCode === null) continue;
 			const teamExport = getSampleTeam(slug, 1);
-			await startBot({ teamId: slug, matches, teamExport });
+			await startBot({ teamId: slug, matches, teamExport, teamMode: 'random' });
 		} catch (err) {
 			console.error(`Error starting bot for ${slug}:`, err);
 		}
@@ -370,13 +421,14 @@ async function startAllBots(matches = 100): Promise<void> {
 
 async function status() {
 	const runningPort = await portIsOpen(SHOWDOWN_PORT);
-	const activeBotsSummary: Record<string, { username: string; running: boolean; matches: number }> = {};
+	const activeBotsSummary: Record<string, { username: string; running: boolean; matches: number; mode: 'random' | 'custom' }> = {};
 	for (const [key, b] of activeBots.entries()) {
 		if (b.child.child.exitCode === null) {
 			activeBotsSummary[key] = {
 				username: b.username,
 				running: true,
 				matches: b.matches,
+				mode: b.mode,
 			};
 		}
 	}
@@ -547,7 +599,7 @@ if (require.main === module) {
 			const defaultSlug = 'connor';
 			try {
 				const teamExport = getSampleTeam(defaultSlug, 1);
-				void startBot({ teamId: defaultSlug, matches: 100, teamExport }).catch(err =>
+				void startBot({ teamId: defaultSlug, matches: 100, teamExport, teamMode: 'random' }).catch(err =>
 					console.error(`Failed to pre-warm default bot ${defaultSlug}:`, err)
 				);
 			} catch (err) {
