@@ -11,6 +11,10 @@
         "grass",
         "ghost"
       ],
+      "teraCaptains": [
+        "scovillain",
+        "tatsugiri"
+      ],
       "roster": [
         {
           "species": "tatsugiri",
