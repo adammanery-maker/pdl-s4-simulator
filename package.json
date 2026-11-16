@@ -51,6 +51,7 @@
     "pdl:experiment": "node build && node dist/pdl/cli/experiment",
     "pdl:play-bot": "node build && node dist/pdl/cli/play-bot",
     "pdl:control-panel": "node build && node dist/pdl/cli/control-panel",
+    "pdl:analyze-replay": "../pdl-s4-foul-play/.venv/bin/python ../pdl-s4-foul-play/scripts/analyze_pdl_replay.py",
     "pdl:rerender-experiment": "node build && node dist/pdl/cli/rerender-experiment-report",
     "posttest": "npm run tsc",
     "full-test": "eslint --max-warnings 0 && npm run tsc && mocha --timeout 8000 --forbid-only -g \".*\" && npm run test-npm",
